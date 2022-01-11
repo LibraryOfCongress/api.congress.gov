@@ -4,9 +4,9 @@ The purpose of this repository is to communicate with Congressional data partner
 
 The purposes of the Congress.gov API 
 
- - Item 1 Support Congressional data partners (by protecting them from scrapers that degrade Congress.gov access) 
-- Item 2 Facilitate more complete and and more accurate Congressional data
-- Item 3 Provide useful, extensible resource for Congressional data partners
+- Support Congressional data partners (by protecting them from scrapers that degrade Congress.gov access) 
+- Facilitate more complete and and more accurate Congressional data
+- Provide useful, extensible resource for Congressional data partners
   
   
 
