@@ -1,12 +1,11 @@
 # Congress.gov API Beta Working Group 
 
-The purpose of this repository is to communicate with Congressional data partners in support of developing the Congress.gov API (v3) that is anticipated to be released to the public at a future date to be determined. Development of the repository includes: 
+The purpose of this repository is to communicate with Congressional data partners in support of developing the Congress.gov API (v3) that is anticipated to be released to the public at a future date. Development plans to be supported within the repository include: 
 
 - Python and Java sample code
-- Documentation (similar to [Bill Status XML Bulk Data user guide](https://github.com/usgpo/bill-status/blob/master/BILLSTATUS-XML_User_User-Guide.md)) 
 - Two-way communication for Congressional data partners
 - Change management communication
-- User documentation with clear information about Congressional data publishing workflows 
+- User documentation (similar to [Bill Status XML Bulk Data user guide](https://github.com/usgpo/bill-status/blob/master/BILLSTATUS-XML_User_User-Guide.md)) with clear information about Congressional data publishing workflows 
 
 The purposes of the Congress.gov API (v3): 
 
