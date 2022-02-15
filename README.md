@@ -16,8 +16,4 @@ The purposes of the Congress.gov API (v3):
   
 The initial Congress.gov API (v3) is implemented as a RESTful read API that is architected as a hierarchical browse.
 
-This repository is anticipated to become public after close consultation with Congressional data partners. 
-As of January 2022, this repository is restricted to select Congressional data partners. 
-With consultation with the select Congressional data partners, we will open up this space to a limited number of public users.
-
-By the end of September, the goal is to go live with the beta version of the API available to all. 
+As of Febrary 2022, this repository is restricted to select Congressional data partners. At a future date and consultation with select Congressional data partners, the goal is to invite a limited number of public users to participate in a public beta working group. At a future date (we are tergeting September 2022) the goal is to "go live" with a  beta version of the API to all.
