@@ -37,16 +37,16 @@ public class Config {
         try (FileInputStream fis = new FileInputStream(CONFIG_FILENAME)) {
             prop.load(fis);
         } catch (FileNotFoundException ex) {
-            Utils.printMessageAndBail("Cannot find the config file " + CONFIG_FILENAME);
+            Utils.outputMessageAndBail("Cannot find the config file " + CONFIG_FILENAME);
         } catch (IOException ex) {
-            Utils.printMessageAndBail("Unable to read the config file " + CONFIG_FILENAME);
+            Utils.outputMessageAndBail("Unable to read the config file " + CONFIG_FILENAME);
         }
 
         String p = prop.getProperty(property_name);
         if (p == null) {
-            Utils.printMessageAndBail("Unable to find property " + property_name);
+            Utils.outputMessageAndBail("Unable to find property " + property_name);
         } else if (p.equals("")) {
-            Utils.printMessageAndBail("Check your config file, " + property_name + " was not set");
+            Utils.outputMessageAndBail("Check your config file, " + property_name + " was not set");
         }
 
         return p;
