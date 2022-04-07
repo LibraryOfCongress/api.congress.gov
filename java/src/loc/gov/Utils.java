@@ -60,6 +60,7 @@ public class Utils {
      * @param url The url that was called that provided the response
      */
     private static void saveOutputToNamedTextFile(HttpResponse<String> output, String url) {
+        // Turns http://api1.test.congress.gov/v3/bill/117/hr/21/titles into bill_117_hr_21_titles.txt
         String filename = url.replace(Config.getRootUrl() + "/", "").replace("/", "_") + ".txt";
 
         // Store our default output
@@ -72,7 +73,12 @@ public class Utils {
         } catch (FileNotFoundException ex) {
             outputMessageAndBail("Unable to create the output file " + filename);
         }
-        assert fileOut != null;
+
+        // Ensure we have a fileOut
+        if (fileOut == null) {
+            outputMessageAndBail("Something went wrong creating the output file " + filename);
+        }
+
         System.setOut(fileOut);
 
         outputMessage(output.body());
