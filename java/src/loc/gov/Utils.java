@@ -1,37 +1,51 @@
 package loc.gov;
 
 import java.io.IOException;
-import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.net.URI;
 
 public class Utils {
 
     /**
-     * make_request
+     * makeRequest
      *
      * Make a GET request to the given URL.  The auth parameters are automatically added.
      *
-     * @param url
+     * @param url The URL of the API we are going to make a GET request to
      *
-     * @throws IOException
-     * @throws InterruptedException
      */
-    public void make_request(String url) throws IOException, InterruptedException {
+    public static void makeRequest(String url) {
 
-        Config config = new Config();
-
-        url += "?authkey=" + config.getAuthKey() + "&format=" + config.getResponseFormat();
+        System.out.println("Making call to " + url);
 
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(url))
+                .uri(URI.create(appendParameters(url)))
                 .build();
 
-        HttpResponse<String> response = client.send(request,
-                HttpResponse.BodyHandlers.ofString());
+        HttpResponse<String> response = null;
+        try {
+            response = client.send(request,
+                    HttpResponse.BodyHandlers.ofString());
+        } catch (IOException | InterruptedException ex) {
+            System.out.println(ex.getMessage());
+            System.exit(1);
 
+        }
         System.out.println(response.body());
+    }
+
+    /**
+     *
+     * appendParameters
+     *
+     * @param url The URL to append the authkey and format parameters to
+     *
+     * @return String
+     */
+    private static String appendParameters(String url) {
+        return url + "?authkey=" + Config.getAuthKey() + "&format=" + Config.getResponseFormat();
     }
 }
