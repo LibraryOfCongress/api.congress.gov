@@ -7,17 +7,19 @@ import java.util.Properties;
 
 public class Config {
 
-    private static final String CONFIG_FILENAME = "loc.cfg";
+    private static final String CONFIG_FILENAME = "loc.cfg";                 // The name of the config file
     
-    private static final String AUTH_KEY         = "CONFIG.AUTH_KEY";
-    private static final String RESPONSE_FORMAT  = "CONFIG.RESPONSE_FORMAT";
+    private static final String AUTH_KEY         = "CONFIG.AUTH_KEY";        // API Auth key
+    private static final String RESPONSE_FORMAT  = "CONFIG.RESPONSE_FORMAT"; // xml | json
 
-    private static final String ROOT_URL         = "CONFIG.ROOT_URL";
+    private static final String STORE_RESPONSE   = "CONFIG.STORE_RESPONSE";  // true | false
 
-    private static final String BILL_HR         = "BILL.HR";
-    private static final String BILL_NUM        = "BILL.NUM";
-    private static final String BILL_URL        = "BILL.URL";
-    private static final String BILL_CONGRESS   = "BILL.CONGRESS";
+    private static final String ROOT_URL         = "CONFIG.ROOT_URL";        // http://api1.test.congress.gov/v3
+
+    private static final String BILL_CHAMBER    = "BILL.CHAMBER";            // hr | s | sjres | hjres
+    private static final String BILL_NUMBER     = "BILL.NUMBER";             // 21
+    private static final String BILL_URL        = "BILL.URL";                // bill
+    private static final String BILL_CONGRESS   = "BILL.CONGRESS";           // 117
 
     /**
      *
@@ -57,7 +59,7 @@ public class Config {
     /**
      * getAuthKey
      *
-     * Get the auth key from the config file
+     * Get the auth key to make API calls
      *
      * @return String
      */
@@ -68,12 +70,24 @@ public class Config {
     /**
      * getResponseFormat
      *
-     * Get the response format from the config file
+     * Get the format that responses are returned to us in (xml | json)
      *
      * @return String
      */
     public static String getResponseFormat() {
         return getProperty(RESPONSE_FORMAT);
+    }
+
+    /**
+     * getStoreResponse
+     *
+     * Get the store response value from the config file.
+     * A value of true will save the response in a txt file named for the route that was called
+     *
+     * @return String
+     */
+    public static String getStoreResponse() {
+        return getProperty(STORE_RESPONSE);
     }
 
     // ************************************
@@ -96,31 +110,31 @@ public class Config {
     // ************************************
 
     /**
-     * getBillHr
+     * getBillChamber
      *
-     * Get the bill chamber
+     * Get the chamber name for the bill config
      *
      * @return String
      */
-    public static String getBillHr() {
-        return getProperty(BILL_HR);
+    public static String getBillChamber() {
+        return getProperty(BILL_CHAMBER);
     }
 
     /**
-     * GetBillNum
+     * GetBillNumber
      *
      * Get the bill number
      *
      * @return String
      */
-    public static String getBillNum() {
-        return getProperty(BILL_NUM);
+    public static String getBillNumber() {
+        return getProperty(BILL_NUMBER);
     }
 
     /**
      * GetBillUrl
      *
-     * Get the bill url
+     * Get the url value that points the api to the bills
      *
      * @return String
      */
@@ -131,7 +145,7 @@ public class Config {
     /**
      * GetBillCongress
      *
-     * Get the bill congress
+     * Get the congress id for the bill config
      *
      * @return String
      */
