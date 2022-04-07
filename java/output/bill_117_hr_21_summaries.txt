@@ -1,0 +1,30 @@
+{
+    "pagination": {
+        "count": 2,
+        "total": 2
+    },
+    "request": {
+        "billNumber": "21",
+        "billType": "hr",
+        "billUrl": "http://api1.test.congress.gov/v3/bill/117/hr/21?format=json",
+        "congress": "117",
+        "contentType": "application/json",
+        "format": "json"
+    },
+    "summaries": [
+        {
+            "actionDate": "2021-01-04",
+            "actionDesc": "Introduced in House",
+            "text": " <p><b>Federal Risk and Authorization Management Program Authorization Act of 2021 or the FedRAMP Authorization Act</b></p> <p>This bill provides statutory authority for the Federal Risk and Authorization Management Program (FedRAMP) within the General Services Administration (GSA).</p> <p>The GSA must establish a government-wide program that provides the authoritative standardized approach to security assessment and authorization for cloud computing products and services that process unclassified information used by agencies. Agencies must ensure that their cloud computing services meet GSA requirements.</p> <p>The bill establishes the Joint Authorization Board to conduct security assessments of cloud computing services and issue provisional authorizations to operate to cloud service providers that meet FedRAMP security guidelines.</p> <p>The GSA shall (1) publish a report that includes an assessment of the cost incurred by agencies and cloud service providers related to the issuance of FedRAMP authorizations and provisional authorizations, (2) determine the requirements for certification of independent assessment organizations, and (3) establish the Federal Secure Cloud Advisory Committee.</p>",
+            "updateDate": "2021-02-06T15:02:10Z",
+            "versionCode": "00"
+        },
+        {
+            "actionDate": "2021-01-05",
+            "actionDesc": "Passed House",
+            "text": " <p><b>Federal Risk and Authorization Management Program Authorization Act of 2021 or the FedRAMP Authorization Act</b></p> <p>This bill provides statutory authority for the Federal Risk and Authorization Management Program (FedRAMP) within the General Services Administration (GSA).</p> <p>The GSA must establish a government-wide program that provides the authoritative standardized approach to security assessment and authorization for cloud computing products and services that process unclassified information used by agencies. Agencies must ensure that their cloud computing services meet GSA requirements.</p> <p>The bill establishes the Joint Authorization Board to conduct security assessments of cloud computing services and issue provisional authorizations to operate to cloud service providers that meet FedRAMP security guidelines.</p> <p>The GSA shall (1) publish a report that includes an assessment of the cost incurred by agencies and cloud service providers related to the issuance of FedRAMP authorizations and provisional authorizations, (2) determine the requirements for certification of independent assessment organizations, and (3) establish the Federal Secure Cloud Advisory Committee.</p>",
+            "updateDate": "2021-02-09T20:56:05Z",
+            "versionCode": "53"
+        }
+    ]
+}

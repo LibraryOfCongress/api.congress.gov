@@ -1,0 +1,82 @@
+{
+    "pagination": {
+        "count": 3,
+        "total": 3
+    },
+    "request": {
+        "billNumber": "21",
+        "billType": "hr",
+        "billUrl": "http://api1.test.congress.gov/v3/bill/117/hr/21?format=json",
+        "congress": "117",
+        "contentType": "application/json",
+        "format": "json"
+    },
+    "textVersions": [
+        {
+            "date": "2021-01-06T05:00:00Z",
+            "formats": [
+                {
+                    "type": "Generated HTML",
+                    "url": "https://test.congress.gov/117/bills/hr21/generated/BILLS-117hr21rfs.html"
+                },
+                {
+                    "type": "Formatted Text",
+                    "url": "https://test.congress.gov/117/bills/hr21/BILLS-117hr21rfs.htm"
+                },
+                {
+                    "type": "PDF",
+                    "url": "https://test.congress.gov/117/bills/hr21/BILLS-117hr21rfs.pdf"
+                },
+                {
+                    "type": "Formatted XML",
+                    "url": "https://test.congress.gov/117/bills/hr21/BILLS-117hr21rfs.xml"
+                }
+            ],
+            "type": "Referred in Senate"
+        },
+        {
+            "date": "2021-01-05T05:00:00Z",
+            "formats": [
+                {
+                    "type": "Generated HTML",
+                    "url": "https://test.congress.gov/117/bills/hr21/generated/BILLS-117hr21eh.html"
+                },
+                {
+                    "type": "Formatted Text",
+                    "url": "https://test.congress.gov/117/bills/hr21/BILLS-117hr21eh.htm"
+                },
+                {
+                    "type": "PDF",
+                    "url": "https://test.congress.gov/117/bills/hr21/BILLS-117hr21eh.pdf"
+                },
+                {
+                    "type": "Formatted XML",
+                    "url": "https://test.congress.gov/117/bills/hr21/BILLS-117hr21eh.xml"
+                }
+            ],
+            "type": "Engrossed in House"
+        },
+        {
+            "date": "2021-01-04T05:00:00Z",
+            "formats": [
+                {
+                    "type": "Generated HTML",
+                    "url": "https://test.congress.gov/117/bills/hr21/generated/BILLS-117hr21ih.html"
+                },
+                {
+                    "type": "Formatted Text",
+                    "url": "https://test.congress.gov/117/bills/hr21/BILLS-117hr21ih.htm"
+                },
+                {
+                    "type": "PDF",
+                    "url": "https://test.congress.gov/117/bills/hr21/BILLS-117hr21ih.pdf"
+                },
+                {
+                    "type": "Formatted XML",
+                    "url": "https://test.congress.gov/117/bills/hr21/BILLS-117hr21ih.xml"
+                }
+            ],
+            "type": "Introduced in House"
+        }
+    ]
+}

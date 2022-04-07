@@ -1,0 +1,83 @@
+{
+    "bill": {
+        "actions": {
+            "count": 10,
+            "url": "http://api1.test.congress.gov/v3/bill/117/hr/21/actions?format=json"
+        },
+        "amendments": {
+            "count": 0,
+            "url": "http://api1.test.congress.gov/v3/bill/117/hr/21/amendments?format=json"
+        },
+        "calendarNumbers": [],
+        "cboCostEstimates": [],
+        "committeeReports": [],
+        "committees": {
+            "count": 2,
+            "url": "http://api1.test.congress.gov/v3/bill/117/hr/21/committees?format=json"
+        },
+        "congress": 117,
+        "constitutionalAuthorityStatementText": "<pre>\n[Congressional Record Volume 167, Number 2 (Monday, January 4, 2021)]\n[House]\nFrom the Congressional Record Online through the Government Publishing Office [<a href=\"https://www.gpo.gov\">www.gpo.gov</a>]\nBy Mr. CONNOLLY:\nH.R. 21.\nCongress has the power to enact this legislation pursuant\nto the following:\nArticle 1, Section 8 of the United States Constitution.\n[Page H51]\n</pre>",
+        "cosponsors": {
+            "count": 2,
+            "countIncludingWithdrawnCosponsors": 2,
+            "url": "http://api1.test.congress.gov/v3/bill/117/hr/21/cosponsors?format=json"
+        },
+        "introducedDate": "2021-01-04",
+        "latestAction": {
+            "actionDate": "2021-01-06",
+            "links": [],
+            "text": "Received in the Senate and Read twice and referred to the Committee on Homeland Security and Governmental Affairs."
+        },
+        "laws": [],
+        "notes": [],
+        "number": "21",
+        "originChamber": "House",
+        "policyArea": {
+            "name": "Government Operations and Politics"
+        },
+        "relatedBills": {
+            "count": 1,
+            "url": "http://api1.test.congress.gov/v3/bill/117/hr/21/relatedbills?format=json"
+        },
+        "sponsors": [
+            {
+                "bioguideId": "C001078",
+                "byRequestType": null,
+                "district": 11,
+                "firstName": "Gerald",
+                "fullName": "Rep. Connolly, Gerald E. [D-VA-11]",
+                "lastName": "Connolly",
+                "middleName": "E.",
+                "party": "D",
+                "state": "VA",
+                "url": "http://api1.test.congress.gov/v3/member/C001078?format=json"
+            }
+        ],
+        "subjects": {
+            "count": 14,
+            "url": "http://api1.test.congress.gov/v3/bill/117/hr/21/subjects?format=json"
+        },
+        "summaries": {
+            "count": 2,
+            "url": "http://api1.test.congress.gov/v3/bill/117/hr/21/summaries?format=json"
+        },
+        "textVersions": {
+            "count": 3,
+            "url": "http://api1.test.congress.gov/v3/bill/117/hr/21/text?format=json"
+        },
+        "title": "FedRAMP Authorization Act",
+        "titles": {
+            "count": 8,
+            "url": "http://api1.test.congress.gov/v3/bill/117/hr/21/titles?format=json"
+        },
+        "type": "HR",
+        "updateDate": "2022-03-25T01:16:59Z"
+    },
+    "request": {
+        "billNumber": "21",
+        "billType": "hr",
+        "congress": "117",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

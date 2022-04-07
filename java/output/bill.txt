@@ -1,0 +1,294 @@
+{
+    "bills": [
+        {
+            "congress": 117,
+            "latestAction": {
+                "actionDate": "2022-04-01",
+                "actionTime": "12:34:43",
+                "text": "Motion to reconsider laid on the table Agreed to without objection."
+            },
+            "number": "3617",
+            "originChamber": "House",
+            "originChamberCode": "H",
+            "title": "MORE Act",
+            "type": "HR",
+            "updateDate": "2022-04-03",
+            "url": "http://api1.test.congress.gov/v3/bill/117/hr/3617?format=json"
+        },
+        {
+            "congress": 117,
+            "latestAction": {
+                "actionDate": "2022-04-01",
+                "text": "Referred to the Subcommittee on Coast Guard and Maritime Transportation."
+            },
+            "number": "7343",
+            "originChamber": "House",
+            "originChamberCode": "H",
+            "title": "",
+            "type": "HR",
+            "updateDate": "2022-04-03",
+            "url": "http://api1.test.congress.gov/v3/bill/117/hr/7343?format=json"
+        },
+        {
+            "congress": 117,
+            "latestAction": {
+                "actionDate": "2022-04-01",
+                "text": "Referred to the Subcommittee on Aviation."
+            },
+            "number": "7321",
+            "originChamber": "House",
+            "originChamberCode": "H",
+            "title": "",
+            "type": "HR",
+            "updateDate": "2022-04-03",
+            "url": "http://api1.test.congress.gov/v3/bill/117/hr/7321?format=json"
+        },
+        {
+            "congress": 117,
+            "latestAction": {
+                "actionDate": "2022-04-01",
+                "text": "Referred to the House Committee on Financial Services."
+            },
+            "number": "7368",
+            "originChamber": "House",
+            "originChamberCode": "H",
+            "title": "",
+            "type": "HR",
+            "updateDate": "2022-04-03",
+            "url": "http://api1.test.congress.gov/v3/bill/117/hr/7368?format=json"
+        },
+        {
+            "congress": 117,
+            "latestAction": {
+                "actionDate": "2022-04-01",
+                "text": "Referred to the House Committee on Veterans' Affairs."
+            },
+            "number": "7369",
+            "originChamber": "House",
+            "originChamberCode": "H",
+            "title": "",
+            "type": "HR",
+            "updateDate": "2022-04-03",
+            "url": "http://api1.test.congress.gov/v3/bill/117/hr/7369?format=json"
+        },
+        {
+            "congress": 117,
+            "latestAction": {
+                "actionDate": "2022-04-01",
+                "text": "Referred to the House Committee on Foreign Affairs."
+            },
+            "number": "1021",
+            "originChamber": "House",
+            "originChamberCode": "H",
+            "title": "",
+            "type": "HRES",
+            "updateDate": "2022-04-03",
+            "url": "http://api1.test.congress.gov/v3/bill/117/hres/1021?format=json"
+        },
+        {
+            "congress": 117,
+            "latestAction": {
+                "actionDate": "2022-04-01",
+                "text": "Referred to the House Committee on Education and Labor."
+            },
+            "number": "7365",
+            "originChamber": "House",
+            "originChamberCode": "H",
+            "title": "",
+            "type": "HR",
+            "updateDate": "2022-04-03",
+            "url": "http://api1.test.congress.gov/v3/bill/117/hr/7365?format=json"
+        },
+        {
+            "congress": 117,
+            "latestAction": {
+                "actionDate": "2022-04-01",
+                "text": "Referred to the Committee on Foreign Affairs, and in addition to the Committees on Energy and Commerce, Transportation and Infrastructure, and Natural Resources, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+            },
+            "number": "1020",
+            "originChamber": "House",
+            "originChamberCode": "H",
+            "title": "",
+            "type": "HRES",
+            "updateDate": "2022-04-03",
+            "url": "http://api1.test.congress.gov/v3/bill/117/hres/1020?format=json"
+        },
+        {
+            "congress": 117,
+            "latestAction": {
+                "actionDate": "2022-04-01",
+                "text": "Referred to the House Committee on Energy and Commerce."
+            },
+            "number": "7362",
+            "originChamber": "House",
+            "originChamberCode": "H",
+            "title": "",
+            "type": "HR",
+            "updateDate": "2022-04-03",
+            "url": "http://api1.test.congress.gov/v3/bill/117/hr/7362?format=json"
+        },
+        {
+            "congress": 117,
+            "latestAction": {
+                "actionDate": "2022-04-01",
+                "text": "Referred to the House Committee on the Judiciary."
+            },
+            "number": "7356",
+            "originChamber": "House",
+            "originChamberCode": "H",
+            "title": "",
+            "type": "HR",
+            "updateDate": "2022-04-03",
+            "url": "http://api1.test.congress.gov/v3/bill/117/hr/7356?format=json"
+        },
+        {
+            "congress": 117,
+            "latestAction": {
+                "actionDate": "2022-04-01",
+                "text": "Referred to the House Committee on Oversight and Reform."
+            },
+            "number": "7371",
+            "originChamber": "House",
+            "originChamberCode": "H",
+            "title": "",
+            "type": "HR",
+            "updateDate": "2022-04-03",
+            "url": "http://api1.test.congress.gov/v3/bill/117/hr/7371?format=json"
+        },
+        {
+            "congress": 117,
+            "latestAction": {
+                "actionDate": "2022-04-01",
+                "text": "Referred to the House Committee on Financial Services."
+            },
+            "number": "7355",
+            "originChamber": "House",
+            "originChamberCode": "H",
+            "title": "",
+            "type": "HR",
+            "updateDate": "2022-04-03",
+            "url": "http://api1.test.congress.gov/v3/bill/117/hr/7355?format=json"
+        },
+        {
+            "congress": 117,
+            "latestAction": {
+                "actionDate": "2022-04-01",
+                "text": "Referred to the House Committee on Transportation and Infrastructure."
+            },
+            "number": "7363",
+            "originChamber": "House",
+            "originChamberCode": "H",
+            "title": "",
+            "type": "HR",
+            "updateDate": "2022-04-03",
+            "url": "http://api1.test.congress.gov/v3/bill/117/hr/7363?format=json"
+        },
+        {
+            "congress": 117,
+            "latestAction": {
+                "actionDate": "2022-04-01",
+                "text": "Referred to the House Committee on Financial Services."
+            },
+            "number": "7364",
+            "originChamber": "House",
+            "originChamberCode": "H",
+            "title": "",
+            "type": "HR",
+            "updateDate": "2022-04-03",
+            "url": "http://api1.test.congress.gov/v3/bill/117/hr/7364?format=json"
+        },
+        {
+            "congress": 117,
+            "latestAction": {
+                "actionDate": "2022-04-01",
+                "text": "Referred to the House Committee on Energy and Commerce."
+            },
+            "number": "7359",
+            "originChamber": "House",
+            "originChamberCode": "H",
+            "title": "",
+            "type": "HR",
+            "updateDate": "2022-04-03",
+            "url": "http://api1.test.congress.gov/v3/bill/117/hr/7359?format=json"
+        },
+        {
+            "congress": 117,
+            "latestAction": {
+                "actionDate": "2022-04-01",
+                "text": "Referred to the House Committee on Science, Space, and Technology."
+            },
+            "number": "7361",
+            "originChamber": "House",
+            "originChamberCode": "H",
+            "title": "",
+            "type": "HR",
+            "updateDate": "2022-04-03",
+            "url": "http://api1.test.congress.gov/v3/bill/117/hr/7361?format=json"
+        },
+        {
+            "congress": 117,
+            "latestAction": {
+                "actionDate": "2022-04-01",
+                "text": "Referred to the Committee on Energy and Commerce, and in addition to the Committee on Science, Space, and Technology, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+            },
+            "number": "7360",
+            "originChamber": "House",
+            "originChamberCode": "H",
+            "title": "",
+            "type": "HR",
+            "updateDate": "2022-04-03",
+            "url": "http://api1.test.congress.gov/v3/bill/117/hr/7360?format=json"
+        },
+        {
+            "congress": 117,
+            "latestAction": {
+                "actionDate": "2022-04-01",
+                "text": "Referred to the Committee on Ways and Means, and in addition to the Committee on the Judiciary, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+            },
+            "number": "7366",
+            "originChamber": "House",
+            "originChamberCode": "H",
+            "title": "",
+            "type": "HR",
+            "updateDate": "2022-04-03",
+            "url": "http://api1.test.congress.gov/v3/bill/117/hr/7366?format=json"
+        },
+        {
+            "congress": 117,
+            "latestAction": {
+                "actionDate": "2022-04-01",
+                "text": "Referred to the House Committee on Energy and Commerce."
+            },
+            "number": "7358",
+            "originChamber": "House",
+            "originChamberCode": "H",
+            "title": "",
+            "type": "HR",
+            "updateDate": "2022-04-03",
+            "url": "http://api1.test.congress.gov/v3/bill/117/hr/7358?format=json"
+        },
+        {
+            "congress": 117,
+            "latestAction": {
+                "actionDate": "2022-04-01",
+                "text": "Referred to the House Committee on Foreign Affairs."
+            },
+            "number": "7372",
+            "originChamber": "House",
+            "originChamberCode": "H",
+            "title": "",
+            "type": "HR",
+            "updateDate": "2022-04-03",
+            "url": "http://api1.test.congress.gov/v3/bill/117/hr/7372?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 386408,
+        "next": "http://api1.test.congress.gov/v3/bill?offset=20&limit=20&format=json",
+        "total": 386408
+    },
+    "request": {
+        "contentType": "application/json",
+        "format": "json"
+    }
+}
