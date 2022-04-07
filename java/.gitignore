@@ -100,3 +100,8 @@ modules.xml
 
 # Sonarlint plugin
 .idea/sonarlint
+/src/META-INF/MANIFEST.MF
+/.idea/description.html
+/.idea/project-template.xml
+/.idea/vcs.xml
+/.idea/artifacts/LOC_Java_api_client_jar.xml
