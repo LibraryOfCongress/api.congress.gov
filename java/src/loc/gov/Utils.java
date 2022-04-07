@@ -18,7 +18,7 @@ public class Utils {
      */
     public static void makeRequest(String url) {
 
-        System.out.println("Making call to " + url);
+        printMessage("Making call to " + url);
 
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
@@ -30,22 +30,45 @@ public class Utils {
             response = client.send(request,
                     HttpResponse.BodyHandlers.ofString());
         } catch (IOException | InterruptedException ex) {
-            System.out.println(ex.getMessage());
-            System.exit(1);
-
+            printMessage(ex.getMessage());
         }
-        System.out.println(response.body());
+
+        printMessage(response.body());
     }
 
     /**
      *
      * appendParameters
      *
-     * @param url The URL to append the authkey and format parameters to
+     * @param url The URL to append the authkey and format URL parameters to
      *
      * @return String
      */
     private static String appendParameters(String url) {
         return url + "?authkey=" + Config.getAuthKey() + "&format=" + Config.getResponseFormat();
+    }
+
+    /**
+     * printMessage
+     *
+     * Display a message on the console
+     *
+     * @param message
+     */
+    public static void printMessage(String message) {
+        System.out.println(message);
+
+    }
+
+    /**
+     * printMessageAndBail
+     *
+     * Display a message on the console and exit
+     *
+     * @param message
+     */
+    public static void printMessageAndBail(String message) {
+        printMessage(message);
+        System.exit(1);
     }
 }
