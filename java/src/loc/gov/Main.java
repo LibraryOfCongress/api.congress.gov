@@ -1,17 +1,16 @@
 package loc.gov;
 
-import java.io.IOException;
-
 public class Main {
 
     /**
+     * Main
      *
-     * @param args
+     * The main entry point
      *
-     * @throws IOException
-     * @throws InterruptedException
+     * @param args The command line arguments
+     *
      */
-    public static void main(String[] args) throws IOException, InterruptedException {
-        Bill.run_bill_methods();
+    public static void main(String[] args) {
+        Bill.runBillMethods();
     }
 }
