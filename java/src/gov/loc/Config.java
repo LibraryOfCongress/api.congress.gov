@@ -7,7 +7,7 @@ import java.util.Properties;
 
 public class Config {
 
-    private static final String CONFIG_FILENAME = "loc.cfg";                 // The name of the config file
+    private static final String CONFIG_FILENAME  = "loc.cfg";                // The name of the config file
     
     private static final String AUTH_KEY         = "CONFIG.AUTH_KEY";        // API Auth key
     private static final String RESPONSE_FORMAT  = "CONFIG.RESPONSE_FORMAT"; // xml | json
@@ -16,13 +16,12 @@ public class Config {
 
     private static final String ROOT_URL         = "CONFIG.ROOT_URL";        // http://api1.test.congress.gov/v3
 
-    private static final String BILL_CHAMBER    = "BILL.CHAMBER";            // hr | s | sjres | hjres
-    private static final String BILL_NUMBER     = "BILL.NUMBER";             // 21
-    private static final String BILL_URL        = "BILL.URL";                // bill
-    private static final String BILL_CONGRESS   = "BILL.CONGRESS";           // 117
+    private static final String BILL_CHAMBER     = "BILL.CHAMBER";           // hr | s | sjres | hjres
+    private static final String BILL_NUMBER      = "BILL.NUMBER";            // 21
+    private static final String BILL_URL         = "BILL.URL";               // bill
+    private static final String BILL_CONGRESS    = "BILL.CONGRESS";          // 117
 
     /**
-     *
      * getProperty
      *
      * Get A Config Property
@@ -31,7 +30,7 @@ public class Config {
      *
      * @return String
      */
-    public static String getProperty(String property_name) {
+    private static String getProperty(String property_name) {
         Properties prop = new Properties();
 
         try (FileInputStream fis = new FileInputStream(CONFIG_FILENAME)) {
