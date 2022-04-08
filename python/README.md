@@ -46,7 +46,7 @@ Password:  # (Do paste it here)
 ```python
 from cdg_client import CDGClient
 
-client = CDGClient(auth_key)
+client = CDGClient(auth_key)  # response_format="xml"
 
 # use requests args and kwargs below modify the request:
 data, status_code = client.get(endpoint, *args, **kwargs)
