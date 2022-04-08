@@ -11,14 +11,14 @@ import java.net.URI;
 public class Utils {
 
     /**
-     * makeRequest
+     * makeRequestAndOutputResponseAndOutputResponse
      *
      * Make a GET request to the given URL.  The auth parameters are automatically added.
      *
      * @param url The URL of the API we are going to make a GET request to
      *
      */
-    public static void makeRequest(String url) {
+    public static void makeRequestAndOutputResponse(String url) {
 
         outputMessage("Making call to " + url);
 
@@ -41,13 +41,9 @@ public class Utils {
             outputMessageAndBail("Something went wrong, we didn't get a response from " + url);
         }
 
-        // Save the output to a file if our config says to do so
-        if (Config.getStoreResponse().equals("true")) {
-            saveOutputToNamedTextFile(response, url);
-        } else {
-            // Otherwise, print it to the screen
-            outputMessage(response.body());
-        }
+        // Output the response
+        outputHttpResponse(response, url);
+
     }
 
     /**

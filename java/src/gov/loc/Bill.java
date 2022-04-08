@@ -39,7 +39,7 @@ public class Bill {
      */
     public static void getAllBills() {
         String url = String.format("%s/%s", ROOT_URL, URL);
-        Utils.makeRequest(url);
+        Utils.makeRequestAndOutputResponse(url);
     }
 
     /**
@@ -49,7 +49,7 @@ public class Bill {
      */
     public static void getAllBillsForCongress() {
         String url = String.format("%s/%s/%s", ROOT_URL, URL, CONGRESS);
-        Utils.makeRequest(url);
+        Utils.makeRequestAndOutputResponse(url);
     }
 
     /**
@@ -60,7 +60,7 @@ public class Bill {
      */
     public static void getAllBillsForCongressionalChamber() {
         String url = String.format("%s/%s/%s/%s", ROOT_URL, URL, CONGRESS, CHAMBER);
-        Utils.makeRequest(url);
+        Utils.makeRequestAndOutputResponse(url);
     }
 
     /**
@@ -70,7 +70,7 @@ public class Bill {
      */
     public static void getABillsDetails() {
         String url = String.format("%s/%s/%s/%s/%s", ROOT_URL, URL, CONGRESS, CHAMBER, NUMBER);
-        Utils.makeRequest(url);
+        Utils.makeRequestAndOutputResponse(url);
     }
 
     /**
@@ -80,7 +80,7 @@ public class Bill {
      */
     public static void getABillsActions() {
         String url = String.format("%s/%s/%s/%s/%s/actions", ROOT_URL, URL, CONGRESS, CHAMBER, NUMBER);
-        Utils.makeRequest(url);
+        Utils.makeRequestAndOutputResponse(url);
     }
 
     /**
@@ -90,7 +90,7 @@ public class Bill {
      */
     public static void getABillsAmendments() {
         String url = String.format("%s/%s/%s/%s/%s/amendments", ROOT_URL, URL, CONGRESS, CHAMBER, NUMBER);
-        Utils.makeRequest(url);
+        Utils.makeRequestAndOutputResponse(url);
     }
 
     /**
@@ -100,7 +100,7 @@ public class Bill {
      */
     public static void getABillsCommittees() {
         String url = String.format("%s/%s/%s/%s/%s/committees", ROOT_URL, URL, CONGRESS, CHAMBER, NUMBER);
-        Utils.makeRequest(url);
+        Utils.makeRequestAndOutputResponse(url);
     }
 
     /**
@@ -110,7 +110,7 @@ public class Bill {
      */
     public static void getABillsCosponsors() {
         String url = String.format("%s/%s/%s/%s/%s/cosponsors", ROOT_URL, URL, CONGRESS, CHAMBER, NUMBER);
-        Utils.makeRequest(url);
+        Utils.makeRequestAndOutputResponse(url);
     }
 
     /**
@@ -120,7 +120,7 @@ public class Bill {
      */
     public static void getABillsRelatedBills() {
         String url = String.format("%s/%s/%s/%s/%s/relatedbills", ROOT_URL, URL, CONGRESS, CHAMBER, NUMBER);
-        Utils.makeRequest(url);
+        Utils.makeRequestAndOutputResponse(url);
     }
 
     /**
@@ -130,7 +130,7 @@ public class Bill {
      */
     public static void getABillsSubjects() {
         String url = String.format("%s/%s/%s/%s/%s/subjects", ROOT_URL, URL, CONGRESS, CHAMBER, NUMBER);
-       Utils.makeRequest(url);
+       Utils.makeRequestAndOutputResponse(url);
     }
 
     /**
@@ -140,7 +140,7 @@ public class Bill {
      */
     public static void getABillsSummaries() {
         String url = String.format("%s/%s/%s/%s/%s/summaries", ROOT_URL, URL, CONGRESS, CHAMBER, NUMBER);
-       Utils.makeRequest(url);
+       Utils.makeRequestAndOutputResponse(url);
     }
 
     /**
@@ -150,7 +150,7 @@ public class Bill {
      */
     public static void getABillsTexts() {
         String url = String.format("%s/%s/%s/%s/%s/text", ROOT_URL, URL, CONGRESS, CHAMBER, NUMBER);
-       Utils.makeRequest(url);
+       Utils.makeRequestAndOutputResponse(url);
     }
 
     /**
@@ -160,6 +160,6 @@ public class Bill {
      */
     public static void getABillsTitles() {
         String url = String.format("%s/%s/%s/%s/%s/titles", ROOT_URL, URL, CONGRESS, CHAMBER, NUMBER);
-       Utils.makeRequest(url);
+       Utils.makeRequestAndOutputResponse(url);
     }
 }
