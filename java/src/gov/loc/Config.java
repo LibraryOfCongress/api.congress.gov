@@ -24,7 +24,7 @@ public class Config {
     /**
      * getProperty
      *
-     * Get A Config Property
+     * Get a config property from the specified config file
      *
      * @param property_name The property name to retrieve from the config file.
      *
@@ -120,7 +120,7 @@ public class Config {
     }
 
     /**
-     * GetBillNumber
+     * getBillNumber
      *
      * Get the bill number
      *
@@ -131,7 +131,7 @@ public class Config {
     }
 
     /**
-     * GetBillUrl
+     * getBillUrl
      *
      * Get the url value that points the api to the bills
      *
@@ -142,7 +142,7 @@ public class Config {
     }
 
     /**
-     * GetBillCongress
+     * getBillCongress
      *
      * Get the congress id for the bill config
      *
