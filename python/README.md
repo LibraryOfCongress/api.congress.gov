@@ -7,10 +7,11 @@ and above.
 
 This example client requires the `requests` package, and optionally the `keyring`
 package.
-They may be installed with the following command:
+They may be installed with one of the the following commands:
 
 ```shell
-⏵ python3 -m pip install requests keyring
+⏵ python3 -m pip install requests keyring        # X-platform
+⏵ apt install python3-requests python3-keyring   # Debian
 
 ```
 
@@ -31,9 +32,9 @@ assuming it python is on your PATH.
 ## Typical Use of CDGClient
 
 ```python
-from cdg_client import CDGClient
+from cdg_client import CDGClient  # make it available
 
-client = CDGClient(auth_key)  # response_format="xml"
+client = CDGClient(auth_key)  # pass the key, response_format="xml" if needed
 
 # use requests args and kwargs below modify the request:
 data, status_code = client.get(endpoint, *args, **kwargs)
@@ -45,18 +46,20 @@ data, status_code = client.get(endpoint, *args, **kwargs)
 # go to town!
 ```
 
-## Command line interface ➧ `cdg_cli`
+## Examples
+
+### Command line interface ➧ `cdg_cli`
 
 `cdg_cli` is an example of:
 
-- Using the CDGClient class
-- Making simple queries at the command-line
+- Using the CDGClient class.
+- Making simple queries at the command-line.
 - How to use the "keyring" functionality of your OS.
 - Using the JSON format, data is returned as native data structures.
 
 First, you'll need to enter your API Auth key at the prompt.
 
-That is, wait for the prompt, do *not* put on the command-line proper:
+That is, wait for the prompt, do *not* put it on the command-line proper:
 
 ```sh
 ⏵ cdg_cli --prompt-key # Enter, do *not* pass API Auth key here ✗
@@ -79,4 +82,20 @@ Password:               # Do paste it here ✓
 
 ```
 ⏵  python3 bill_example.py
+ 1. bill:
+   - congress:            '117'
+   - type:                'HR'
+   - originChamber:       'House'
+   - originChamberCode:   'H'
+   - number:              '5681'
+   - url:                 'http://api1.test.congress.gov/v3/bill/117/hr/5681?format=xml'
+   - title:               'Shadow Wolves Enhancement Act'
+   - latestAction:        ''
+   - updateDate:          '2022-04-08'
+ ...
 ```
+
+<p>&nbsp;</p>
+
+---
+© 2022, Library of Congress via Congress.gov
