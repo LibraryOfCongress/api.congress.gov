@@ -206,4 +206,4 @@ if __name__ == "__main__":
         # get_bill_titles(client)
 
     except OSError as err:
-        print('err:', err)
+        print('Error:', err)

@@ -53,7 +53,8 @@ client = CDGClient(auth_key)  # response_format="xml"
 data, status_code = client.get(endpoint, *args, **kwargs)
 
 # JSON data is pre-parsed, XML will need
-root = ET.fromstring(data)
+# import xml.etree.ElementTree as ET
+# root = ET.fromstring(data)
 
 # go to town!
 ```
