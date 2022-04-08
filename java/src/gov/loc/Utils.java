@@ -33,6 +33,7 @@ public class Utils {
         try {
             response = client.send(request, HttpResponse.BodyHandlers.ofString());
         } catch (IOException | InterruptedException ex) {
+            outputMessage("Something went wrong with the call to " + url);
             outputMessageAndBail(ex.getMessage());
         }
         
