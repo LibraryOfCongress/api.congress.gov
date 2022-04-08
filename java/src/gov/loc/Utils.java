@@ -99,6 +99,9 @@ public class Utils {
 
         // Restore the default output
         System.setOut(console);
+
+        // Let us know what file was created
+        outputMessage("Output saved to " + filename);
     }
 
     /**
