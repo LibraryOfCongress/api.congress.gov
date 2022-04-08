@@ -23,7 +23,8 @@ though they work after the python command as well:
 ⏵ chmod a+x cdg_cli bill_example.py
 ```
 
-Windows folks will probably need to type `python` before the script.
+Windows folks will probably need to type `python` before the script,
+assuming it is in your PATH.
 
 
 ## Command line interface
