@@ -24,8 +24,7 @@ to your application.  In absence of such system, other reasonable choices are:
 
 - Put the key into a separate configuration file in an external folder with
   tight access permissions, i.e. only readable by the application's user
-  account.<br><br>
-  This avoids the likelyhood of it being recorded in version control.
+  account.  This avoids the likelyhood of it being recorded in version control.
 
 - For manually run programs, use the "keyring" functionality of your
   Operating System to store the secret (see Python example).
