@@ -1,4 +1,6 @@
-package gov.loc;
+package sample;
+
+import gov.loc.Utils;
 
 public class Main {
 

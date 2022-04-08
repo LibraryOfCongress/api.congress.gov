@@ -1,4 +1,7 @@
-package gov.loc;
+package sample;
+
+import gov.loc.CDGClient;
+import gov.loc.Config;
 
 public class Bill {
 
