@@ -68,6 +68,33 @@ Password:               # Do paste it here ✓
 
   INFO     API Key was saved.
 
+# Now you can run it
+
+⏵ cdg_cli bill/117/hr/21/committees
+  INFO     __main__/main:111 HTTP Status: 200
+  INFO     __main__/main:112 API Returned:
+{'committees': [{'activities': [{'date': '2021-01-07T01:26:34Z',
+                                 'name': 'Referred to'}],
+                 'chamber': 'Senate',
+                 'name': 'Homeland Security and Governmental Affairs Committee',
+                 'subcommittees': [],
+                 'systemCode': 'ssga00',
+                 'type': 'Standing',
+                 'url': 'http://api1.test.congress.gov/v3/committee/senate/ssga00?format=json'},
+                {'activities': [{'date': '2021-01-04T15:11:25Z',
+                                 'name': 'Referred to'}],
+                 'chamber': 'House',
+                 'name': 'Oversight and Reform Committee',
+                 'subcommittees': [],
+                 'systemCode': 'hsgo00',
+                 'type': 'Standing',
+                 'url': 'http://api1.test.congress.gov/v3/committee/house/hsgo00?format=json'}],
+ 'request': {'billNumber': '21',
+             'billType': 'hr',
+             'billUrl': 'http://api1.test.congress.gov/v3/bill/117/hr/21?format=json',
+             'congress': '117',
+             'contentType': 'application/json',
+             'format': 'json'}}
 ```
 
 ### Examples of how to talk to various endpoints:
