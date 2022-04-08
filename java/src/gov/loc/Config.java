@@ -44,7 +44,11 @@ public class Config {
         String p = prop.getProperty(property_name);
         if (p == null) {
             Utils.outputMessageAndBail("Unable to find property " + property_name);
-        } else if (p.equals("")) {
+        }
+        
+        p = p.replaceAll("\\s+", ""); // no config values should have whitespaces
+
+        if (p.equals("")) {
             Utils.outputMessageAndBail("Check your config file, " + property_name + " was not set");
         }
 
