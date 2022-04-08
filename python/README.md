@@ -51,6 +51,9 @@ client = CDGClient(auth_key)
 # use requests args and kwargs below modify the request:
 data, status_code = client.get(endpoint, *args, **kwargs)
 
+# JSON data is pre-parsed, XML will need
+root = ET.fromstring(data)
+
 # go to town!
 ```
 
