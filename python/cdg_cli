@@ -93,7 +93,7 @@ def setup():
 
 def main(args):
     """ Let's get started. """
-    from pprint import pformat
+    from pprint import pformat  # defer imports in favoer of startup speed
     from keyring import get_password
     from cdg_client import CDGClient
 
@@ -105,7 +105,7 @@ def main(args):
 
         #
         # Code goes code here:
-        # below is an example:
+        # below is a simple example:
         #
         result,  status_code = client.get(args.endpoint)
         log.info('HTTP Status: %s', status_code)

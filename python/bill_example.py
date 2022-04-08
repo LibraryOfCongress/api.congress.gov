@@ -2,14 +2,13 @@
 """
     CDG Examples
 
-    Below are some examples of using the Bill endpoint.
+    Below are some examples of using the Bill endpoint with XML parsing.
 
     @copyright: 2022, Library of Congress
     @license: CC0 1.0
 """
 import xml.etree.ElementTree as ET
-
-# from lxml import etree as ET  # lxml is faster
+# from lxml import etree as ET  # lxml is faster, but an extra download.
 
 from cdg_client import CDGClient
 
@@ -18,19 +17,19 @@ BILL_HR = "hr"
 BILL_NUM = 21
 BILL_PATH = "bill"
 CONGRESS = 117
-parse_xml = lambda data: ET.fromstring(data)  # bytes, more accurately
+parse_xml = lambda data: ET.fromstring(data)  # from bytes, more accurately
 
 
 def print_items(items):
     """Print the items found."""
-    for i, bill in enumerate(items):
+    for i, item in enumerate(items):
 
-        print(f"{i + 1:2}. {bill.tag}:")
-        for field in bill:
+        print(f"{i + 1:2}. {item.tag}:")
+        for field in item:
             if field.text:
                 print(f"   - {field.tag + ':':20} {field.text.strip()!r}")
 
-    # print(root.xpath("count(.//bills/bill)"), 'bills') # lxml
+    # print(root.xpath("count(.//bills/bill)"), 'bills') # lxml implements count()
 
 
 def get_bill(client):
@@ -63,7 +62,6 @@ def get_bill_list_type(client):
     Bill list by Type
     """
     endpoint = f"{BILL_PATH}/{CONGRESS}/{BILL_HR}/"
-    client.get(endpoint)
     data, _ = client.get(endpoint)
     root = parse_xml(data)
 
@@ -77,7 +75,10 @@ def get_bill_detail(client):
     Bill Details
     """
     endpoint = f"{BILL_PATH}/{CONGRESS}/{BILL_HR}/{BILL_NUM}"
-    client.get(endpoint)
+    data, _ = client.get(endpoint)
+    root = parse_xml(data)
+
+    print_items(root.findall(".//bill"))
 
 
 def get_bill_action(client):
@@ -87,7 +88,10 @@ def get_bill_action(client):
     Bill Action
     """
     endpoint = f"{BILL_PATH}/{CONGRESS}/{BILL_HR}/{BILL_NUM}/actions"
-    client.get(endpoint)
+    data, _ = client.get(endpoint)
+    root = parse_xml(data)
+
+    print_items(root.findall(".//actions/item"))  # https://professionalsuperhero.com/
 
 
 def get_bill_amendments(client):
@@ -176,9 +180,9 @@ if __name__ == "__main__":
         python bill.py <optional api version v3/v4>
         Example - python bill.py v3 or python bill.py
     """
-    # This demostrates how to store your key in a config file that should be out of
-    # the source code repo and in a secure location only readable by the user of
-    # your application:
+    # This section demostrates how to store your key in a config file that should be
+    # out of the source code repo and in a secure location only readable by the user
+    # of your application:
     from configparser import ConfigParser
 
     config = ConfigParser()
@@ -189,13 +193,19 @@ if __name__ == "__main__":
     client = CDGClient(auth_key, response_format="xml")
 
     print(f"Contacting Congres.gov, at {client.base_url} ...")
+    pause = lambda: input('\nPress Enter to continue…')
+
     try:
 
-        # get_bill(client)
-        # get_bill_congress(client)
+        get_bill(client)
+        pause()
+        get_bill_congress(client)
+        pause()
         get_bill_list_type(client)
-        # get_bill_detail(client)
-        # get_bill_action(client)
+        pause()
+        get_bill_detail(client)
+        pause()
+        get_bill_action(client)
         # get_bill_amendments(client)
         # get_bill_committee(client)
         # get_bill_cosponsors(client)

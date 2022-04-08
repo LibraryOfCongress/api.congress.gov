@@ -2,7 +2,8 @@
 
 ## Requirements
 
-This client with tested with Python 3.8 so should work with that version and above.
+This client with developed and tested with Python 3.8 so should work with that version
+and above.
 
 This example client requires the `requests` package, and optionally the `keyring`
 package.
@@ -14,35 +15,20 @@ They may be installed with the following command:
 ```
 
 `lxml` might be useful as well, if you expect to be using and parsing a lot of XML.
-JSON is the default data serializtion format.
+JSON is the default data serialization format.
 
 On Unix, you may want to directly run the example scripts as executable files,
-though they work after the python command as well:
+though they work after the `python` command as well:
 
 ```
 ⏵ chmod a+x cdg_cli bill_example.py
 ```
 
-Windows folks will probably need to type `python` before the script,
-assuming it is in your PATH.
+Windows folks will probably need to type `python` before any scripts,
+assuming it python is on your PATH.
 
 
-## Command line interface
-
-First enter your API Auth key at the prompt.
-
-Wait for the prompt, do *not* put on the command-line proper:
-
-```sh
-⏵ cdg_cli --prompt-key # ENTER, do *not* pass API Auth key here
-
-Password:  # (Do paste it here)
-
-  INFO     API Key was saved.
-
-```
-
-## Typical Use
+## Typical Use of CDGClient
 
 ```python
 from cdg_client import CDGClient
@@ -59,7 +45,37 @@ data, status_code = client.get(endpoint, *args, **kwargs)
 # go to town!
 ```
 
+## Command line interface ➧ `cdg_cli`
+
+`cdg_cli` is an example of:
+
+- Using the CDGClient class
+- Making simple queries at the command-line
+- How to use the "keyring" functionality of your OS.
+- Using the JSON format, data is returned as native data structures.
+
+First, you'll need to enter your API Auth key at the prompt.
+
+That is, wait for the prompt, do *not* put on the command-line proper:
+
+```sh
+⏵ cdg_cli --prompt-key # Enter, do *not* pass API Auth key here ✗
+
+Password:               # Do paste it here ✓
+
+  INFO     API Key was saved.
+
+```
+
 ### Examples of how to talk to various endpoints:
+
+`bill_example` is an example of:
+
+- Using the CDGClient class
+- How the endpoints are structured.
+- Using an external "secrets" config file.
+- Using the XML format.
+
 
 ```
 ⏵  python3 bill_example.py

@@ -45,9 +45,9 @@ class CDGClient:
         self.base_url = urljoin(ROOT_URL, api_version) + "/"
         self._session = requests.Session()
 
-        # do not use url parameters, but unfortunately need to for now :-/
-        self._session.params = {"authkey": auth_key, "format": response_format}
-        #~ self._session.headers.update({"authkey": auth_key, "format": response_format})
+        # do not use url parameters, even if offered, use headers
+        self._session.params = {"format": response_format}
+        self._session.headers.update({"x-api-key": auth_key})
 
         if raise_on_error:
             self._session.hooks = {
