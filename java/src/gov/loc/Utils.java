@@ -47,6 +47,24 @@ public class Utils {
     }
 
     /**
+     * outputHttpResponse
+     *
+     * Output the response to the appropriate location
+     *
+     * @param response the HttpResponse
+     * @param url the URL called
+     */
+    private static void outputHttpResponse(HttpResponse<String> response, String url) {
+        // Save the output to a file if our config says to do so
+        if (Config.getStoreResponse().equals("true")) {
+            saveOutputToNamedTextFile(response, url);
+        } else {
+            // Otherwise, print it to the screen
+            outputMessage(response.body());
+        }
+    }
+
+    /**
      * saveOutput
      * 
      * Save the output of the call to url in a text file named for the route.
