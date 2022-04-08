@@ -3,24 +3,38 @@
 ### Set Up
 
 Create a folder structure:
-- some_folder/gov/loc
 
-Copy loc.cfg from the root of the repo to the root of
-- some_folder
+```shell
+mkdir -p some_folder/gov/loc
+```
+
+Copy loc.cfg from the root of the repo to the root of 
+
+```shell
+cp loc.cfg some_folder
+```
 
 Edit the loc.cfg and make sure the CONFIG.AUTH_KEY is set
 
 ### Compiling:
 
 Compile java source files in src/gov/loc with: 
-- javac *.java
+
+```shell
+javac *.java
+```
 
 Move all .class files to
-- some_folder/gov/loc
+```shell
+mv *.class some_folder/gov/loc
+```
 
 ### Usage:
 From 'some_folder' run app with the 'help' parameter to view the available options
-- java -classpath ./ gov.loc.Main help
+
+```shell
+java -classpath ./ gov.loc.Main help
+```
 
 <p>&nbsp;</p>
 
