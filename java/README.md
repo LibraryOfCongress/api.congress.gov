@@ -25,7 +25,7 @@ Compile java source files in src/gov/loc with:
 javac *.java
 ```
 
-Move all .class files to
+Move all .class files to the loc folder
 ```shell
 mv *.class some_folder/gov/loc
 ```
@@ -35,6 +35,19 @@ From 'some_folder' run app with the 'help' parameter to view the available optio
 
 ```shell
 java -classpath ./ gov.loc.Main help
+```
+
+```java
+import gov.loc.CDGClient;
+
+public class TestCDG {
+
+    public static void main(String[] args) {
+        String url = "the api url endpoint";
+        String response = CDGClient.makeRequestGetResponse(url).body();
+        System.out.println(response);
+    }
+}
 ```
 
 <p>&nbsp;</p>
