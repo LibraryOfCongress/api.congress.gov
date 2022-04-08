@@ -90,11 +90,12 @@ public class CDGClient {
 
         // Save the output to a file if our config says to do so
         if (Config.getStoreResponse().equals("true")) {
+
             // Turns http://api1.test.congress.gov/v3/bill/117/hr/21/titles into bill_117_hr_21_titles.txt
             String filename = url.replace(Config.getRootUrl() + "/", "").replace("/", "_") + ".txt";
 
-            // Store our default output
-            PrintStream console = System.out;
+            // Store our default out
+            PrintStream defaultOut = System.out;
 
             // Set up our file output
             PrintStream fileOut = null;
@@ -109,17 +110,20 @@ public class CDGClient {
                 Utils.outputMessageAndBail("Something went wrong creating the output file " + filename);
             }
 
+            // Set the output to fileOut
             System.setOut(fileOut);
 
+            // Output the message to the current System.out
             Utils.outputMessage(response.body());
 
-            // Restore the default output
-            System.setOut(console);
+            // Restore the default out
+            System.setOut(defaultOut);
 
-            // Let us know what file was created
+            // Output what file was created
             Utils.outputMessage("Output saved to " + filename);
         } else {
-            // Otherwise, print it to the screen
+
+            // Otherwise, print it to the screen (default System.out)
             System.out.println(response.body());
         }
     }
