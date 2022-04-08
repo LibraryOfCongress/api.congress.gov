@@ -13,7 +13,7 @@ public class Bill {
     private static final String ROOT_URL = Config.getRootUrl();
 
     /**
-     * runBillMethods
+     * runAllBillMethods
      * 
      * Runs all the bill endpoints against the API
      *
@@ -133,7 +133,7 @@ public class Bill {
      */
     public static void getABillsSubjects() {
         String url = String.format("%s/%s/%s/%s/%s/subjects", ROOT_URL, URL, CONGRESS, CHAMBER, NUMBER);
-       CDGClient.makeRequestAndOutputResponse(url);
+        CDGClient.makeRequestAndOutputResponse(url);
     }
 
     /**
@@ -143,7 +143,7 @@ public class Bill {
      */
     public static void getABillsSummaries() {
         String url = String.format("%s/%s/%s/%s/%s/summaries", ROOT_URL, URL, CONGRESS, CHAMBER, NUMBER);
-       CDGClient.makeRequestAndOutputResponse(url);
+        CDGClient.makeRequestAndOutputResponse(url);
     }
 
     /**
@@ -153,7 +153,7 @@ public class Bill {
      */
     public static void getABillsTexts() {
         String url = String.format("%s/%s/%s/%s/%s/text", ROOT_URL, URL, CONGRESS, CHAMBER, NUMBER);
-       CDGClient.makeRequestAndOutputResponse(url);
+        CDGClient.makeRequestAndOutputResponse(url);
     }
 
     /**
@@ -163,6 +163,6 @@ public class Bill {
      */
     public static void getABillsTitles() {
         String url = String.format("%s/%s/%s/%s/%s/titles", ROOT_URL, URL, CONGRESS, CHAMBER, NUMBER);
-       CDGClient.makeRequestAndOutputResponse(url);
+        CDGClient.makeRequestAndOutputResponse(url);
     }
 }

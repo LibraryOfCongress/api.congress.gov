@@ -1,5 +1,14 @@
 # Congress Dot Gov - Example Java Client
 
+### Compiling:
+
+Compile java source files in src:
+
+```shell
+javac src/gov/loc/*.java src/sample/*.java
+```
+
+---
 ### Set Up
 
 Create a folder structure:
@@ -14,26 +23,17 @@ Copy loc.cfg from the root of the repo to the root of the 'output' folder
 cp loc.cfg output
 ```
 
-- Edit the loc.cfg and make sure the CONFIG.AUTH_KEY is set
+- Edit loc.cfg and make sure the CONFIG.AUTH_KEY value is set
 - Adjust the response format to your preferred format (xml | json), default is json
 
----
-### Compiling:
-
-Compile java source files in src: 
-
-```shell
-javac src/gov/loc/*.java /src/sample/*.java
-```
-
-Move all .class files to the loc folder
+Move all .class files to the correct folders
 ```shell
 mv src/gov/loc/*.class output/gov/loc && mv src/sample/*.class output/class
 ```
 
 ---
 ### Usage:
-From the 'output' folder run app with the 'help' parameter to view the available options
+From the root of the 'output' folder run app with the 'help' parameter to view the available options
 
 ```shell
 java sample.Main help
