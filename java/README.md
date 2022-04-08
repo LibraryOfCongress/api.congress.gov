@@ -14,7 +14,8 @@ Copy loc.cfg from the root of the repo to the root of
 cp loc.cfg some_folder
 ```
 
-Edit the loc.cfg and make sure the CONFIG.AUTH_KEY is set
+- Edit the loc.cfg and make sure the CONFIG.AUTH_KEY is set
+- Adjust the response format to your preferred format (xml | json), default is json
 
 ### Compiling:
 
