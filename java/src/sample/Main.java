@@ -79,9 +79,9 @@ public class Main {
                     Utils.outputMessage("Run with the 'help' option to list the available options.");
                 }
             }
-        }
-        else
+        } else {
             help();
+        }
     }
 
     /**
