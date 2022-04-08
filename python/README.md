@@ -26,7 +26,7 @@ though they work after the `python` command as well:
 ```
 
 Windows folks will probably need to type `python` before any scripts,
-assuming it python is on your PATH.
+assuming python is on your PATH.
 
 
 ## Typical Use of CDGClient
