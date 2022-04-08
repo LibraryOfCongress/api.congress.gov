@@ -48,6 +48,9 @@ data, status_code = client.get(endpoint, *args, **kwargs)
 
 ## Examples
 
+Below are a few fleshed out examples.
+
+
 ### Command line interface ➧ `cdg_cli`
 
 `cdg_cli` is an example of:
@@ -64,7 +67,7 @@ That is, wait for the prompt, do *not* put it on the command-line proper:
 ```sh
 ⏵ cdg_cli --prompt-key # Enter, do *not* pass API Auth key here ✗
 
-Password:               # Do paste it here ✓
+Auth Key:               # Do paste it here ✓
 
   INFO     API Key was saved.
 
@@ -97,7 +100,9 @@ Password:               # Do paste it here ✓
              'format': 'json'}}
 ```
 
-### Examples of how to talk to various endpoints:
+<p>&nbsp;</p>
+
+### How to talk to various endpoints:
 
 `bill_example` is an example of:
 

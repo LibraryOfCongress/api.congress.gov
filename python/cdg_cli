@@ -77,10 +77,10 @@ def setup():
         auth_key = getpass('Auth Key: ')
         if auth_key:
             keyring.set_password(CDG_SYSTEM_NAME, CDG_USER, auth_key)
-            log.info('API Key was saved.')
+            log.info('API Auth Key was saved.')
             sys.exit(os.EX_OK)
         else:
-            log.warning('API Key may not be empty, aborting.')
+            log.warning('API Auth Key may not be empty, aborting.')
             sys.exit(os.EX_NOINPUT)
     else:
         if not keyring.get_password(CDG_SYSTEM_NAME, CDG_USER):
