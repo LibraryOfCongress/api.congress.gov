@@ -5,14 +5,13 @@
 Create a folder structure:
 
 ```shell
-mkdir -p some_folder/gov/loc
-mkdir -p some_folder/sample
+mkdir -p output/gov/loc output/sample
 ```
 
-Copy loc.cfg from the root of the repo to the root of 
+Copy loc.cfg from the root of the repo to the root of the 'output' folder
 
 ```shell
-cp loc.cfg some_folder
+cp loc.cfg output
 ```
 
 - Edit the loc.cfg and make sure the CONFIG.AUTH_KEY is set
@@ -29,17 +28,17 @@ javac src/gov/loc/*.java /src/sample/*.java
 
 Move all .class files to the loc folder
 ```shell
-mv src/gov/loc/*.class some_folder/gov/loc
-mv src/sample/*.class some_folder/class
+mv src/gov/loc/*.class output/gov/loc && mv src/sample/*.class output/class
 ```
 
 ---
 ### Usage:
-From 'some_folder' run app with the 'help' parameter to view the available options
+From the 'output' folder run app with the 'help' parameter to view the available options
 
 ```shell
-java -classpath ./ sample.Main help
-java -classpath ./ sample.Main bill
+java sample.Main help
+
+java sample.Main bill
 ```
 
 ```java
