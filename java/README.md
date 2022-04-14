@@ -28,7 +28,7 @@ cp loc.cfg output
 
 Move all .class files to the correct folders
 ```shell
-mv src/gov/loc/*.class output/gov/loc && mv src/sample/*.class output/class
+mv src/gov/loc/*.class output/gov/loc && mv src/sample/*.class output/sample
 ```
 
 ---
