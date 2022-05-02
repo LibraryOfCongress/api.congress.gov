@@ -10,9 +10,9 @@ The purpose of this repository is to communicate with Congressional data partner
 The purposes of the Congress.gov API (v3): 
 
 - Support Congressional data partners (by protecting them from scrapers that degrade Congress.gov access) 
-- Facilitate more complete and and more accurate Congressional data
-- Provide useful, extensible resource for Congressional data partners
-- Replace Congress.gov API (v2)
+- Facilitate access to more complete and accurate Congressional data
+- Provide a useful, extensible resource for Congressional data partners
+- Replace Congress.gov API (v2), a closed API used primarily for bulk data sharing
   
 The initial Congress.gov API (v3) is implemented as a RESTful read API that is presented as a hierarchical browse API.
 
