@@ -9,13 +9,13 @@ For every request, three elements are returned:
 - The **Pagination** element contains a count of how many total data items are contained within the response, a URL containing the next page of results; and, if the offset is greater than 1, a URL containing the previous page of results.
 - The **Data** element, the name of which changes depending on the endpoint utilized (i.e. `bills` for the bill endpoint, `amendments` for the amendment endpoint, etc.). This element contains a list of all data items returned by your API call. 
 ## Key/Authentication
-An API key is required for access. Sign up for a key [here](https://api.data.gov/signup/). Email lawoutreach@loc.gov for assistance in authenticating your API key (which will be required until after the beta API is released to the public in September 2022).
+An API key is required for access. Sign up for a key [here](https://api.data.gov/signup/). Email lawoutreach@loc.gov for assistance in authenticating your API key (which will be required until the beta API is released to the public in September 2022).
 ## Versioning
 The current version of the API is version 3 (v3). Prior versions were used by the Government Publishing Office (GPO) for its [Bulk Data Repository](https://www.govinfo.gov/bulkdata), and other clients. If the API requires major changes, then Congress.gov will issue a version 4 (v4) before retiring v3 after a period of time.
 ## Support
 Congress.gov staff will monitor and respond to any [issues](https://github.com/LibraryOfCongress/api.congress.gov/issues) created in this repository, and will initiate actions, as necessary. Before creating an issue in the repository, please review existing issues and add a comment to any issues relevant to yours. 
 ## Change Management
-Congrss.gov staff will issue change management communication through the [ChangeLog](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/ChangeLog.md) so that consumers are able to adjust accordingly. The [ChangeLog](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/ChangeLog.md) will contain information on updates to the API, the impacted endpoints, and the expected production release date. 
+Congress.gov staff will issue change management communication through the [ChangeLog](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/ChangeLog.md) so that consumers are able to adjust accordingly. The [ChangeLog](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/ChangeLog.md) will contain information on updates to the API, the impacted endpoints, and the expected production release date. 
 # Endpoints
 ## bill
 ### Coverage
