@@ -75,7 +75,7 @@ Parent container for a bill or resolution. A `<bill>` may include the following 
     - `<count>` (e.g. 3)
       - The number of committees with activity associated with the bill or resolution.
     -  `<url>` (e.g. **api.data.gov/congress/v3/bill/117/hr/3076/committees**)
-       - A referrer URL to the committees level of the bill API. Click [here](/#committees-level) for more information about the committees level. 
+       - A referrer URL to the committees level of the bill API. Click [here](/ExpandedBillEndpointDocumentation.md/#committees-level) for more information about the committees level. 
 - `<committeeReports>`
   - Parent container for committee reports associated with the bill or resolution. Read more [About Committee Reports of the U.S. Congress](https://www.congress.gov/help/committee-reports) on Congress.gov. 
   - Note that the `<committeeReports>` container will be empty unless a bill or resolution has an associated committee report on Congress.gov.
