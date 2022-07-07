@@ -142,7 +142,7 @@ Parent container for a bill or resolution. A `<bill>` may include the following 
         - `<title>` (e.g. H.R. 3076, Postal Service Reform Act of 2021)
           - The title of the CBO cost estimate.
         - `<url>` (e.g. https://www.cbo.gov/publication/57356)
-          - The URL for the CBO cost estimate on https://www.cbo.gov/.
+          - The URL for the CBO cost estimate on [CBO.gov](https://www.cbo.gov/).
 - `<laws>`
   - Parent container for public or private law data for the bill or joint resolution. The `<laws>` element may include the following children:
     - `<type>` (e.g. Public Law)
@@ -192,7 +192,7 @@ Parent container for a bill or resolution. A `<bill>` may include the following 
     - `<count>` (e.g. 48)
       - The number of amendments to the bill or resolution.
     - `<url>` (e.g. **api.data.gov/congress/v3/bill/117/hr/3076/amendments**)
-      - A referrer URL to the amendments level of the bill API. Click [here](/ExpandedBillEndpointDocumentation.md/#amendments-level) for more information about the amendments level.
+      - A referrer URL to the amendments level of the bill API. 
 - `<textVersions>`
   - Parent container for text of the bill or resolution. Read more [About Legislation Text](https://www.congress.gov/help/legislation-text) on Congress.gov. 
   - The `<textVersions>` element may include the following children:
