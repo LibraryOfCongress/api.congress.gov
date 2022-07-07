@@ -1,7 +1,6 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED.
 
-## UPCOMING July 2022
-**Expected production release date:** July 5, 2022
+## COMPLETED July 2022
 ### Change #1
 **Impacted endpoint:** bill
 
