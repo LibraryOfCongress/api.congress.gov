@@ -1,13 +1,13 @@
 # Overview
 ## Introduction
-The beta Congress.gov Application Programming Interface (API) - [https://api.data.gov/congress/v3?api_key=](https://api.data.gov/congress/v3/?api_key=) - provides a method for Congress and the public to view, retrieve, and re-use machine-readable data from collections available on Congress.gov. This documentation contains information on accessing and using the beta Congress.gov API. Additionally, an overview of the data available through the beta Congress.gov API is detailed. 
+The beta Congress.gov Application Programming Interface (API) - [https://api.data.gov/congress/v3?api_key=](https://api.data.gov/congress/v3/?api_key=) - provides a method for Congress and the public to view, retrieve, and re-use machine-readable data from collections available on Congress.gov. This repository contains information on accessing and using the beta Congress.gov API, as well as documentation on available endpoints.
 
-Within the beta Congress.gov API, responses are returned in XML or JSON formats. An `api-root` element will be visible for responses returned in XML. 
+Within the beta Congress.gov API, responses are returned in XML or JSON formats. An `<api-root>` element will be visible for responses returned in XML. 
 
 For every request, three elements are returned:
-- The **Request** element contains information about the API request itself. This includes the format and the `contentType`; this is essentially the information you might expect to see in a request header.
+- The **Request** element contains information about the API request itself. This includes the format and the `<contentType>`; this is essentially the information you might expect to see in a request header.
 - The **Pagination** element contains a count of how many total data items are contained within the response, a URL containing the next page of results; and, if the offset is greater than 1, a URL containing the previous page of results.
-- The **Data** element, the name of which changes depending on the endpoint utilized (i.e. `bills` for the bill endpoint, `amendments` for the amendment endpoint, etc.). This element contains a list of all data items returned by your API call. 
+- The **Data** element, the name of which changes depending on the endpoint utilized (i.e. `<bills>` for the bill endpoint, `<amendments>` for the amendment endpoint, etc.). This element contains a list of all data items returned by your API call. 
 ## Key/Authentication
 An API key is required for access. Sign up for a key [here](https://api.data.gov/signup/). Email lawoutreach@loc.gov for assistance in authenticating your API key (which will be required until the beta API is released to the public in September 2022).
 ## Versioning
@@ -24,7 +24,7 @@ The purpose of this repository is to communicate with Congressional data partner
 - Python and Java sample client code
 - Two-way communication for Congressional data partners
 - Change management communication
-- User documentation (similar to [Bill Status XML Bulk Data user guide](https://github.com/usgpo/bill-status/blob/master/BILLSTATUS-XML_User_User-Guide.md)) with clear information about Congressional data publishing workflows 
+- User documentation with clear information about Congressional data publishing workflows (bill endpoint documentation is available [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/ExpandedBillEndpointDocumentation.md); documentation for other endpoints is in progress)
 
 The purposes of the Congress.gov API (v3): 
 
