@@ -193,14 +193,14 @@ Parent container for a bill or resolution. A `<bill>` may include the following 
     - `<count>` (e.g. 48)
       - The number of amendments to the bill or resolution.
     - `<url>` (e.g. **api.data.gov/congress/v3/bill/117/hr/3076/amendments**)
-      - A referrer URL to the amendments level of the bill API. 
+      - A referrer URL to the amendments level of the bill API. Click [here](#amendments-level) for more information about the amendments level. 
 - `<textVersions>`
   - Parent container for text of the bill or resolution. Read more [About Legislation Text](https://www.congress.gov/help/legislation-text) on Congress.gov. 
   - The `<textVersions>` element may include the following children:
     - `<count>` (e.g. 7)
       - The number of texts for the bill or resolution.
     - `<url>` (e.g. **api.data.gov/congress/v3/bill/117/hr/3076/text**)
-      - A referrer URL to the text level of the bill API. 
+      - A referrer URL to the text level of the bill API. Click [here](#text-level) for more information about the text level. 
 -  `<latestAction>` 
     - Parent container for the latest action taken by the House, Senate, or the President on the bill or resolution. The `<latestAction>` element may include the following children:
       - `<actionDate>` (e.g. 2022-04-06)
@@ -515,3 +515,59 @@ Parent container for titles associated with the bill or resolution. A title may 
         - The name of the bill text version associated with the title. This element is not populated for all titles (e.g. a display title will never have an associated bill text version). 
     - `<billTextVersionCode>` (e.g. EH)
         - The file extension code for the bill text version associated with the title. This element is not populate for all titles (e.g. a display title will never have an associated bill text version).
+
+#### Text Level
+`<api-root>`
+
+The `<api-root>` is only present in the XML format.
+
+`<textVersions>`
+
+Parent container for text versions associated with the bill or resolution. Read more about bill text at [About Legislation Text of the U.S. Congress](https://www.congress.gov/help/legislation-text). A `<textVersions>` element may include the following children:
+- `<item>`
+  - Parent container for a text version associated with the bill or resolution. An `<item>` element may include the following children:
+    - `<type>` (e.g. Introduced in House)
+      - The bill text version type.
+    - `<date>` (e.g. 2021-05-11T04:00:00Z)
+      - The date associated with the text version. This date is associated with the date of action, not the printing date.
+    - `<formats>`
+      - Parent container for formats of the text version. A `<formats>` element may include the following children: 
+        - `<item>` 
+          - Parent container for a format of the text version. An `<item>` element may include the following children:
+            - `<url>` (e.g. https://www.congress.gov/117/bills/hr3076/BILLS-117hr3076ih.xml)
+              - The URL for the text version format in Congress.gov. 
+            - `<type>` (e.g. Formatted XML)
+              -  The type of bill text version format. 
+              -  Possible values are "Formatted Text", "PDF", and "Formatted XML". Note that not all format types are available for all text versions.
+#### Amendments Level
+`<api-root>`
+
+The `<api-root>` is only present in the XML format.
+
+`<amendments>`
+
+Parent container for amendments on the bill or resolution. Read more [about amendments](https://www.congress.gov/help/legislative-glossary#glossary_amendment) on Congress.gov. A `<amendments>` element may include the following children:
+- `<amendment>`
+  - `<number>` (e.g. 173)
+    - The assigned amendment number.
+  - `<description>` (e.g. An amendment numbered 1 printed in House Report 117-243 to clarifiy the roles and responsibilities of the Office of Personnel Management, the Social Security Administration, and the Centers for Medicare & Medicaid Services regarding the information postal employees will need to enroll in Medicare Part B; specify that performance standards must be submitted to the Postal Regulatory Commission for each product; and make other technical and conforming changes to the bill.)
+    - The amendment's description. 
+    - Only House amendments will have this element populated.
+  - `<purpose>`
+    - The amendment's purpose. 
+    - House amendments and proposed Senate amendments may have this element populated.
+  - `<congress>` (e.g. 117)
+    - The congress during which the amendment was submitted or offered. 
+  - `<type>` (e.g. HAMDT)
+    - The type of amendment.
+    - Possible values are "HAMDT" and "SAMDT".
+  - `<latestAction>`
+    - Parent container for the latest action taken on amendment. The `<latestAction>` may include the following children:
+      - `<actionDate>` (e.g. 2022-02-08)
+        - The date of the latest action taken on the amendment.
+      - `<text>` (e.g. On agreeing to the Maloney, Carolyn B. amendment (A002) Agreed to by voice vote.)
+        - The text of the latest action taken on the amendment.
+      - `<actionTime>` (e.g. 15:39:53)
+        - The time of the latest action taken on the amendment. Certain actions taken by the House contain this element.
+  - `<url>` (e.g. **api.data.gov/congress/v3/amendment/117/hamdt/173**)
+    - The referrer URL to the amendment item in the API. Documentation for the amendment endpoint is in progress.
