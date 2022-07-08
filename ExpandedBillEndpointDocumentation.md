@@ -67,7 +67,7 @@ Parent container for a bill or resolution. A `<bill>` may include the following 
 - `<congress>` (e.g. 117)
   - The congress during which a bill or resolution was introduced or submitted.
   - View the [field values list of Congresses](https://www.congress.gov/help/field-values/congresses) on Congress.gov. Read more [about Congresses](https://www.congress.gov/help/legislative-glossary#glossary_congress) on Congress.gov.
-- `<constitutionalAuthorityStatementText>`
+- `<constitutionalAuthorityStatementText>` (e.g. `<![CDATA[ <pre>[Congressional Record Volume 167, Number 81 (Tuesday, May 11, 2021)][House]From the Congressional Record Online through the Government Publishing Office [<a href="https://www.gpo.gov">www.gpo.gov</a>]By Mrs. CAROLYN B. MALONEY of New York:H.R. 3076.Congress has the power to enact this legislation pursuantto the following:Article I, Section I, Clause 18 (Necessary and ProperClause)[Page H2195]</pre> ]]>`)
   - Text extracted from the Congressional Record to accompany House Bills (HR) and House Joint Resolutions (HJRES) that cites the power granted to Congress by the Constitution to enact the proposed law, as required by Clause 7 of House Rule XII. Read more about constitutional authority statements on the [House Rules Committee website](https://rules.house.gov/rules-and-resources/constitutional-authority-statements).
   - Note that the text is encased in CDATA.
 - `<committees>` 
@@ -385,6 +385,11 @@ Parent container for cosponsors of a bill or resolution. Read more [about cospon
         - Possible values are "True" and "False"
     - `<sponsorshipWithdrawnDate>`
         - The date the cosponsor withdrew their cosponsorship of the bill or resolution.
+- `<pagination>` (from **api.data.gov/congress/v3/bill/117/s/3580/cosponsors**)
+  - `<count>` (e.g. 30)
+    - The current count of cosponsors of the bill or resolution, not including any withdrawn cosponsors.
+  - `<countIncludingWithdrawnCosponsors>` (e.g. 31)
+    - The total number of cosponsors of the bill or resolution, including any withdrawn cosponsors. 
 
 #### Subjects Level
 `<api-root>`
@@ -562,7 +567,7 @@ Parent container for amendments on the bill or resolution. Read more [about amen
     - The type of amendment.
     - Possible values are "HAMDT" and "SAMDT".
   - `<latestAction>`
-    - Parent container for the latest action taken on amendment. The `<latestAction>` may include the following children:
+    - Parent container for the latest action taken on the amendment. The `<latestAction>` may include the following children:
       - `<actionDate>` (e.g. 2022-02-08)
         - The date of the latest action taken on the amendment.
       - `<text>` (e.g. On agreeing to the Maloney, Carolyn B. amendment (A002) Agreed to by voice vote.)
