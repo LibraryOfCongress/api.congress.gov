@@ -1,14 +1,18 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED.
-
-## COMPLETED July 2022
-### Change #1
-**Impacted endpoint:** bill
-
-**Changes:** A `<billTextVersionName>` (e.g. Introduced in House) and a `<billTextVersionCode>` (e.g. IH) will be added to the titles level of the bill endpoint (e.g. **api.data.gov/congress/v3/bill/117/hr/3076/titles?api_key=**). These values will be populated when a title (short or official) is associated with a bill text version. Not all titles will have these values populated (e.g. a Display Title will never have an associated bill text version).
-### Change #2
-**Impacted endpoint:** congress
-
-**Changes:** 
+# UPCOMING July 2022, Part 2
+**Expected production release date:** July 25, 2022
+## Change #1
+### Impacted endpoint: amendment
+Empty elements will be suppressed from view. 
+## Change #2 
+### Impacted endpoint: congress
+A referrer URL to a congress item (e.g. **api.data.gov/congress/v3/congress/117**) will be added to the list level (**api.data.gov/congress/v3/congress**).
+# COMPLETED July 2022, Part 1
+## Change #1
+### Impacted endpoint: bill
+A `<billTextVersionName>` (e.g. Introduced in House) and a `<billTextVersionCode>` (e.g. IH) will be added to the titles level of the bill endpoint (e.g. **api.data.gov/congress/v3/bill/117/hr/3076/titles?api_key=**). These values will be populated when a title (short or official) is associated with a bill text version. Not all titles will have these values populated (e.g. a Display Title will never have an associated bill text version).
+## Change #2
+### Impacted endpoint: congress
 1. The following elements will be removed from the congress endpoint:
     - `<timezone>` from the list and item levels. 
     - `<name>` from the list and item levels.
