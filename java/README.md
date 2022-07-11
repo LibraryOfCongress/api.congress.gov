@@ -1,6 +1,7 @@
 # Congress Dot Gov - Example Java Client
 
 ### Compiling:
+Note: compiled using openJDK v 18.0.1.1
 
 Compile java source files in src:
 
