@@ -7,6 +7,9 @@ Empty elements will be suppressed from view.
 ## Change #2 
 ### Impacted endpoint: congress
 A referrer URL to a congress item (e.g. **api.data.gov/congress/v3/congress/117**) will be added to the list level (**api.data.gov/congress/v3/congress**).
+## Change #3
+### Impacted endpoint: bill
+Empty elements will be suppressed from view. 
 # COMPLETED July 2022, Part 1
 ## Change #1
 ### Impacted endpoint: bill
