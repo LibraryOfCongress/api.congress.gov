@@ -25,6 +25,7 @@ cp loc.cfg output
 ```
 
 - Edit loc.cfg and make sure the CONFIG.AUTH_KEY value is set
+(Learn more about how to get an API key on https://api.congress.gov)
 - Adjust the response format to your preferred format (xml | json), default is json
 
 Move all .class files to the correct folders
