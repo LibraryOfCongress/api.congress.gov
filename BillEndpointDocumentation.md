@@ -79,7 +79,6 @@ Parent container for a bill or resolution. A `<bill>` may include the following 
        - A referrer URL to the committees level of the bill API. Click [here](#committees-level) for more information about the committees level. 
 - `<committeeReports>`
   - Parent container for committee reports associated with the bill or resolution. Read more [About Committee Reports of the U.S. Congress](https://www.congress.gov/help/committee-reports) on Congress.gov. 
-  - Note that the `<committeeReports>` container will be empty unless a bill or resolution has an associated committee report on Congress.gov.
   - The committeeReports element may include the following children:
     - `<committeeReport>`
       - Parent container for an individual committee report related to the bill or resolution. The `<committeeReport>` element may include the following children:
@@ -112,8 +111,7 @@ Parent container for a bill or resolution. A `<bill>` may include the following 
         - `<firstName>` (e.g. Carolyn)
           - The first name of the bill or resolution sponsor.
         - `<middleName>` (e.g. B.)
-          - The middle name of the bill or resolution sponsor.
-          - Note that this element may be empty.
+          - The middle name or initial of the bill or resolution sponsor.
         - `<lastName>` (e.g. Maloney)
           - The last name of the bill or resolution sponsor. 
         - `<party>` (e.g. D)
@@ -124,7 +122,7 @@ Parent container for a bill or resolution. A `<bill>` may include the following 
           - A referrer URL to the member item in the API. Documentation for the member endpoint is in progress.
         - `<district>` (e.g. 12)
           - The congressional district that the bill or resolution sponsor represents.
-          - Note that this element will be empty for Senate sponsors and will be "0" for states, territories, or districts where there is only one congressional district.
+          - Note that this element will be "0" for states, territories, or districts where there is only one congressional district.
 - `<cosponsors>`
   - Parent container for any cosponsors of the bill or resolution. The `<cosponsors>` element may include the following children:
     - `<countIncludingWithdrawnCosponsors>` (e.g. 31)
@@ -288,6 +286,7 @@ Parent container for related bills added by the House, Senate, and CRS. Read mor
 The `<api-root>` is only present in the XML format.
 
 `<actions>`
+
 Parent container for all actions taken on a bill or resolution. Actions may come from the House, Senate, or Library of Congress. An `<actions>` element may include the following children:
 - `<item>`
   - Parent container for an action taken on a bill or resolution. An `<item>` element may include the following children:
@@ -354,6 +353,7 @@ Parent container for all actions taken on a bill or resolution. Actions may come
 The `<api-root>` is only present in the XML format.
 
 `<cosponsors>`
+
 Parent container for cosponsors of a bill or resolution. Read more [about cosponsors](https://www.congress.gov/help/legislative-glossary#glossary_cosponsor) on Congress.gov. A `<cosponsors>` element may include the following children:
 - `<item>`
   - Parent container for a cosponsor of a bill or resolution. An `<item>` element may include the following children:
@@ -365,7 +365,7 @@ Parent container for cosponsors of a bill or resolution. Read more [about cospon
      - `<firstName>` (e.g. Gerald)
         - The first name of the bill or resolution cosponsor.
      - `<middleName>` (e.g. E.)
-        - The middle name of the bill or resolution cosponsor. 
+        - The middle name or initial of the bill or resolution cosponsor. 
      - `<lastName>` (e.g. Connolly)
         - The last name of the bill or resolution cosponsor. 
      - `<party>` (e.g. D)
@@ -377,7 +377,7 @@ Parent container for cosponsors of a bill or resolution. Read more [about cospon
         - A referrer URL to the member item in the API. Documentation for the member endpoint is in progress.
      - `<district>` (e.g. 11)
         - The congressional district that the bill or resolution sponsor represents. 
-        - Note that this element will be empty for Senate cosponsors and will be "0" for states, territories, or districts where there is only one congressional district.
+        - Note that this element will be "0" for states, territories, or districts where there is only one congressional district.
      - `<sponsorshipDate>` (e.g. 2021-05-11)
         - The date the member became a cosponsor to the bill or resolution.
      - `<isOriginalCosponsor>` (e.g. True)
@@ -397,6 +397,7 @@ Parent container for cosponsors of a bill or resolution. Read more [about cospon
 The `<api-root>` is only present in the XML format.
 
 `<subjects>`
+
 Parent container for [legislative subject terms](https://www.congress.gov/help/legislative-glossary#glossary_legislativesubjectterm) and [policy area terms](https://www.congress.gov/help/legislative-glossary#glossary_policyareaterm) attached to a bill or resolution, as assigned by CRS. Note that subject terms from the [Legislative Indexing Vocabulary](https://www.congress.gov/help/legislative-glossary#glossary_legislativeindexingvocabulary) were applied to bills and resolutions from the 93rd to the 110th Congresses (1973-2008). Read more [about subject and policy area terms](https://www.congress.gov/help/find-bills-by-subject) on Congress.gov. A `<subjects>` element may include the following children:
 - `<legislativeSubjects>`
   - Parent container for legislative subject terms attached to a bill or resolution. A `<legislativeSubjects>` element may include the following children:
