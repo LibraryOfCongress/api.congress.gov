@@ -5,7 +5,7 @@ Coverage information for bill data in the API can be found at [Coverage Dates fo
 The section below details available element names, their description, and possible values.
 
 ### List Level
-*Note that bill items at the list level can be filtered down by congress (e.g. 117) and by bill type (e.g. HR) - **api.data.gov/congress/v3/bill/117/hr?api_key**.*
+Note that bill items at the list level can be filtered down by congress (e.g. 117) and by bill type (e.g. HR) - **api.data.gov/congress/v3/bill/117/hr?api_key=**.
 
 `<api-root>`
 
