@@ -313,14 +313,14 @@ Parent container for all actions taken on a bill or resolution. Actions may come
           - Possible values are "Senate", "House committee actions", "House floor actions", and "Library of Congress".
      - `<committees>`
        - Parent container for committees associated with the action. A `<committees>` element may include the following children:
-        - `<item>`
-          - Parent container for a committee associated with the action. An `<item>` element may include the following children:
-            - `<url>`
-              - A referrer URL to the committee or subcommittee item in the API. Documentation for the committee endpoint is in progress.
-            - `<systemCode>`
-              - A code associated with the committee or subcommittee used to match items in Congress.gov with the committee or subcommittee.
-            - `<name>`
-              - The name of the committee or subcommittee associated with the action.
+          - `<item>`
+            - Parent container for a committee associated with the action. An `<item>` element may include the following children:
+              - `<url>`
+                - A referrer URL to the committee or subcommittee item in the API. Documentation for the committee endpoint is in progress.
+              - `<systemCode>`
+                - A code associated with the committee or subcommittee used to match items in Congress.gov with the committee or subcommittee.
+              - `<name>`
+                - The name of the committee or subcommittee associated with the action.
      - `<recordedVotes>`
        - Parent container for recorded (roll call) votes associated with the action. Read more [about roll call votes](https://www.congress.gov/help/legislative-glossary#glossary_rollcallvote) on Congress.gov. More information can also be found at the [Roll Call Votes by the U.S. Congress](https://www.congress.gov/roll-call-votes) and [Votes in the House and Senate](https://www.congress.gov/help/votes-in-the-house-and-senate) pages on Congress.gov. 
        - A `<recordedVotes>` element may include the following children:
