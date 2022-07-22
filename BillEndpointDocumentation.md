@@ -379,9 +379,9 @@ Parent container for cosponsors of a bill or resolution. Read more [about cospon
         - The congressional district that the bill or resolution sponsor represents. 
         - Note that this element will be "0" for states, territories, or districts where there is only one congressional district.
      - `<sponsorshipDate>` (e.g. 2021-05-11)
-        - The date the member became a cosponsor to the bill or resolution.
+        - The date the member became a cosponsor of the bill or resolution.
      - `<isOriginalCosponsor>` (e.g. True)
-        - A designation that the member is an original or additional cosponsor to the bill or resolution. If the member cosponsored the bill or resolution on the date of its introduction or submission, then this value will be "True". If the member cosponsored the bill or resolution after its date of introduction or submission, then this value will be "False". 
+        - A designation that the member is an original or additional cosponsor of the bill or resolution. If the member cosponsored the bill or resolution on the date of its introduction or submission, then this value will be "True". If the member cosponsored the bill or resolution after its date of introduction or submission, then this value will be "False". 
         - Possible values are "True" and "False"
     - `<sponsorshipWithdrawnDate>`
         - The date the cosponsor withdrew their cosponsorship of the bill or resolution.
