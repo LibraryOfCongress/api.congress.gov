@@ -1,4 +1,4 @@
-This documentation provides a brief overview of available endpoints in the Congress.gov API. Expanded bill endpoint documentation is available in this repository at [BillEndpointDocumentation](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/BillEndpointDocumentation.md). Expanded documentation on other endpoints is in progress. 
+This documentation provides a brief overview of available endpoints in the Congress.gov API. Expanded bill endpoint documentation is available in this repository at [BillEndpoint](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/BillEndpoint.md). Expanded documentation on other endpoints is in progress. 
 # Jump to
 - [bill](#bill)
 - [amendment](#amendment)
@@ -13,7 +13,7 @@ This documentation provides a brief overview of available endpoints in the Congr
 # Endpoints
 ## bill
 ### Coverage
-Coverage information for bill data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates) on Congress.gov. Projects to add more historical legislative data to Congress.gov are underway. Read more about bill data at [About Legislation of the U.S. Congress](https://www.congress.gov/help/legislation). View expanded documentation for the bill endpoint at [BillEndpointDocumentation](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/BillEndpointDocumentation.md).
+Coverage information for bill data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates) on Congress.gov. Projects to add more historical legislative data to Congress.gov are underway. Read more about bill data at [About Legislation of the U.S. Congress](https://www.congress.gov/help/legislation). View expanded documentation for the bill endpoint at [BillEndpoint](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/BillEndpoint.md).
 ### Base Request
 The base request for bill data in the API is **api.data.gov/congress/v3/bill**. The request will return 20 results by default. Basic information about each bill item will be included in the response. Included in that basic information is the congress (e.g. 117), bill type (e.g. HR), bill number (e.g. 3076), origin chamber (e.g. House), a URL to the bill item in the API (e.g. **api.data.gov/congress/v3/bill/117/hr/3076**), title (e.g. Postal Service Reform Act of 2022), latest action (e.g. Became Public Law No: 117-108.), and the bill's update date in Congress.gov (e.g. 2022-06-28T22:30:22Z). Filters can be added to the URL in order to limit results returned to bills in a single Congress (e.g. **api.data.gov/congress/v3/bill/117**) or congress and bill type (e.g. **api.data.gov/congress/v3/bill/117/hr**).
 ### Item
