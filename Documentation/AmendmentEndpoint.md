@@ -149,7 +149,7 @@ Parent container for an amendment. An `<amendment>` element may include the foll
         -	`<count>` (e.g. 507)
             -	The number of amendments to the amendment. 
         -	`<url>` (e.g. **api.data.gov/congress/v3/amendment/117/samdt/2137/amendments**)
-            -	A referrer URL to the amendment to amendments level of the amendment API. Click [here](#amendments-to-amendments-level) for more information about the amendments to amendments level.
+            -	A referrer URL to the amendment to amendments level of the amendment API. Click [here](#amendments-to-amendment-level) for more information about the amendments to amendments level.
   -	`<notes>`
       -	Parent container for notes attached to the amendment on Congress.gov. The note may contain supplemental information about the amendment that users may find helpful. Read more [about notes](https://www.congress.gov/help/legislative-glossary#glossary_notes) on Congress.gov.
       -	A  `<notes>` element may include the following children:
