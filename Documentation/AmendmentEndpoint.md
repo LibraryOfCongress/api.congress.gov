@@ -197,13 +197,13 @@ Parent container for all actions taken on an amendment. Actions may come from th
             -	View a [field values list of Library of Congress action codes](https://www.congress.gov/help/field-values/action-codes) on Congress.gov.
          - `<sourceSystem>`
             -	Parent container for the source system where the action was entered. A `<sourceSystem>` element may include the following children:
-              - `<code>` (e.g. 0)
-                  -	A code for the source system that entered the action.
-                  -	Possible values are "0", "1", "2", or "9".
-                  -	"0" is for Senate, "1" and "2" are for House, and "9" is Library of Congress.
-              - `<name>` (e.g. Senate)
-                  -	The name of the source system that entered the action.
-                  -	Possible values are "Senate", "House committee actions", "House floor actions", and "Library of Congress".
+                - `<code>` (e.g. 0)
+                    -	A code for the source system that entered the action.
+                    -	Possible values are "0", "1", "2", or "9".
+                    -	"0" is for Senate, "1" and "2" are for House, and "9" is Library of Congress.
+                - `<name>` (e.g. Senate)
+                    - The name of the source system that entered the action.
+                    - Possible values are "Senate", "House committee actions", "House floor actions", and "Library of Congress".
           - `<committees>`
             -	Parent container for committees associated with the action. A `<committees>` element may include the following children:
                 -	`<item>`
