@@ -35,7 +35,7 @@ Parent container for bills and resolutions. A `<bills>` element may include the 
   - `<title>` (e.g. Postal Service Reform Act of 2022)
     - The display title for the bill or resolution.
   - `<latestAction>`
-    - Parent container for the latest action taken on the bill or resolution. The `<latestAction>` may include the following children:
+    - Parent container for the latest action taken on the bill or resolution. A `<latestAction>` element may include the following children:
       - `<actionDate>` (e.g. 2022-04-06)
         - The date of the latest action taken on the bill or resolution.
       - `<text>` (e.g. Became Public Law No: 117-108.)
@@ -51,7 +51,7 @@ The `<api-root>` is only present in the XML format.
 
 `<bill>`
 
-Parent container for a bill or resolution. A `<bill>` may include the following children:
+Parent container for a bill or resolution. A `<bill>` element may include the following children:
 - `<number>` (e.g. 3076)
   - The assigned bill or resolution number.
 - `<updateDate>` (e.g. 2022-05-05)
@@ -72,29 +72,29 @@ Parent container for a bill or resolution. A `<bill>` may include the following 
   - Note that the text is encased in CDATA.
 - `<committees>` 
   - Parent container for committees or subcommittees with activity associated with the bill or resolution. Read more [About Committees and Committee Materials](https://www.congress.gov/help/committee-materials) on Congress.gov. 
-  - The committees element may include the following children:
+  - A `<committees>` element may include the following children:
     - `<count>` (e.g. 3)
       - The number of committees with activity associated with the bill or resolution.
     -  `<url>` (e.g. **api.data.gov/congress/v3/bill/117/hr/3076/committees**)
        - A referrer URL to the committees level of the bill API. Click [here](#committees-level) for more information about the committees level. 
 - `<committeeReports>`
   - Parent container for committee reports associated with the bill or resolution. Read more [About Committee Reports of the U.S. Congress](https://www.congress.gov/help/committee-reports) on Congress.gov. 
-  - The committeeReports element may include the following children:
+  - A `<committeeReports>` element may include the following children:
     - `<committeeReport>`
-      - Parent container for an individual committee report related to the bill or resolution. The `<committeeReport>` element may include the following children:
+      - Parent container for an individual committee report related to the bill or resolution. A `<committeeReport>` element may include the following children:
         - `<citation>` (e.g. H. Rept. 117-89,Part 1)
           - The committee report citation.
         - `<url>` (e.g. **api.data.gov/congress/v3/committeeReport/117/HRPT/89**)
           - A referrer URL to the committee report item in the API. Documentation for the committee report endpoint is in progress.
 - `<relatedBills>`
   - Parent container for related bills to the bill or resolution, as assigned by CRS, the House, and the Senate. Read [About Related Bills](https://www.congress.gov/help/related-bills) on Congress.gov. 
-  - The `<relatedBills>` element may include the following children:
+  - A `<relatedBills>` element may include the following children:
     - `<count>` (e.g. 2)
       - The number of related bills assigned to the bill or resolution.
     - `<url>` (e.g. **api.data.gov/congress/v3/bill/117/hr/3076/relatedbills**)
       - A referrer URL to the related bills level of the bill API. Click [here](#related-bills-level) for more information about the related bills level.
 - `<actions>` 
-  - Parent container for actions on the bill or resolution. The `<actions>` element may include the following children:
+  - Parent container for actions on the bill or resolution. An `<actions>` element may include the following children:
     - `<count>` (e.g. 30)
       - The number of actions on the bill or resolution. The `<count>` includes actions from the House, Senate, and Library of Congress.
     - `<url>` (e.g. **api.data.gov/congress/v3/bill/117/hr/3076/actions**)
@@ -124,7 +124,7 @@ Parent container for a bill or resolution. A `<bill>` may include the following 
           - The congressional district that the bill or resolution sponsor represents.
           - Note that this element will be "0" for states, territories, or districts where there is only one congressional district.
 - `<cosponsors>`
-  - Parent container for any cosponsors of the bill or resolution. The `<cosponsors>` element may include the following children:
+  - Parent container for any cosponsors of the bill or resolution. A `<cosponsors>` element may include the following children:
     - `<countIncludingWithdrawnCosponsors>` (e.g. 31)
       - The total number of cosponsors of the bill or resolution, including any withdrawn cosponsors.
     - `<count>` (e.g. 30)
@@ -133,9 +133,9 @@ Parent container for a bill or resolution. A `<bill>` may include the following 
       - A referrer URL to the cosponsors level of the bill API. Click [here](#cosponsors-level) for more information about the cosponsors level.
 - `<cboCostEstimates>`
   - Parent container for Congressional Budget Office (CBO) cost estimates associated with a bill or resolution. Read [about CBO](https://www.congress.gov/help/legislative-glossary#glossary_cbo) on Congress.gov.
-  - The `<cboCostEstimates>` element may include the following children:
+  - A `<cboCostEstimates>` element may include the following children:
     - `<item`
-      - Parent container for a CBO cost estimate. The `<item>` element may include the following children:
+      - Parent container for a CBO cost estimate. An `<item>` element may include the following children:
         - `<pubDate>` (e.g. 2021-07-14T17:27:00Z)
           - The date the CBO cost estimate was published.
         - `<title>` (e.g. H.R. 3076, Postal Service Reform Act of 2021)
@@ -143,7 +143,7 @@ Parent container for a bill or resolution. A `<bill>` may include the following 
         - `<url>` (e.g. https://www.cbo.gov/publication/57356)
           - The URL for the CBO cost estimate on [CBO.gov](https://www.cbo.gov/).
 - `<laws>`
-  - Parent container for public or private law data for the bill or joint resolution. The `<laws>` element may include the following children:
+  - Parent container for public or private law data for the bill or joint resolution. A `<laws>` element may include the following children:
     - `<type>` (e.g. Public Law)
       - The type of law.
       - Possible values are "Public Law" or "Private Law".
@@ -151,27 +151,27 @@ Parent container for a bill or resolution. A `<bill>` may include the following 
       - The law number, as assigned by the National Archives and Records Administration (NARA).
 -  `<notes>`
     - Parent container for notes attached to the bill or resolution on Congress.gov. The note may contain supplemental information about the bill or resolution that users may find helpful. Read more [about notes](https://www.congress.gov/help/legislative-glossary#glossary_notes) on Congress.gov. 
-    - The `<notes>` element may include the following children:
+    - A `<notes>` element may include the following children:
       - `<item>`
-        - Parent container for a note. The `<item>` element may include the following children:
+        - Parent container for a note. An `<item>` element may include the following children:
           - `<text>` (e.g. `<![CDATA[ <a href="https://rules.house.gov/sites/democrats.rules.house.gov/files/BILLS-117HR2471SA-RCP-117-35.pdf" target="_blank">The House Rules Committee Print</a>, <a href="https://docs.house.gov/floor/Default.aspx?date=2022-03-07" target="_blank">joint explanatory statements</a>, and <a href="https://www.congress.gov/congressional-report/117th-congress/house-report/269/1" target="_blank">H.Rept. 117-269</a> from the House Rules Committee are available. ]]>`)
             - The text of the note on Congress.gov (from **api.data.gov/congress/v3/117/hr/2471**)
             - Note that the text is encased in CDATA.
 - `<policyArea>`
   - Parent container for the policy area term of the bill or resolution. Every bill and resolution is assigned one policy area term out of a list of 32; view a [field values list of policy area terms](https://www.congress.gov/help/field-values/policy-area) on Congress.gov. Read more [about policy area terms](https://www.congress.gov/help/legislative-glossary#glossary_policyareaterm) on Congress.gov. 
-  - The `<policyArea>` element may include the following children:
+  - A `<policyArea>` element may include the following children:
     - `<name>` (e.g. Government Operations and Politics)
       - The policy area term assigned to the bill or resolution by CRS.
 - `<subjects>`
   - Parent container for legislative subject terms assigned to the bill or resolution by CRS. Read more about [legislative subject terms](https://www.congress.gov/help/find-bills-by-subject) on Congress.gov. 
-  - The `<subjects>` element may include the following children:
+  - A `<subjects>` element may include the following children:
     - `<count>` (e.g. 17)
       - The number of legislative subject terms assigned to the bill or resolution by CRS.
     -  `<url>` (e.g. **api.data.gov/congress/v3/bill/hr/3076/subjects**)
         - A referrer URL to the subjects level of the bill API. Click [here](#subjects-level) for more information about the subjects level.
 - `<summaries>`
   - Parent container for bill summaries, written by CRS legislative analysts, on the bill or resolution. Read more [about bill summaries](https://www.congress.gov/help/legislative-glossary#glossary_billsummary) on Congress.gov.
-  - The `<summaries>` element may include the following children:
+  - A `<summaries>` element may include the following children:
     - `<count>` (e.g. 5)
       - The number of bill summaries on the bill or resolution. 
     - `<url>` (e.g. **api.data.gov/congress/v3/bill/117/hr/3076/summaries**)
@@ -180,27 +180,27 @@ Parent container for a bill or resolution. A `<bill>` may include the following 
   - The display title for the bill or resolution on Congress.gov. This title may be a short title or an official title. 
   - Read more about [short titles](https://www.congress.gov/help/legislative-glossary#glossary_shorttitle) and [official titles](https://www.congress.gov/help/legislative-glossary#glossary_officialtitle) on Congress.gov.
 - `<titles>`
-  - Parent container for titles associated with the bill or resolution. The `<titles>` element may include the following children:
+  - Parent container for titles associated with the bill or resolution. A `<titles>` element may include the following children:
     - `<count>` (e.g. 13)
       - The number of titles associated with the bill or resolution. This number may include measure short titles, level short titles, and official titles from the House, Senate, and the Government Publishing Office (GPO).
     - `<url>` (e.g. **api.data.gov/congress/v3/bill/117/hr/3076/titles**)
       - A referrer URL to the titles level of the bill API. Click [here](#titles-level) for more information about the titles level.
 - `<amendments>`
   - Parent container for amendments to the bill or resolution. Read more [about amendments](https://www.congress.gov/help/legislative-glossary#glossary_amendment) on Congress.gov. 
-  - The `<amendments>` element may include the following children:
+  - An `<amendments>` element may include the following children:
     - `<count>` (e.g. 48)
       - The number of amendments to the bill or resolution.
     - `<url>` (e.g. **api.data.gov/congress/v3/bill/117/hr/3076/amendments**)
       - A referrer URL to the amendments level of the bill API. Click [here](#amendments-level) for more information about the amendments level. 
 - `<textVersions>`
   - Parent container for text of the bill or resolution. Read more [About Legislation Text](https://www.congress.gov/help/legislation-text) on Congress.gov. 
-  - The `<textVersions>` element may include the following children:
+  - A `<textVersions>` element may include the following children:
     - `<count>` (e.g. 7)
       - The number of texts for the bill or resolution.
     - `<url>` (e.g. **api.data.gov/congress/v3/bill/117/hr/3076/text**)
       - A referrer URL to the text level of the bill API. Click [here](#text-level) for more information about the text level. 
 -  `<latestAction>` 
-    - Parent container for the latest action taken by the House, Senate, or the President on the bill or resolution. The `<latestAction>` element may include the following children:
+    - Parent container for the latest action taken by the House, Senate, or the President on the bill or resolution. A `<latestAction>` element may include the following children:
       - `<actionDate>` (e.g. 2022-04-06)
         - The date of the latest action taken on the bill or resolution.
       - `<text>` (e.g. Became Public Law No: 117-108.)
@@ -233,7 +233,7 @@ Parent container for committees associated with the bill or resolution. A list o
       - Parent container for subcommittees associated with the bill or resolution.
     - `<activities>`
       - Parent container for committee or subcommittee activities on a bill or resolution. Read more [about committee-related activity](https://www.congress.gov/help/legislative-glossary#glossary_committeerelatedactivity) on Congress.gov. 
-      - The `<activities>` element may include the following children:
+      - An `<activities>` element may include the following children:
         - `<item>`
           - Parent container for a committee or subcommittee activity on a bill or resolution. The `<item>` element may include the following children:
             - `<name>` (e.g. Referred to)
@@ -263,7 +263,7 @@ Parent container for related bills added by the House, Senate, and CRS. Read mor
       - The type of related bill or resolution. 
       - Possible values are "HR", "S", "HJRES", "SJRES", "HCONRES", "SCONRES", "HRES", and "SRES".
     - `<latestAction>`
-      - Parent container for the latest action taken on the bill or resolution. The `<latestAction>` may include the following children:
+      - Parent container for the latest action taken on the bill or resolution. A `<latestAction>` element may include the following children:
         - `<actionDate>` (e.g. 2021-05-19)
           - The date of the latest action taken on the bill or resolution.
         - `<text>` (e.g. Read twice and referred to the Committee on Homeland Security and Governmental Affairs.)
@@ -552,7 +552,7 @@ The `<api-root>` is only present in the XML format.
 
 `<amendments>`
 
-Parent container for amendments on the bill or resolution. Read more [about amendments](https://www.congress.gov/help/legislative-glossary#glossary_amendment) on Congress.gov. A `<amendments>` element may include the following children:
+Parent container for amendments on the bill or resolution. Read more [about amendments](https://www.congress.gov/help/legislative-glossary#glossary_amendment) on Congress.gov. An `<amendments>` element may include the following children:
 - `<amendment>`
   - `<number>` (e.g. 173)
     - The assigned amendment number.
@@ -568,7 +568,7 @@ Parent container for amendments on the bill or resolution. Read more [about amen
     - The type of amendment.
     - Possible values are "HAMDT" and "SAMDT".
   - `<latestAction>`
-    - Parent container for the latest action taken on the amendment. The `<latestAction>` may include the following children:
+    - Parent container for the latest action taken on the amendment. A `<latestAction>` element may include the following children:
       - `<actionDate>` (e.g. 2022-02-08)
         - The date of the latest action taken on the amendment.
       - `<text>` (e.g. On agreeing to the Maloney, Carolyn B. amendment (A002) Agreed to by voice vote.)
