@@ -1,4 +1,21 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED.
+# UPCOMING August 2022
+**Expected production release date:** August 15th, 2022
+## Change 1
+### Impacted endpoints: all
+In the pagination, `<total>` will be removed. The `<count>` will remain.
+## Change 2
+### Impacted endpoints: amendment, congress, member, nomination, treaty, congressional-record, committee
+The `<version>` element will be removed.
+## Change 3
+### Impacted endpoint: bill
+An `<isByRequest>` element (contained within `<sponsors>` at the item level) will be added to indicate if a measure was introduced by request. This element will be populated with Y or N values. The `<isByRequest>` element will replace `<byRequestType>`.
+## Change 4
+### Impacted endpoint:committee
+An `<updateDate>` element (within each `<history>` item at the item level) will be added to indicate the update date for committee name changes. This change is in response to feedback [issue #16](https://github.com/LibraryOfCongress/api.congress.gov/issues/16). 
+## Change 5
+### Impacted endpoints: bill and amendment 
+The `<totalCount>` (within `<cosponsors>` at the item level) will be removed. This element is duplicative of `<countIncludingWithdrawnCosponsors>`, which will remain. 
 # COMPLETED July 2022, Part 2
 ## Changes #1 and #2
 ### Impacted endpoint: amendment
