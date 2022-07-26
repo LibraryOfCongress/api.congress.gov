@@ -1,16 +1,12 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED.
-# UPCOMING July 2022, Part 2
-**Expected production release date:** July 25, 2022
+# COMPLETED July 2022, Part 2
 ## Changes #1 and #2
 ### Impacted endpoint: amendment
-1. Empty elements will be suppressed from view. 
-2. 97th and 98th Congress Senate Unprinted Amendments will be available. 
+1. Empty elements are suppressed from view. 
+2. 97th and 98th Congress Senate Unprinted Amendments are available. 
 ## Change #3
-### Impacted endpoint: congress
-A referrer URL to a congress item (e.g. **api.data.gov/congress/v3/congress/117**) will be added to the list level (**api.data.gov/congress/v3/congress**).
-## Change #4
 ### Impacted endpoint: bill
-Empty elements will be suppressed from view. 
+Empty elements are suppressed from view. 
 # COMPLETED July 2022, Part 1
 ## Change #1
 ### Impacted endpoint: bill
