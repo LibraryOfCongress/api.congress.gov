@@ -69,11 +69,11 @@ Parent container for an individual member’s entry. A `<member>` element may in
     - `<imageUrl>` (e.g., [https://www.congress.gov/img/member/l000174_200.jpg](https://www.congress.gov/img/member/l000174_200.jpg))
       - The member’s current official portrait.
     - `<attribution>` (e.g., [Courtesy U.S. Senate Historical Office](http://www.senate.gov/artandhistory/history/common/generic/Photo_Collection_of_the_Senate_Historical_Office.htm))
-      - The linked source of the images. 
+      - The linked source of the image. 
 - `<terms>`
-  - Container of a member’s terms of service in chronological order. The `<terms>` element will contain the following child, which is repeatable: 
+  - Container of a member’s terms of service in chronological order. The `<terms>` element will contain the following child: 
    - `<item>` 
-     - Container for the member’s service in an individual Congress. The `<item>` element may contain the following children: 
+     - Container for the member’s service in an individual Congress. The `<item>` element is repeatable and may contain the following children: 
        - `<memberType>` (e.g., Senator)
          - The membership type.
          - Possible values are "Representative", "Resident Commissioner", "Delgate", or "Senator".
@@ -94,7 +94,7 @@ Parent container for an individual member’s entry. A `<member>` element may in
        - `<district>` (e.g., 4)
          - The Congressional district represented by the member (exclusive to the House).
 - `<identifiers>`
-  - Container for member’s identifying and contact information. The `<identifiers>` element will include the following child: 
+  - Container for member’s identifying information. The `<identifiers>` element will include the following child: 
   - `<bioguideID>` (e.g., L000174)
     - The unique ID value that originates in the [Biographical Directory of the United States Congress, 1774-Present](https://bioguide.congress.gov/).  
 - `<partyHistory>`
