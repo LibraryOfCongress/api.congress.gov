@@ -17,15 +17,15 @@ Parent container for all member entries. A `<members>` element will include the 
 - `<member>`
   - Container for an individual member’s entry.  The `<member>` element will contain the following children:
 
-	- `<bioguideID>` (e.g., L000174)
-	  - The unique ID value that originates in the Biographical Directory of the United States Congress, 1774-Present. 
+	- `<ID>` (e.g., L000174)
+	  - The unique ID value that originates in the [Biographical Directory of the United States Congress, 1774-Present](https://bioguide.congress.gov/). 
 
 	- `<state>` (e.g., Vermont)
 	  - The state represented by the member.
 
 	- `<party>`  (e.g., Democrat)
 	  - The political party of the member.
-	  - Possible values are Democrat, Independent, or Republican.
+	  - Possible values are "Democrat", "Independent", or "Republican".
 
 	- `<district>`  (e.g., 4)
 	  - The Congressional district represented by the member (exclusive to House).  
@@ -73,7 +73,7 @@ Parent container for an individual member’s entry. A `<member>` element may in
 
 - `<currentMember>` (e.g., True)  
   - Indicator of whether the member is currently serving. 
-  - Possible values are True or False.
+  - Possible values are "True" or "False".
 
 - `<birthYear>` (e.g., 1940)  
   - Member’s year of birth.
@@ -94,12 +94,12 @@ Parent container for an individual member’s entry. A `<member>` element may in
    	  - The linked source of the images. 
 		  
 - `<terms>`
-  - Parent container of a member’s terms of service in chronological order. The `<terms>` element will contain the following child, which is repeatable: 
+  - Container of a member’s terms of service in chronological order. The `<terms>` element will contain the following child, which is repeatable: 
     - `<item>` 
       - Container for the member’s service in an individual Congress. The `<item>` element may contain the following children: 
         - `<memberType>` (e.g., Senator)
           - The membership type.
-          - Possible values are Representative, Resident Commissioner, Delgate, or Senator.
+          - Possible values are "Representative", "Resident Commissioner", "Delgate", or "Senator".
  
         - `<congress>` (e.g., 94)
           - The Congress during which the member served.  
@@ -107,7 +107,7 @@ Parent container for an individual member’s entry. A `<member>` element may in
         
 		- `<chamber>` (e.g., Senate)
           - The chamber in which the member served during that Congress.
-          - Possible values are House of Representatives and Senate.
+          - Possible values are "House of Representatives" and "Senate".
 
         - `<stateCode>` (e.g., VT)
           - The two-digit postal code abbreviation for the state represented by the member. 
@@ -128,18 +128,18 @@ Parent container for an individual member’s entry. A `<member>` element may in
   - Container for member’s identifying and contact information. The `<identifiers>` element will include the following children: 
 
     - `<bioguideID>` (e.g., L000174)
-      - The unique ID value that originates in the Biographical Directory of the United States Congress, 1774-Present. 
+      - The unique ID value that originates in the [Biographical Directory of the United States Congress, 1774-Present](https://bioguide.congress.gov/).  
 
   - `<partyHistory>`
-      - Parent container for member’s party affiliation over time. The `<partyHistory>` element will contain the following children:
+      - Container for member’s party affiliation over time. The `<partyHistory>` element will contain the following children:
 
       - `<partyName>` (e.g., Democrat)
         - The political party of the member.
-        - Possible values are Democrat, Independent, or Republican.
+        - Possible values are "Democrat", "Independent", or "Republican".
 
       - `<partyCode>` (e.g., D)
         - The single-letter abbreviation for the party of the member. 
-        - Possible values are D, I, and R.
+        - Possible values are "D", "I", and "R".
 	  
       - `<startYear>` (e.g., 1975)
         - The year the member began affiliation with the political party.
@@ -180,7 +180,7 @@ Parent container for an individual member’s entry. A `<member>` element may in
     - The member’s name in last-name-first order. 
 
   - `<addressInformation>`
-    - Parent container for the member’s contact information. The `<addressInformation>` container will include the following children:
+    - Container for the member’s contact information. The `<addressInformation>` container will include the following children:
 
       - `<officeAddress>` (e.g, 437 Russell Senate Office Building Washington, DC 20510) 
         - The member’s mailing and physical office address in Washington, D.C. The `<officeAddress>` element provides the full address for Senate members and only the House office building information for House members. 
@@ -195,15 +195,15 @@ Parent container for an individual member’s entry. A `<member>` element may in
         - The postal zip code for the member’s office in Washington, D.C. 
 
       - `<officeTelephone>`
-        - Parent container for the member’s telephone contact information. The `<officeTelephone>` container will include the following child:
+        - Container for the member’s telephone contact information. The `<officeTelephone>` container will include the following child:
           - `<phoneNumber>` (e.g., (202) 224-4242)
             - The telephone number for the member’s office in Washington, D.C. 
 
   - `<leadership>`
-    - Parent container for all leadership positions the member has held during their membership/tenure of service. The `<leadership>` container will contain the following children:
+    - Container for all leadership positions the member has held during their membership/tenure of service. The `<leadership>` container will contain the following children:
 
       - `<item>`
-        - Parent container for individual leadership positions held by the member during a Congress. The `<item>` container will include the following:
+        - Container for individual leadership positions held by the member during a Congress. The `<item>` container will include the following:
 
           - `<type>` (e.g., President Pro Tempore)
             - The title of the leadership position held by the member. 
@@ -211,10 +211,10 @@ Parent container for an individual member’s entry. A `<member>` element may in
             - The Congress during which the specified leadership position was held by the member. 
           - `<current>` (e.g., False)
             - Indicator whether the leadership position is currently held by the member. NOTE: This value may change from True to False during a Congress.
-            - Possible values are True or False.
+            - Possible values are "True" or "False".
 
   - `<sponsoredLegislation>`
-    - Parent container for legislation sponsored by member. The `<sponsoredLegislation>` container will include the following:
+    - Container for legislation sponsored by member. The `<sponsoredLegislation>` container will include the following:
 
       - `<count>` (e.g., 1753)
         - The total number of measures sponsored by the member. 
@@ -223,7 +223,7 @@ Parent container for an individual member’s entry. A `<member>` element may in
         - The URL of the item level endpoint listing the measures sponsored by the member. 
 
   - `<cosponsoredLegislation>`
-    - Parent container for legislation cosponsored by member. The `<cosponsoredLegislation>` container will include the following:
+    - Container for legislation cosponsored by member. The `<cosponsoredLegislation>` container will include the following:
 
       - `<count>` (e.g., 7470)  
         - The total number of measures cosponsored by the member. 
