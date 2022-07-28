@@ -71,7 +71,7 @@ Parent container for an individual member’s entry. A `<member>` element may in
     - `<attribution>` (e.g., [Courtesy U.S. Senate Historical Office](http://www.senate.gov/artandhistory/history/common/generic/Photo_Collection_of_the_Senate_Historical_Office.htm))
       - The linked source of the image. 
 - `<terms>`
-  - Container of a member’s terms of service in chronological order. The `<terms>` element will contain the following child: 
+  - Container of a member’s terms of service in chronological order. The `<terms>` element will contain the following child, which is repeatable: 
    - `<item>` 
      - Container for the member’s service in an individual Congress. The `<item>` element is repeatable and may contain the following children: 
        - `<memberType>` (e.g., Senator)
@@ -92,7 +92,7 @@ Parent container for an individual member’s entry. A `<member>` element may in
        - `<termEndYear>` (e.g., 1977)
          - The year in which the member’s service in that Congress ended. 
        - `<district>` (e.g., 4)
-         - The Congressional district represented by the member (exclusive to the House).
+         - The Congressional district represented by the member (exclusive to the House). The value of zero indicates the state has only one member in the House.
 - `<identifiers>`
   - Container for member’s identifying information. The `<identifiers>` element will include the following child: 
   - `<bioguideID>` (e.g., L000174)
@@ -146,7 +146,7 @@ Parent container for an individual member’s entry. A `<member>` element may in
       - `<phoneNumber>` (e.g., (202) 224-4242)
         - The telephone number for the member’s office in Washington, D.C. 
 - `<leadership>`
-  - Container for all leadership positions the member has held during their membership/tenure of service. The `<leadership>` container will contain the following children:
+  - Container for all leadership positions the member has held during their membership/tenure of service. The `<leadership>` container will contain the following child, which is repeatable:
     - `<item>`
       - Container for individual leadership positions held by the member during a Congress. The `<item>` container is repeatable and will include the following children:
       - `<type>` (e.g., President Pro Tempore)
@@ -195,7 +195,7 @@ Parent container for all sponsored legislation entries. A `<sponsoredLegislation
     - `<number>` (e.g., 4417)
       - The assigned bill or resolution number.
     - `<policyArea>`
-      - Container for the policy area term of the bill or resolution. Every bill and resolution is assigned one policy area term out of a list of 32; view a [field values list of policy area terms](https://www.congress.gov/help/field-values/policy-area) on Congress.gov. Read more about [policy area terms](https://www.congress.gov/help/legislative-glossary#glossary_policyareaterm) on Congress.gov. The `<policyArea>` element may include the following child:
+      - Container for the policy area term of the bill or resolution. Every bill and resolution is assigned one policy area term; view the [field values list of policy area terms](https://www.congress.gov/help/field-values/policy-area) on Congress.gov. Read more about [policy area terms](https://www.congress.gov/help/legislative-glossary#glossary_policyareaterm) on Congress.gov. The `<policyArea>` element may include the following child:
         - `<name>` (e.g. Commerce)
           - The policy area term assigned to the bill or resolution by CRS.
     - `<latestAction>`
@@ -232,7 +232,7 @@ Parent container for all sponsored legislation entries. A `<cosponsoredLegislati
     - `<number>` (e.g., 714)
       - The assigned bill or resolution number.
     - `<policyArea>`
-      - Container for the policy area term of the bill or resolution. Every bill and resolution is assigned one policy area term out of a list of 32; view a [field values list of policy area terms](https://www.congress.gov/help/field-values/policy-area) on Congress.gov. Read more about [policy area terms](https://www.congress.gov/help/legislative-glossary#glossary_policyareaterm) on Congress.gov. The `<policyArea>` element may include the following child:
+      - Container for the policy area term of the bill or resolution. Every bill and resolution is assigned one policy area term; view the [field values list of policy area terms](https://www.congress.gov/help/field-values/policy-area) on Congress.gov. Read more about [policy area terms](https://www.congress.gov/help/legislative-glossary#glossary_policyareaterm) on Congress.gov. The `<policyArea>` element may include the following child:
         - `<name>` (e.g. Health)
           - The policy area term assigned to the bill or resolution by CRS.
     - `<latestAction>`
