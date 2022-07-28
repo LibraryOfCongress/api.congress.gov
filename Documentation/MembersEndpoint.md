@@ -36,13 +36,13 @@ Parent container for all member entries. A `<members>` element will include the 
            - The year in which the member began serving in the designated chamber.
          - `<end>` (e.g., 1990)
            - The year in which the member ceased serving in the designated chamber.
-  - `<url>`  (e.g., [https://api.data.gov/congress/v3/member/L000174?format=xml](https://api.data.gov/congress/v3/member/L000174?format=xml))
+  - `<url>`  (e.g., **https://api.data.gov/congress/v3/member/L000174?format=xml**)
       - The URL of the member’s item level endpoint in the API.
   - `<depiction>`
       -	Container for the member’s current official portrait. The `<depiction>` element may contain the following children:
-        - `<imageUrl>` (e.g., [https://www.congress.gov/img/member/l000174_200.jpg](https://www.congress.gov/img/member/l000174_200.jpg))
+        - `<imageUrl>` (e.g., **https://www.congress.gov/img/member/l000174_200.jpg**)
           - The member’s current official portrait.
-        - `<attribution>` (e.g., [Courtesy U.S. Senate Historical Office](http://www.senate.gov/artandhistory/history/common/generic/Photo_Collection_of_the_Senate_Historical_Office.htm))
+        - `<attribution>` (e.g., **<a href="http://www.senate.gov/artandhistory/history/common/generic/Photo_Collection_of_the_Senate_Historical_Office.htm">Courtesy U.S. Senate Historical Office</a>**)
           - The linked source of the image. 
 
 
@@ -66,9 +66,9 @@ Parent container for an individual member’s entry. A `<member>` element may in
   - The date of update in Congress.gov. This date has no legislative significance.
 - `<depiction>`
   - Container for the member’s current official portrait. The `<depiction>` element may contain the following children:
-    - `<imageUrl>` (e.g., [https://www.congress.gov/img/member/l000174_200.jpg](https://www.congress.gov/img/member/l000174_200.jpg))
+    - `<imageUrl>` (e.g., **https://www.congress.gov/img/member/l000174_200.jpg**)
       - The member’s current official portrait.
-    - `<attribution>` (e.g., [Courtesy U.S. Senate Historical Office](http://www.senate.gov/artandhistory/history/common/generic/Photo_Collection_of_the_Senate_Historical_Office.htm))
+    - `<attribution>` (e.g., **<a href="http://www.senate.gov/artandhistory/history/common/generic/Photo_Collection_of_the_Senate_Historical_Office.htm">Courtesy U.S. Senate Historical Office</a>**)
       - The linked source of the image. 
 - `<terms>`
   - Container of a member’s terms of service in chronological order. The `<terms>` element will contain the following child, which is repeatable: 
@@ -113,7 +113,7 @@ Parent container for an individual member’s entry. A `<member>` element may in
   - The state represented by the member.
 - `<district>`  (e.g., 4)
   - The Congressional district represented by the member (exclusive to House). 
-- `<officialWebsiteUrl>` (e.g., [https://www.leahy.senate.gov/](https://www.leahy.senate.gov/))
+- `<officialWebsiteUrl>` (e.g., **https://www.leahy.senate.gov/**)
   - The member’s official website.
 - `<honorificName>` (e.g., Mr.)  
   - The honorific title of the member.
@@ -160,13 +160,13 @@ Parent container for an individual member’s entry. A `<member>` element may in
   - Container for legislation sponsored by member. The `<sponsoredLegislation>` container will include the following children:
     - `<count>` (e.g., 1753)
       - The total number of measures sponsored by the member. 
-    - `<url>` (e.g., https://api.data.gov/congress/v3/member/L000174/sponsored-legislation)
+    - `<url>` (e.g., **https://api.data.gov/congress/v3/member/L000174/sponsored-legislation**)
       - The URL of the item level endpoint listing the measures sponsored by the member. 
 - `<cosponsoredLegislation>`
   - Container for legislation cosponsored by member. The `<cosponsoredLegislation>` container will include the following children:
     - `<count>` (e.g., 7470)  
       - The total number of measures cosponsored by the member. 
-    - `<url>` (e.g., https://api.data.gov/congress/v3/member/L000174/cosponsored-legislation) 
+    - `<url>` (e.g., **https://api.data.gov/congress/v3/member/L000174/cosponsored-legislation**) 
       - The URL of the item level endpoint listing the measures cosponsored by the member.  
 - `<updateDate>` (e.g., 2022-07-22)
   - The date of last update of the record. This date has no legislative meaning. 
@@ -204,7 +204,7 @@ Parent container for all sponsored legislation entries. A `<sponsoredLegislation
           - The date of the latest action taken on the bill or resolution.
         - `<text>` (e.g. Read twice and referred to the Committee on the Judiciary.)
           - The text of the latest action taken on the bill or resolution.
-    - `<url>` (e.g., [https://api.data.gov/congress/v3/bill/117/s/4417?format=xml](https://api.data.gov/congress/v3/bill/117/s/4417?format=xml))
+    - `<url>` (e.g., **https://api.data.gov/congress/v3/bill/117/s/4417?format=xml**)
       - A referrer URL to the bill level API for the measure.  
 
 
@@ -241,5 +241,5 @@ Parent container for all sponsored legislation entries. A `<cosponsoredLegislati
           - The date of the latest action taken on the bill or resolution.
         - `<text>` (e.g. , Referred to the Committee on Health, Education, Labor, and Pensions. (text: CR S3547-3548))
           - The text of the latest action taken on the bill or resolution.
-    - `<url>` (e.g., https://api.data.gov/congress/v3/bill/117/sres/714?format=xml)
+    - `<url>` (e.g., **https://api.data.gov/congress/v3/bill/117/sres/714?format=xml**)
       - A referrer URL to the bill level API for the measure.  
