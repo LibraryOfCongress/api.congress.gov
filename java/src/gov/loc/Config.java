@@ -14,7 +14,8 @@ public class Config {
 
     private static final String STORE_RESPONSE   = "CONFIG.STORE_RESPONSE";  // true | false
 
-    private static final String ROOT_URL         = "CONFIG.ROOT_URL";        // http://api1.test.congress.gov/v3
+    private static final String ROOT_URL         = "CONFIG.ROOT_URL";        // https://api.data.gov/congress/v3
+    private static final String OUTPUT_FOLDER    = "CONFIG.OUTPUT_FOLDER";   // output
 
     private static final String BILL_CHAMBER     = "BILL.CHAMBER";           // hr | s | sjres | hjres
     private static final String BILL_NUMBER      = "BILL.NUMBER";            // 21
@@ -91,6 +92,17 @@ public class Config {
      */
     public static String getStoreResponse() {
         return getProperty(STORE_RESPONSE);
+    }
+
+    /**
+     * getOutputFolder
+     *
+     * Get the folder to store the saved output
+     *
+     * @return String
+     */
+    public static String getOutputFolder() {
+        return getProperty(OUTPUT_FOLDER);
     }
 
     // ************************************
