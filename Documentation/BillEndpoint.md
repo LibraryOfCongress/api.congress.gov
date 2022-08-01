@@ -407,7 +407,7 @@ Parent container for [legislative subject terms](https://www.congress.gov/help/l
               - The name of the legislative subject term attached to a bill or resolution. 
 - `<policyArea>`
   - Parent container for the policy area term attached to a bill or resolution. Each bill or resolution will have only one policy area term taken from [this list of terms](https://www.congress.gov/help/field-values/policy-area) on Congress.gov. 
-  - Note that prior to the 101st Congress (1989), terms outside of the list of 32 may be used as a policy area term for a bill or resolution. Projects are underway to standardize the terms during those congresses.
+  - Note that prior to the 101st Congress (1989), terms outside of the controlled list may be used as a policy area term for a bill or resolution. Projects are underway to standardize the terms used during those congresses.
   - A `<policyArea>` element may include the following children:
       - `<name>` (e.g. Government Operations and Politics)
         - The name of the policy area term attached to a bill or resolution.
