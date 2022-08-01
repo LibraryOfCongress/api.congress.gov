@@ -15,7 +15,7 @@ java -version
 echo -e "\nIf you don't have Java installed, or your version is < openJDK 18.0, please press 'ctrl + c' to install Java or update before continuing.\n"
 read -p 'Press enter to continue or ctrl + c to abort and install or update Java'
 
-echo 'Setting up...'
+echo -e '\nSetting up...'
 mkdir -p $TARGET/gov/loc $TARGET/sample $TARGET/output
 javac $SOURCE/gov/loc/*.java $SOURCE/sample/*.java
 mv $SOURCE/gov/loc/*.class $TARGET/gov/loc && mv $SOURCE/sample/*.class $TARGET/sample
