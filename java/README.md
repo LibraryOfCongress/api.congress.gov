@@ -5,6 +5,7 @@
 - [Requirements](#requirements)
 - [API Credentials](#api-credentials)
 - [Setup](#setup)
+- [Config file](#config-file)
 - [Execution](#execution)
 - [Additional Information](#additional-information)
 - [Client arguments](#client-arguments)
@@ -35,8 +36,27 @@ Edit the loc.cfg file in the client folder and set the CONFIG.API_KEY value to y
 cd client && nano loc.cfg
 ````
 
+## Config file
+Some configurable options in the config file are
+
+| Key                      | Description                                                        | Values                                       |
+|--------------------------|--------------------------------------------------------------------|----------------------------------------------|
+| *CONFIG_API_KEY*         | The API key used to authenticate calls                             | Retrieved from https://api.data.gov          |
+| *CONFIG.RESPONSE_FORMAT* | Sets the response format returned by the API                       | xml, json                                    |
+| *CONFIG.STORE_RESPONSE*  | Store the response to a text file or not                           | true, false                                  |
+| *CONFIG.OUTPUT_FOLDER*   | The folder to store the xml or json output if storing the response | a valid folder name                          |
+| *BILL.CONGRESS*          | The numerical value of the congress to query                       | 1 - 117 (or current congress)                |
+| *BILL.CHAMBER*           | The congressional chamber                                          | hr, s, sjres, hjres                          |
+| *BILL.NUMBER*            | The bill number to query                                           | A valid bill number from https://congres.gov |
+| *BILL.URL*               | The bill url for the API to query                                  | bill                                         |
+
+
 ## Execution
-Execute the sample application using the definitions in loc.cfg.  Upon successful execution, check the contents of the client/output folder and you will see the results of the API call 
+To display the help message execute the following:
+````shell
+java sample.Main help
+````
+Execute the sample application using the sample Bill definitions in loc.cfg.  Upon successful execution, check the contents of the client/output folder and you will see the results of the API call stored in text files 
 ````shell
 java sample.Main bill
 ````
