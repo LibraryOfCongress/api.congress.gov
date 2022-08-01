@@ -75,6 +75,7 @@ public class CDGClient {
      * @return String The url with the appended api and format parameters
      */
     private static String appendParameters(String url) {
+        // See other options to set the API key here: https://api.data.gov/docs/api-key/
         return url + "?api_key=" + Config.getApiKey() + "&format=" + Config.getResponseFormat();
     }
 
