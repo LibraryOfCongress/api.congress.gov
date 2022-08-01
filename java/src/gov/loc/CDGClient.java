@@ -92,7 +92,7 @@ public class CDGClient {
         if (Config.getStoreResponse().equals("true")) {
 
             // Turns http://api1.test.congress.gov/v3/bill/117/hr/21/titles into bill_117_hr_21_titles.txt
-            String filename = url.replace(Config.getRootUrl() + "/", "").replace("/", "_") + ".txt";
+            String filename = Config.getOutputFolder() + "/" + url.replace(Config.getRootUrl() + "/", "").replace("/", "_") + ".txt";
 
             // Store our default out
             PrintStream defaultOut = System.out;
