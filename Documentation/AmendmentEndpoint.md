@@ -3,7 +3,7 @@
 Coverage information for amendment data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates) on Congress.gov. Read more [about amendments](https://www.congress.gov/help/legislative-glossary#glossary_amendment) on Congress.gov.
 ## Elements and Descriptions
 ### List Level
-Note that amendment items at the list level can be filtered down by congress and then by amendment type (e.g. **api.data.gov/congress/v3/amendment/117/SAMDT?api_key=**). 
+Note that amendment items at the list level can be filtered down by congress and then by amendment type (e.g. https://api.data.gov/congress/v3/amendment/117/SAMDT?api_key=). 
 
 `<api-root>`
 
@@ -36,7 +36,7 @@ Parent container for amendments. An `<amendments>` element may include the follo
                   -	`<actionTime>`
                       -	The time of the latest action taken on the amendment. 
                       -	Certain actions taken by the House contain this element.
-         - `<url>` (e.g. **api.data.gov/congress/v3/amendment/117/samdt/2137**)
+         - `<url>` (e.g. https://api.data.gov/congress/v3/amendment/117/samdt/2137)
              - The referrer URL to the amendment item in the API.
 ### Item Level
 `<api-root>`
@@ -87,19 +87,19 @@ Parent container for an amendment. An `<amendment>` element may include the foll
                      - The party code of the amendment's sponsor.
                 -	`<state>` (e.g. AZ)
                      - A two-letter abbreviation for the state, territory, or district represented by the amendment's sponsor.
-                -	`<url>` (e.g. **api.data.gov/congress/v3/member/S001191**)
-                     - A referrer URL to the member item in the API. Documentation for the member endpoint is in progress.
+                -	`<url>` (e.g. https://api.data.gov/congress/v3/member/S001191)
+                     - A referrer URL to the member item in the API. Documentation for the member endpoint is available [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/MemberEndpoint.md).
                 - `<district>` 
                      - The congressional district that the amendment's sponsor represents.
                      - Note that this element will be empty for Senate sponsors and will be "0" for states, territories, or districts where there is only one congressional district.
   -	`<cosponsors>`
       -	Parent container for any cosponsors of the amendment. Only Senate amendments may have this element populated.
-      -	A `<cosponsors>` element may include the following children (the below counts are taken from **api.data.gov/congress/v3/amendment/117/samdt/3892**):
+      -	A `<cosponsors>` element may include the following children (the below counts are taken from https://api.data.gov/congress/v3/amendment/117/samdt/3892):
         -	`<countIncludingWithdrawnCosponsors>` (e.g. 2)
             -	The total number of cosponsors of the amendment, including any withdrawn cosponsors.
         -	`<count>` (e.g. 1)
             -	The current number of cosponsors of the amendment, not including any withdrawn cosponsors. 
-        -	`<url>` (e.g. **api.data.gov/congress/v3/amendment/117/samdt/3892/cosponsors**)
+        -	`<url>` (e.g. https://api.data.gov/congress/v3/amendment/117/samdt/3892/cosponsors)
             -	A referrer URL to the cosponsors level of the amendment API. Click [here](#cosponsors-level) for more information about the cosponsors level.
   -	`<proposedDate>` (e.g. 2021-08-01T04:00:00Z)
       -	The date the amendment was proposed on the floor. 
@@ -123,12 +123,12 @@ Parent container for an amendment. An `<amendment>` element may include the foll
               -	Possible values are "H" and "S".
         -	`<number>` (e.g. 3684)
              - The assigned bill or resolution number.
-        -	`<url>` (e.g. **api.data.gov/congress/v3/bill/117/hr/3684**)
+        -	`<url>` (e.g. https://api.data.gov/congress/v3/bill/117/hr/3684)
             -	The referrer URL to the bill or resolution item in the API. Documentation for the bill endpoint is available [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/BillEndpoint.md).
         -	`<title>` (e.g. Infrastructure Investment and Jobs Act)
             -	The display title for the bill or resolution.
 -	`<amendedAmendment>` 
-    -	Parent container for the amendment amended by the amendment. An `<amendedAmendment>` element may include the following children (the below amendment data is taken from **api.data.gov/congress/v3/amendment/117/samdt/2564**) :
+    -	Parent container for the amendment amended by the amendment. An `<amendedAmendment>` element may include the following children (the below amendment data is taken from https://api.data.gov/congress/v3/amendment/117/samdt/2564) :
         -	`<number>` (e.g. 2137)
             -	The assigned amendment number.
         - `<description>`
@@ -142,13 +142,13 @@ Parent container for an amendment. An `<amendment>` element may include the foll
         -	`<type>` (e.g. SAMDT)
             - The type of amendment.
             - Possible values are "HAMDT" and "SAMDT".
-        -	`<url>` (e.g. **api.data.gov/congress/v3/amendment/117/samdt/2137**)
+        -	`<url>` (e.g. https://api.data.gov/congress/v3/amendment/117/samdt/2137)
             - The referrer URL to the amendment item in the API.
   -	`<amendmentsToAmendment>`
     -	Parent container for amendments to the amendment. An `<amendmentsToAmendment>` element may contain the following children:
         -	`<count>` (e.g. 507)
             -	The number of amendments to the amendment. 
-        -	`<url>` (e.g. **api.data.gov/congress/v3/amendment/117/samdt/2137/amendments**)
+        -	`<url>` (e.g. https://api.data.gov/congress/v3/amendment/117/samdt/2137/amendments)
             -	A referrer URL to the amendment to amendments level of the amendment API. Click [here](#amendments-to-amendment-level) for more information about the amendments to amendments level.
   -	`<notes>`
       -	Parent container for notes attached to the amendment on Congress.gov. The note may contain supplemental information about the amendment that users may find helpful. Read more [about notes](https://www.congress.gov/help/legislative-glossary#glossary_notes) on Congress.gov.
@@ -156,21 +156,21 @@ Parent container for an amendment. An `<amendment>` element may include the foll
         -	`<item>`
             -	Parent container for a note. An `<item>` element may include the following children:
                 -	`<text>` (e.g. `<![CDATA[ The Senate agreed to the amendment on 12/5/2016, then vitiated its adoption on 12/5/2016, then agreed to the amendment on 12/10/2016. ]]>`)
-                    -	The text of the note on Congress.gov (from **api.data.gov/congress/v3/amendment/114/samdt/5129**).
+                    -	The text of the note on Congress.gov (from https://api.data.gov/congress/v3/amendment/114/samdt/5129).
                     - Note that the text is encased in CDATA.
   -	`<amendedTreaty>`
-      -	Parent container for the treaty amended by the amendment. An `<amendedTreaty>` element may contain the following children (the below treaty data is taken from **api.data.gov/congress/v3/amendment/117/samdt/2137**):
+      -	Parent container for the treaty amended by the amendment. An `<amendedTreaty>` element may contain the following children (the below treaty data is taken from https://api.data.gov/congress/v3/amendment/117/samdt/2137):
         -	`<congress>` (e.g. 116)
             -	The congress during which a treaty was submitted. 
         -	`<treatyNumber>` (e.g. 1)
             -	The assigned treaty number.
-        -	`<url>` (e.g. **api.data.gov/congress/v3/treaty/116/1**)
+        -	`<url>` (e.g. https://api.data.gov/congress/v3/treaty/116/1)
             -	The referrer URL to the treaty item in the API. Documentation for the treaty endpoint is in progress.
   -	`<actions>`
       - Parent container for actions on the amendment. An `<actions>` element may include the following children:
           - `<count>` (e.g. 19)
               - The number of actions on the amendment. A `<count>` element may include actions from the House, Senate, and Library of Congress.
-          - `<url>` (e.g. **api.data.gov/congress/v3/amendment/117/samdt/2137/actions**)
+          - `<url>` (e.g. https://api.data.gov/congress/v3/amendment/117/samdt/2137/actions)
               - A referrer URL to the actions level of the amendment API. Click [here](#actions-level) for more information about the actions level.
 ## Actions Level
 `<api-root>`
@@ -264,7 +264,7 @@ Parent container for all amendments to the amendment. An `<amendments>` element 
                     -	Certain actions taken by the House contain this element.
                 -	`<text>` (e.g. Amendment SA 2300 agreed to in Senate by Voice Vote.)
                     - The text of the latest action taken on the amendment.
-                -	`<url>` (e.g. **api.data.gov/congress/v3/amendment/117/samdt/2300**)
+                -	`<url>` (e.g. https://api.data.gov/congress/v3/amendment/117/samdt/2300)
                     -	A referrer URL to the amendment item in the API.
 ## Cosponsors Level
 `<api-root>`
@@ -292,8 +292,8 @@ Parent container for cosponsors of an amendment. Read more [about cosponsors](ht
             -	Possible values are "D", "R", "I", "ID", and "L".
         -	`<state>` (e.g. OH)
             -	A two-letter abbreviation for the state, territory, or district represented by the amendment cosponsor.
-        -	`<url>` (e.g. **api.data.gov/congress/v3/member/P000449**)
-            -	A referrer URL to the member item in the API. Documentation for the member endpoint is in progress.
+        -	`<url>` (e.g. https://api.data.gov/congress/v3/member/P000449)
+            -	A referrer URL to the member item in the API. Documentation for the member endpoint is available [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/MemberEndpoint.md).
         -	`<sponsorshipDate>` (e.g. 2021-08-01)
             -	The date the member became a cosponsor of the amendment.
         -	`<isOriginalCosponsor>` (e.g. True)
@@ -301,7 +301,7 @@ Parent container for cosponsors of an amendment. Read more [about cosponsors](ht
              - Possible values are "True" and "False"
         -	`<sponsorshipWithdrawnDate>`
              - The date the cosponsor withdrew their cosponsorship of amendment.
-  -	`<pagination>` (from **api.data.gov/congress/v3/amendment/117/samdt/3892**)
+  -	`<pagination>` (from https://api.data.gov/congress/v3/amendment/117/samdt/3892)
       -	`<count>` (e.g. 1)
           -	The current count of cosponsors of the amendment, not including any withdrawn cosponsors.
       -	`<countIncludingWithdrawnCosponsors>` (e.g. 2)
