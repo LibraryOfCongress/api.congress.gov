@@ -1,4 +1,4 @@
-# Members endpoint
+# Member endpoint
 ## Coverage
 Coverage information for member data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates). Read more about member data at [About Congressional Member Profiles](https://www.congress.gov/help/members) on Congress.gov.
 ## Elements and Descriptions
