@@ -91,10 +91,10 @@ Parent container for an individual member’s entry. A `<member>` element may in
          - The two-digit postal code abbreviation for the state represented by the member. 
        - `<stateName>` (e.g., Vermont)
          - The name of the state represented by the member. 
-       - `<partyName>' (e.g., Democrat)
+       - `<partyName>` (e.g., Democrat)
          - The political party of the member.
          - Possible values are "Democrat", Independent, and "Republication".
-       - `<partyCode>' (e.g., D)
+       - `<partyCode>` (e.g., D)
          - The single letter abbreviation for the political party of the member.
          - Possible values are "D", "I", and "R". 
        - `<termBeginYear>` (e.g., 1975)
