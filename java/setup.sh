@@ -10,10 +10,10 @@ OUTPUT=output
 
 clear
 
-echo -e 'Your java version is\n'
+echo -e 'Your Java version is:\n'
 java -version
-echo -e "\nIf you don't have Java installed, or your version is < openJDK 18.0, please install Java or update before continuing."
-read -p 'Press enter to continue or ctrl+c to abort and install or update Java'
+echo -e "\nIf you don't have Java installed, or your version is < openJDK 18.0, please press 'ctrl + c' to install Java or update before continuing.\n"
+read -p 'Press enter to continue or ctrl + c to abort and install or update Java'
 
 echo 'Setting up...'
 mkdir -p $TARGET/gov/loc $TARGET/sample $TARGET/output
