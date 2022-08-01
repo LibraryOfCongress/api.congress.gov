@@ -15,7 +15,7 @@ public class CDGClient {
      *
      * Make a GET request to the given URL and output the response per the config
      *
-     * The auth parameters are automatically added.
+     * The authentication parameters are automatically added.
      *
      * @param url the parameterless url to call
      *
@@ -37,7 +37,7 @@ public class CDGClient {
      *
      * Make a request to the given url and return the response
      *
-     * The auth parameters are automatically added.
+     * The authentication parameters are automatically added.
      *
      * @param url the parameterless url to call
      * @return HttpResponse
@@ -70,12 +70,12 @@ public class CDGClient {
     /**
      * appendParameters
      *
-     * @param url The URL to append the authkey and format URL parameters to
+     * @param url The URL to append the api_key and format URL parameters to
      *
-     * @return String The url with the appended auth and format parameters
+     * @return String The url with the appended api and format parameters
      */
     private static String appendParameters(String url) {
-        return url + "?authkey=" + Config.getAuthKey() + "&format=" + Config.getResponseFormat();
+        return url + "?api_key=" + Config.getApiKey() + "&format=" + Config.getResponseFormat();
     }
 
     /**
