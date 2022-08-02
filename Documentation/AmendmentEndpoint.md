@@ -26,7 +26,7 @@ Parent container for amendments. An `<amendments>` element may include the follo
             -	The congress during which an amendment was submitted or offered.
         -	`<type>` (e.g. SAMDT)
             -	The type of amendment.
-            -	Possible values are "HAMDT" and "SAMDT".
+            -	Possible values are "HAMDT", "SAMDT", and "SUAMDT". Note that the "SUAMDT" type value is only available for the 97th and 98th Congresses.
         - `<latestAction>`
             -  Parent container for the latest action taken on the amendment. A `<latestAction>` element may include the following children:
                   - `<actionDate>` (e.g. 2021-08-08)
@@ -58,7 +58,7 @@ Parent container for an amendment. An `<amendment>` element may include the foll
     -	The congress during which an amendment was submitted or offered.
   -	`<type>` (e.g. SAMDT)
     -	The type of amendment.
-    -	Possible values are "HAMDT" and "SAMDT".
+    -	Possible values are "HAMDT", "SAMDT", and "SUAMDT". Note that the "SUAMDT" type value is only available for the 97th and 98th Congresses.
   -	`<latestAction>`
     -	Parent container for the latest action taken on the amendment. A `<latestAction>` element may include the following children:
         - `<actionDate>` (e.g. 2021-08-08)
@@ -141,7 +141,7 @@ Parent container for an amendment. An `<amendment>` element may include the foll
             - The congress during which an amendment was submitted or offered.
         -	`<type>` (e.g. SAMDT)
             - The type of amendment.
-            - Possible values are "HAMDT" and "SAMDT".
+            - Possible values are "HAMDT", "SAMDT", and "SUAMDT". Note that the "SUAMDT" type value is only available for the 97th and 98th Congresses.
         -	`<url>` (e.g. https://api.data.gov/congress/v3/amendment/117/samdt/2137)
             - The referrer URL to the amendment item in the API.
   -	`<amendmentsToAmendment>`
@@ -254,7 +254,7 @@ Parent container for all amendments to the amendment. An `<amendments>` element 
             -	The congress during which an amendment was submitted or offered.
         -	`<type>` (e.g. SAMDT)
             -	The type of amendment.
-            -	Possible values are "HAMDT" and "SAMDT".
+            -	Possible values are "HAMDT", "SAMDT", and "SUAMDT". Note that the "SUAMDT" type value is only available for the 97th and 98th Congresses.
         -	`<latestAction>`
             -	Parent container for the latest action taken on the amendment. A `<latestAction>` element may include the following children:
                 -	`<actionDate>` (e.g. 2021-08-03)
