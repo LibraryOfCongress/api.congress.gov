@@ -96,7 +96,7 @@ Parent container for an individual member’s entry. A `<member>` element may in
          - Possible values are "Democrat", "Independent", "Independent Democrat", "Libertarian", and "Republication".
        - `<partyCode>` (e.g., D)
          - The single letter abbreviation for the political party of the member.
-         - Possible values are "D", "I", "J", "L", and "R". 
+         - Possible values are "D", "I", "ID", "L", and "R". 
        - `<termBeginYear>` (e.g., 1975)
          - The year in which the member’s service in that Congress began. 
        - `<termEndYear>` (e.g., 1977)
