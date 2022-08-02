@@ -161,13 +161,13 @@ Parent container for an individual member’s entry. A `<member>` element may in
     - `<count>` (e.g., 1753)
       - The total number of measures sponsored by the member. 
     - `<url>` (e.g., **https://api.data.gov/congress/v3/member/L000174/sponsored-legislation**)
-      - A referrer URL to the sponsored-legislation level of the API. Click here for more information about the [sponsored-legislation level](#sponsored-legislation-level).
+      - A referrer URL to the sponsored-legislation level of the API. Click [here](#sponsored-legislation-level) for more information about the sponsored-legislation level.
 - `<cosponsoredLegislation>`
   - Container for legislation cosponsored by member. The `<cosponsoredLegislation>` container may include the following children:
     - `<count>` (e.g., 7470)  
       - The total number of measures cosponsored by the member. 
     - `<url>` (e.g., **https://api.data.gov/congress/v3/member/L000174/cosponsored-legislation**) 
-      - A referrer URL to the cosponsored-legislation level of the API. Click here for more information about the [cosponsored-legislation level](#cosponsored-legislation-level)  
+      - A referrer URL to the cosponsored-legislation level of the API. Click [here](#cosponsored-legislation-level) for more information about the cosponsored-legislation level.  
 - `<updateDate>` (e.g., 2022-07-22)
   - The date of last update of the record. This date has no legislative meaning. 
 
