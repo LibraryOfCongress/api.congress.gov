@@ -22,9 +22,9 @@ Congress.gov staff will issue change management communication through the [Chang
 The purpose of this repository is to communicate with Congressional data partners in support of developing the Congress.gov API (v3) that is anticipated to be released to the public at a future date. Development plans to be supported within the repository include: 
 
 - Python and Java sample client code
-- Two-way communication for Congressional data partners
-- Change management communication
-- User documentation with clear information about Congressional data publishing workflows (bill endpoint documentation is available [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/ExpandedBillEndpointDocumentation.md); documentation for other endpoints is in progress)
+- [Two-way communication](https://github.com/LibraryOfCongress/api.congress.gov/issues) for Congressional data partners
+- [Change management communication](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/ChangeLog.md)
+- [User documentation](https://github.com/LibraryOfCongress/api.congress.gov/tree/main/Documentation) with clear information about Congressional data publishing workflows
 
 The purposes of the Congress.gov API (v3): 
 
