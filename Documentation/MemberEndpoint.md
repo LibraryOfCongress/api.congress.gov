@@ -21,7 +21,7 @@ Parent container for all member entries. A `<members>` element may include the f
      - The state represented by the member.
   - `<party>`  (e.g., Democrat)
      - The political party of the member.
-     - Possible values are "Democrat", "Independent", or "Republican".
+     - Possible values are "Democrat", "Independent", "Independent Democrat", "Libertarian", or "Republican".
   - `<district>`  
      - The Congressional district represented by the member (exclusive to House). The value of zero indicates the state has only one member in the House.
   - `<name>`  (e.g.,  Leahy, Patrick J.)
@@ -93,10 +93,10 @@ Parent container for an individual member’s entry. A `<member>` element may in
          - The name of the state represented by the member. 
        - `<partyName>` (e.g., Democrat)
          - The political party of the member.
-         - Possible values are "Democrat", Independent, and "Republication".
+         - Possible values are "Democrat", "Independent", "Independent Democrat", "Libertarian", and "Republication".
        - `<partyCode>` (e.g., D)
          - The single letter abbreviation for the political party of the member.
-         - Possible values are "D", "I", and "R". 
+         - Possible values are "D", "I", "J", "L", and "R". 
        - `<termBeginYear>` (e.g., 1975)
          - The year in which the member’s service in that Congress began. 
        - `<termEndYear>` (e.g., 1977)
