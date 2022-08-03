@@ -298,7 +298,7 @@ Parent container for cosponsors of an amendment. Read more [about cosponsors](ht
             -	The date the member became a cosponsor of the amendment.
         -	`<isOriginalCosponsor>` (e.g. True)
              - A designation that the member is an original or additional cosponsor of the amendment. If the member cosponsored the amendment on the date of its submission, then this value will be "True". If the member cosponsored the amendment after its date of submission, then this value will be "False".
-             - Possible values are "True" and "False"
+             - Possible values are "True" or "False"
         -	`<sponsorshipWithdrawnDate>`
              - The date the cosponsor withdrew their cosponsorship of amendment.
   -	`<pagination>` (from https://api.data.gov/congress/v3/amendment/117/samdt/3892)
