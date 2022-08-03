@@ -7,13 +7,14 @@ In the pagination, the `<total>` element will be removed. The `<count>` element 
 ## Change #2
 ### Impacted endpoints: amendment, congress, member, nomination, treaty, congressional-record, committee
 The `<version>` element will be removed.
-## Change #3
+## Changes #3 and #4
 ### Impacted endpoint: bill
-An `<isByRequest>` element (contained within `<sponsors>` at the item level) will be added to indicate if a measure was introduced by request. This element will be populated with Y or N values. The `<isByRequest>` element will replace `<byRequestType>`.
-## Change #4
+1. An `<isByRequest>` element (contained within `<sponsors>` at the item level) will be added to indicate if a measure was introduced by request. This element will be populated with Y or N values. The `<isByRequest>` element will replace `<byRequestType>`.
+2. Law text will be available in the text deeper level.
+## Change #5
 ### Impacted endpoint: committee
 An `<updateDate>` element (within each `<history>` item at the item level) will be added to indicate the update date for committee name changes. This change is in response to feedback [issue #16](https://github.com/LibraryOfCongress/api.congress.gov/issues/16). 
-## Change #5
+## Change #6
 ### Impacted endpoints: bill and amendment 
 The `<totalCount>` element (within `<cosponsors>` at the item level) will be removed. This element is duplicative of the `<countIncludingWithdrawnCosponsors>` element, which will remain. 
 # COMPLETED July 2022, Part 2
