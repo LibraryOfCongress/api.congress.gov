@@ -1,4 +1,4 @@
-# Committee endpoint
+# Committee endpoint:  IN PROGRESS; NOT COMPLETE
 ## Coverage
 Coverage information for committee data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates). Read more about committee data at [About Committees and Committee Materials]( https://www.congress.gov/help/committee-materials) on Congress.gov.
 ## Elements and Descriptions
