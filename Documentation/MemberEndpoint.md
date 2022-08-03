@@ -192,13 +192,13 @@ Parent container for all sponsored legislation entries. A `<sponsoredLegislation
       - The assigned bill or resolution number.
     - `<policyArea>`
       - Container for the policy area term of the bill or resolution. Every bill and resolution is assigned one policy area term; view the [field values list of policy area terms](https://www.congress.gov/help/field-values/policy-area) on Congress.gov. Read more about [policy area terms](https://www.congress.gov/help/legislative-glossary#glossary_policyareaterm) on Congress.gov. A `<policyArea>` element may include the following child:
-        - `<name>` (e.g. Commerce)
+        - `<name>` (e.g., Commerce)
           - The policy area term assigned to the bill or resolution by CRS.
     - `<latestAction>`
       - Container for the latest action taken on the bill or resolution. A `<latestAction>` element may include the following children:
-        - `<actionDate>` (e.g. 2022-06-16)
+        - `<actionDate>` (e.g., 2022-06-16)
           - The date of the latest action taken on the bill or resolution.
-        - `<text>` (e.g. Read twice and referred to the Committee on the Judiciary.)
+        - `<text>` (e.g., Read twice and referred to the Committee on the Judiciary.)
           - The text of the latest action taken on the bill or resolution.
     - `<url>` (e.g., https://api.data.gov/congress/v3/bill/117/s/4417?format=xml)
       - A referrer URL to the bill item in the API. Documentation for the Bill endpoint is [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/BillEndpoint.md).
@@ -214,7 +214,7 @@ The `<api-root>` is only present in the XML format.
 
 Parent container for all sponsored legislation entries. A `<cosponsoredLegislation>` element may include the following children:
 - `<item>`
-  - Container for an individual legislative measure sponsored by the member. The `<item>` element may include the following children:
+  - Container for an individual legislative measure sponsored by the member. An `<item>` element may include the following children:
     - `<introducedDate>` (e.g., 2022-07-20)
       - The date the measure was introduced. 
     - `<type>` (e.g., SRES)
@@ -222,20 +222,20 @@ Parent container for all sponsored legislation entries. A `<cosponsoredLegislati
       - Possible values are "HR", "S", "HJRES", "SJRES", "HCONRES", "SCONRES", "HRES", and "SRES".
     - `<congress>` (e.g., 117)
       - The congress during which a bill or resolution was introduced or submitted.
-      - View the field values list of Congresses on Congress.gov. Read more about Congresses on Congress.gov.
+      - View the [field values list of Congresses](https://www.congress.gov/help/field-values/congresses) on Congress.gov. Read more [about Congresses](https://www.congress.gov/help/legislative-glossary#glossary_congress) on Congress.gov.
     - `<latestTitle>` (e.g., A resolution recognizing the importance of independent living for individuals with disabilities made possible by the Americans with Disabilities Act of 1990 and calling for further action to strengthen home and community living for individuals with disabilities.)
-      - The display title for the bill or resolution.
+      - The display title for the bill or resolution on Congress.gov.
     - `<number>` (e.g., 714)
       - The assigned bill or resolution number.
     - `<policyArea>`
       - Container for the policy area term of the bill or resolution. Every bill and resolution is assigned one policy area term; view the [field values list of policy area terms](https://www.congress.gov/help/field-values/policy-area) on Congress.gov. Read more about [policy area terms](https://www.congress.gov/help/legislative-glossary#glossary_policyareaterm) on Congress.gov. The `<policyArea>` element may include the following child:
-        - `<name>` (e.g. Health)
+        - `<name>` (e.g., Health)
           - The policy area term assigned to the bill or resolution by CRS.
     - `<latestAction>`
       - Container for the latest action taken on the bill or resolution. A `<latestAction>` element may include the following children:
-        - `<actionDate>` (e.g. 2022-07-20)
+        - `<actionDate>` (e.g., 2022-07-20)
           - The date of the latest action taken on the bill or resolution.
-        - `<text>` (e.g. , Referred to the Committee on Health, Education, Labor, and Pensions. (text: CR S3547-3548))
+        - `<text>` (e.g., Referred to the Committee on Health, Education, Labor, and Pensions. (text: CR S3547-3548))
           - The text of the latest action taken on the bill or resolution.
     - `<url>` (e.g., https://api.data.gov/congress/v3/bill/117/sres/714?format=xml)
       - A referrer URL to the bill item in the API. Documentation for the Bill endpoint is [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/BillEndpoint.md).
