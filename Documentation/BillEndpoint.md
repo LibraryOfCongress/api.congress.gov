@@ -124,7 +124,7 @@ Parent container for a bill or resolution. A `<bill>` element may include the fo
           - The congressional district that the bill or resolution sponsor represents.
           - Note that this element will be "0" for states, territories, or districts where there is only one congressional district.
 - `<cosponsors>`
-  - Parent container for any cosponsors of the bill or resolution. A `<cosponsors>` element may include the following children:
+  - Parent container for any cosponsors of the bill or resolution. A `<cosponsors>` element may include the following children (the below counts are taken from https://api.data.gov/congress/v3/bill/117/s/3580/cosponsors):
     - `<countIncludingWithdrawnCosponsors>` (e.g. 31)
       - The total number of cosponsors of the bill or resolution, including any withdrawn cosponsors.
     - `<count>` (e.g. 30)
@@ -382,7 +382,7 @@ Parent container for cosponsors of a bill or resolution. Read more [about cospon
         - The date the member became a cosponsor of the bill or resolution.
      - `<isOriginalCosponsor>` (e.g. True)
         - A designation that the member is an original or additional cosponsor of the bill or resolution. If the member cosponsored the bill or resolution on the date of its introduction or submission, then this value will be "True". If the member cosponsored the bill or resolution after its date of introduction or submission, then this value will be "False". 
-        - Possible values are "True" and "False"
+        - Possible values are "True" or "False"
     - `<sponsorshipWithdrawnDate>`
         - The date the cosponsor withdrew their cosponsorship of the bill or resolution.
 - `<pagination>` (from https://api.data.gov/congress/v3/bill/117/s/3580/cosponsors)
