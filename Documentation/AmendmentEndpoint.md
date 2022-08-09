@@ -13,7 +13,7 @@ The `<api-root>` is only present in the XML format.
 
 Parent container for amendments. An `<amendments>` element may include the following children:
 -	`<amendment>`
-    -	Parent container for an amendment. An `<amendment>` element may include the following children:
+    -	Container for an amendment. An `<amendment>` element may include the following children:
         -	`<number>` (e.g. 2137)
             -	The assigned amendment number. 
         -	`<description>`
@@ -28,7 +28,7 @@ Parent container for amendments. An `<amendments>` element may include the follo
             -	The type of amendment.
             -	Possible values are "HAMDT", "SAMDT", and "SUAMDT". Note that the "SUAMDT" type value is only available for the 97th and 98th Congresses.
         - `<latestAction>`
-            -  Parent container for the latest action taken on the amendment. A `<latestAction>` element may include the following children:
+            -  Container for the latest action taken on the amendment. A `<latestAction>` element may include the following children:
                   - `<actionDate>` (e.g. 2021-08-08)
                       - The date of the latest action taken on the amendment.
                   -	`<text>` (e.g. Amendment SA 2137 agreed to in Senate by Yea-Nay Vote. 69 - 28. Record Vote Number: 312.)
@@ -60,7 +60,7 @@ Parent container for an amendment. An `<amendment>` element may include the foll
     -	The type of amendment.
     -	Possible values are "HAMDT", "SAMDT", and "SUAMDT". Note that the "SUAMDT" type value is only available for the 97th and 98th Congresses.
   -	`<latestAction>`
-    -	Parent container for the latest action taken on the amendment. A `<latestAction>` element may include the following children:
+    -	Container for the latest action taken on the amendment. A `<latestAction>` element may include the following children:
         - `<actionDate>` (e.g. 2021-08-08)
             - The date of the latest action taken on the amendment.
         - `<text>` (e.g. Amendment SA 2137 agreed to in Senate by Yea-Nay Vote. 69 - 28. Record Vote Number: 312.)
@@ -69,9 +69,9 @@ Parent container for an amendment. An `<amendment>` element may include the foll
             - The time of the latest action taken on the amendment. 
             - Certain actions taken by the House contain this element.
   -	`<sponsors>`
-    -	Parent container for the sponsor of the amendment. A `<sponsors>` element may include the following children:
+    -	Container for the sponsor of the amendment. A `<sponsors>` element may include the following children:
         -	`<item>`
-            -	Parent container for a single sponsor of the amendment. An `<item>` element may include the following children:
+            -	Container for a single sponsor of the amendment. An `<item>` element may include the following children:
                 -	`<bioguideId>` (e.g. S001191)
                       -	The unique identifier for the amendment's sponsor, as assigned in the [Biographical Directory of the United States Congress, 1774-Present](https://bioguide.congress.gov/).
                       -	View a [field values list of Bioguide identifiers](https://www.congress.gov/help/field-values/member-bioguide-ids) for current and former members in Congress.gov.
@@ -93,7 +93,7 @@ Parent container for an amendment. An `<amendment>` element may include the foll
                      - The congressional district that the amendment's sponsor represents.
                      - Note that this element will be empty for Senate sponsors and will be "0" for states, territories, or districts where there is only one congressional district.
   -	`<cosponsors>`
-      -	Parent container for any cosponsors of the amendment. Only Senate amendments may have this element populated.
+      -	Container for any cosponsors of the amendment. Only Senate amendments may have this element populated.
       -	A `<cosponsors>` element may include the following children (the below counts are taken from https://api.data.gov/congress/v3/amendment/117/samdt/3892):
         -	`<countIncludingWithdrawnCosponsors>` (e.g. 2)
             -	The total number of cosponsors of the amendment, including any withdrawn cosponsors.
@@ -109,7 +109,7 @@ Parent container for an amendment. An `<amendment>` element may include the foll
   -	`<chamber>` (e.g. Senate)
       -	The chamber in which the amendment was submitted or offered.
   -	`<amendedBill>` 
-      -	Parent container for the bill amended by the amendment. An `<amendedBill>` element may include the following children:
+      -	Container for the bill amended by the amendment. An `<amendedBill>` element may include the following children:
           -	`<congress>` (e.g. 117) 
              -	The congress during which the bill or resolution was introduced or submitted.
          -	`<type>` (e.g. HR)
@@ -128,7 +128,7 @@ Parent container for an amendment. An `<amendment>` element may include the foll
         -	`<title>` (e.g. Infrastructure Investment and Jobs Act)
             -	The display title for the bill or resolution.
 -	`<amendedAmendment>` 
-    -	Parent container for the amendment amended by the amendment. An `<amendedAmendment>` element may include the following children (the below amendment data is taken from https://api.data.gov/congress/v3/amendment/117/samdt/2564) :
+    -	Container for the amendment amended by the amendment. An `<amendedAmendment>` element may include the following children (the below amendment data is taken from https://api.data.gov/congress/v3/amendment/117/samdt/2564) :
         -	`<number>` (e.g. 2137)
             -	The assigned amendment number.
         - `<description>`
@@ -145,21 +145,21 @@ Parent container for an amendment. An `<amendment>` element may include the foll
         -	`<url>` (e.g. https://api.data.gov/congress/v3/amendment/117/samdt/2137)
             - The referrer URL to the amendment item in the API.
   -	`<amendmentsToAmendment>`
-    -	Parent container for amendments to the amendment. An `<amendmentsToAmendment>` element may contain the following children:
+    -	Container for amendments to the amendment. An `<amendmentsToAmendment>` element may contain the following children:
         -	`<count>` (e.g. 507)
             -	The number of amendments to the amendment. 
         -	`<url>` (e.g. https://api.data.gov/congress/v3/amendment/117/samdt/2137/amendments)
             -	A referrer URL to the amendment to amendments level of the amendment API. Click [here](#amendments-to-amendment-level) for more information about the amendments to amendments level.
   -	`<notes>`
-      -	Parent container for notes attached to the amendment on Congress.gov. The note may contain supplemental information about the amendment that users may find helpful. Read more [about notes](https://www.congress.gov/help/legislative-glossary#glossary_notes) on Congress.gov.
+      -	Container for notes attached to the amendment on Congress.gov. The note may contain supplemental information about the amendment that users may find helpful. Read more [about notes](https://www.congress.gov/help/legislative-glossary#glossary_notes) on Congress.gov.
       -	A  `<notes>` element may include the following children:
         -	`<item>`
-            -	Parent container for a note. An `<item>` element may include the following children:
+            -	Container for a note. An `<item>` element may include the following children:
                 -	`<text>` (e.g. `<![CDATA[ The Senate agreed to the amendment on 12/5/2016, then vitiated its adoption on 12/5/2016, then agreed to the amendment on 12/10/2016. ]]>`)
                     -	The text of the note on Congress.gov (from https://api.data.gov/congress/v3/amendment/114/samdt/5129).
                     - Note that the text is encased in CDATA.
   -	`<amendedTreaty>`
-      -	Parent container for the treaty amended by the amendment. An `<amendedTreaty>` element may contain the following children (the below treaty data is taken from https://api.data.gov/congress/v3/amendment/117/samdt/2137):
+      -	Container for the treaty amended by the amendment. An `<amendedTreaty>` element may contain the following children (the below treaty data is taken from https://api.data.gov/congress/v3/amendment/117/samdt/2137):
         -	`<congress>` (e.g. 116)
             -	The congress during which a treaty was submitted. 
         -	`<treatyNumber>` (e.g. 1)
@@ -167,7 +167,7 @@ Parent container for an amendment. An `<amendment>` element may include the foll
         -	`<url>` (e.g. https://api.data.gov/congress/v3/treaty/116/1)
             -	The referrer URL to the treaty item in the API. Documentation for the treaty endpoint is in progress.
   -	`<actions>`
-      - Parent container for actions on the amendment. An `<actions>` element may include the following children:
+      - Container for actions on the amendment. An `<actions>` element may include the following children:
           - `<count>` (e.g. 19)
               - The number of actions on the amendment. A `<count>` element may include actions from the House, Senate, and Library of Congress.
           - `<url>` (e.g. https://api.data.gov/congress/v3/amendment/117/samdt/2137/actions)
@@ -181,7 +181,7 @@ The `<api-root>` is only present in the XML format.
 
 Parent container for all actions taken on an amendment. Actions may come from the House, Senate, or Library of Congress. An `<actions>` element may include the following children:
 -	`<item>` 
-    -	Parent container for an action taken on an amendment. An `<item>` element may include the following children:
+    -	Container for an action taken on an amendment. An `<item>` element may include the following children:
         -	`<actionDate>` (e.g. 2021-08-08)
             -	The date of the action taken on an amendment.
         -	`<actionTime>`
@@ -196,7 +196,7 @@ Parent container for all actions taken on an amendment. Actions may come from th
             -	An action code associated with the action taken on an amendment. The <actionCode> element will be present only for House and Library of Congress actions.
             -	View a [field values list of Library of Congress action codes](https://www.congress.gov/help/field-values/action-codes) on Congress.gov.
          - `<sourceSystem>`
-            -	Parent container for the source system where the action was entered. A `<sourceSystem>` element may include the following children:
+            -	Container for the source system where the action was entered. A `<sourceSystem>` element may include the following children:
                 - `<code>` (e.g. 0)
                     -	A code for the source system that entered the action.
                     -	Possible values are "0", "1", "2", or "9".
@@ -205,9 +205,9 @@ Parent container for all actions taken on an amendment. Actions may come from th
                     - The name of the source system that entered the action.
                     - Possible values are "Senate", "House committee actions", "House floor actions", and "Library of Congress".
           - `<committees>`
-            -	Parent container for committees associated with the action. A `<committees>` element may include the following children:
+            -	Container for committees associated with the action. A `<committees>` element may include the following children:
                 -	`<item>`
-                    -	Parent container for a committee associated with the action. An `<item>` element may include the following children:
+                    -	Container for a committee associated with the action. An `<item>` element may include the following children:
                         -	`<url>`
                             -	A referrer URL to the committee or subcommittee in the API. Documentation for the committee endpoint is in progress.
                         -	`<systemCode>`
@@ -215,10 +215,10 @@ Parent container for all actions taken on an amendment. Actions may come from th
                         -	`<name>`
                             -	The name of the committee or subcommittee associated with the action. 
           -	`<recordedVotes>`
-              -	Parent container for recorded (roll call) votes associated with the action. Read more [about roll call votes]( https://www.congress.gov/help/legislative-glossary#glossary_rollcallvote) on Congress.gov. More information can also be found at the [Roll Call Votes by the U.S. Congress](https://www.congress.gov/roll-call-votes) and [Votes in the House and Senate](https://www.congress.gov/help/votes-in-the-house-and-senate) pages on Congress.gov. 
+              -	Container for recorded (roll call) votes associated with the action. Read more [about roll call votes]( https://www.congress.gov/help/legislative-glossary#glossary_rollcallvote) on Congress.gov. More information can also be found at the [Roll Call Votes by the U.S. Congress](https://www.congress.gov/roll-call-votes) and [Votes in the House and Senate](https://www.congress.gov/help/votes-in-the-house-and-senate) pages on Congress.gov. 
                   -	A `<recordedVotes>` element may include the following children:
                       -	`<recordedVote>`
-                          -	Parent container for a recorded (roll call) vote associated with the action. A `<recordedVote>` element may include the following children:
+                          -	Container for a recorded (roll call) vote associated with the action. A `<recordedVote>` element may include the following children:
                               - `<rollNumber>` (e.g. 312)
                                   - The recorded (roll call) vote number. 
                               - `<url>` (e.g. https://www.senate.gov/legislative/LIS/roll_call_votes/vote1171/vote_117_1_00312.xml)
@@ -241,7 +241,7 @@ The `<api-root>` is only present in the XML format.
 
 Parent container for all amendments to the amendment. An `<amendments>` element may include the following children:
 -	`<amendment>`
-    -	Parent container for an amendment to the amendment. An `<amendment>` element may include the following children:
+    -	Container for an amendment to the amendment. An `<amendment>` element may include the following children:
         -	`<number>` (e.g. 2300)
             -	The assigned amendment number. 
         -	`<description>`
@@ -256,7 +256,7 @@ Parent container for all amendments to the amendment. An `<amendments>` element 
             -	The type of amendment.
             -	Possible values are "HAMDT", "SAMDT", and "SUAMDT". Note that the "SUAMDT" type value is only available for the 97th and 98th Congresses.
         -	`<latestAction>`
-            -	Parent container for the latest action taken on the amendment. A `<latestAction>` element may include the following children:
+            -	Container for the latest action taken on the amendment. A `<latestAction>` element may include the following children:
                 -	`<actionDate>` (e.g. 2021-08-03)
                     -	The date of the latest action taken on the amendment.
                 -	`<actionTime>`
@@ -275,7 +275,7 @@ The `<api-root>` is only present in the XML format.
 
 Parent container for cosponsors of an amendment. Read more [about cosponsors](https://www.congress.gov/help/legislative-glossary#glossary_cosponsor) on Congress.gov. Only Senate amendments will have this deeper level. A `<cosponsors>` element may include the following children:
 -	`<item>`
-    -	Parent container for a cosponsor of an amendment. An `<item>` element may include the following children:
+    -	Container for a cosponsor of an amendment. An `<item>` element may include the following children:
         -	`<bioguideId>` (e.g. P000449)
             -	The unique identifier for the amendment cosponsor, as assigned in the [Biographical Directory of the United States Congress, 1774-Present](http://bioguide.congress.gov/).
             -	View a [field values list of Bioguide identifiers](https://www.congress.gov/help/field-values/member-bioguide-ids) for current and former members in Congress.gov.
