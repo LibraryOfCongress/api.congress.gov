@@ -31,7 +31,7 @@ Parent container for bills and resolutions. A `<bills>` element may include the 
   - `<number>` (e.g. 3076)
     - The assigned bill or resolution number.
   - `<url>` (e.g. https://api.data.gov/congress/v3/bill/117/hr/3076)
-    - The referrer URL to the bill or resolution item in the API.
+    - A referrer URL to the bill or resolution item in the API.
   - `<title>` (e.g. Postal Service Reform Act of 2022)
     - The display title for the bill or resolution.
   - `<latestAction>`
@@ -576,4 +576,4 @@ Parent container for amendments on the bill or resolution. Read more [about amen
       - `<actionTime>` (e.g. 15:39:53)
         - The time of the latest action taken on the amendment. Certain actions taken by the House contain this element.
   - `<url>` (e.g. https://api.data.gov/congress/v3/amendment/117/hamdt/173)
-    - The referrer URL to the amendment item in the API. Documentation for the amendment endpoint is available [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/AmendmentEndpoint.md).
+    - A referrer URL to the amendment item in the API. Documentation for the amendment endpoint is available [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/AmendmentEndpoint.md).
