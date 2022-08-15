@@ -40,7 +40,7 @@ The `<api-root>` is only present in the XML format.
            - The name of the subcommittee.
      - `<chamber>` (e.g., House)
        -  The committee's chamber of origin.
-       -  Possible values are "House", "Senate", and "no-chamber".
+       -  Possible values are "House", "Senate", and "Joint".
      - `<committeeTypeCode>` (e.g., Standing)
        - The type of committee.
        - Possible values are "Commission or Caucus", "Joint", "Other", "Select", "Special", "Standing", "Subcommittee", and "Task Force".
