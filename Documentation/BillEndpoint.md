@@ -218,7 +218,7 @@ Parent container for committees associated with the bill or resolution. A list o
 - `<item>`
   - Container for a committee associated with the bill or resolution. An `<item>` element may include the following children:
     - `<url>` (e.g. https://api.data.gov/congress/v3/committee/house/hsif00)
-      - A referrer URL to the committee or subcommittee item in the committee API. Documentation for the committee endpoint is in progress.
+      - A referrer URL to the committee or subcommittee item in the committee API. Documentation for the committee endpoint is available [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/CommitteeEndpoint.md).
     - `<systemCode>` (e.g. hsif00)
       - A code associated with the committee or subcommittee used to match items in Congress.gov with the committee or subcommittee.
     - `<name>` (e.g. Energy and Commerce Committee)
@@ -316,7 +316,7 @@ Parent container for all actions taken on a bill or resolution. Actions may come
           - `<item>`
             - Container for a committee associated with the action. An `<item>` element may include the following children:
               - `<url>`
-                - A referrer URL to the committee or subcommittee item in the API. Documentation for the committee endpoint is in progress.
+                - A referrer URL to the committee or subcommittee item in the API. Documentation for the committee endpoint is available [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/CommitteeEndpoint.md).
               - `<systemCode>`
                 - A code associated with the committee or subcommittee used to match items in Congress.gov with the committee or subcommittee.
               - `<name>`
