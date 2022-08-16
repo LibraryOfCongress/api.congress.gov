@@ -209,7 +209,7 @@ Parent container for all actions taken on an amendment. Actions may come from th
                 -	`<item>`
                     -	Container for a committee associated with the action. An `<item>` element may include the following children:
                         -	`<url>`
-                            -	A referrer URL to the committee or subcommittee in the API. Documentation for the committee endpoint is in progress.
+                            -	A referrer URL to the committee or subcommittee in the API. Documentation for the committee endpoint is available [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/CommitteeEndpoint.md).
                         -	`<systemCode>`
                             -	A code associated with the committee or subcommittee used to match items in Congress.gov with the committee or subcommittee.
                         -	`<name>`
