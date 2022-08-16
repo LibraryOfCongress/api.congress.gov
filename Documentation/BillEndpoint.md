@@ -123,6 +123,9 @@ Parent container for a bill or resolution. A `<bill>` element may include the fo
         - `<district>` (e.g. 12)
           - The congressional district that the bill or resolution sponsor represents.
           - Note that this element will be "0" for states, territories, or districts where there is only one congressional district.
+         - `<isByRequest>` (e.g. N)
+           - Flag indicating if the bill or resolution was introduced at the request of the President or another entity.
+           - Possible values are "Y" or "N".
 - `<cosponsors>`
   - Container for any cosponsors of the bill or resolution. A `<cosponsors>` element may include the following children (the below counts are taken from https://api.data.gov/congress/v3/bill/117/s/3580/cosponsors):
     - `<countIncludingWithdrawnCosponsors>` (e.g. 31)
@@ -135,7 +138,7 @@ Parent container for a bill or resolution. A `<bill>` element may include the fo
   - Container for Congressional Budget Office (CBO) cost estimates associated with a bill or resolution. Read [about CBO](https://www.congress.gov/help/legislative-glossary#glossary_cbo) on Congress.gov.
   - A `<cboCostEstimates>` element may include the following children:
     - `<item`
-      - Container for a CBO cost estimate. An `<item>` element may include the following children:
+      - Container for a CBO cost estimate. An `<item>` element is repeatable and may include the following children:
         - `<pubDate>` (e.g. 2021-07-14T17:27:00Z)
           - The date the CBO cost estimate was published.
         - `<title>` (e.g. H.R. 3076, Postal Service Reform Act of 2021)
@@ -216,11 +219,11 @@ The `<api-root>` is only present in the XML format.
 
 Parent container for committees associated with the bill or resolution. A list of committees with an association to data on Congress.gov is available at the [Committee Name History](https://www.congress.gov/help/committee-name-history) page on Congress.gov. A list of current committees is available at [Committees of the U.S. Congress](https://www.congress.gov/committees) on Congress.gov. A `<committees>` element may include the following children:
 - `<item>`
-  - Container for a committee associated with the bill or resolution. An `<item>` element may include the following children:
+  - Container for a committee associated with the bill or resolution. An `<item>` element is repeatable and may include the following children:
     - `<url>` (e.g. https://api.data.gov/congress/v3/committee/house/hsif00)
       - A referrer URL to the committee or subcommittee item in the committee API. Documentation for the committee endpoint is available [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/CommitteeEndpoint.md).
     - `<systemCode>` (e.g. hsif00)
-      - A code associated with the committee or subcommittee used to match items in Congress.gov with the committee or subcommittee.
+      - Unique ID value for the committee.
     - `<name>` (e.g. Energy and Commerce Committee)
       - The name of the committee or subcommittee associated with the bill or resolution. 
     - `<chamber>` (e.g. House)
@@ -235,7 +238,7 @@ Parent container for committees associated with the bill or resolution. A list o
       - Container for committee or subcommittee activities on a bill or resolution. Read more [about committee-related activity](https://www.congress.gov/help/legislative-glossary#glossary_committeerelatedactivity) on Congress.gov. 
       - An `<activities>` element may include the following children:
         - `<item>`
-          - Container for a committee or subcommittee activity on a bill or resolution. The `<item>` element may include the following children:
+          - Container for a committee or subcommittee activity on a bill or resolution. The `<item>` element is repeatable and may include the following children:
             - `<name>` (e.g. Referred to)
               - The name of the committee or subcommittee activity.
               - Possible values are "Referred to", "Re-Referred to", "Hearings by", "Markup by", "Reported by", "Reported original measure", "Committed to", "Re-Committed to", and "Legislative Interest". 
@@ -250,7 +253,7 @@ The `<api-root>` is only present in the XML format.
 
 Parent container for related bills added by the House, Senate, and CRS. Read more [About Related Bills](https://www.congress.gov/help/related-bills) on Congress.gov. A `<relatedBills>` element may include the following children:
 - `<item>`
-  - Container for a related bill to the bill or resolution. An `<item>` element may include the following children:
+  - Container for a related bill to the bill or resolution. An `<item>` is repeatable and may element may include the following children:
     - `<url>` (e.g. https://api.data.gov/congress/v3/bill/117/s/1720)
       - A referrer URL to the bill item in the API.
     - `<title>` (e.g. Postal Service Reform Act of 2021)
@@ -273,7 +276,7 @@ Parent container for related bills added by the House, Senate, and CRS. Read mor
      - `<relationshipDetails>` 
        - Container for the details on the type of relationship added by the House, Senate, or CRS. A `<relationshipDetails>` element may include the following children:
         - `<item>`
-          - An `<item>` element may include the following children:
+          - An `<item>` element is repeatable and may include the following children:
             - `<type>` (e.g. Related bill)
               - The type of relationship, as designated by the House, Senate, or CRS.
             - `<identifiedBy>` (e.g. CRS)
@@ -289,7 +292,7 @@ The `<api-root>` is only present in the XML format.
 
 Parent container for all actions taken on a bill or resolution. Actions may come from the House, Senate, or Library of Congress. An `<actions>` element may include the following children:
 - `<item>`
-  - Container for an action taken on a bill or resolution. An `<item>` element may include the following children:
+  - Container for an action taken on a bill or resolution. An `<item>` element is repeatable and may include the following children:
     - `<actionDate>` (e.g. 2022-03-08)
       - The date of the action taken on a bill or resolution.
     - `<actionTime>`
@@ -314,7 +317,7 @@ Parent container for all actions taken on a bill or resolution. Actions may come
      - `<committees>`
        - Container for committees associated with the action. A `<committees>` element may include the following children:
           - `<item>`
-            - Container for a committee associated with the action. An `<item>` element may include the following children:
+            - Container for a committee associated with the action. An `<item>` element is repeatable and may include the following children:
               - `<url>`
                 - A referrer URL to the committee or subcommittee item in the API. Documentation for the committee endpoint is available [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/CommitteeEndpoint.md).
               - `<systemCode>`
@@ -356,7 +359,7 @@ The `<api-root>` is only present in the XML format.
 
 Parent container for cosponsors of a bill or resolution. Read more [about cosponsors](https://www.congress.gov/help/legislative-glossary#glossary_cosponsor) on Congress.gov. A `<cosponsors>` element may include the following children:
 - `<item>`
-  - Container for a cosponsor of a bill or resolution. An `<item>` element may include the following children:
+  - Container for a cosponsor of a bill or resolution. An `<item>` element is repeatable and may include the following children:
     - `<bioguideId>` (e.g. C001078)
       - The unique identifier for the bill or resolution cosponsor, as assigned in the [Biographical Directory of the United States Congress, 1774-Present](http://bioguide.congress.gov/).
       - View a [field values list of Bioguide identifiers](https://www.congress.gov/help/field-values/member-bioguide-ids) for current and former members in Congress.gov. 
@@ -402,7 +405,7 @@ Parent container for [legislative subject terms](https://www.congress.gov/help/l
 - `<legislativeSubjects>`
   - Container for legislative subject terms attached to a bill or resolution. A `<legislativeSubjects>` element may include the following children:
      - `<item>` 
-        - Container for a legislative subject term attached to a bill or resolution. An `<item>` element may include the following children:
+        - Container for a legislative subject term attached to a bill or resolution. An `<item>` element is repeatable and may include the following children:
           - `<name>` (e.g. Congressional oversight)
               - The name of the legislative subject term attached to a bill or resolution. 
 - `<policyArea>`
@@ -506,7 +509,7 @@ The `<api-root>` is only present in the XML format.
 
 Parent container for titles associated with the bill or resolution. A title may be an [official title](https://www.congress.gov/help/legislative-glossary#glossary_officialtitle), a [short title](https://www.congress.gov/help/legislative-glossary#glossary_shorttitle), or a [popular title](https://www.congress.gov/help/legislative-glossary#glossary_populartitle). A `<titles>` element may include the following children:
 - `<item>`
-  - Container for a title associated with the bill or resolution. An `<item>` element may include the following children:
+  - Container for a title associated with the bill or resolution. An `<item>` element is repeatable and may include the following children:
     - `<titleType>` (e.g. Short Title(s) as Passed House)
       - A short description of the type of title associated with the bill or resolution. 
     - `<title>` (e.g. Postal service Reform Act of 2022)
@@ -531,7 +534,7 @@ The `<api-root>` is only present in the XML format.
 
 Parent container for text versions associated with the bill or resolution. Read more about bill text at [About Legislation Text of the U.S. Congress](https://www.congress.gov/help/legislation-text). A `<textVersions>` element may include the following children:
 - `<item>`
-  - Container for a text version associated with the bill or resolution. An `<item>` element may include the following children:
+  - Container for a text version associated with the bill or resolution. An `<item>` element is repeatable and may include the following children:
     - `<type>` (e.g. Introduced in House)
       - The bill text version type.
     - `<date>` (e.g. 2021-05-11T04:00:00Z)
@@ -539,7 +542,7 @@ Parent container for text versions associated with the bill or resolution. Read 
     - `<formats>`
       - Container for formats of the text version. A `<formats>` element may include the following children: 
         - `<item>` 
-          - Container for a format of the text version. An `<item>` element may include the following children:
+          - Container for a format of the text version. An `<item>` element is repeatable and may include the following children:
             - `<url>` (e.g. https://www.congress.gov/117/bills/hr3076/BILLS-117hr3076ih.xml)
               - The URL for the text version format in Congress.gov. 
             - `<type>` (e.g. Formatted XML)
@@ -554,26 +557,27 @@ The `<api-root>` is only present in the XML format.
 
 Parent container for amendments on the bill or resolution. Read more [about amendments](https://www.congress.gov/help/legislative-glossary#glossary_amendment) on Congress.gov. An `<amendments>` element may include the following children:
 - `<amendment>`
-  - `<number>` (e.g. 173)
-    - The assigned amendment number.
-  - `<description>` (e.g. An amendment numbered 1 printed in House Report 117-243 to clarifiy the roles and responsibilities of the Office of Personnel Management, the Social Security Administration, and the Centers for Medicare & Medicaid Services regarding the information postal employees will need to enroll in Medicare Part B; specify that performance standards must be submitted to the Postal Regulatory Commission for each product; and make other technical and conforming changes to the bill.)
-    - The amendment's description. 
-    - Only House amendments will have this element populated.
-  - `<purpose>`
-    - The amendment's purpose. 
-    - House amendments and proposed Senate amendments may have this element populated.
-  - `<congress>` (e.g. 117)
-    - The congress during which the amendment was submitted or offered. 
-  - `<type>` (e.g. HAMDT)
-    - The type of amendment.
-    - Possible values are "HAMDT" and "SAMDT".
-  - `<latestAction>`
-    - Container for the latest action taken on the amendment. A `<latestAction>` element may include the following children:
-      - `<actionDate>` (e.g. 2022-02-08)
-        - The date of the latest action taken on the amendment.
-      - `<text>` (e.g. On agreeing to the Maloney, Carolyn B. amendment (A002) Agreed to by voice vote.)
-        - The text of the latest action taken on the amendment.
+  - Container for an amendment on the bill or resolution. An `<amendment>` element is repeatable and may include the following children:
+    - `<number>` (e.g. 173)
+      - The assigned amendment number.
+    - `<description>` (e.g. An amendment numbered 1 printed in House Report 117-243 to clarifiy the roles and responsibilities of the Office of Personnel Management, the Social Security Administration, and the Centers for Medicare & Medicaid Services regarding the information postal employees will need to enroll in Medicare Part B; specify that performance standards must be submitted to the Postal Regulatory Commission for each product; and make other technical and conforming changes to the bill.)
+      - The amendment's description. 
+      - Only House amendments will have this element populated.
+    - `<purpose>`
+      - The amendment's purpose. 
+      - House amendments and proposed Senate amendments may have this element populated.
+    - `<congress>` (e.g. 117)
+      - The congress during which the amendment was submitted or offered. 
+    - `<type>` (e.g. HAMDT)
+      - The type of amendment.
+      - Possible values are "HAMDT", "SAMDT", and "SUAMDT".
+    - `<latestAction>`
+      - Container for the latest action taken on the amendment. A `<latestAction>` element may include the following children:
+          - `<actionDate>` (e.g. 2022-02-08)
+            - The date of the latest action taken on the amendment.
+          - `<text>` (e.g. On agreeing to the Maloney, Carolyn B. amendment (A002) Agreed to by voice vote.)
+            - The text of the latest action taken on the amendment.
       - `<actionTime>` (e.g. 15:39:53)
         - The time of the latest action taken on the amendment. Certain actions taken by the House contain this element.
-  - `<url>` (e.g. https://api.data.gov/congress/v3/amendment/117/hamdt/173)
-    - A referrer URL to the amendment item in the API. Documentation for the amendment endpoint is available [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/AmendmentEndpoint.md).
+    - `<url>` (e.g. https://api.data.gov/congress/v3/amendment/117/hamdt/173)
+      - A referrer URL to the amendment item in the API. Documentation for the amendment endpoint is available [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/AmendmentEndpoint.md).
