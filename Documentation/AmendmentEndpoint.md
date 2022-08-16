@@ -126,17 +126,17 @@ Parent container for an amendment. An `<amendment>` element may include the foll
         -	`<url>` (e.g. https://api.data.gov/congress/v3/bill/117/hr/3684)
             -	The referrer URL to the bill or resolution item in the API. Documentation for the bill endpoint is available [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/BillEndpoint.md).
         -	`<title>` (e.g. Infrastructure Investment and Jobs Act)
-            -	The display title for the bill or resolution.
+            -	The display title for the bill or resolution on Congress.gov.
 -	`<amendedAmendment>` 
     -	Container for the amendment amended by the amendment. An `<amendedAmendment>` element may include the following children (the below amendment data is taken from https://api.data.gov/congress/v3/amendment/117/samdt/2564) :
         -	`<number>` (e.g. 2137)
             -	The assigned amendment number.
         - `<description>`
             - The amendment's description.
-            -	Only House amendments will have this element populated.
+            - Only House amendments will have this element populated.
         -	`<purpose>` (e.g. In the nature of a substitute.)
-            -	The amendment's purpose.
-            -	House amendments and proposed Senate amendments may have this element populated.
+            - The amendment's purpose.
+            - House amendments and proposed Senate amendments may have this element populated.
         -	`<congress>` (e.g. 117)
             - The congress during which an amendment was submitted or offered.
         -	`<type>` (e.g. SAMDT)
@@ -181,7 +181,7 @@ The `<api-root>` is only present in the XML format.
 
 Parent container for all actions taken on an amendment. Actions may come from the House, Senate, or Library of Congress. An `<actions>` element may include the following children:
 -	`<item>` 
-    -	Container for an action taken on an amendment. An `<item>` element may include the following children:
+    -	Container for an action taken on an amendment. An `<item>` element is repeatable and may include the following children:
         -	`<actionDate>` (e.g. 2021-08-08)
             -	The date of the action taken on an amendment.
         -	`<actionTime>`
@@ -207,11 +207,11 @@ Parent container for all actions taken on an amendment. Actions may come from th
           - `<committees>`
             -	Container for committees associated with the action. A `<committees>` element may include the following children:
                 -	`<item>`
-                    -	Container for a committee associated with the action. An `<item>` element may include the following children:
+                    -	Container for a committee associated with the action. An `<item>` element is repeatable and may include the following children:
                         -	`<url>`
                             -	A referrer URL to the committee or subcommittee in the API. Documentation for the committee endpoint is available [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/CommitteeEndpoint.md).
                         -	`<systemCode>`
-                            -	A code associated with the committee or subcommittee used to match items in Congress.gov with the committee or subcommittee.
+                            -	Unique ID value for the committee or subcommittee.
                         -	`<name>`
                             -	The name of the committee or subcommittee associated with the action. 
           -	`<recordedVotes>`
@@ -241,7 +241,7 @@ The `<api-root>` is only present in the XML format.
 
 Parent container for all amendments to the amendment. An `<amendments>` element may include the following children:
 -	`<amendment>`
-    -	Container for an amendment to the amendment. An `<amendment>` element may include the following children:
+    -	Container for an amendment to the amendment. An `<amendment>` element is repeatable and may include the following children:
         -	`<number>` (e.g. 2300)
             -	The assigned amendment number. 
         -	`<description>`
@@ -275,7 +275,7 @@ The `<api-root>` is only present in the XML format.
 
 Parent container for cosponsors of an amendment. Read more [about cosponsors](https://www.congress.gov/help/legislative-glossary#glossary_cosponsor) on Congress.gov. Only Senate amendments will have this deeper level. A `<cosponsors>` element may include the following children:
 -	`<item>`
-    -	Container for a cosponsor of an amendment. An `<item>` element may include the following children:
+    -	Container for a cosponsor of an amendment. An `<item>` element is repeatable and may include the following children:
         -	`<bioguideId>` (e.g. P000449)
             -	The unique identifier for the amendment cosponsor, as assigned in the [Biographical Directory of the United States Congress, 1774-Present](http://bioguide.congress.gov/).
             -	View a [field values list of Bioguide identifiers](https://www.congress.gov/help/field-values/member-bioguide-ids) for current and former members in Congress.gov.
