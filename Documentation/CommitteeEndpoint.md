@@ -174,7 +174,7 @@ The `<api-root>` is only present in the XML format.
 
 `<nominations>`
 
-Parent container for nominations considered by a Senate committee (the below data is taken from https://api.data.gov/congress/v3/committee/senate/ssju00/nominations?api_key=). The `<nominations>` element may contain the following children, which are repeatable:
+Parent container for nominations associated with a Senate committee (the below data is taken from https://api.data.gov/congress/v3/committee/senate/ssju00/nominations?api_key=). The `<nominations>` element may contain the following children, which are repeatable:
  - `<item>`
  	- Container for individual nominations considered by the Senate committee. The `<item>` element is repeatable and may contain the following children: 
  		- `<congress>` (e.g., 117)
@@ -186,18 +186,18 @@ Parent container for nominations considered by a Senate committee (the below dat
  			- The part number for the individual nomination. Nominations with multiple nominees may be partitioned if the nominees follow different confirmation paths.
  		- `<citation>` (e.g., PN2439)
  			- The citation identifying the nomination. PN indicates "Presidential Nomination" and the digits are the nominations assigned number. If the nomination was partitioned, the citation will include a dash and the partition number (e.g. PN78-4).  
- 		- `<description>` (e.g., Araceli Martinez-Olguin, of California, to be United States District Judge for the Northern District of California, vice Jeffrey S. White, retired.”)
+ 		- `<description>` (e.g., Araceli Martinez-Olguin, of California, to be United States District Judge for the Northern District of California, vice Jeffrey S. White, retired.)
  			- The description of the nomination.
  		- `<receivedDate>` (e.g., 2022-08-01)
  			- The date the nomination was received from the President.
  		- `<nominationType>`
-			- Container for nomination type data. A '<nominationType>' element may contain the following children:
-			- `<isCivilian>` (e.g., True)
-				- Flag indicating whether the nomination is for a civilian position. 
-				- Possible values are "True" or "False".
-			- `<inMilitary>` (e.g., False)
-				- Flag indicating whether the nomination is for a military position.
-				- Possible values are "True" or "False".
+			- Container for nomination type data. A `<nominationType>` element may contain the following children:
+				- `<isCivilian>` (e.g., True)
+					- Flag indicating whether the nomination is for a civilian position. 
+					- Possible values are "True" or "False".
+				- `<inMilitary>` (e.g., False)
+					- Flag indicating whether the nomination is for a military position.
+					- Possible values are "True" or "False".
 		- `<updateDate>` (e.g., 2022-08-02 04:25:19+00:00)
 			- Date of update in Congress.gov
 		- `<latestAction>`
