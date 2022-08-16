@@ -8,8 +8,8 @@ An `<updateDate>` element will be added to the list level. This element will ind
 ### Impacted endpoint: member
 1. The following elements will be removed:
 * `<congressName>` within a `<terms>` item at the item level
-* `<partyStateDistrictCode>` within a `<terms>` (if a House member) at the item level
-* `<partyStateCode>` within a `<terms>` (if a Senate member) at the item level
+* `<partyStateDistrictCode>` within a `<terms>` item (if a House member) at the item level
+* `<partyStateCode>` within a `<terms>` item (if a Senate member) at the item level
 * `<lisId>` within `<identifiers>` at the item level
 * `<gpoId>` within `<identifiers>` at the item level
 * `<imageUrl>` within `<depiction>` at the list and item level (note that `<thumbnailUrl>` will be renamed to `<imageUrl>`)
@@ -20,7 +20,7 @@ An `<updateDate>` element will be added to the list level. This element will ind
 * `<thumbnailUrl>` within `<depiction>` will become `<imageUrl>` at the list and item level
 * `<latestTitle>` will become `<title>` at the sponsored-legislation and cosponsored-legislation deeper levels
 3. An `<updateDate>` will be added at the item level. This element will indicate the member record's last update in Congress.gov.
-4. A new `<partyHistory>` container will be created at the item level. The `<partyName>` and `<partyCode>` elements (currently underneath a `<terms>` item) will be moved underneath the new `<partyHistory>` container. Also contained underneath `<partyHistory> will be `<startDate>` and `<endDate>` elements. This structure will better represent members who represented different parties over their congressional service.
+4. A new `<partyHistory>` container will be created at the item level. The `<partyName>` and `<partyCode>` elements (currently underneath a `<terms>` item) will be moved underneath the new `<partyHistory>` container. Also contained underneath `<partyHistory>` will be `<startDate>` and `<endDate>` elements. This structure will better represent members who represented different parties over their congressional service.
 ## Change #3
 ### Impacted endpoint: bill
 An `<updateDateIncludingText>` element will be added to the item level. This element will indicate the bill's last update in Congress.gov, including if that update was to the bill text. The existing `<updateDate>` element does not include updates to bill text.
