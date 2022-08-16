@@ -570,7 +570,7 @@ Parent container for amendments on the bill or resolution. Read more [about amen
       - The congress during which the amendment was submitted or offered. 
     - `<type>` (e.g. HAMDT)
       - The type of amendment.
-      - Possible values are "HAMDT", "SAMDT", and "SUAMDT".
+      - Possible values are "HAMDT", "SAMDT", and "SUAMDT". Note that the "SUAMDT" type value is only available for the 97th and 98th Congresses.
     - `<latestAction>`
       - Container for the latest action taken on the amendment. A `<latestAction>` element may include the following children:
           - `<actionDate>` (e.g. 2022-02-08)
