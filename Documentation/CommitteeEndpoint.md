@@ -170,7 +170,7 @@ Parent container for bills and resolutions associated with the committee or subc
        - The date of update in Congress.gov. 
 
 
-### Nominations Item Level
+### Nominations Level
 `<api-root>`
 
 The `<api-root>` is only present in the XML format. 
