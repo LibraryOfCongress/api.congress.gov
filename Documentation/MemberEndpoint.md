@@ -37,7 +37,7 @@ Parent container for all member entries. A `<members>` element may include the f
                                   - The year in which the member began serving in the designated chamber.
                              - `<end>` (e.g., 1990)
                                   - The year in which the member ceased serving in the designated chamber.
-      - `<url>`  (e.g., **https://api.data.gov/congress/v3/member/L000174?format=xml**)
+      - `<url>`  (e.g., https://api.data.gov/congress/v3/member/L000174?format=xml)
           - The referrer URL to the member item in the API.
       - `<depiction>`
           -	Container for the member’s current official portrait. The `<depiction>` element may include the following children:
@@ -153,15 +153,15 @@ Parent container for an individual member’s entry. A `<member>` element may in
         - Indicator whether the leadership position is currently held by the member. NOTE: This value may change from True to False during a Congress.
         - Possible values are "True" or "False".
 - `<sponsoredLegislation>`
-  - Container for legislation sponsored by member. A `<sponsoredLegislation>` container may include the following children:
+  - Container for bills and resolutions sponsored by member. A `<sponsoredLegislation>` container may include the following children:
     - `<count>` (e.g., 1753)
-      - The total number of measures sponsored by the member. 
+      - The total number of bills and resolutions sponsored by the member. 
     - `<url>` (e.g., https://api.data.gov/congress/v3/member/L000174/sponsored-legislation)
       - A referrer URL to the sponsored-legislation level of the API. Click [here](#sponsored-legislation-level) for more information about the sponsored-legislation level.
 - `<cosponsoredLegislation>`
-  - Container for legislation cosponsored by member. A `<cosponsoredLegislation>` container may include the following children:
+  - Container for bills and resolutions cosponsored by member. A `<cosponsoredLegislation>` container may include the following children:
     - `<count>` (e.g., 7470)  
-      - The total number of measures cosponsored by the member. 
+      - The total number of bills and resolutions cosponsored by the member. 
     - `<url>` (e.g., https://api.data.gov/congress/v3/member/L000174/cosponsored-legislation) 
       - A referrer URL to the cosponsored-legislation level of the API. Click [here](#cosponsored-legislation-level) for more information about the cosponsored-legislation level.  
 - `<updateDate>` (e.g., 2022-07-22T18:44:02Z)
@@ -175,11 +175,11 @@ The `<api-root>` is only present in the XML format.
 
 `<sponsoredLegislation>`
 
-Parent container for all sponsored legislation entries. A `<sponsoredLegislation>` element may include the following children:
+Parent container for all sponsored bills and resolutions. A `<sponsoredLegislation>` element may include the following children:
 - `<item>`
-  - Container for an individual legislative measure sponsored by the member. An `<item>` element may include the following children:
+  - Container for an individual bill or resolution sponsored by the member. An `<item>` element may include the following children:
     - `<introducedDate>` (e.g., 2022-06-16)
-      - The date the measure was introduced. 
+      - The date the bill or resolution was introduced. 
     - `<type>` (e.g., S)
       - The type of bill or resolution.
       - Possible values are "HR", "S", "HJRES", "SJRES", "HCONRES", "SCONRES", "HRES", and "SRES".
@@ -201,7 +201,7 @@ Parent container for all sponsored legislation entries. A `<sponsoredLegislation
         - `<text>` (e.g., Read twice and referred to the Committee on the Judiciary.)
           - The text of the latest action taken on the bill or resolution.
     - `<url>` (e.g., https://api.data.gov/congress/v3/bill/117/s/4417?format=xml)
-      - A referrer URL to the bill item in the API. Documentation for the Bill endpoint is [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/BillEndpoint.md).
+      - A referrer URL to the bill item in the API. Documentation for the bill endpoint is [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/BillEndpoint.md).
 
 
 ### Cosponsored-Legislation Level
@@ -212,11 +212,11 @@ The `<api-root>` is only present in the XML format.
 
 `<cosponsoredLegislation>`
 
-Parent container for all sponsored legislation entries. A `<cosponsoredLegislation>` element may include the following children:
+Parent container for all sponsored bills and resolutions. A `<cosponsoredLegislation>` element may include the following children:
 - `<item>`
-  - Container for an individual legislative measure sponsored by the member. An `<item>` element may include the following children:
+  - Container for an individual bill or resolution sponsored by the member. An `<item>` element may include the following children:
     - `<introducedDate>` (e.g., 2022-07-20)
-      - The date the measure was introduced. 
+      - The date the bill or resolution was introduced. 
     - `<type>` (e.g., SRES)
       - The type of bill or resolution.
       - Possible values are "HR", "S", "HJRES", "SJRES", "HCONRES", "SCONRES", "HRES", and "SRES".
@@ -238,4 +238,4 @@ Parent container for all sponsored legislation entries. A `<cosponsoredLegislati
         - `<text>` (e.g., Referred to the Committee on Health, Education, Labor, and Pensions. (text: CR S3547-3548))
           - The text of the latest action taken on the bill or resolution.
     - `<url>` (e.g., https://api.data.gov/congress/v3/bill/117/sres/714?format=xml)
-      - A referrer URL to the bill item in the API. Documentation for the Bill endpoint is [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/BillEndpoint.md).
+      - A referrer URL to the bill item in the API. Documentation for the bill endpoint is [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/BillEndpoint.md).
