@@ -207,4 +207,4 @@ Parent container for nominations associated with a Senate committee (the below d
 				- `<text>` (e.g., Received in the Senate and referred to the Committee on the Judiciary.)
 					- The text of the latest action taken on the nomination. 
 				- `<url>` (e.g., https://api.data.gov/congress/v3/nomination/117/2439?format=xml)
-					- A referrer URL to the nomination item in the API. Documentation for the nomination endpoint is in progress. 
+					- A referrer URL to the nomination item in the API. Documentation for the nomination endpoint is available [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/NominationEndpoint.md).
