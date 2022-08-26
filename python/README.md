@@ -1,7 +1,18 @@
 # CDG Example Client with Python
 
-## Requirements
 
+## Table of contents
+
+- [Requirements](#requirements)
+- [API Credentials](#api-credentials)
+- [Typical Use of CDGClient](#typical-use-of-cdgclient)
+- [Examples](#examples)
+- [Configurable options](#configurable-options)
+- [How to talk to various endpoints](#how-to-talk-to-various-endpoints)  
+- [Client arguments](#client-arguments)
+- [Additional Information](#additional-information)
+
+## Requirements
 This client with developed and tested with Python 3.8 so should work with that version
 and above.
 
@@ -27,6 +38,10 @@ though they work after the `python` command as well:
 
 Windows folks will probably need to type `python` before any scripts,
 assuming python is on your PATH.
+
+## API Credentials
+Sign up for and retrieve your API key from https://api.congress.gov/sign-up
+
 
 
 ## Typical Use of CDGClient
@@ -65,15 +80,16 @@ First, you'll need to enter your API Auth key at the prompt.
 That is, wait for the prompt, do *not* put it on the command-line proper:
 
 ```sh
-⏵ cdg_cli --prompt-key # Enter, do *not* pass API Auth key here ✗
+⏵ python cdg_cli --prompt-key # Enter, do *not* pass API Auth key here ✗
 
 API Key:               # Do paste it here ✓
 
   INFO     API Key was saved.
 
 # Now you can run it
+now you want to look at bill/hr/21/committeess, write:
 
-⏵ cdg_cli bill/117/hr/21/committees
+⏵ python cdg_cli bill/117/hr/21/committees
   INFO     __main__/main:111 HTTP Status: 200
   INFO     __main__/main:112 API Returned:
 {'committees': [{'activities': [{'date': '2021-01-07T01:26:34Z',
@@ -102,6 +118,18 @@ API Key:               # Do paste it here ✓
 
 <p>&nbsp;</p>
 
+## Configurable options
+
+| Key                      | Description                                                        | Values                                       |
+|--------------------------|--------------------------------------------------------------------|----------------------------------------------|
+| *API_KEY*                | The API key used to authenticate calls                             | Retrieved from https://api.data.gov          |
+| *RESPONSE_FORMAT*        | Sets the response format returned by the API                       | xml, json                                    |
+| *BILL.CONGRESS*          | The numerical value of the congress to query                       | 1 - 117 (or current congress)                |
+| *BILL.CHAMBER*           | The congressional chamber                                          | hr, s, sjres, hjres                          |
+| *BILL.NUMBER*            | The bill number to query                                           | A valid bill number from https://congres.gov |
+| *BILL.URL*               | The bill url for the API to query                                  | bill                                         |
+
+
 ### How to talk to various endpoints:
 
 `bill_example` is an example of:
@@ -129,5 +157,29 @@ API Key:               # Do paste it here ✓
 
 <p>&nbsp;</p>
 
+## Client arguments
+Other options allowed as arguments to python bill_example.py are:
+
+| Argument             | Description                              |
+|----------------------|------------------------------------------|
+| *help*               | Displays the help message                |
+| *all_bill_calls*     | Runs all of the defined bill API calls   |
+| *bills_get_all*      | Gets all bills                           |
+| *bills_by_congress*  | Gets all bills by the specified congress |
+| *bills_by_chamber*   | Gets all bills by the specified chamber  |
+| *bill*               | Gets a specific bill                     |
+| *bill_actions*       | Gets a bills actions                     |
+| *bill_amendments*    | Gets a bills amendments                  |
+| *bill_committees*    | Gets a bills committees                  |
+| *bill_cosponsors*    | Gets a bills cosponsors                  |
+| *bill_related_bills* | Gets a bills related bills               |
+| *bill_subjects*      | Gets a bills subjects                    |
+| *bill_summaries*     | Gets a bills summaries                   |
+| *bill_texts*         | Gets a bills texts                       |
+|  *bill_titles*       | Gets a bills titles                      |
+
+## Additional Information
+- For more information and the full API reference, please visit https://api.congress.gov/
+- Alternative ways to make use of your API key when making calls can be found here: https://api.data.gov/docs/api-key/
 ---
 © 2022, Library of Congress via Congress.gov
