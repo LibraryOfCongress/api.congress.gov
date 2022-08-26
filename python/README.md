@@ -34,7 +34,7 @@ assuming python is on your PATH.
 ```python
 from cdg_client import CDGClient  # make it available
 
-client = CDGClient(auth_key)  # pass the key, response_format="xml" if needed
+client = CDGClient(api_key)  # pass the key, response_format="xml" if needed
 
 # use requests args and kwargs below modify the request:
 data, status_code = client.get(endpoint, *args, **kwargs)
@@ -67,7 +67,7 @@ That is, wait for the prompt, do *not* put it on the command-line proper:
 ```sh
 ⏵ cdg_cli --prompt-key # Enter, do *not* pass API Auth key here ✗
 
-Auth Key:               # Do paste it here ✓
+API Key:               # Do paste it here ✓
 
   INFO     API Key was saved.
 

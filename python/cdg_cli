@@ -28,7 +28,7 @@ import logging
 __version__ = '0.90'
 log = logging.getLogger(__name__)
 CDG_SYSTEM_NAME = 'CDG_API'
-CDG_USER = 'AUTH_KEY'  # informational only
+CDG_USER = 'API_KEY'  # informational only
 
 
 def setup():
@@ -44,7 +44,7 @@ def setup():
     parser.add_argument(
         '--prompt-key',
         action='store_true',
-        help='Prompt to store auth_key in keyring.\nDo not add key to command-line.',
+        help='Prompt to store api_key in keyring.\nDo not add key to command-line.',
     )
     parser.add_argument(
         '-v',
@@ -74,9 +74,9 @@ def setup():
     if args.prompt_key:
         from getpass import getpass
 
-        auth_key = getpass('Auth Key: ')
-        if auth_key:
-            keyring.set_password(CDG_SYSTEM_NAME, CDG_USER, auth_key)
+        api_key = getpass('API Key: ')
+        if api_key:
+            keyring.set_password(CDG_SYSTEM_NAME, CDG_USER, api_key)
             log.info('API Auth Key was saved.')
             sys.exit(os.EX_OK)
         else:
@@ -84,7 +84,7 @@ def setup():
             sys.exit(os.EX_NOINPUT)
     else:
         if not keyring.get_password(CDG_SYSTEM_NAME, CDG_USER):
-            parser.error('auth_key has not been set, see -h to explain --prompt-key')
+            parser.error('api_key has not been set, see -h to explain --prompt-key')
         if not args.endpoint:
             parser.error('endpoint parameter is required.')
 
