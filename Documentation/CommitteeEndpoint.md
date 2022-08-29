@@ -1,6 +1,6 @@
 # Committee endpoint
 ## Coverage
-Coverage information for committee data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates). Read more about committee data at [About Committees and Committee Materials]( https://www.congress.gov/help/committee-materials) on Congress.gov.
+Coverage information for committee data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates). Read more about committee data at [About Committees and Committee Materials](https://www.congress.gov/help/committee-materials) on Congress.gov.
 ## Elements and Descriptions
 The section below details available element names, their description, and possible values.
 ### List Level
@@ -15,7 +15,7 @@ The `<api-root>` is only present in the XML format.
  Parent container for committees and subcommittees. A `<committees>` element may contain the following children:
  - `<item>`
    - Container for an individual committee or subcommittee. An `<item>` element is repeatable and may contain the following children: 
-     - `<url>` (e.g., https://api.congress.gov/v3/committee/house/hspw00?format=xml)
+     - `<url>` (e.g., https://api.congress.gov/v3/committee/house/hspw00)
        - A referrer URL to the committee or subcommittee item in the API.     
      - `<systemCode>` (e.g., hspw00)
         -	Unique ID value for the committee or subcommittee. The first letter represents the chamber, i.e., House, Senate, or Joint. The two numerals at the end of the `<systemCode>` indicate whether the entity is a full committee or subcommittee. Full committees are represented by a double zero and subcommittees will have an identical systemCode as its parent committee but with numerals other than the double zero.  
@@ -33,7 +33,7 @@ The `<api-root>` is only present in the XML format.
        - Container for subcommittee information and indication of whether a parent committee has subcommittees. A `<subcommittees>` element is repeatable and may contain the following children: 
        		- `<item>`
          		- Container for an individual subcommittee of the committee. An `<item>` element is repeatable and may contain the following children:
-        			 - `<url>` (e.g., https://api.congress.gov/v3/committee/house/hspw14?format=xml)
+        			 - `<url>` (e.g., https://api.congress.gov/v3/committee/house/hspw14)
         			 	- A referrer URL to the subcommittee item in the API. 
          			- `<systemCode>` (e.g., hspw14)
            				-  The unique ID value for the subcommittee. Subcommittee `<systemCode>` values contain numerals other than a double zero. 
@@ -72,7 +72,7 @@ Parent container for an individual committee or subcommittee entry. A `<committe
       - Container for all of the committee's subcommittee's. The `<subcommittee>` element may contain the following children, which are repeatable:  
       	- `<item>`
        	 	- Container for an individual subcommittee under the committee. The `<item>` element is repeatable and may contain the following children:
-         		- `<url>` (e.g., https://api.congress.gov/v3/committee/house/hspw14?format=xml)
+         		- `<url>` (e.g., https://api.congress.gov/v3/committee/house/hspw14)
            			- A referrer URL to the subcommittee item in the API.
         		- `<systemCode>` (e.g., hspw14)
           			- The unique ID of the subcommittee. Subcommittee `<systemCode>` values contain numerals other than a double zero.   
@@ -80,13 +80,13 @@ Parent container for an individual committee or subcommittee entry. A `<committe
           			- The name of the subcommittee. 
 - `<reports>`
      - Container for committee reports issued by a committee. A `<reports>` element may contain the following children: 
-        - `<url>` (e.g., https://api.congress.gov/v3/committee/house/hspw00/reports?format=xml)
+        - `<url>` (e.g., https://api.congress.gov/v3/committee/house/hspw00/reports)
         	- A referrer URL to the committee reports level of the committee API. Click [here](#committee-reports-level) for more information about the committee reports level.
         - `<count>` (e.g., 1373)
           - The number of reports present in the committee's reports API endpoint.  
 - `<bills>`
 	- Container for bills associated with a committee. A `<bills>` element may contain the following children:
-		- `<url>` (e.g., https://api.congress.gov/v3/committee/house/hspw00/bills?format=xml)
+		- `<url>` (e.g., https://api.congress.gov/v3/committee/house/hspw00/bills)
 			- Referrer URL to the bills level of the committee API. Click [here](#bills-level) for more information about the bills level. 
 		- `<count>` (e.g., 25313)
 			- The number of bills in the committee's bills API endpoint.  
@@ -134,7 +134,7 @@ Parent container for reports issued by a committee. The `<reports>` element may 
    - Container for individual reports issued by the committee. The `<item>` container is repeatable and may contain the following children:
    		- `<citation>` (e.g., H. Rept. 109-570)
    			- The citation of the report issued by the committee.  
-   		- `<url>` (e.g., https://api.congress.gov/v3/committeeReport/109/HRPT/570?format=xml)
+   		- `<url>` (e.g., https://api.congress.gov/v3/committeeReport/109/HRPT/570)
    			- A referrer URL to the committee report item in the API. Documentation for the committee report endpoint is in progress. 
    		- `<updateDate>` (e.g., 2021-07-10 16:19:06+00:00)
    			- The date of update in Congress.gov. 
@@ -146,7 +146,7 @@ The `<api-root>` is only present in the XML format.
 `<committee-bills>`
 
 Parent container for bills and resolutions associated with the committee or subcommittee. The `<committee-bills>` element may contain the following children:
- - `<url>` (e.g., https://api.congress.gov/v3/committee/house/hspw00/bills?format=xml)
+ - `<url>` (e.g., https://api.congress.gov/v3/committee/house/hspw00/bills)
    - A referrer URL to the committee's bills level in the API.
  - `<count>` (e.g., 25313)
    - The number of bills and resolutions in the bills level API. 
