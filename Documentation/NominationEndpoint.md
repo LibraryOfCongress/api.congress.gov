@@ -4,7 +4,7 @@ Coverage information for nominations data in the API can be found at [Coverage D
 ## Elements and Descriptions
 The section below details available element names, their descriptions, and possible values.
 ### List Level
-Note that nomination items at the list level can be filtered down by congress (e.g. 117) - https://api.data.gov/congress/v3/nomination/117/?api_key=.
+Note that nomination items at the list level can be filtered down by congress (e.g. 117) - https://api.congress.gov/v3/nomination/117/?api_key=.
 
 `<api-root>`
 
@@ -40,8 +40,8 @@ Parent container for nominations. A `<nominations>` element may include the foll
      - `<latestAction>` (e.g. ({actionDate:'2022-07-21', 'text':'Confirmed by the Senate by Voice Vote.'},))
         - Data string containing an action date element (the date of the latest action taken on the nomination) and a text element (the text of the latest action taken on the nomination). Work is scheduled to separate out these elements. 
      - `<updateDate>` (e.g. 2022-07-22 04:24:15+00:00)
-        - The date of last update in Congress.gov.
-     - `<url>` (e.g. https://api.data.gov/congress.gov/v3/nomination/117/1064)
+        - The date of update in Congress.gov.
+     - `<url>` (e.g. https://api.congress.gov/v3/nomination/117/1064)
         - A referrer URL to the nomination item in the API.
 ### Item Level
 `<api-root>`
@@ -86,7 +86,7 @@ Parent container for the nomination. A `<nomination>` element may contain the fo
           - The title of the position for which the nominee has been nominated.
         - `<division>`
           - The name of the division within the organization for which the nominee has been nominated.
-        - `<url>` (e.g. https://api.data.gov/congress/v3/nomination/117/1064/1)
+        - `<url>` (e.g. https://api.congress.gov/v3/nomination/117/1064/1)
           - A referrer URL to the nominee position level of the nomination API. Click [here](#nominees-level) for more information about the nominee position level.
           - Note that if there are nominees for multiple positions within a nomination, there will be multiple referrer URLs to those nominee position levels. The numbering for the referrer URLs will be sequential (e.g. 1, 2, etc.).
         - `<nomineeCount>` (e.g. 1)
@@ -107,16 +107,16 @@ Parent container for the nomination. A `<nomination>` element may contain the fo
   - Container for actions on the nomination. An `<actions>` element may include the following children:
     - `<count>` (e.g. 6)
       - The number of actions on the nomination. The `<count>` may include actions from the Senate and the President.
-     - `<url>` (e.g. https://api.data.gov/v3/congress/nomination/117/1064/actions)
+     - `<url>` (e.g. https://api.congress.gov/v3/nomination/117/1064/actions)
        - A referrer URL to the actions level of the nomination API. Click [here](#actions-level) for more information about the actions level. 
 - `<hearings>`
-  - Container for all printed hearings associated with the nomination. A `<hearings>` element may include the following children (the below data is from https://api.data.gov/congress/v3/nomination/116/389):
+  - Container for all printed hearings associated with the nomination. A `<hearings>` element may include the following children (the below data is from https://api.congress.gov/v3/nomination/116/389):
     - `<count>` (e.g. 1)
       - The number of printed hearings associated with the nomination.
-    -  `<url>` (e.g. https://api.data.congress.gov/v3/nomination/116/389/hearings)
+    -  `<url>` (e.g. https://api.congress.gov/v3/nomination/116/389/hearings)
        - A referrer URL to the printed hearings level of the nomination API. Click [here](#hearings-level) for more information about the printed hearings level.
 - `<updateDate>` (e.g. 2022-07-22 04:25:15+00:00)
-  - The date of last update in Congress.gov.
+  - The date of update in Congress.gov.
 ### Nominees Level
 `<api-root>` 
 
@@ -158,8 +158,8 @@ The `<api-root>` is only present in the XML format.
 
 Parent container for committees with activity associated with the nomination. A list of committees with an association to data on Congress.gov is available at the [Committee Name History](https://www.congress.gov/help/committee-name-history) page on Congress.gov. A list of current committees is available at [Committees of the U.S. Congress](https://www.congress.gov/committees) on Congress.gov. A `<committees>` element may include the following children:
 - `<item>`
-  - Container for a committee with activity associated with the nomination. An `<item>` element is repeatable and may include the following children (the below data is from https://api.data.gov/congress/v3/nomination/117/1520/committees):
-    - `<url>` (e.g. https://api.data.gov/congress/v3/committee/house/sscm00)
+  - Container for a committee with activity associated with the nomination. An `<item>` element is repeatable and may include the following children (the below data is from https://api.congress.gov/v3/nomination/117/1520/committees):
+    - `<url>` (e.g. https://api.congress.gov/v3/committee/house/sscm00)
       - A referrer URL to the committee item in the API. Documentation for the committee endpoint is available [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/CommitteeEndpoint.md).
     - `<systemCode>` (e.g. sscm00)
       - Unique ID value for the committee.
@@ -218,7 +218,7 @@ The `<api-root>` is only present in the XML format.
 
 `<hearings>`
 
-Parent container for printed hearings associated with the nomination. A `<hearings>` element may include the following children (the below data is from https://api.data.gov/nomination/116/389/hearings):
+Parent container for printed hearings associated with the nomination. A `<hearings>` element may include the following children (the below data is from https://api.congress.gov/v3/nomination/116/389/hearings):
 - `<item>`
   - Container for a printed hearing on the nomination. An `<item>` element is repeatable and may include the following children:
     - `<chamber>` (e.g. Senate)
