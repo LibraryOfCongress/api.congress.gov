@@ -62,7 +62,7 @@ Parent container for an individual committee or subcommittee entry. A `<committe
       - `<systemCode>`
 		- The unique ID of the committee's parent. Parent committee `<systemCode>` values end in a double zero. 
       - `<name>`
-      		- The name of the committee's parent.  
+      	- The name of the committee's parent.  
   - `<updateDate>` (e.g., 2020-02-04T00:07:37Z)
      - The date of update in Congress.gov.
   - `<isCurrent>` (e.g., True)
