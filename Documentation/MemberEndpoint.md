@@ -99,9 +99,9 @@ Parent container for an individual member’s entry. A `<member>` element may in
           - The Congressional district represented by the member (exclusive to the House). The value of zero indicates the state, district or territory has only one member in the House.
 - `<identifiers>`
   - Container for member’s identifying information. The `<identifiers>` element may include the following child: 
-  - `<bioguideID>` (e.g., L000174)
-    - The unique ID value that originates in the [Biographical Directory of the United States Congress, 1774-Present](https://bioguide.congress.gov/). 
-    - View a [field values list of Bioguide identifiers](https://www.congress.gov/help/field-values/member-bioguide-ids) for current and former members in Congress.gov. 
+    - `<bioguideID>` (e.g., L000174)
+      - The unique ID value that originates in the [Biographical Directory of the United States Congress, 1774-Present](https://bioguide.congress.gov/). 
+      - View a [field values list of Bioguide identifiers](https://www.congress.gov/help/field-values/member-bioguide-ids) for current and former members in Congress.gov. 
 - `<party>` (e.g., Democatic)
   - The current political party of the member. Note: This does not currently reflect party changes. 
   - Possible values are "Democratic", "Independent", "Independent Democrat", "Libertarian", and "Republication".
