@@ -38,7 +38,7 @@ Parent container for all member entries. A `<members>` element may include the f
                              - `<end>` (e.g., 1990)
                                   - The year in which the member ceased serving in the designated chamber.
       - `<url>`  (e.g., https://api.congress.gov/v3/member/L000174)
-          - The referrer URL to the member item in the API.
+          - A referrer URL to the member item in the API.
       - `<depiction>`
           -	Container for the member’s current official portrait. The `<depiction>` element may include the following children:
               - `<imageUrl>` (e.g. https://www.congress.gov/img/member/l000174_200.jpg)
