@@ -24,7 +24,7 @@ Parent container for all member entries. A `<members>` element may include the f
         - The political party of the member.
         - Possible values are "Democratic", "Independent", "Independent Democrat", "Libertarian", or "Republican".
     - `<district>`  
-      - The Congressional district represented by the member (exclusive to House). The value of zero indicates the state has only one member in the House.
+      - The Congressional district represented by the member (exclusive to House). The value of zero indicates the state, district or territory has only one member in the House.
      - `<name>`  (e.g.,  Leahy, Patrick J.)
         - The name of the member in last-name-first order.
       - `<served>`
@@ -37,7 +37,7 @@ Parent container for all member entries. A `<members>` element may include the f
                                   - The year in which the member began serving in the designated chamber.
                              - `<end>` (e.g., 1990)
                                   - The year in which the member ceased serving in the designated chamber.
-      - `<url>`  (e.g., https://api.data.gov/congress/v3/member/L000174?format=xml)
+      - `<url>`  (e.g., https://api.congress.gov/v3/member/L000174)
           - The referrer URL to the member item in the API.
       - `<depiction>`
           -	Container for the member’s current official portrait. The `<depiction>` element may include the following children:
@@ -70,33 +70,33 @@ Parent container for an individual member’s entry. A `<member>` element may in
       - The source of the image. 
 - `<terms>`
   - Container of a member’s terms of service in chronological order. A `<terms>` element may include the following child, which is repeatable: 
-   - `<item>` 
-     - Container for the member’s service in an individual Congress. An `<item>` element is repeatable and may include the following children: 
-       - `<memberType>` (e.g., Senator)
-         - The membership type.
-         - Possible values are "Representative", "Resident Commissioner", "Delgate", or "Senator".
-       - `<congress>` (e.g., 94)
-         - The Congress during which the member served.  
-         - View the [field values list of Congresses](https://www.congress.gov/help/field-values/congresses) on Congress.gov. Read more [about Congresses](https://www.congress.gov/help/legislative-glossary#glossary_congress) on Congress.gov.
-       - `<chamber>` (e.g., Senate)
-         - The chamber in which the member served during that Congress.
-         - Possible values are "House of Representatives" and "Senate".
-       - `<stateCode>` (e.g., VT)
-         - The two-digit postal code abbreviation for the state represented by the member. 
-       - `<stateName>` (e.g., Vermont)
-         - The name of the state represented by the member. 
-       - `<partyName>` (e.g., Democratic)
-         - The political party of the member.
-         - Possible values are "Democratic", "Independent", "Independent Democrat", "Libertarian", and "Republication".
-       - `<partyCode>` (e.g., D)
-         - The single letter abbreviation for the political party of the member.
-         - Possible values are "D", "I", "ID", "L", and "R". 
-       - `<termBeginYear>` (e.g., 1975)
-         - The year in which the member’s service in that Congress began. 
-       - `<termEndYear>` (e.g., 1977)
-         - The year in which the member’s service in that Congress ended. 
-       - `<district>`  
-         - The Congressional district represented by the member (exclusive to the House). The value of zero indicates the state has only one member in the House.
+    - `<item>` 
+      - Container for the member’s service in an individual Congress. An `<item>` element is repeatable and may include the following children: 
+        - `<memberType>` (e.g., Senator)
+          - The membership type.
+          - Possible values are "Representative", "Resident Commissioner", "Delgate", or "Senator".
+        - `<congress>` (e.g., 94)
+          - The Congress during which the member served.  
+          - View the [field values list of Congresses](https://www.congress.gov/help/field-values/congresses) on Congress.gov. Read more [about Congresses](https://www.congress.gov/help/legislative-glossary#glossary_congress) on Congress.gov.
+        - `<chamber>` (e.g., Senate)
+          - The chamber in which the member served during that Congress.
+          - Possible values are "House of Representatives" and "Senate".
+        - `<stateCode>` (e.g., VT)
+          - The two-digit postal code abbreviation for the state represented by the member. 
+        - `<stateName>` (e.g., Vermont)
+          - The name of the state represented by the member. 
+        - `<partyName>` (e.g., Democratic)
+          - The political party of the member.
+          - Possible values are "Democratic", "Independent", "Independent Democrat", "Libertarian", and "Republication".
+        - `<partyCode>` (e.g., D)
+          - The single letter abbreviation for the political party of the member.
+          - Possible values are "D", "I", "ID", "L", and "R". 
+        - `<termBeginYear>` (e.g., 1975)
+          - The year in which the member’s service in that Congress began. 
+        - `<termEndYear>` (e.g., 1977)
+          - The year in which the member’s service in that Congress ended. 
+        - `<district>`  
+          - The Congressional district represented by the member (exclusive to the House). The value of zero indicates the state, district or territory has only one member in the House.
 - `<identifiers>`
   - Container for member’s identifying information. The `<identifiers>` element may include the following child: 
   - `<bioguideID>` (e.g., L000174)
@@ -108,7 +108,7 @@ Parent container for an individual member’s entry. A `<member>` element may in
 - `<state>` (e.g., Vermont)
   - The state represented by the member.
 - `<district>`   
-  - The Congressional district represented by the member (exclusive to House). The value of zero indicates the state has only one member in the House.
+  - The Congressional district represented by the member (exclusive to House). The value of zero indicates the state, district or territory has only one member in the House.
 - `<officialUrl>` (e.g., https://www.leahy.senate.gov/)
   - The member’s official website.
 - `<honorificName>` (e.g., Mr.)  
@@ -139,8 +139,8 @@ Parent container for an individual member’s entry. A `<member>` element may in
       - The postal zip code for the member’s office in Washington, D.C. 
     - `<officeTelephone>`
       - Container for the member’s telephone contact information. An `<officeTelephone>` container may include the following child:
-      - `<phoneNumber>` (e.g., (202) 224-4242)
-        - The telephone number for the member’s office in Washington, D.C. 
+        - `<phoneNumber>` (e.g., (202) 224-4242)
+          - The telephone number for the member’s office in Washington, D.C. 
 - `<leadership>`
   - Container for the leadership positions available on Congress.gov that the member has held during their membership/tenure of service. A `<leadership>` container may include the following child, which is repeatable:
     - `<item>`
@@ -156,13 +156,13 @@ Parent container for an individual member’s entry. A `<member>` element may in
   - Container for bills and resolutions sponsored by member. A `<sponsoredLegislation>` container may include the following children:
     - `<count>` (e.g., 1753)
       - The total number of bills and resolutions sponsored by the member. 
-    - `<url>` (e.g., https://api.data.gov/congress/v3/member/L000174/sponsored-legislation)
+    - `<url>` (e.g., https://api.congress.gov/v3/member/L000174/sponsored-legislation)
       - A referrer URL to the sponsored-legislation level of the API. Click [here](#sponsored-legislation-level) for more information about the sponsored-legislation level.
 - `<cosponsoredLegislation>`
   - Container for bills and resolutions cosponsored by member. A `<cosponsoredLegislation>` container may include the following children:
     - `<count>` (e.g., 7470)  
       - The total number of bills and resolutions cosponsored by the member. 
-    - `<url>` (e.g., https://api.data.gov/congress/v3/member/L000174/cosponsored-legislation) 
+    - `<url>` (e.g., https://api.congress.gov/v3/member/L000174/cosponsored-legislation) 
       - A referrer URL to the cosponsored-legislation level of the API. Click [here](#cosponsored-legislation-level) for more information about the cosponsored-legislation level.  
 - `<updateDate>` (e.g., 2022-07-22T18:44:02Z)
   - The date of last update in Congress.gov.
@@ -200,7 +200,7 @@ Parent container for all sponsored bills and resolutions. A `<sponsoredLegislati
           - The date of the latest action taken on the bill or resolution.
         - `<text>` (e.g., Read twice and referred to the Committee on the Judiciary.)
           - The text of the latest action taken on the bill or resolution.
-    - `<url>` (e.g., https://api.data.gov/congress/v3/bill/117/s/4417?format=xml)
+    - `<url>` (e.g., https://api.congress.gov/v3/bill/117/s/4417)
       - A referrer URL to the bill item in the API. Documentation for the bill endpoint is [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/BillEndpoint.md).
 
 
@@ -237,5 +237,5 @@ Parent container for all sponsored bills and resolutions. A `<cosponsoredLegisla
           - The date of the latest action taken on the bill or resolution.
         - `<text>` (e.g., Referred to the Committee on Health, Education, Labor, and Pensions. (text: CR S3547-3548))
           - The text of the latest action taken on the bill or resolution.
-    - `<url>` (e.g., https://api.data.gov/congress/v3/bill/117/sres/714?format=xml)
+    - `<url>` (e.g., https://api.congress.gov/v3/bill/117/sres/714)
       - A referrer URL to the bill item in the API. Documentation for the bill endpoint is [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/BillEndpoint.md).
