@@ -1,6 +1,6 @@
 # Overview
 ## Introduction
-The beta Congress.gov Application Programming Interface (API) - [https://api.data.gov/congress/v3?api_key=](https://api.data.gov/congress/v3/?api_key=) - provides a method for Congress and the public to view, retrieve, and re-use machine-readable data from collections available on Congress.gov. This repository contains information on accessing and using the beta Congress.gov API, as well as documentation on available endpoints.
+The beta Congress.gov Application Programming Interface (API) - https://api.congress.gov/v3/?api_key= - provides a method for Congress and the public to view, retrieve, and re-use machine-readable data from collections available on Congress.gov. This repository contains information on accessing and using the beta Congress.gov API, as well as documentation on available endpoints.
 
 Within the beta Congress.gov API, responses are returned in XML or JSON formats. An `<api-root>` element will be visible for responses returned in XML. 
 
@@ -34,5 +34,3 @@ The purposes of the Congress.gov API (v3):
 - Replace Congress.gov API (v2), a closed API used primarily for bulk data sharing
   
 The initial Congress.gov API (v3) is implemented as a RESTful read API that is presented as a hierarchical browse API.
-
-
