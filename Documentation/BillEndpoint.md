@@ -422,7 +422,9 @@ The `<api-root>` is only present in the XML format.
 
 `<summaries>`
 
-Parent container for bill summaries on the bill or resolution. Bill summaries are written by legislative analysts in CRS. Read more [about bill summaries](https://www.congress.gov/help/legislative-glossary#glossary_billsummary) on Congress.gov. A `<summaries>` element may include the following children:
+Parent container for bill summaries on the bill or resolution. Bill summaries are written by legislative analysts in CRS. Read more [about bill summaries](https://www.congress.gov/help/legislative-glossary#glossary_billsummary) on Congress.gov. Read more about the summaries endpoint [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/SummariesEndpoint.md). 
+
+A `<summaries>` element may include the following children:
 - `<summary>`
   - Container for a bill summary on the bill or resolution. A `<summary>` element may include the following children:
     - `<versionCode>` (e.g. 00)
