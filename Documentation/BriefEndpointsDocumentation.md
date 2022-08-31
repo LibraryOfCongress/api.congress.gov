@@ -2,6 +2,7 @@ This documentation provides a brief overview of available endpoints in the Congr
 # Jump to
 - [bill](#bill)
 - [amendment](#amendment)
+- [summaries](#summaries)
 - [congress](#congress)
 - [member](#member)
 - [committee](#committee)
@@ -29,6 +30,11 @@ The base request for amendment data in the Congress.gov API is https://api.congr
 Depending on the data available, each amendment item in the API may contain the following: congress (e.g. 117), amendment type (e.g. SAMDT), amendment number (e.g. 2137), purpose (e.g. In the nature of a substitute.), description, latest action (e.g. Amendment SA 2137 agreed to in Senate by Yea-Nay Vote. 69 - 28. Record Vote Number: 312.), the amendment’s update date in Congress.gov (e.g. 2022-02-08T17:27:59Z), sponsor (e.g. Sen. Sinema, Kyrsten [D-AZ]), cosponsor count (e.g. 9), amended bill information (e.g. 117 HR 3684), amended amendments information, amendments to the amendment count (e.g. 507), amended treaty information, and an actions count (e.g. 19).
 ### Levels
 Depending on the data available, each amendment item in the API may contain a referrer URL to the following deeper levels: actions, amendments (to the amendment), and cosponsors. These levels contain more information related to the amendment item. For example, the actions level may contain the following for each action on the amendment: date of action (e.g. 2021-08-08), text of the action (e.g. Amendment SA 2137 agreed to in Senate by Yea-Nay Vote. 69 - 28. Record Vote Number: 312.), the type of action (e.g. Floor), action code[^9], source system (e.g. Senate), associated committee information and associated recorded vote information. 
+## summaries
+### Coverage
+Coverage information for bill summary data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates) on Congress.gov. View expanded documentation for the summaries endpoint at [SummariesEndpoint](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/SummariesEndpoint.md). 
+### Base Request
+The base request for bill summary data in the Congress.gov API is https://api.congress.gov/v3/summaries. The request will return 20 results by default. Basic information on each bill summary item will be included in the response. Included in the basic information is the associated bill or resolution, the text of the bill summary, and related data on the bill summary, such as action description, action date, update date, and summary version code.
 ## congress
 ### Coverage
 Coverage information for congress data in the API can be found at the [Congresses field values list](https://www.congress.gov/help/field-values/congresses) on Congress.gov. Information on past session dates can be found on Congress.gov at the [Dates of Past Sessions](https://www.congress.gov/past-days-in-session).
