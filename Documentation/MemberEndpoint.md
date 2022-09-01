@@ -4,7 +4,7 @@ Coverage information for member data in the API can be found at [Coverage Dates 
 ## Elements and Descriptions
 The section below details available element names, their description, and possible values.
 ### List Level
-Note that member items at the list level cannot be filtered.
+Note that member items at the list level cannot be filtered (https://api.congress.gov/v3/member?api_key=).
 
 `<api-root>`
 
