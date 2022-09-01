@@ -200,7 +200,7 @@ Parent container for all actions taken on the nomination. Actions may come from 
       -  Possible values are "IntroReferral", "Committee", "Calendars", and "Floor".
     - `<actionCode>` (e.g. S05310)
       - A Senate-provided code associated with the action taken on the nomination.
-    - `<committees>
+    - `<committees>`
       - Container for committees associated with the action. A `<committees>` element may include the following children:
         - `<item>`
           - Container for a committee associated with the action. An `<item>` element is repeatable and may include the following children:
