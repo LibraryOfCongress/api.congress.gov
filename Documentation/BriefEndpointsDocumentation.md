@@ -7,7 +7,7 @@ This documentation provides a brief overview of available endpoints in the Congr
 - [member](#member)
 - [committee](#committee)
 - [nomination](#nomination)
-- [treaties](#treaties)
+- [treaty](#treaty)
 - [committeeReport](#committeereport)
 - [congressional-record](#congressional-record)
 - [house-communication](#house-communication)
@@ -69,7 +69,7 @@ The base request for nominations data in the API is https://api.congress.gov/v3/
 Depending on the data available, each nomination item in the API may contain the following: the nomination's congress (e.g. 117), nomination number (e.g. 1783), partition number (e.g. 00), citation (e.g. PN1783), executive calendar information, authority date, nomination position information (including the organization - e.g. Supreme Court of the United States, position title - e.g. Associate Justice of the Supreme Count of the United States, and count - e.g. 1), committee count (e.g. 1), latest action on the nomination (e.g. Confirmed by the Senate by Yea-Nay Vote. 53 - 47. Record Vote Number: 134.), actions count (e.g. 19), printed hearings count (e.g. 0), and the update date in Congress.gov (e.g. 2022-04-06T13:03:52Z).
 ### Levels
 Depending on the data available, each nomination item in the API may contain a referrer URL to the following deeper levels: nominees, committees, actions, and printed hearings. These levels contain information on the nomination's nominees, associated committees, actions on the nominations, and associated printed hearings. For example, the actions level may contain the following for each action on the nomination: date of action (e.g. 2022-04-07), text of the action (e.g. Confirmed by the Senate by Yea-Nay Vote. 53 - 47. Record Vote Number: 134.), the type of action (e.g. Floor), Senate action code (e.g. S051310), and associated committee information.
-## treaties
+## treaty
 ### Coverage
 Coverage information for treaty data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates) on Congress.gov. Read more about treaty data at [About Treaty Documents](https://www.congress.gov/help/treaty-documents).
 ### Base Request
