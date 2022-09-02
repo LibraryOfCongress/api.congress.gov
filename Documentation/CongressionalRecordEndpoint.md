@@ -50,7 +50,7 @@ Parent container for congressional record issues. A `<Results>` element may incl
                                 - `<item>`
                               - Container for the individual PDF text format for the section. Multiple PDFs may be used to deliver the entire section. An `<item>` element is repeatable and may include the following children:
                              - `<Part>` (e.g., 1)
-                               - Number assigned to individual PDFs that comprise a single section. If there are multiple Daily Digest section parts, the numbers will be sequential.
+                               - Number assigned to individual PDFs that comprise a single section. If there are multiple Extension of Remarks section parts, the numbers will be sequential.
                              - `<Url>` (e.g, https://www.congress.gov/117/crec/2022/08/16/168/136/CREC-2022-08-16-extensions.pdf)
                                - The URL to the individual Extension of Remarks section PDF.
                  - `<House>`
@@ -92,7 +92,7 @@ Parent container for congressional record issues. A `<Results>` element may incl
                                 - `<item>`
                               - Container for the individual PDF text format for the section. Multiple PDFs may be used to deliver the entire section. An `<item>` element is repeatable and may include the following children:
                              - `<Part>` (e.g., 1)
-                               - Number assigned to individual PDFs that comprise a single section. If there are multiple Daily Digest section parts, the numbers will be sequential.
+                               - Number assigned to individual PDFs that comprise a single section. If there are multiple Entire Issue section parts, the numbers will be sequential.
                              - `<Url>` (e.g, https://www.congress.gov/117/crec/2022/08/16/168/136/CREC-2022-08-16.pdf)
                                - The URL to the individual Entire Issue section PDF.
 		 - `<PublishDate>` (e.g., 2022-08-16)
