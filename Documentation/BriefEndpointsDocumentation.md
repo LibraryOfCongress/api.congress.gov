@@ -1,4 +1,4 @@
-This documentation provides a brief overview of available endpoints in the Congress.gov API, including the base request, item level, and any deeper levels. When available, a link to expanded documentation on the below endpoints is provided in the **Coverage** text. 
+This documentation provides a brief overview of available endpoints in the Congress.gov API, including the base request, item level, and any deeper levels. A link to  expanded documentation for each endpoint is provided in the **Coverage** text. 
 # Jump to
 - [bill](#bill)
 - [amendment](#amendment)
@@ -37,7 +37,7 @@ Coverage information for bill summary data in the API can be found at [Coverage 
 The base request for bill summary data in the Congress.gov API is https://api.congress.gov/v3/summaries. The request will return 20 results by default. Basic information on each bill summary item will be included in the response. Included in the basic information is the associated bill or resolution, the text of the bill summary, and related data on the bill summary, such as action description, action date, update date, and summary version code.
 ## congress
 ### Coverage
-Coverage information for congress data in the API can be found at the [Congresses field values list](https://www.congress.gov/help/field-values/congresses) on Congress.gov. Information on past session dates can be found on Congress.gov at the [Dates of Past Sessions](https://www.congress.gov/past-days-in-session).
+Coverage information for congress data in the API can be found at the [Congresses field values list](https://www.congress.gov/help/field-values/congresses) on Congress.gov. Information on past session dates can be found on Congress.gov at the [Dates of Past Sessions](https://www.congress.gov/past-days-in-session). View expanded documentation for the congress endpoint at [CongressEndpoint](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/CongressEndpoint.md). 
 ### Base Request
 The base request for congress data in the API is https://api.congress.gov/v3/congress. The request will return 20 results by default. Basic information about each congress item will be included in the request. Included in that basic information is the congress's name (e.g. 117th Congress), start year (e.g. 2021), end year (e.g. 2022), session data (including session type - e.g. Regular - and chamber - e.g. House of Representatives), and a URL to the congress item in the API (e.g. https://api.congress.gov/v3/congress/117). 
 ### Item
