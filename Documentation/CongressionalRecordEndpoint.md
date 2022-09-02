@@ -12,7 +12,8 @@ Note that congressional record items can be filtered down to a specific year, mo
 The `<api-root>` is only present in the XML format. 
 
 `<Results>` 
- Parent container for congressional record issues. A `<Results>` element may include the following children:
+
+Parent container for congressional record issues. A `<Results>` element may include the following children:
  - `<Issues>`
    - Container for congressional record issues. An `<Issues>` element may include the following children:
      - `<item>`
@@ -23,59 +24,59 @@ The `<api-root>` is only present in the XML format.
 	- `<Issue>` (e.g., 136)
 	   - The congressional record's issue number.
 	 - `<Links>`
-       - Container for links to the individual sections of the issue.
+       - Container for links to the individual sections of the issue. A `<Links>` element may include the following children:
 		 - `<Digest>`
-		   - Container for the Daily Digest section of the issue. The `<Digest>` element may include the following children:
+		   - Container for the Daily Digest section of the issue. A `<Digest>` element may include the following children:
 		     - `<Label>` (e.g., Daily Digest)
 			   - The name of the section.
 			 - `<Ordinal>` (e.g., 1)
 			   - The sort order number used for the section's placement on Congress.gov.
 			 - `<PDF>`
-               - Container for the PDF text format for the section. The `<PDF>` element may include the following children:
+               - Container for the PDF text format for the section. A `<PDF>` element may include the following children:
                  - `<item>`
-                   - Container for the individual PDF text format for the section. Multiple PDFs may be used to deliver the entire section. The `<item>` element is repeatable and may include the following children:
+                   - Container for the individual PDF text format for the section. Multiple PDFs may be used to deliver the entire section. An `<item>` element is repeatable and may include the following children:
                      - `<Part>` (e.g., 1)
 					   - Number assigned to individual PDFs that comprise a single section. If there are multiple Daily Digest section parts, the numbers will be sequential.
 					 - `<Url>` (e.g, https://www.congress.gov/117/crec/2022/08/16/168/136/CREC-2022-08-16-dailydigest.pdf)
 					   - The URL to the individual Daily Digest section PDF.
 		 - `<Remarks>`
-		   - Container for the Extension of Remarks section of the issue.  The `<Remarks>` element may include the following children:
+		   - Container for the Extension of Remarks section of the issue.  A `<Remarks>` element may include the following children:
 		   - `<Label>` (e.g., Extension of Remarks Section)
 			 - The name of the section.
 		   - `<Ordinal>` (e.g., 4)
 			   - The sort order number used for the section's placement on Congress.gov.
 	       - `<PDF>`
-			 - Container for the PDF text format for the section. The `<PDF>` element may include the following children:
+			 - Container for the PDF text format for the section. A `<PDF>` element may include the following children:
 			 - `<item>`
-                   - Container for the individual PDF text format for the section. Multiple PDFs may be used to deliver the entire section. The `<item>` element is repeatable and may include the following children:
+                   - Container for the individual PDF text format for the section. Multiple PDFs may be used to deliver the entire section. An `<item>` element is repeatable and may include the following children:
 			   - `<Part>` (e.g., 1)
 					   - Number assigned to individual PDFs that comprise a single section. If there are multiple Extension of Remarks Section parts, the numbers will be sequential.	
 			   - `<Url>` (e.g, https://www.congress.gov/117/crec/2022/08/16/168/136/CREC-2022-08-16-extensions.pdf)
 					   - The URL to the individual Extension of Remarks section PDF.
 		 - `<House>`
-		   - Container for the House section of the issue. The `<House>` element may include the following children:
+		   - Container for the House section of the issue. A `<House>` element may include the following children:
 		   - `<Label>` (e.g., House Section)
 			 - The name of the section.
 		   - `<Ordinal>` (e.g., 3)
 			   - The sort order number used for the section's placement on Congress.gov.
 		   - `<PDF>`
-			 - Container for the PDF text format for the section. The `<PDF>` element may include the following children:
+			 - Container for the PDF text format for the section. A `<PDF>` element may include the following children:
              - `<item>`
-               - Container for individual PDF data associated with the section. Multiple PDFs may be used to deliver the entire section. The `<item>` element is repeatable and may include the following children:
+               - Container for individual PDF data associated with the section. Multiple PDFs may be used to deliver the entire section. An `<item>` element is repeatable and may include the following children:
                  - `<Part>` (e.g., 1)
 					   - Number assigned to individual PDFs that comprise a single section. If there are multiple House Section parts, the numbers will be sequential.
 				 - `<Url>` (e.g, https://www.congress.gov/117/crec/2022/08/16/168/136/CREC-2022-08-16-house.pdf)
 					   - The URL to the individual House section PDF.
          - `<Senate>`
-		   - Container for the Senate section of the issue.  The `<Senate>` element may include the following children:
+		   - Container for the Senate section of the issue.  A `<Senate>` element may include the following children:
 		   - `<Label>` (e.g., Senate Section)
 		     - The name of the section.
 		   - `<Ordinal>` (e.g., 2)
 			   - The sort order number used for the section's placement on Congress.gov.
 		   - `<PDF>`
-             - Container for the PDF data for the section. The `<PDF>` element may include the following children:
+             - Container for the PDF data for the section. A `<PDF>` element may include the following children:
              - `<item>`
-               - Container for individual PDF data associated with the section. Multiple PDFs may be used to deliver the entire section. The `<item>` element is repeatable and may include the following children:
+               - Container for individual PDF data associated with the section. Multiple PDFs may be used to deliver the entire section. An `<item>` element is repeatable and may include the following children:
                  - `<Part>` (e.g., 1)
 					   - Number assigned to individual PDFs that comprise a single section. If there are multiple House Section parts, the numbers will be sequential.	
 				 - `<Url>` (e.g, https://www.congress.gov/117/crec/2022/08/16/168/136/CREC-2022-08-16-senate.pdf)
@@ -87,9 +88,9 @@ The `<api-root>` is only present in the XML format.
 		   - `<Ordinal>` (e.g., 5)
 			   - The sort order number used for the section's placement on Congress.gov.
 		   - `<PDF>`
-             - Container for the PDF data for the section. The `<PDF>` element may include the following children:
+             - Container for the PDF data for the section. A `<PDF>` element may include the following children:
              - `<item>`
-               - Container for individual PDF data associated with the section. Multiple PDFs may be used to deliver the entire section. The `<item>` element is repeatable and may include the following children:
+               - Container for individual PDF data associated with the section. Multiple PDFs may be used to deliver the entire section. An `<item>` element is repeatable and may include the following children:
                  - `<Part>` (e.g., 1)
 					   - Number assigned to individual PDFs that comprise a single section. If there are multiple House Section parts, the numbers will be sequential. 	
 				 - `<Url>` (e.g, https://www.congress.gov/117/crec/2022/08/16/168/136/CREC-2022-08-16.pdf)
