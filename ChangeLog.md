@@ -1,12 +1,11 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED.
-# UPCOMING September 2022
-**Expected production release date:** September 6th, 2022
+# COMPLETED September 2022
 ## Change #1
 ### Impacted endpoint: amendment
-An `<updateDate>` element will be added to the list level. This element will indicate an amendment's last update in Congress.gov.
+An `<updateDate>` element was added to the list level. This element indicates an amendment's last update in Congress.gov.
 ## Change #2
 ### Impacted endpoint: member
-1. The following elements will be removed:
+1. The following elements were removed:
 * `<congressName>` within a `<terms>` item at the item level
 * `<partyStateDistrictCode>` within a `<terms>` item (if a House member) at the item level
 * `<partyStateCode>` within a `<terms>` item (if a Senate member) at the item level
@@ -14,19 +13,19 @@ An `<updateDate>` element will be added to the list level. This element will ind
 * `<gpoId>` within `<identifiers>` at the item level
 * `<imageUrl>` within `<depiction>` at the list and item level (note that `<thumbnailUrl>` will be renamed to `<imageUrl>`)
 * `<createDate>` at the item level
-2. The following elements will be renamed:
-* `<member-lis>` will become `<member>` at the item level
-* `<officialUrl>` will become `<officialWebsiteUrl>` at the item level
-* `<thumbnailUrl>` within `<depiction>` will become `<imageUrl>` at the list and item level
-* `<latestTitle>` will become `<title>` at the sponsored-legislation and cosponsored-legislation deeper levels
-3. An `<updateDate>` will be added at the item level. This element will indicate the member record's last update in Congress.gov.
-4. A new `<partyHistory>` container will be created at the item level. The `<partyName>` and `<partyCode>` elements (currently underneath a `<terms>` item) will be moved underneath the new `<partyHistory>` container. Also contained underneath `<partyHistory>` will be `<startDate>` and `<endDate>` elements. This structure will better represent members who represented different parties over their congressional service.
+2. The following elements were renamed:
+* `<member-lis>` became `<member>` at the item level
+* `<officialUrl>` became `<officialWebsiteUrl>` at the item level
+* `<thumbnailUrl>` within `<depiction>` became `<imageUrl>` at the list and item level
+* `<latestTitle>` became `<title>` at the sponsored-legislation and cosponsored-legislation deeper levels
+3. An `<updateDate>` was added at the item level. This element indicates the member record's last update in Congress.gov.
+4. A new `<partyHistory>` container was created at the item level. The `<partyName>` and `<partyCode>` elements (currently underneath a `<terms>` item) were moved underneath the new `<partyHistory>` container. Also contained underneath `<partyHistory>` are the `<startDate>` and `<endDate>` elements. This structure better represents members who represented different parties over their congressional service.
 ## Change #3
 ### Impacted endpoint: bill
-An `<updateDateIncludingText>` element will be added to the item level. This element will indicate the bill's last update in Congress.gov, including if that update was to the bill text. The existing `<updateDate>` element does not include updates to bill text.
+An `<updateDateIncludingText>` element was added to the item level. This element indicates the bill's last update in Congress.gov, including if that update was to the bill text. The existing `<updateDate>` element does not include updates to bill text.
 ## Change #4
 ### Impacted endpoints: bill and amendment
-At the actions deeper level, the `<fullActionName>` element within a `<recordedVotes>` container will be removed. 
+At the actions deeper level, the `<fullActionName>` element within a `<recordedVotes>` container was removed. 
 # COMPLETED August 2022
 ## Change #1
 ### Impacted endpoints: all
