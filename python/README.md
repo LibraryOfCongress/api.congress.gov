@@ -14,7 +14,7 @@
 
 ## Requirements
 This client with developed and tested with Python 3.8 so should work with that version
-and above.
+and above. We have tested with older Python versions. 
 
 This example client requires the `requests` package, and optionally the `keyring`
 package.
@@ -148,7 +148,7 @@ now you want to look at bill/hr/21/committeess, write:
    - originChamber:       'House'
    - originChamberCode:   'H'
    - number:              '5681'
-   - url:                 'http://api.congress.gov/v3/bill/117/hr/5681?format=xml'
+   - url:                 'https://api.congress.gov/v3/bill/117/hr/5681?format=xml'
    - title:               'Shadow Wolves Enhancement Act'
    - latestAction:        ''
    - updateDate:          '2022-04-08'
