@@ -126,7 +126,7 @@ now you want to look at bill/hr/21/committeess, write:
 | *RESPONSE_FORMAT*        | Sets the response format returned by the API                       | xml, json                                    |
 | *BILL.CONGRESS*          | The numerical value of the congress to query                       | 1 - 117 (or current congress)                |
 | *BILL.CHAMBER*           | The congressional chamber                                          | hr, s, sjres, hjres                          |
-| *BILL.NUMBER*            | The bill number to query                                           | A valid bill number from https://congres.gov |
+| *BILL.NUMBER*            | The bill number to query                                           | A valid bill number from https://congress.gov |
 | *BILL.URL*               | The bill url for the API to query                                  | bill                                         |
 
 
