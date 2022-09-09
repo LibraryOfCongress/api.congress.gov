@@ -1,0 +1,44 @@
+{
+    "cosponsors": [
+        {
+            "bioguideId": "C001108",
+            "district": 1,
+            "firstName": "James",
+            "fullName": "Rep. Comer, James [R-KY-1]",
+            "isOriginalCosponsor": true,
+            "lastName": "Comer",
+            "middleName": null,
+            "party": "R",
+            "sponsorshipDate": "2021-01-04",
+            "sponsorshipWithdrawnDate": null,
+            "state": "KY",
+            "url": "https://api.congress.gov/v3/member/C001108?format=json"
+        },
+        {
+            "bioguideId": "H001071",
+            "district": 10,
+            "firstName": "Jody",
+            "fullName": "Rep. Hice, Jody B. [R-GA-10]",
+            "isOriginalCosponsor": true,
+            "lastName": "Hice",
+            "middleName": "B.",
+            "party": "R",
+            "sponsorshipDate": "2021-01-04",
+            "sponsorshipWithdrawnDate": null,
+            "state": "GA",
+            "url": "https://api.congress.gov/v3/member/H001071?format=json"
+        }
+    ],
+    "pagination": {
+        "count": 2,
+        "total": 2
+    },
+    "request": {
+        "billNumber": "21",
+        "billType": "hr",
+        "billUrl": "https://api.congress.gov/v3/bill/117/hr/21?format=json",
+        "congress": "117",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}
