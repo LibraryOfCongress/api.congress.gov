@@ -34,7 +34,7 @@ def print_items(items):
 
 def get_bill(client):
     """
-    'http://api1.test.congress.gov/v3/bill'
+    'https://api.congress.gov/v3/bill'
     this API returns, list of latest bills
     """
     data, status_code = client.get(BILL_PATH)
@@ -43,7 +43,7 @@ def get_bill(client):
 
 def get_bill_congress(client):
     """
-    'http://api1.test.congress.gov/v3/bill/117'
+    'https://api.congress.gov/v3/bill/117'
     this API returns, list of Congress bill that's picked
 
     Bill list by Congress
@@ -57,7 +57,7 @@ def get_bill_congress(client):
 
 def get_bill_list_type(client):
     """
-    'http://api1.test.congress.gov/v3/bill/117/hr'
+    'https://api.congress.gov/v3/bill/117/hr'
 
     Bill list by Type
     """
@@ -70,7 +70,7 @@ def get_bill_list_type(client):
 
 def get_bill_detail(client):
     """
-    'http://api1.test.congress.gov/v3/bill/117/hr/21'
+    'https://api.congress.gov/v3/bill/117/hr/21'
     This API returns list of all Bill details
     Bill Details
     """
@@ -83,7 +83,7 @@ def get_bill_detail(client):
 
 def get_bill_action(client):
     """
-    'http://api1.test.congress.gov/v3/bill/117/hr/21/actions'
+    'https://api.congress.gov/v3/bill/117/hr/21/actions'
     This API returns, Actions of the specified Bill
     Bill Action
     """
@@ -96,7 +96,7 @@ def get_bill_action(client):
 
 def get_bill_amendments(client):
     """
-    'http://api1.test.congress.gov/v3/bill/117/hr/21/amendments'
+    'https://api.congress.gov/v3/bill/117/hr/21/amendments'
     This API returns, Amendments of the specified Bill
     Bill Amendments
     """
@@ -106,7 +106,7 @@ def get_bill_amendments(client):
 
 def get_bill_committee(client):
     """
-    'http://api1.test.congress.gov/v3/bill/117/hr/21/committees'
+    'https://api.congress.gov/v3/bill/117/hr/21/committees'
     This API returns, Committees of the specified Bill
     Bill Committees
     """
@@ -116,7 +116,7 @@ def get_bill_committee(client):
 
 def get_bill_cosponsors(client):
     """
-    'http://api1.test.congress.gov/v3/bill/117/hr/21/cosponsors'
+    'https://api.congress.gov/v3/bill/117/hr/21/cosponsors'
     This API returns, cosponsors of the specified Bill
     Bill Cosponsors
     """
@@ -126,7 +126,7 @@ def get_bill_cosponsors(client):
 
 def get_bill_relatedbills(client):
     """
-    'http://api1.test.congress.gov/v3/bill/117/hr/21/relatedbills'
+    'https://api.congress.gov/v3/bill/117/hr/21/relatedbills'
     This API returns, relatedbills of the specified Bill
     Bill Relatedbills
     """
@@ -136,7 +136,7 @@ def get_bill_relatedbills(client):
 
 def get_bill_subjects(client):
     """
-    'http://api1.test.congress.gov/v3/bill/117/hr/21/subjects'
+    'https://api.congress.gov/v3/bill/117/hr/21/subjects'
     This API returns, relatedbills of the specified Bill
     Bill subjects
     """
@@ -146,7 +146,7 @@ def get_bill_subjects(client):
 
 def get_bill_summaries(client):
     """
-    'http://api1.test.congress.gov/v3/bill/117/hr/21/summaries'
+    'https://api.congress.gov/v3/bill/117/hr/21/summaries'
     This API returns, summaries of the specified Bill
     Bill subjects
     """
@@ -156,7 +156,7 @@ def get_bill_summaries(client):
 
 def get_bill_text(client):
     """
-    'http://api1.test.congress.gov/v3/bill/117/hr/21/text'
+    'https://api.congress.gov/v3/bill/117/hr/21/text'
     This API returns, text of the specified Bill
     Bill subjects
     """
@@ -166,7 +166,7 @@ def get_bill_text(client):
 
 def get_bill_titles(client):
     """
-    'http://api1.test.congress.gov/v3/bill/117/hr/21/titles'
+    'https://api.congress.gov/v3/bill/117/hr/21/titles'
     This API returns, titles of the specified Bill
     Bill titles
     """

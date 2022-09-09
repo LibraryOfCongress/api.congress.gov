@@ -23,6 +23,6 @@ cp loc.cfg $TARGET
 
 echo -e '\nDone!\n'
 echo -e "To run the sample code:\n
- edit the $TARGET/loc.cfg file and add your API KEY obtained from https://api.data.gov/\n
+ edit the $TARGET/loc.cfg file and add your API KEY obtained from https://api.congress.gov/\n
  then execute: cd $TARGET && java sample.Main bill\n
  By default, the stored result can be found in the .txt file in the $TARGET/$OUTPUT folder"

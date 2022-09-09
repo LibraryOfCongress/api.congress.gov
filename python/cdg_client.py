@@ -10,7 +10,7 @@ import requests
 
 
 API_VERSION = "v3"
-ROOT_URL = "https://api.data.gov/congress/"
+ROOT_URL = "https://api.congress.gov/"
 RESPONSE_FORMAT = "json"
 
 

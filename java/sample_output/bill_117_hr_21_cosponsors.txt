@@ -12,7 +12,7 @@
             "sponsorshipDate": "2021-01-04",
             "sponsorshipWithdrawnDate": null,
             "state": "KY",
-            "url": "http://api1.test.congress.gov/v3/member/C001108?format=json"
+            "url": "https://api.congress.gov/v3/member/C001108?format=json"
         },
         {
             "bioguideId": "H001071",
@@ -26,7 +26,7 @@
             "sponsorshipDate": "2021-01-04",
             "sponsorshipWithdrawnDate": null,
             "state": "GA",
-            "url": "http://api1.test.congress.gov/v3/member/H001071?format=json"
+            "url": "https://api.congress.gov/v3/member/H001071?format=json"
         }
     ],
     "pagination": {
@@ -36,7 +36,7 @@
     "request": {
         "billNumber": "21",
         "billType": "hr",
-        "billUrl": "http://api1.test.congress.gov/v3/bill/117/hr/21?format=json",
+        "billUrl": "https://api.congress.gov/v3/bill/117/hr/21?format=json",
         "congress": "117",
         "contentType": "application/json",
         "format": "json"

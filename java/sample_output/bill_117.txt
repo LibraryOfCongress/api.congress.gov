@@ -13,7 +13,7 @@
             "title": "MORE Act",
             "type": "HR",
             "updateDate": "2022-04-03",
-            "url": "http://api1.test.congress.gov/v3/bill/117/hr/3617?format=json"
+            "url": "https://api.congress.gov/v3/bill/117/hr/3617?format=json"
         },
         {
             "congress": 117,
@@ -27,7 +27,7 @@
             "title": "",
             "type": "HR",
             "updateDate": "2022-04-03",
-            "url": "http://api1.test.congress.gov/v3/bill/117/hr/7343?format=json"
+            "url": "https://api.congress.gov/v3/bill/117/hr/7343?format=json"
         },
         {
             "congress": 117,
@@ -41,7 +41,7 @@
             "title": "",
             "type": "HR",
             "updateDate": "2022-04-03",
-            "url": "http://api1.test.congress.gov/v3/bill/117/hr/7321?format=json"
+            "url": "https://api.congress.gov/v3/bill/117/hr/7321?format=json"
         },
         {
             "congress": 117,
@@ -55,7 +55,7 @@
             "title": "",
             "type": "HR",
             "updateDate": "2022-04-03",
-            "url": "http://api1.test.congress.gov/v3/bill/117/hr/7368?format=json"
+            "url": "https://api.congress.gov/v3/bill/117/hr/7368?format=json"
         },
         {
             "congress": 117,
@@ -69,7 +69,7 @@
             "title": "",
             "type": "HR",
             "updateDate": "2022-04-03",
-            "url": "http://api1.test.congress.gov/v3/bill/117/hr/7369?format=json"
+            "url": "https://api.congress.gov/v3/bill/117/hr/7369?format=json"
         },
         {
             "congress": 117,
@@ -83,7 +83,7 @@
             "title": "",
             "type": "HRES",
             "updateDate": "2022-04-03",
-            "url": "http://api1.test.congress.gov/v3/bill/117/hres/1021?format=json"
+            "url": "https://api.congress.gov/v3/bill/117/hres/1021?format=json"
         },
         {
             "congress": 117,
@@ -97,7 +97,7 @@
             "title": "",
             "type": "HR",
             "updateDate": "2022-04-03",
-            "url": "http://api1.test.congress.gov/v3/bill/117/hr/7365?format=json"
+            "url": "https://api.congress.gov/v3/bill/117/hr/7365?format=json"
         },
         {
             "congress": 117,
@@ -111,7 +111,7 @@
             "title": "",
             "type": "HRES",
             "updateDate": "2022-04-03",
-            "url": "http://api1.test.congress.gov/v3/bill/117/hres/1020?format=json"
+            "url": "https://api.congress.gov/v3/bill/117/hres/1020?format=json"
         },
         {
             "congress": 117,
@@ -125,7 +125,7 @@
             "title": "",
             "type": "HR",
             "updateDate": "2022-04-03",
-            "url": "http://api1.test.congress.gov/v3/bill/117/hr/7362?format=json"
+            "url": "https://api.congress.gov/v3/bill/117/hr/7362?format=json"
         },
         {
             "congress": 117,
@@ -139,7 +139,7 @@
             "title": "",
             "type": "HR",
             "updateDate": "2022-04-03",
-            "url": "http://api1.test.congress.gov/v3/bill/117/hr/7356?format=json"
+            "url": "https://api.congress.gov/v3/bill/117/hr/7356?format=json"
         },
         {
             "congress": 117,
@@ -153,7 +153,7 @@
             "title": "",
             "type": "HR",
             "updateDate": "2022-04-03",
-            "url": "http://api1.test.congress.gov/v3/bill/117/hr/7371?format=json"
+            "url": "https://api.congress.gov/v3/bill/117/hr/7371?format=json"
         },
         {
             "congress": 117,
@@ -167,7 +167,7 @@
             "title": "",
             "type": "HR",
             "updateDate": "2022-04-03",
-            "url": "http://api1.test.congress.gov/v3/bill/117/hr/7355?format=json"
+            "url": "https://api.congress.gov/v3/bill/117/hr/7355?format=json"
         },
         {
             "congress": 117,
@@ -181,7 +181,7 @@
             "title": "",
             "type": "HR",
             "updateDate": "2022-04-03",
-            "url": "http://api1.test.congress.gov/v3/bill/117/hr/7363?format=json"
+            "url": "https://api.congress.gov/v3/bill/117/hr/7363?format=json"
         },
         {
             "congress": 117,
@@ -195,7 +195,7 @@
             "title": "",
             "type": "HR",
             "updateDate": "2022-04-03",
-            "url": "http://api1.test.congress.gov/v3/bill/117/hr/7364?format=json"
+            "url": "https://api.congress.gov/v3/bill/117/hr/7364?format=json"
         },
         {
             "congress": 117,
@@ -209,7 +209,7 @@
             "title": "",
             "type": "HR",
             "updateDate": "2022-04-03",
-            "url": "http://api1.test.congress.gov/v3/bill/117/hr/7359?format=json"
+            "url": "https://api.congress.gov/v3/bill/117/hr/7359?format=json"
         },
         {
             "congress": 117,
@@ -223,7 +223,7 @@
             "title": "",
             "type": "HR",
             "updateDate": "2022-04-03",
-            "url": "http://api1.test.congress.gov/v3/bill/117/hr/7361?format=json"
+            "url": "https://api.congress.gov/v3/bill/117/hr/7361?format=json"
         },
         {
             "congress": 117,
@@ -237,7 +237,7 @@
             "title": "",
             "type": "HR",
             "updateDate": "2022-04-03",
-            "url": "http://api1.test.congress.gov/v3/bill/117/hr/7360?format=json"
+            "url": "https://api.congress.gov/v3/bill/117/hr/7360?format=json"
         },
         {
             "congress": 117,
@@ -251,7 +251,7 @@
             "title": "",
             "type": "HR",
             "updateDate": "2022-04-03",
-            "url": "http://api1.test.congress.gov/v3/bill/117/hr/7366?format=json"
+            "url": "https://api.congress.gov/v3/bill/117/hr/7366?format=json"
         },
         {
             "congress": 117,
@@ -265,7 +265,7 @@
             "title": "",
             "type": "HR",
             "updateDate": "2022-04-03",
-            "url": "http://api1.test.congress.gov/v3/bill/117/hr/7358?format=json"
+            "url": "https://api.congress.gov/v3/bill/117/hr/7358?format=json"
         },
         {
             "congress": 117,
@@ -279,12 +279,12 @@
             "title": "",
             "type": "HR",
             "updateDate": "2022-04-03",
-            "url": "http://api1.test.congress.gov/v3/bill/117/hr/7372?format=json"
+            "url": "https://api.congress.gov/v3/bill/117/hr/7372?format=json"
         }
     ],
     "pagination": {
         "count": 13129,
-        "next": "http://api1.test.congress.gov/v3/bill/117?offset=20&limit=20&format=json",
+        "next": "https://api.congress.gov/v3/bill/117?offset=20&limit=20&format=json",
         "total": 13129
     },
     "request": {

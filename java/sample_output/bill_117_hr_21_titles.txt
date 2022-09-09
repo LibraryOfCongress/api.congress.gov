@@ -6,7 +6,7 @@
     "request": {
         "billNumber": "21",
         "billType": "hr",
-        "billUrl": "http://api1.test.congress.gov/v3/bill/117/hr/21?format=json",
+        "billUrl": "https://api.congress.gov/v3/bill/117/hr/21?format=json",
         "congress": "117",
         "contentType": "application/json",
         "format": "json"

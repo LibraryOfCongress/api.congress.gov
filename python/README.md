@@ -99,7 +99,7 @@ now you want to look at bill/hr/21/committeess, write:
                  'subcommittees': [],
                  'systemCode': 'ssga00',
                  'type': 'Standing',
-                 'url': 'http://api1.test.congress.gov/v3/committee/senate/ssga00?format=json'},
+                 'url': 'https://api.congress.gov/v3/committee/senate/ssga00?format=json'},
                 {'activities': [{'date': '2021-01-04T15:11:25Z',
                                  'name': 'Referred to'}],
                  'chamber': 'House',
@@ -107,10 +107,10 @@ now you want to look at bill/hr/21/committeess, write:
                  'subcommittees': [],
                  'systemCode': 'hsgo00',
                  'type': 'Standing',
-                 'url': 'http://api1.test.congress.gov/v3/committee/house/hsgo00?format=json'}],
+                 'url': 'https://api.congress.gov/v3/committee/house/hsgo00?format=json'}],
  'request': {'billNumber': '21',
              'billType': 'hr',
-             'billUrl': 'http://api1.test.congress.gov/v3/bill/117/hr/21?format=json',
+             'billUrl': 'https://api.congress.gov/v3/bill/117/hr/21?format=json',
              'congress': '117',
              'contentType': 'application/json',
              'format': 'json'}}
@@ -122,7 +122,7 @@ now you want to look at bill/hr/21/committeess, write:
 
 | Key                      | Description                                                        | Values                                       |
 |--------------------------|--------------------------------------------------------------------|----------------------------------------------|
-| *API_KEY*                | The API key used to authenticate calls                             | Retrieved from https://api.data.gov          |
+| *API_KEY*                | The API key used to authenticate calls                             | Retrieved from https://api.congress.gov      |
 | *RESPONSE_FORMAT*        | Sets the response format returned by the API                       | xml, json                                    |
 | *BILL.CONGRESS*          | The numerical value of the congress to query                       | 1 - 117 (or current congress)                |
 | *BILL.CHAMBER*           | The congressional chamber                                          | hr, s, sjres, hjres                          |
@@ -148,7 +148,7 @@ now you want to look at bill/hr/21/committeess, write:
    - originChamber:       'House'
    - originChamberCode:   'H'
    - number:              '5681'
-   - url:                 'http://api1.test.congress.gov/v3/bill/117/hr/5681?format=xml'
+   - url:                 'http://api.congress.gov/v3/bill/117/hr/5681?format=xml'
    - title:               'Shadow Wolves Enhancement Act'
    - latestAction:        ''
    - updateDate:          '2022-04-08'

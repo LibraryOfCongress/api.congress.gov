@@ -14,10 +14,10 @@
 
 Building and running the CDG Sample Java client requires:
 1. openJDK v 18.0+ or the equivalent
-2. An API Key from https://api.data.gov (TODO: update the to the final URL)
+2. An API Key from https://api.congress.gov/sign-up 
 
 ## API Credentials
-Sign up for and retrieve your API key from https://api.data.gov (TODO: update the to the final URL)
+Sign up for and retrieve your API key from https://api.congress.gov/sign-up and store it locally
 
 ## Setup
 Ensure you have Java installed and the correct version. This sample was compiled using openJDK v 18.0.  Earlier versions may also work, but have not been tested.
@@ -27,7 +27,7 @@ java -version
 
 Clone this repository and execute the setup script to create the folder structure, compile the source and move the assets into place
 ````shell
-git clone <TODO add the repository URL>
+git clone https://github.com/LibraryOfCongress/..... <Final URL to be filled in>
 cd java && ./setup.sh
  ````
 
@@ -41,13 +41,13 @@ Some configurable options in the config file are
 
 | Key                      | Description                                                        | Values                                       |
 |--------------------------|--------------------------------------------------------------------|----------------------------------------------|
-| *CONFIG_API_KEY*         | The API key used to authenticate calls                             | Retrieved from https://api.data.gov          |
+| *CONFIG_API_KEY*         | The API key used to authenticate calls                             | Retrieved from https://api.congress.gov      |
 | *CONFIG.RESPONSE_FORMAT* | Sets the response format returned by the API                       | xml, json                                    |
 | *CONFIG.STORE_RESPONSE*  | Store the response to a text file or not                           | true, false                                  |
 | *CONFIG.OUTPUT_FOLDER*   | The folder to store the xml or json output if storing the response | a valid folder name                          |
 | *BILL.CONGRESS*          | The numerical value of the congress to query                       | 1 - 117 (or current congress)                |
 | *BILL.CHAMBER*           | The congressional chamber                                          | hr, s, sjres, hjres                          |
-| *BILL.NUMBER*            | The bill number to query                                           | A valid bill number from https://congres.gov |
+| *BILL.NUMBER*            | The bill number to query                                           | A valid bill number from https://congress.gov|
 | *BILL.URL*               | The bill url for the API to query                                  | bill                                         |
 
 
@@ -83,5 +83,5 @@ Other options allowed as arguments to java sample.Main are:
 |  *bill_titles*       | Gets a bills titles                      |
 
 ## Additional Information
-- For more information and the full API reference, please visit TODO INSERT API DOC LINK HERE
+- For more information and the full API reference, please visit https://api.congress.gov
 - Alternative ways to make use of your API key when making calls can be found here: https://api.data.gov/docs/api-key/
