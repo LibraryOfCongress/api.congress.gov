@@ -1,17 +1,23 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Information available in the [Change Log issue](https://github.com/LibraryOfCongress/api.congress.gov/issues/28) is also available here.
 # UPCOMING September 2022, Part 2
-**Expected production release date:** September 26, 2022
-## Change #1
+**Expected production release date:** September 23, 2022
+### Change #1
 New Senate Communications API endpoints will be released. The Senate Communications API will consist of a list level and an item level. Data elements will be similar to the existing House Communications API. Communications will be accessible by congress and by communication type (executive communication, petition or memorial, and presidential message) at the list level. Detailed information about each Senate Communication will be available at the item level. The new endpoints will be available at https://api.congress.gov/v3/senate-communication.
 ## Change #2 
-## Impacted endpoint: committee
+### Impacted endpoint: committee
 At the bills deeper level of the committee API, the following changes will be made:
 * `<billType>` will be renamed to `<type>`
 * `<billNumber>` will be renamed to `<number>`
 * A referrer URL to each bill item in the API will be added
 ## Change #3
-## Impacted endpoint: nomination
+### Impacted endpoint: nomination
 Empty elements will be suppressed from view. 
+## Change #4
+### Impacted endpoint: all
+Pagination URLs will be corrected to be https://api.congress.gov and not https://api.data.gov/congress (see [issue #26](https://github.com/LibraryOfCongress/api.congress.gov/issues/26)).
+## Change #5
+### Impacted endpoint: treaty
+Treaty pagination URLs will no longer be malformed and contain two https:// (see [issue #41](https://github.com/LibraryOfCongress/api.congress.gov/issues/41)).
 # COMPLETED September 2022, Part 1
 ## Change #1
 ### Impacted endpoint: amendment
