@@ -192,7 +192,7 @@ if __name__ == "__main__":
     # if you want to view data in json format, you can change the output type here:
     client = CDGClient(api_key, response_format="xml")
 
-    print(f"Contacting Congres.gov, at {client.base_url} ...")
+    print(f"Contacting Congress.gov, at {client.base_url} ...")
     pause = lambda: input('\nPress Enter to continue…')
 
     try:
