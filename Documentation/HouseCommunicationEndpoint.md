@@ -38,9 +38,9 @@ Parent container for House communications. A `<houseCommunications>` element may
 
 The `<api-root>` is only present in the XML format.
 
-`<houseCommunication>` 
+`<house-communication>` 
 
-Parent container for a House communication item. A `<houseCommunication>` element may include the following children:
+Parent container for a House communication item. A `<house-communication>` element may include the following children:
 - `<chamber>` (e.g. House)
   - The chamber where the communication was received. This value will always be set to "House".
 - `<communicationNumber>` (e.g. 1)
