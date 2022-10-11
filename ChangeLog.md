@@ -1,11 +1,9 @@
-This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository will expected production release date information.
-# UPCOMING October 2022
-**Expected production release date:** October 17, 2022
+This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
+# UPCOMING November 2022 Part 1
+**Expected prodcution release date:** November 7, 2022
 ## Change #1
-### Impacted endpoint: all
-Pagination URLs will be corrected to be https://api.congress.gov and not https://api.data.gov/congress (see [issue #26](https://github.com/LibraryOfCongress/api.congress.gov/issues/26)). This work is ongoing from a prior release.
-## Change #2
-### Impacted endpoint: committeeReport
+### Impacted endpoint: committeeReport 
+This work is ongoing from a prior release.
 1. The API endpoint will be renamed from committeeReport to committee-report, to conform to other API endpoints. 
 2. At the list level, the following elements will be added:
 * `<congress>` (with values like 117, 116)
@@ -25,10 +23,34 @@ Pagination URLs will be corrected to be https://api.congress.gov and not https:/
 * `<textVersions>` will be renamed to `<text>`
 * `<isErrata>` will be present for each text item (with values like Y or N)
 * text URLs will be absolute, instead of relative
-## Change #3
+## Change #2
+### Impacted endpoint: committee
+Within the committee API, a new endpoint will be created for Senate Communications. The endpoint will be available at https://api.congress.gov/v3/committee/senate/{committeeCode}/senate-communication and will contain communications available in Congress.gov associated with that committee.
+## Change #3 
+### Impacted endpoint: committee
+The following parameters - fromDate and toDate - will be added to the committee reports sub-level of the committee API. The parameters can be used to filter results to reports updated within a specified update date time range.
+## Change #4
+### Impacted endpoint: nomination
+1. At the list level:
+* an `<organization>` element will be added. This element is currently available at the item level.
+* the display of `<latestAction>` data (including `<actionDate>` and `<text>`) will be adjusted so that the `<actionDate>` and `<text>` elements are individual data elements.
+* the `<name>` element will be removed.
+2. At the item level: 
+* a `<receivedDate>` element will be added. This element is currently available at the list level. 
+* a `<description>` element will be added. This element is currently available at the list level. 
+* the `<createDate>` element will be removed.
+## Change #5
+### Impacted endpoint: member
+In response to [issue #31](https://github.com/LibraryOfCongress/api.congress.gov/issues/31), the bug causing duplicate members to be returned by certain limits set will be addressed. As a result, regardless of the set limit, the number of unique members returned should not change. 
+# UPCOMING October 2022
+**Expected production release date:** October 17, 2022
+## Change #1
+### Impacted endpoint: all
+Pagination URLs will be corrected to be https://api.congress.gov and not https://api.data.gov/congress (see [issue #26](https://github.com/LibraryOfCongress/api.congress.gov/issues/26)). This work is ongoing from a prior release.
+## Change #2
 ### Impacted endpoint: treaty
 Treaty pagination URLs will no longer be malformed and contain http:// and https:// (see [issue #41](https://github.com/LibraryOfCongress/api.congress.gov/issues/41)). This work is ongoing from a prior release.
-## Change #4
+## Change #3
 ### Impacted endpoint: nomination
 Empty elements will be suppressed from view. This work is ongoing from a prior release.
 # COMPLETED September 2022, Part 2
