@@ -1,5 +1,5 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
-# UPCOMING November 2022 Part 1
+# UPCOMING November 2022
 **Expected prodcution release date:** November 7, 2022
 ## Change #1
 ### Impacted endpoint: committeeReport 
