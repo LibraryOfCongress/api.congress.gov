@@ -1,4 +1,4 @@
-This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Information available in the [Change Log issue](https://github.com/LibraryOfCongress/api.congress.gov/issues/28) is also available here.
+This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository will expected production release date information.
 # UPCOMING October 2022
 **Expected production release date:** October 17, 2022
 ## Change #1
