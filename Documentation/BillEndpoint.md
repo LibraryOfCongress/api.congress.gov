@@ -303,8 +303,11 @@ Parent container for all actions taken on a bill or resolution. Actions may come
       - A short name representing legislative process stages or categories of more detailed actions. Most types condense actions into sets. Some types are used for data processing and do not represent House or Senate legislative process activities.
       - Possible values are "Committee", "Calendars", "Floor", "BecameLaw", "IntroReferral", "President", "ResolvingDifferences", "Discharge", "NotUsed", and "Veto".
     - `<actionCode>`
-      - An action code associated with the action taken on a bill or resolution. The `<actionCode>` element will be present only for House and Library of Congress actions. 
-      - View a [field values list of Library of Congress action codes](https://www.congress.gov/help/field-values/action-codes) on Congress.gov.
+      - An action code associated with the action taken on a bill or resolution. 
+      - The `<actionCode>` element will be present only for actions where the `<sourceSystem>` is 2 (House) or 9 (Library of Congress).
+         - [Action Codes](https://www.congress.gov/help/field-values/action-codes) is an authoritative list of values where the `<sourceSystem>` is 9 (Library of Congress).
+         - An authoritative list of action codes where the `<sourceSystem>` is 2 (House) does not exist.
+       - Various code sets are used by multiple systems in the House, Senate, and Library of Congress by legislative clerks and data editors for functions independent of this data set. As new codes and systems were developed, there was no coordinated effort to retroactively apply new codes to old records. Many codes are concatenated with other codes or elements or utilize free text. Codes in one set may be redundant with a different code in another code set. Additionally, some codes may have been used and re-used over the years for different purposes further complicating the ability to create an authoritative list. View the original code set of [U.S. Congress legislative status steps](http://www.loc.gov/pictures/resource/ppmsca.33996/).
     - `<sourceSystem>`
       - Container for the source system where the action was entered. A `<sourceSystem>` element may include the following children:
         - `<code>` (e.g. 0)
