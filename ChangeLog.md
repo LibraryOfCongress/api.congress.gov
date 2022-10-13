@@ -1,5 +1,5 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
-# UPCOMING November 2022
+# UPCOMING November 2022 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/6)
 **Expected production release date:** November 7, 2022
 ## Change #1
 ### Impacted endpoint: committeeReport 
@@ -42,7 +42,7 @@ The following parameters - fromDate and toDate - will be added to the committee 
 ## Change #5
 ### Impacted endpoint: member
 In response to [issue #31](https://github.com/LibraryOfCongress/api.congress.gov/issues/31), the bug causing duplicate members to be returned by certain limits set will be addressed. As a result, regardless of the set limit, the number of unique members returned should not change. 
-# UPCOMING October 2022
+# UPCOMING October 2022 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/5)
 **Expected production release date:** October 17, 2022
 ## Change #1
 ### Impacted endpoint: all
