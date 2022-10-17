@@ -42,17 +42,13 @@ The following parameters - fromDate and toDate - will be added to the committee 
 ## Change #5
 ### Impacted endpoint: member
 In response to [issue #31](https://github.com/LibraryOfCongress/api.congress.gov/issues/31), the bug causing duplicate members to be returned by certain limits set will be addressed. As a result, regardless of the set limit, the number of unique members returned should not change. 
-# UPCOMING October 2022 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/5)
-**Expected production release date:** October 17, 2022
+# COMPLETED October 2022 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/5)
 ## Change #1
 ### Impacted endpoint: all
-Pagination URLs will be corrected to be https://api.congress.gov and not https://api.data.gov/congress (see [issue #26](https://github.com/LibraryOfCongress/api.congress.gov/issues/26)). This work is ongoing from a prior release.
+Pagination URLs were corrected to https://api.congress.gov and not https://api.data.gov/congress (see [issue #26](https://github.com/LibraryOfCongress/api.congress.gov/issues/26)). This work was ongoing from a prior release.
 ## Change #2
-### Impacted endpoint: treaty
-Treaty pagination URLs will no longer be malformed and contain http:// and https:// (see [issue #41](https://github.com/LibraryOfCongress/api.congress.gov/issues/41)). This work is ongoing from a prior release.
-## Change #3
 ### Impacted endpoint: nomination
-Empty elements will be suppressed from view. This work is ongoing from a prior release.
+Empty elements were suppressed from view. This work was ongoing from a prior release.
 # COMPLETED September 2022, Part 2
 ### Change #1
 New Senate Communications API endpoints were released. The Senate Communications API consists of a list level and an item level. Data elements are similar to the existing House Communications API. Communications are accessible by congress and by communication type (executive communication, petition or memorial, and presidential message) at the list level. Detailed information about each Senate Communication is available at the item level. The new endpoints are available at https://api.congress.gov/v3/senate-communication.
