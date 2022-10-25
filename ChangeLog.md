@@ -1,4 +1,24 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
+# UPCOMING November 2022 Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/7)
+**Expected production release date:** November 28, 2022
+## Change #1
+### Impacted endpoint: treaty
+Treaty pagination URLs will no longer be malformed and contain http:// and https:// (see [issue #41](https://github.com/LibraryOfCongress/api.congress.gov/issues/41)). This work is ongoing from a prior release.
+## Change #2
+### Impacted endpoint: committee
+The following elements will be added to the committee reports sub-level of the committee API:
+* `<congress>` (with values like 117, 116)
+* `<chamber>` (with values like 'House' and 'Senate')
+* `<type>` (with values like 'HRPT', 'SRPT', and 'ERPT')
+* `<number>` (with values like 1, 7, 455)
+* `<part>` (with values like 1, 2)
+## Change #3 
+### Impacted endpoint: nomination
+At the printed hearings endpoint, the following changes will be made:
+* `<extJacketNumber>` will be renamed to be `<jacketNumber>`
+* `<startDate>` will be renamed to be `<date>`
+* `<hearingNumber>` will be renamed to be `<number>`
+* `<endDate>` will be removed
 # UPCOMING November 2022 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/6)
 **Expected production release date:** November 7, 2022
 ## Change #1
@@ -60,7 +80,7 @@ At the bills deeper level of the committee API, the following changes were made:
 * `<billType>` was renamed to `<type>`
 * `<billNumber>` was renamed to `<number>`
 * A referrer URL to each bill item in the API was added
-# COMPLETED September 2022, Part 1
+# COMPLETED September 2022
 ## Change #1
 ### Impacted endpoint: amendment
 An `<updateDate>` element was added to the list level. This element indicates an amendment's last update in Congress.gov.
