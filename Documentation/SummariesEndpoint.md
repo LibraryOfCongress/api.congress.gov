@@ -1,6 +1,6 @@
 # Summaries endpoint
 ## Coverage
-Coverage information for bill summaries data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates). 
+Coverage information for bill summaries data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates). Only bill summaries published in the last day are available from this endpoint; however, all bill summaries published for bills available on Congress.gov can be found at the [bill endpoint](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/BillEndpoint.md#summaries-level). 
 ## Elements and Descriptions
 The section below details available element names, their description, and possible values.
 ### List Level
