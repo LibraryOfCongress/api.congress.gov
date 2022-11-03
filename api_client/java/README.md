@@ -27,8 +27,8 @@ java -version
 
 Clone this repository and execute the setup script to create the folder structure, compile the source and move the assets into place
 ````shell
-git clone https://github.com/LibraryOfCongress/..... <Final URL to be filled in>
-cd java && ./setup.sh
+git clone https://github.com/LibraryOfCongress/api.congress.gov.git
+cd api.congress.gov/api_client/java && ./setup.sh
  ````
 
 Edit the loc.cfg file in the client folder and set the CONFIG.API_KEY value to your API Key you obtained earlier
