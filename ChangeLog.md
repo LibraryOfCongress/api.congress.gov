@@ -19,49 +19,49 @@ At the printed hearings endpoint, the following changes will be made:
 * `<startDate>` will be renamed to be `<date>`
 * `<hearingNumber>` will be renamed to be `<number>`
 * `<endDate>` will be removed
-# UPCOMING November 2022 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/6)
-**Expected production release date:** November 7, 2022
+## Change #4 
+### Impacted endpoint: committee
+The following parameters - fromDate and toDate - will be added to the committee reports sub-level of the committee API. The parameters can be used to filter results to reports updated within a specified update date time range. This work is ongoing from a prior release.
+# COMPLETED November 2022 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/6)
 ## Change #1
 ### Impacted endpoint: committeeReport 
-This work is ongoing from a prior release.
-1. The API endpoint will be renamed from committeeReport to committee-report, to conform to other API endpoints. 
-2. At the list level, the following elements will be added:
+This work was ongoing from a prior release.
+1. The API endpoint was renamed from committeeReport to committee-report, to conform to other API endpoints. 
+2. At the list level, the following elements were added:
 * `<congress>` (with values like 117, 116)
 * `<chamber>` (with values like 'House' and 'Senate')
 * `<type>` (with values like 'HRPT', 'SRPT', and 'ERPT')
 * `<number>` (with values like 1, 17, 455)
 * `<part>` (with values like 1, 2)
-3. At the item level, the following elements will be added:
+3. At the item level, the following elements were added:
 * `<associatedBill>` data, when a committee report is associated with a measure
 * `<associatedTreaty>` data, when a committee report is associated with a treaty
-4. At the item level, the following elements will be renamed:
-* `<congSession>` will be renamed to `<sessionNumber>`
-* `<reportNumber>` will be renamed to `<number>`
-* `<partNumber>` will be renamed to `<part>`
-* `<reportTypeCode>` will be renamed to `<type>`
-5. At the text sub-level, the following changes will be made:
-* `<textVersions>` will be renamed to `<text>`
-* `<isErrata>` will be present for each text item (with values like Y or N)
-* text URLs will be absolute, instead of relative
+4. At the item level, the following elements were renamed:
+* `<congSession>` was renamed to `<sessionNumber>`
+* `<reportNumber>` was renamed to `<number>`
+* `<partNumber>` was renamed to `<part>`
+* `<reportTypeCode>` was renamed to `<type>`
+5. At the text sub-level, the following changes were made:
+* `<textVersions>` was renamed to `<text>`
+* `<isErrata>` is present for each text item (with values like Y or N)
+* text URLs are absolute, instead of relative
 ## Change #2
 ### Impacted endpoint: committee
-Within the committee API, a new endpoint will be created for Senate Communications. The endpoint will be available at https://api.congress.gov/v3/committee/senate/{committeeCode}/senate-communication and will contain communications available in Congress.gov associated with that committee.
-## Change #3 
-### Impacted endpoint: committee
-The following parameters - fromDate and toDate - will be added to the committee reports sub-level of the committee API. The parameters can be used to filter results to reports updated within a specified update date time range.
-## Change #4
+Within the committee API, a new endpoint was created for Senate Communications. The endpoint is available at https://api.congress.gov/v3/committee/senate/{committeeCode}/senate-communication and contains communications available in Congress.gov associated with that committee.
+## Change #3
 ### Impacted endpoint: nomination
 1. At the list level:
-* an `<organization>` element will be added. This element is currently available at the item level.
-* the display of `<latestAction>` data (including `<actionDate>` and `<text>`) will be adjusted so that the `<actionDate>` and `<text>` elements are individual data elements.
-* the `<name>` element will be removed.
+* an `<organization>` element was added. This element is currently available at the item level.
+* the display of `<latestAction>` data (including `<actionDate>` and `<text>`) was adjusted so that the `<actionDate>` and `<text>` elements are individual data elements.
+* the `<name>` element was removed.
 2. At the item level: 
-* a `<receivedDate>` element will be added. This element is currently available at the list level. 
-* a `<description>` element will be added. This element is currently available at the list level. 
-* the `<createDate>` element will be removed.
-## Change #5
+* `<positions>` was renamed to `<nominees>`.
+* a `<receivedDate>` element was added. This element is currently available at the list level. 
+* a `<description>` element was added. This element is currently available at the list level. 
+* the `<createDate>` element was removed.
+## Change #4
 ### Impacted endpoint: member
-In response to [issue #31](https://github.com/LibraryOfCongress/api.congress.gov/issues/31), the bug causing duplicate members to be returned by certain limits set will be addressed. As a result, regardless of the set limit, the number of unique members returned should not change. 
+In response to [issue #31](https://github.com/LibraryOfCongress/api.congress.gov/issues/31), the bug causing duplicate members to be returned by certain limits set should be addressed. As a result, regardless of the set limit, the number of unique members returned should not change. 
 # COMPLETED October 2022 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/5)
 ## Change #1
 ### Impacted endpoint: all
