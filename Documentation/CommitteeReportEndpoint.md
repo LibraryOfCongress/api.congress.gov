@@ -91,7 +91,7 @@ Parent container for multiple committee report parts within a single report. A `
 	 	- Container for committee report text. A `<text>` element may include the following children: 
 	 		- `<count>` (e.g., 2)
 	 			- The number of text formats for the committee report.
-	 		- `<url>` (e.g., https://api.congress.gov/v3/committeeReport/117/hrpt/351/text)
+	 		- `<url>` (e.g., https://api.congress.gov/v3/committee-report/117/hrpt/351/text)
 	 			- A referrer URL to the text level of the committee report API. Click [here](#text-level) for more information about the text level. 
 	 - `<associatedTreaties>`
 	   - Container for associated treaties to the executive report. An `<associatedTreaties>` element may include the following children (the below data is taken from https://api.congress.gov/v3/committee-report/117/erpt/5?api_key=):
