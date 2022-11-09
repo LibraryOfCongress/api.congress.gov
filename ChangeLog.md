@@ -1,4 +1,14 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
+# UPCOMING December 2022
+**Expected production release date:** December 19, 2022
+## Change #1
+New House Requirements API endpoints will be released. The House Requirements API will consist of a list level and an item level. At the list level, requirements should be filterable by congress. Data elements at the list level will include  requirement numbers, referrer URLs to the item level, and update dates in Congress.gov. Detailed information about each House Requirement will be available at the item level. The new endpoints will be available at https://api.congress.gov/v3/house-requirement.
+## Change #2
+### Impacted endpoint: committee
+Empty elements will be suppressed from view.
+## Change #3
+### Impacted endpoint: member
+Empty elements will be suppressed from view.
 # UPCOMING November 2022 Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/7)
 **Expected production release date:** November 28, 2022
 ## Change #1
@@ -72,8 +82,6 @@ Empty elements were suppressed from view. This work was ongoing from a prior rel
 # COMPLETED September 2022, Part 2
 ### Change #1
 New Senate Communications API endpoints were released. The Senate Communications API consists of a list level and an item level. Data elements are similar to the existing House Communications API. Communications are accessible by congress and by communication type (executive communication, petition or memorial, and presidential message) at the list level. Detailed information about each Senate Communication is available at the item level. The new endpoints are available at https://api.congress.gov/v3/senate-communication.
-
-**NOTE:** Communications from the 114th-present are available. Communications from congresses prior to the 114th should become available in the API in a future release.
 ## Change #2 
 ### Impacted endpoint: committee
 At the bills deeper level of the committee API, the following changes were made:
