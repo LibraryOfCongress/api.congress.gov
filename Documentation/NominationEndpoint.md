@@ -37,12 +37,18 @@ Parent container for nominations. A `<nominations>` element may include the foll
         - `<isMilitary>` (e.g. False)
           - Flag indicating whether the nomination is for a military nomination.
           - Possible values are "True" or "False".
-     - `<latestAction>` (e.g. ({actionDate:'2022-07-21', 'text':'Confirmed by the Senate by Voice Vote.'},))
-        - Data string containing an action date element (the date of the latest action taken on the nomination) and a text element (the text of the latest action taken on the nomination). Work is scheduled to separate out these elements. 
+     - `<latestAction>` 
+        - Container for the latest action taken on the nomination. A `<latestAction>` element may include the following children:
+          - `<actionDate>` (e.g., 2022-07-21)
+            - The date of the latest action taken on the nomination.
+          - `<text>` (e.g., Confirmed by the Senate by Voice Vote.)
+            - The text of the latest action taken on the nomination. 
      - `<updateDate>` (e.g. 2022-07-22 04:24:15+00:00)
         - The date of update in Congress.gov.
      - `<url>` (e.g. https://api.congress.gov/v3/nomination/117/1064)
         - A referrer URL to the nomination item in the API.
+     - `<organization>` (e.g., Corporation for National and Community Service)
+        - The name of the organization for which the nomination was submitted.
 ### Item Level
 `<api-root>`
 
@@ -68,12 +74,16 @@ Parent container for the nomination. A `<nomination>` element may contain the fo
 - `<isList>` (e.g. False)
   - Flag indicating whether the nomination is for the Military, Foreign Service, National Oceanic and Atmospheric Administration (NOAA), or Public Health.
   - Possible values are "True" or "False".
+- `<receivedDate>` (e.g., 2021-09-13)
+  - The date the nomination was received from the President.
+- `<description>` (e.g., Lisette Nieves, of New York, to be a Member of the Board of Directors of the Corporation for National and Community Service for a term expiring October 6, 2027. (Reappointment))
+  - The description of the nomination.
 - `<executiveCalendarNumber>`
   - Executive calendar number information for the nomination.
 - `<authorityDate>` (e.g. 2022-07-21)
   - The date when the Senate granted authority to the Secretary of the Senate to receive nominations during periods of recess or adjournment.
-- `<positions>` 
-  - Container for nominee position data. A `<positions>` element may include the following children:
+- `<nominees>` 
+  - Container for nominee position data. A `<nominees>` element may include the following children:
     - `<item>` 
       - Container for a nominee position. An `<item>` element is repeatable and may include the following children:
         - `<ordinal>` (e.g. 1)
