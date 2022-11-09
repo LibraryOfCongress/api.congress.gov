@@ -84,8 +84,8 @@ Parent container for a bill or resolution. A `<bill>` element may include the fo
       - Container for an individual committee report related to the bill or resolution. A `<committeeReport>` element may include the following children:
         - `<citation>` (e.g. H. Rept. 117-89,Part 1)
           - The committee report citation.
-        - `<url>` (e.g. https://api.congress.gov/v3/committeeReport/117/HRPT/89)
-          - A referrer URL to the committee report item in the API. Documentation for the committee report endpoint is in progress.
+        - `<url>` (e.g. https://api.congress.gov/v3/committee-report/117/HRPT/89)
+          - A referrer URL to the committee report item in the API. Documentation for the committee report endpoint is available [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/CommitteeReportEndpoint.md).
 - `<relatedBills>`
   - Container for related bills to the bill or resolution, as assigned by CRS, the House, and the Senate. Read [About Related Bills](https://www.congress.gov/help/related-bills) on Congress.gov. 
   - A `<relatedBills>` element may include the following children:
