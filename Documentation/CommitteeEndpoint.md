@@ -140,7 +140,7 @@ Parent container for reports issued by a committee. The `<reports>` element may 
    - Container for individual reports issued by the committee. The `<item>` container is repeatable and may contain the following children:
    		- `<citation>` (e.g., H. Rept. 109-570)
    			- The citation of the report issued by the committee.  
-   		- `<url>` (e.g., https://api.congress.gov/v3/committeeReport/109/HRPT/570)
+   		- `<url>` (e.g., https://api.congress.gov/v3/committee-report/109/HRPT/570)
    			- A referrer URL to the committee report item in the API. Documentation for the committee report endpoint is available [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/CommitteeReportEndpoint.md). 
    		- `<updateDate>` (e.g., 2021-07-10 16:19:06+00:00)
    			- The date of update in Congress.gov. 
