@@ -165,7 +165,7 @@ Parent container for an amendment. An `<amendment>` element may include the foll
         -	`<treatyNumber>` (e.g. 1)
             -	The assigned treaty number.
         -	`<url>` (e.g. https://api.congress.gov/v3/treaty/116/1)
-            -	A referrer URL to the treaty item in the API. Documentation for the treaty endpoint is in progress.
+            -	A referrer URL to the treaty item in the API. Documentation for the treaty endpoint is available [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/TreatyEndpoint.md).
   -	`<actions>`
       - Container for actions on the amendment. An `<actions>` element may include the following children:
           - `<count>` (e.g. 19)
