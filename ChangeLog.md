@@ -3,12 +3,6 @@ This change log will contain information on updates to the Congress.gov API, the
 **Expected production release date:** December 19, 2022
 ## Change #1
 New House Requirements API endpoints will be released. The House Requirements API will consist of a list level and an item level. At the list level, requirements should be filterable by congress. Data elements at the list level will include  requirement numbers, referrer URLs to the item level, and update dates in Congress.gov. Detailed information about each House Requirement will be available at the item level. The new endpoints will be available at https://api.congress.gov/v3/house-requirement.
-## Change #2
-### Impacted endpoint: committee
-Empty elements will be suppressed from view.
-## Change #3
-### Impacted endpoint: member
-Empty elements will be suppressed from view.
 # UPCOMING November 2022 Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/7)
 **Expected production release date:** November 28, 2022
 ## Change #1
