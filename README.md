@@ -12,6 +12,8 @@ For every request, three elements are returned:
 An API key is required for access. Sign up for a key [here](https://api.congress.gov/sign-up/).
 ## Versioning
 The current version of the API is version 3 (v3). Prior versions were used by the Government Publishing Office (GPO) for its [Bulk Data Repository](https://www.govinfo.gov/bulkdata), and other clients.
+## Rate Limit
+The rate limit is set to 1,000 requests per hour.
 ## Limit and Offset
 By default, the API returns 20 results starting with the first record. The 20 results limit can be adjusted up to 250 results. If the limit is adjusted to be greater than 250 results, only 250 results will be returned. The offset, or the starting record, can also be adjusted to be greater than 0. 
 ## Support
