@@ -1,31 +1,30 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
-# UPCOMING December 2022
+# UPCOMING December 2022 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/7)
 **Expected production release date:** December 19, 2022
 ## Change #1
 New House Requirements API endpoints will be released. The House Requirements API will consist of a list level and an item level. At the list level, requirements should be filterable by congress. Data elements at the list level will include  requirement numbers, referrer URLs to the item level, and update dates in Congress.gov. Detailed information about each House Requirement will be available at the item level. The new endpoints will be available at https://api.congress.gov/v3/house-requirement.
-# UPCOMING November 2022 Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/7)
-**Expected production release date:** November 28, 2022
-## Change #1
-### Impacted endpoint: treaty
-Treaty pagination URLs will no longer be malformed and contain http:// and https:// (see [issue #41](https://github.com/LibraryOfCongress/api.congress.gov/issues/41)). This work is ongoing from a prior release.
 ## Change #2
+### Impacted endpoint: treaty
+Treaty pagination URLs will no longer be malformed and contain http:// and https:// (see [issue #41](https://github.com/LibraryOfCongress/api.congress.gov/issues/41)). This work is ongoing from prior releases.
+# COMPLETED November 2022 Part 2
+## Change #1
 ### Impacted endpoint: committee
-The following elements will be added to the committee reports sub-level of the committee API:
+The following elements were added to the committee reports sub-level of the committee API:
 * `<congress>` (with values like 117, 116)
 * `<chamber>` (with values like 'House' and 'Senate')
 * `<type>` (with values like 'HRPT', 'SRPT', and 'ERPT')
 * `<number>` (with values like 1, 7, 455)
 * `<part>` (with values like 1, 2)
-## Change #3 
+## Change #2
 ### Impacted endpoint: nomination
-At the printed hearings endpoint, the following changes will be made:
-* `<extJacketNumber>` will be renamed to be `<jacketNumber>`
-* `<startDate>` will be renamed to be `<date>`
-* `<hearingNumber>` will be renamed to be `<number>`
-* `<endDate>` will be removed
-## Change #4 
+At the printed hearings endpoint, the following changes were made:
+* `<extJacketNumber>` was renamed to `<jacketNumber>`
+* `<startDate>` was renamed to `<date>`
+* `<hearingNumber>` was renamed to `<number>`
+* `<endDate>` was removed
+## Change #3
 ### Impacted endpoint: committee
-The following parameters - fromDate and toDate - will be added to the committee reports sub-level of the committee API. The parameters can be used to filter results to reports updated within a specified update date time range. This work is ongoing from a prior release.
+The following parameters - fromDate and toDate - were added to the committee reports sub-level of the committee API. The parameters can be used to filter results to reports updated within a specified update date time range. This work was ongoing from a prior release.
 # COMPLETED November 2022 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/6)
 ## Change #1
 ### Impacted endpoint: committeeReport 
