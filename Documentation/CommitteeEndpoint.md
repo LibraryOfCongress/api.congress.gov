@@ -144,6 +144,20 @@ Parent container for reports issued by a committee. The `<reports>` element may 
    			- A referrer URL to the committee report item in the API. Documentation for the committee report endpoint is available [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/CommitteeReportEndpoint.md). 
    		- `<updateDate>` (e.g., 2021-07-10 16:19:06+00:00)
    			- The date of update in Congress.gov. 
+   		- `<congress>` (e.g., 109)
+   		    - The congress during which the committee report was produced.
+   		- `<chamber>` (e.g., House)
+   		    - The chamber where the committee report was produced.
+   		    - Possible values are "House" and "Senate".
+   		- `<type>` (e.g., HRPT)
+   		    - The type of report.
+   		    - Possible values are "HRPT", "SRPT", and "ERPT".
+   		- `<number>` (e.g., 570)
+   		    - The assigned committee report number.
+   		- `<part>` (e.g., 1)
+   		    - The part number of the report.
+   		    - Committee reports without parts will have a value of 1. If there are multiple parts, the number value may be 2, 3, etc.
+
 ### Bills Level
 `<api-root>`
 
