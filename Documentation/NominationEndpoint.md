@@ -233,16 +233,16 @@ Parent container for printed hearings associated with the nomination. A `<hearin
   - Container for a printed hearing on the nomination. An `<item>` element is repeatable and may include the following children:
     - `<chamber>` (e.g. Senate)
       - The chamber where the hearing associated with the nomination took place. This value will always be set to "Senate".
-    - `<hearingNumber>` (e.g. 38)
+    - `<number>` (e.g. 38)
       - The number for the printed hearing.
     - `<partNumber>`
       - The part number for the hearing, if printed in parts.
     - `<citation>` (e.g. S.Hrg. 116-38)
       - The printed hearing citation.
-    - `<extJacketNumber>` (e.g. 37106)
+    - `<jacketNumber>` (e.g. 37106)
       - The jacket number, as present on the paper and PDF formats of the printed hearing.
-    - `<errataNumber>` 
+    - `<errataNumber>`
       - If errata, the printed hearing's errata number.
       - Read more [about errata](https://www.congress.gov/help/legislative-glossary#glossary_errata) on Congress.gov.
-    - `<startDate>` (e.g. 2019-06-05)
+    - `<date>` (e.g. 2019-06-05)
       - The date when the hearing took place. 
