@@ -1,8 +1,8 @@
 # Senate communication endpoint
 ## Coverage
 Coverage information for Senate communications data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates). Read more about Senate communications data at [About Senate Executive and Other Communications](https://www.congress.gov/help/senate-communications) on Congress.gov.
-
-Note that currently, only Senate communications from the 114th Congress to the present are available in the API. Efforts are underway to add Senate communications from prior congresses to the API. Check the [ChangeLog](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/ChangeLog.md) for any updates.
+## OpenAPI Specification
+View OpenAPI Specification on the Senate communications API, supported endpoints, and available parameters at [https://api.congress.gov](https://api.congress.gov/#/senate-communication/senate_communication). 
 ## Elements and Descriptions
 The section below details available element names, their description, and possible values.
 ### List Level
