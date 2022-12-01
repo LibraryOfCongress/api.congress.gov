@@ -1,6 +1,8 @@
 # Amendment endpoint
 ## Coverage
 Coverage information for amendment data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates) on Congress.gov. Read more [about amendments](https://www.congress.gov/help/legislative-glossary#glossary_amendment) on Congress.gov.
+## OpenAPI Specification
+View OpenAPI Specification on the amendment API, supported endpoints, and available parameters at [https://api.congress.gov](https://api.congress.gov/#/amendments/Amendment). 
 ## Elements and Descriptions
 ### List Level
 Note that amendment items at the list level can be filtered down by congress and then by amendment type (e.g. https://api.congress.gov/v3/amendment/117/SAMDT?api_key=). 
