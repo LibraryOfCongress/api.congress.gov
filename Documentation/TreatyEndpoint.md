@@ -1,6 +1,8 @@
 # Treaty endpoint
 ## Coverage
 Coverage information for treaty data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates). Read more about treaty data at [About Treaty Documents](https://www.congress.gov/help/treaty-documents) on Congress.gov.
+## OpenAPI Specification
+View OpenAPI Specification on the treaty API, supported endpoints, and available parameters at [https://api.congress.gov](https://api.congress.gov/#/treaty/treaty_list).
 ## Elements and Descriptions
 The section below details available element names, their description, and possible values.
 ### List Level
