@@ -1,9 +1,10 @@
 # Bill endpoint
 ## Coverage
 Coverage information for bill data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates). Projects to add more historical legislative data to Congress.gov are underway. Read more about bill data at [About Legislation of the U.S. Congress](https://www.congress.gov/help/legislation) on Congress.gov.
+## OpenAPI Specification
+View OpenAPI Specification on the bill API, supported endpoints, and available parameters at [https://api.congress.gov](https://api.congress.gov/#/bill/bill_list_all). 
 ## Elements and Descriptions
 The section below details available element names, their description, and possible values.
-
 ### List Level
 Note that bill items at the list level can be filtered down by congress (e.g. 117) and by bill type (e.g. HR) - https://api.congress.gov/v3/bill/117/hr?api_key=.
 
