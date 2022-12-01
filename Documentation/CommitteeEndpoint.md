@@ -1,6 +1,8 @@
 # Committee endpoint
 ## Coverage
 Coverage information for committee data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates). Read more about committee data at [About Committees and Committee Materials](https://www.congress.gov/help/committee-materials) and committee name data at [Committee Name History](https://www.congress.gov/help/committee-name-history) on Congress.gov.
+## OpenAPI Specification
+View OpenAPI Specification on the committee API, supported endpoints, and available parameters at [https://api.congress.gov](https://api.congress.gov/#/committee/committee_list). 
 ## Elements and Descriptions
 The section below details available element names, their description, and possible values.
 ### List Level
