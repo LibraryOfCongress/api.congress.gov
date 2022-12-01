@@ -31,12 +31,14 @@ The `<api-root>` is only present in the XML format.
      		- `<originChamberCode>` (e.g., H)
      			- The code for the chamber of origin where the bill or resolution was introduced or submitted.
      			- Possible values are "H" and "S".
-     		- `<number>` (e.g., 1118)
+     		- `<number>` (e.g., 8432)
      			- The assigned bill or resolution number.
      		- `<url>` (e.g., https://api.congress.gov/v3/bill/117/hr/8432) 
      			- A referrer URL to the bill or resolution item in the API. Documentation for the bill endpoint is available [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/BillEndpoint.md).
 		 - `<title>` (e.g., Beagle Brigade Act of 2022)
 		 	- The display title for the bill or resolution on Congress.gov.
+		 - `<updateDateIncludingText>` (e.g., 2022-09-29T07:15:39Z)
+		 	- The date of update for the bill on Congres.gov, which includes updates to the bill's text.
 	 - `<text>` (e.g., `<![CDATA[ <p><strong>Beagle Brigade Act of 2022</strong></p> <p>This bill provides statutory authority for the National Detector Dog Training Center that is operated by the Animal and Plant Health Inspection Service of the Department of Agriculture. The center trains dogs to inspect passenger baggage, cargo, mailed packages, and vehicles to detect foreign pests and diseases that threaten domestic agriculture and natural resources.</p> ]]>`>
 	   - The text of the bill summary.
 		- Note that the bill summary text is encased in CDATA and contains HTML codes. The HTML codes may not be valid (see [#2](https://github.com/LibraryOfCongress/api.congress.gov/issues/2)); efforts are underway to improve the validity of the HTML codes.
