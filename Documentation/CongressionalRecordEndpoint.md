@@ -1,6 +1,8 @@
 # Congressional Record endpoint
 ## Coverage
 Coverage information for congressional record data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates). Note that while the Bound Congressional Record is available in Congress.gov, it is not yet available in the API. Read more about Congressional Record data at [About the Congressional Record](https://www.congress.gov/help/congressional-record) on Congress.gov. 
+## OpenAPI Specification
+View OpenAPI Specification on the congressional record API and available parameters at [https://api.congress.gov](https://api.congress.gov/#/congressional-record/congressional_record_list).
 ## Elements and Descriptions
 The section below details available element names, their description, and possible values.
 ### List Level
