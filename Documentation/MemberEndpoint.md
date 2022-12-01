@@ -1,6 +1,8 @@
 # Member endpoint
 ## Coverage
 Coverage information for member data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates). Read more about member data at [About Congressional Member Profiles](https://www.congress.gov/help/members) on Congress.gov.
+## OpenAPI Specification
+View OpenAPI Specification on the member API, supported endpoints, and available parameters at [https://api.congress.gov](https://api.congress.gov/#/member/member_list). 
 ## Elements and Descriptions
 The section below details available element names, their description, and possible values.
 ### List Level
