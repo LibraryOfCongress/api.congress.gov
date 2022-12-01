@@ -1,6 +1,8 @@
 # Congress endpoint
 ## Coverage
 Coverage information for congress data in the API can be found at the [Congresses field values list](https://www.congress.gov/help/field-values/congresses) on Congress.gov. Information on past session dates can be found on Congress.gov at the [Dates of Past Sessions](https://www.congress.gov/past-days-in-session).
+## OpenAPI Specification
+View OpenAPI Specification on the congress API, supported endpoints, and available parameters at [https://api.congress.gov](https://api.congress.gov/#/congress/congress_list).
 ## Elements and Descriptions
 The section below details available element names, their descriptions, and possible values. 
 ### List Level
