@@ -1,6 +1,8 @@
 # Nomination endpoint
 ## Coverage
 Coverage information for nominations data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates). Read more about nominations data at [About Nominations by the U.S. President](https://www.congress.gov/help/nominations) on Congress.gov.
+## OpenAPI Specification
+View OpenAPI Specification on the nomination API, supported endpoints, and available parameters at [https://api.congress.gov](https://api.congress.gov/#/nomination/nomination_list). 
 ## Elements and Descriptions
 The section below details available element names, their descriptions, and possible values.
 ### List Level
