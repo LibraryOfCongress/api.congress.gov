@@ -1,6 +1,8 @@
 # House communication endpoint
 ## Coverage 
 Coverage information for House communications data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates). Read more about House communications data at [About Communications to the House](https://www.congress.gov/help/house-communications) on Congress.gov.
+## OpenAPI Specification
+View OpenAPI Specification on the House communications API, supported endpoints, and available parameters at [https://api.congress.gov](https://api.congress.gov/#/house-communication/house_communication). 
 ## Elements and Descriptions
 The section below details available element names, their description, and possible values.
 ### List Level
