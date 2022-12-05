@@ -1,4 +1,12 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
+# UPCOMING January 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/8)
+**Expected production release date:** January 9, 2023
+## Change #1
+### Impacted endpoint: member
+Referrer URLs to the sponsored-legislation and cosponsored-legislation sub-levels from member detail pages will be corrected to reflect the API's domain name, api.congress.gov, instead of api.data.gov/congress (see [issue #50](https://github.com/LibraryOfCongress/api.congress.gov/issues/50)).
+## Change #2
+### Impacted endpoint: bill
+A `<description>` element will be added for CBO cost estimates on bill detail pages. The element is sourced from CBO and provides a brief description on the cost estimate. Text contained in this element will be encased in HTML `<p>` tags.
 # UPCOMING December 2022 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/7)
 **Expected production release date:** December 19, 2022
 ## Change #1
