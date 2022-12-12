@@ -3,7 +3,7 @@ This change log will contain information on updates to the Congress.gov API, the
 **Expected production release date:** January 9, 2023
 ## Change #1
 ### Impacted endpoint: bill
-A `<description>` element will be added for CBO cost estimates on bill detail pages. The element is sourced from CBO and provides a brief description on the cost estimate. Text contained in this element will be encased in HTML `<p>` tags.
+A `<description>` element will be added for CBO cost estimates on bill detail pages. The element is sourced from CBO and provides a brief description on the cost estimate.
 # UPCOMING December 2022 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/7)
 **Expected production release date:** December 19, 2022
 ## Change #1
