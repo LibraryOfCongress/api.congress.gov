@@ -4,13 +4,12 @@ This change log will contain information on updates to the Congress.gov API, the
 ## Change #1
 ### Impacted endpoint: bill
 A `<description>` element will be added for CBO cost estimates on bill detail pages. The element is sourced from CBO and provides a brief description on the cost estimate.
-# UPCOMING December 2022 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/7)
-**Expected production release date:** December 19, 2022
+# COMPLETED December 2022 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/7)
 ## Change #1
-New House Requirements API endpoints will be released. The House Requirements API will consist of a list level and an item level. At the list level, requirements should be filterable by congress. Data elements at the list level will include  requirement numbers, referrer URLs to the item level, and update dates in Congress.gov. Detailed information about each House Requirement will be available at the item level. The new endpoints will be available at https://api.congress.gov/v3/house-requirement.
+New House Requirements API endpoints were released. The House Requirements API consists of a list level and an item level.  Data elements at the list level include requirement numbers, referrer URLs to the item level, and update dates in Congress.gov. Detailed information about each House Requirement are available at the item level. The new endpoints are available from https://api.congress.gov/v3/house-requirement. Also see [https://api.congress.gov](https://api.congress.gov/#/house-requirement/house_requirement) for OpenAPI Specification on the endpoints.
 ## Change #2
 ### Impacted endpoint: treaty
-Treaty pagination URLs will no longer be malformed and contain http:// and https:// (see [issue #41](https://github.com/LibraryOfCongress/api.congress.gov/issues/41)). This work is ongoing from prior releases.
+Treaty pagination URLs are longer be malformed and contain http:// and https:// (see [issue #41](https://github.com/LibraryOfCongress/api.congress.gov/issues/41)). This work was ongoing from prior releases.
 # COMPLETED November 2022 Part 2
 ## Change #1
 ### Impacted endpoint: committee
