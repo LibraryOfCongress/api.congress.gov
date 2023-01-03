@@ -1,4 +1,18 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
+# UPCOMING January 2023, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/9)
+**Expected production release date:** January 30, 2023
+## Change #1
+### Impacted endpoint: member
+Referrer URLs at member item levels to the sponsored-legislation and cosponsored-legislation sub-levels will be corrected to be https://api.congress.gov and not https://api.data.gov/congress (see [issue #50](https://github.com/LibraryOfCongress/api.congress.gov/issues/50)).
+## Change #2
+### Impacted endpoint: member
+Empty elements will be suppressed. 
+## Change #3
+### Impacted endpoint: committee
+Empty elements will be suppressed. 
+## Change #4
+### Impacted endpoint: amendment
+Submitted-only Senate amendments will be present at the amendment list level. Currently, only proposed Senate amendments and House amendments are present at the list level (see [issue #52](https://github.com/LibraryOfCongress/api.congress.gov/issues/52)). Note that these submitted-only Senate amendments are still available in the API by direct URL.
 # UPCOMING January 2023
 **Expected production release date:** January 9, 2023
 ## Change #1
