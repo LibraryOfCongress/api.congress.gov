@@ -1,5 +1,7 @@
-This documentation provides a brief overview of available endpoints in the Congress.gov API, including the base request, item level, and any deeper levels. Links to expanded documentation on the endpoints are provided in the **Coverage** text. 
 # Jump to
+
+This documentation provides a brief overview of available endpoints in the Congress.gov API, including the base request, item level, and any deeper levels. Links to expanded documentation on the endpoints are provided in the **Coverage** text.
+
 - [bill](#bill)
 - [amendment](#amendment)
 - [summaries](#summaries)
@@ -13,108 +15,210 @@ This documentation provides a brief overview of available endpoints in the Congr
 - [house-communication](#house-communication)
 - [house-requirement](#house-requirement)
 - [senate-communication](#senate-communication)
-# Endpoints
+
+## Endpoints
+
 ## bill
+
 ### Coverage
+
 Coverage information for bill data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates) on Congress.gov. Projects to add more historical legislative data to Congress.gov are underway. Read more about bill data at [About Legislation of the U.S. Congress](https://www.congress.gov/help/legislation). View expanded documentation for the bill endpoints at [BillEndpoint](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/BillEndpoint.md).
+
 ### Base Request
-The base request for bill data in the API is https://api.congress.gov/v3/bill. The request will return 20 results by default. Basic information about each bill item will be included in the response. Included in that basic information is the congress (e.g. 117), bill type (e.g. HR), bill number (e.g. 3076), origin chamber (e.g. House), a URL to the bill item in the API (e.g. https://api.congress.gov/v3/bill/117/hr/3076), title (e.g. Postal Service Reform Act of 2022), latest action (e.g. Became Public Law No: 117-108.), and the bill's update date in Congress.gov (e.g. 2022-06-28T22:30:22Z). Filters can be added to the URL in order to limit results returned to bills in a single Congress (e.g. https://api.congress.gov/v3/bill/117) or congress and bill type (e.g. https://api.congress.gov/v3/bill/117/hr).
+
+The base request for bill data in the API is <https://api.congress.gov/v3/bill>. The request will return 20 results by default. Basic information about each bill item will be included in the response. Included in that basic information is the congress (e.g. 117), bill type (e.g. HR), bill number (e.g. 3076), origin chamber (e.g. House), a URL to the bill item in the API (e.g. <https://api.congress.gov/v3/bill/117/hr/3076>), title (e.g. Postal Service Reform Act of 2022), latest action (e.g. Became Public Law No: 117-108.), and the bill's update date in Congress.gov (e.g. 2022-06-28T22:30:22Z). Filters can be added to the URL in order to limit results returned to bills in a single Congress (e.g. <https://api.congress.gov/v3/bill/117>) or congress and bill type (e.g. <https://api.congress.gov/v3/bill/117/hr>).
+
 ### Item
+
 Depending on the data available, each bill item in the API may contain the following: congress (e.g. 117), bill type (e.g. HR), bill number (e.g. 3076), origin chamber (e.g. House), introduced date (e.g. 2021-05-11), title[^1] (e.g. Postal Service Reform Act of 2022), constitutional authority statement, committee count, associated committee report(s)[^2], related bills[^3] count, actions count, sponsor (e.g. Rep. Maloney, Carolyn B. [D-NY-12]), cosponsor count (e.g. 102), associated Congressional Budget Office (CBO) cost estimate(s)[^4], law information (e.g. Public Law, 116-108), policy area term[^5] (e.g. Government Operations and Politics), subjects[^6] count (e.g. 17), summaries[^7] count (e.g. 5), amendments count (e.g. 48), text count (e.g. 7), latest action (e.g. Became Public Law No: 117-108.), and the bill’s update date in Congress.gov.
+
 ### Levels
-Depending on the data available, each bill item in the API may contain a referrer URL to the following deeper levels: actions, amendments, committees, cosponsors, relatedBills[^3], subjects[^6], summaries[^7], text[^8], and titles[^1]. These levels contain more information related to the bill item. For example, the actions level may contain the following for each action on the bill: date of action (e.g. 2022-03-28), text of the action (e.g. Became Public Law No: 117-108.), the type of action (e.g. BecameLaw), action code[^9] (e.g. 36000), source system (e.g. Library of Congress), associated committee information, associated recorded vote information, and associated calendar information. 
+
+Depending on the data available, each bill item in the API may contain a referrer URL to the following deeper levels: actions, amendments, committees, cosponsors, relatedBills[^3], subjects[^6], summaries[^7], text[^8], and titles[^1]. These levels contain more information related to the bill item. For example, the actions level may contain the following for each action on the bill: date of action (e.g. 2022-03-28), text of the action (e.g. Became Public Law No: 117-108.), the type of action (e.g. BecameLaw), action code[^9] (e.g. 36000), source system (e.g. Library of Congress), associated committee information, associated recorded vote information, and associated calendar information.
+
 ## amendment
+
 ### Coverage
+
 Coverage information for amendment data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates) on Congress.gov. Read more about [amendments on Congress.gov](https://www.congress.gov/help/legislative-glossary#glossary_amendment). View expanded documentation for the amendment endpoints at [AmendmentEndpoint](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/AmendmentEndpoint.md).
+
 ### Base Request
-The base request for amendment data in the Congress.gov API is https://api.congress.gov/v3/amendment. The request will return 20 results by default. Basic information about each amendment item will be included in the response. Included in the basic information is the congress (e.g. 117), amendment type (e.g. SAMDT), amendment number (e.g. 2137), description, purpose (e.g. In the nature of a substitute.), latest action (e.g. Amendment SA 2137 agreed to in Senate by Yea-Nay Vote. 69 - 28. Record Vote Number: 312.), and a URL to the amendment item in the API (e.g. https://api.congress.gov/v3/amendment/117/samdt/2137). Filters can be added to the URL in order to limit results returned to amendments in a single congress (e.g. https://api.congress.gov/v3/amendment/117) or congress and amendment type (e.g. https://api.congress.gov/v3/amendment/117/samdt).
+
+The base request for amendment data in the Congress.gov API is <https://api.congress.gov/v3/amendment>. The request will return 20 results by default. Basic information about each amendment item will be included in the response. Included in the basic information is the congress (e.g. 117), amendment type (e.g. SAMDT), amendment number (e.g. 2137), description, purpose (e.g. In the nature of a substitute.), latest action (e.g. Amendment SA 2137 agreed to in Senate by Yea-Nay Vote. 69 - 28. Record Vote Number: 312.), and a URL to the amendment item in the API (e.g. <https://api.congress.gov/v3/amendment/117/samdt/2137>). Filters can be added to the URL in order to limit results returned to amendments in a single congress (e.g. <https://api.congress.gov/v3/amendment/117>) or congress and amendment type (e.g. <https://api.congress.gov/v3/amendment/117/samdt>).
+
 ### Item
+
 Depending on the data available, each amendment item in the API may contain the following: congress (e.g. 117), amendment type (e.g. SAMDT), amendment number (e.g. 2137), purpose (e.g. In the nature of a substitute.), description, latest action (e.g. Amendment SA 2137 agreed to in Senate by Yea-Nay Vote. 69 - 28. Record Vote Number: 312.), the amendment’s update date in Congress.gov (e.g. 2022-02-08T17:27:59Z), sponsor (e.g. Sen. Sinema, Kyrsten [D-AZ]), cosponsor count (e.g. 9), amended bill information (e.g. 117 HR 3684), amended amendments information, amendments to the amendment count (e.g. 507), amended treaty information, and an actions count (e.g. 19).
+
 ### Levels
-Depending on the data available, each amendment item in the API may contain a referrer URL to the following deeper levels: actions, amendments (to the amendment), and cosponsors. These levels contain more information related to the amendment item. For example, the actions level may contain the following for each action on the amendment: date of action (e.g. 2021-08-08), text of the action (e.g. Amendment SA 2137 agreed to in Senate by Yea-Nay Vote. 69 - 28. Record Vote Number: 312.), the type of action (e.g. Floor), action code[^9], source system (e.g. Senate), associated committee information and associated recorded vote information. 
+
+Depending on the data available, each amendment item in the API may contain a referrer URL to the following deeper levels: actions, amendments (to the amendment), and cosponsors. These levels contain more information related to the amendment item. For example, the actions level may contain the following for each action on the amendment: date of action (e.g. 2021-08-08), text of the action (e.g. Amendment SA 2137 agreed to in Senate by Yea-Nay Vote. 69 - 28. Record Vote Number: 312.), the type of action (e.g. Floor), action code[^9], source system (e.g. Senate), associated committee information and associated recorded vote information.
+
 ## summaries
+
 ### Coverage
+
 Coverage information for bill summaries data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates). By default, only bill summaries published in the last day are available from these endpoints unless "fromDateTime" and/or "toDateTime" parameters are added to the API request (read more about those parameters in the [OpenAPI Specification](https://api.congress.gov/#/summaries/bill_summaries_all)); however, all bill summaries published for bills available on Congress.gov can be found at the [bill endpoints](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/BillEndpoint.md#summaries-level). View expanded documentation for the summaries endpoints at [SummariesEndpoint](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/SummariesEndpoint.md).
+
 ### Base Request
-The base request for bill summary data in the Congress.gov API is https://api.congress.gov/v3/summaries. The request will return 20 results by default. Basic information on each bill summary item will be included in the response. Included in the basic information is the associated bill or resolution, the text of the bill summary, and related data on the bill summary, such as action description, action date, update date, and summary version code.
+
+The base request for bill summary data in the Congress.gov API is <https://api.congress.gov/v3/summaries>. The request will return 20 results by default. Basic information on each bill summary item will be included in the response. Included in the basic information is the associated bill or resolution, the text of the bill summary, and related data on the bill summary, such as action description, action date, update date, and summary version code.
+
 ## congress
+
 ### Coverage
-Coverage information for congress data in the API can be found at the [Congresses field values list](https://www.congress.gov/help/field-values/congresses) on Congress.gov. Information on past session dates can be found on Congress.gov at the [Dates of Past Sessions](https://www.congress.gov/past-days-in-session). View expanded documentation for the congress endpoints at [CongressEndpoint](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/CongressEndpoint.md). 
+
+Coverage information for congress data in the API can be found at the [Congresses field values list](https://www.congress.gov/help/field-values/congresses) on Congress.gov. Information on past session dates can be found on Congress.gov at the [Dates of Past Sessions](https://www.congress.gov/past-days-in-session). View expanded documentation for the congress endpoints at [CongressEndpoint](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/CongressEndpoint.md).
+
 ### Base Request
-The base request for congress data in the API is https://api.congress.gov/v3/congress. The request will return 20 results by default. Basic information about each congress item will be included in the request. Included in that basic information is the congress's name (e.g. 117th Congress), start year (e.g. 2021), end year (e.g. 2022), session data (including session type - e.g. Regular - and chamber - e.g. House of Representatives), and a URL to the congress item in the API (e.g. https://api.congress.gov/v3/congress/117). 
+
+The base request for congress data in the API is <https://api.congress.gov/v3/congress>. The request will return 20 results by default. Basic information about each congress item will be included in the request. Included in that basic information is the congress's name (e.g. 117th Congress), start year (e.g. 2021), end year (e.g. 2022), session data (including session type - e.g. Regular - and chamber - e.g. House of Representatives), and a URL to the congress item in the API (e.g. <https://api.congress.gov/v3/congress/117>).
+
 ### Item
-Depending on the data available, each congress item in the API may contain the following: the congress's name (e.g. 117th Congress), start year (e.g. 2021), end year (e.g. 2022), update date in Congress.gov (e.g. 2021-01-12T20:05:52Z), congress number (e.g. 117), and sessions data. Sessions data may contain the following: chamber (e.g. House of Representatives), type of session (e.g. R, for "Regular"), start date (2021-01-03), end date (e.g. 2022-01-03), and session number (e.g. 1). 
+
+Depending on the data available, each congress item in the API may contain the following: the congress's name (e.g. 117th Congress), start year (e.g. 2021), end year (e.g. 2022), update date in Congress.gov (e.g. 2021-01-12T20:05:52Z), congress number (e.g. 117), and sessions data. Sessions data may contain the following: chamber (e.g. House of Representatives), type of session (e.g. R, for "Regular"), start date (2021-01-03), end date (e.g. 2022-01-03), and session number (e.g. 1).
+
 ## member
+
 ### Coverage
+
 Coverage information for member data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates) on Congress.gov. Read more about member data at [About Congressional Member Profiles](https://www.congress.gov/help/members). View expanded documentation for the member endpoints at [MemberEndpoint](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/MemberEndpoint.md).
+
 ### Base Request
-The base request for member data in the API is https://api.congress.gov/v3/member. The request will return 20 results by default. Basic information about each member item will be included the response. Included in that basic information is the member's Bioguide identifier (e.g. L000174), state (e.g. Vermont), party (e.g. Democratic), district, name (e.g. Leahy, Patrick J.), chamber/years served (including the chamber - e.g. Senate, start year of service in that chamber - e.g. 1975, and end year of service in that chamber), a URL to the member item in the API (e.g. https://api.congress.gov/v3/member/L000174), and member image data (including an image URL and attribution). 
+
+The base request for member data in the API is <https://api.congress.gov/v3/member>. The request will return 20 results by default. Basic information about each member item will be included the response. Included in that basic information is the member's Bioguide identifier (e.g. L000174), state (e.g. Vermont), party (e.g. Democratic), district, name (e.g. Leahy, Patrick J.), chamber/years served (including the chamber - e.g. Senate, start year of service in that chamber - e.g. 1975, and end year of service in that chamber), a URL to the member item in the API (e.g. <https://api.congress.gov/v3/member/L000174>), and member image data (including an image URL and attribution).
+
 ### Item
-Depending on the data available, each member item in the API may contain the following: the member's status (current or not current), birth year (e.g. 1940), death year, an update date in Congress.gov (e.g. 2022-05-17T18:44:02Z), member image data (including an image URL and attribution), member term data (including the member type - Senator, congress served - 117, state represented - Vermont, party information - Democratic, term start year - 2021, and term end year), party data (e.g. Democratic), state data (e.g. Vermont), official website URL (e.g. https://www.leahy.senate.gov/), name information (e.g. Leahy, Patrick J.), office address (e.g. 437 Russell Senate Office Building Washington, DC 20510) and contact information (e.g. (202) 224-4242).
+
+Depending on the data available, each member item in the API may contain the following: the member's status (current or not current), birth year (e.g. 1940), death year, an update date in Congress.gov (e.g. 2022-05-17T18:44:02Z), member image data (including an image URL and attribution), member term data (including the member type - Senator, congress served - 117, state represented - Vermont, party information - Democratic, term start year - 2021, and term end year), party data (e.g. Democratic), state data (e.g. Vermont), official website URL (e.g. <https://www.leahy.senate.gov/>), name information (e.g. Leahy, Patrick J.), office address (e.g. 437 Russell Senate Office Building Washington, DC 20510) and contact information (e.g. (202) 224-4242).
+
 ### Levels
-Depending on the data available, each member item in the API may contain a referrer URL to the sponsored legislation and cosponsored legislation. These levels contain more information on legislation sponsored and cosponsored by the member. Bill items in the deeper levels contain: an introduced date (e.g. 2022-06-16), bill type (e.g. S), congress (e.g. 117), title (e.g. Patent Trial and Appeal Board Reform Act of 2022), bill number (e.g. 4417), policy area (e.g. Commerce), latest action (e.g. Read twice and referred to the Committee on the Judiciary.), and a URL to the bill item in the API (e.g. https://api.congress.gov/v3/bill/117/s/4417). 
+
+Depending on the data available, each member item in the API may contain a referrer URL to the sponsored legislation and cosponsored legislation. These levels contain more information on legislation sponsored and cosponsored by the member. Bill items in the deeper levels contain: an introduced date (e.g. 2022-06-16), bill type (e.g. S), congress (e.g. 117), title (e.g. Patent Trial and Appeal Board Reform Act of 2022), bill number (e.g. 4417), policy area (e.g. Commerce), latest action (e.g. Read twice and referred to the Committee on the Judiciary.), and a URL to the bill item in the API (e.g. <https://api.congress.gov/v3/bill/117/s/4417>).
+
 ## committee
+
 ### Coverage
+
 Coverage information for committee data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates) on Congress.gov. Read more committee data at [About Committees and Committee Materials](https://www.congress.gov/help/committee-materials). View expanded documentation for the committee endpoints at [CommitteeEndpoint](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/CommitteeEndpoint.md).
+
 ### Base Request
-The base request for committee data in the API is https://api.congress.gov/v3/committee. The request will return 20 results by default. Basic information about each committee item will be included in the response. Included in that basic information is the committee's system code (e.g. hsag00), name (e.g. Agriculture Committee), a URL to the committee item in the API (e.g. https://api.congress.gov/v3/committee/house/hsag00), chamber (e.g. House), committee type (e.g. Standing), and subcommittee information (including subcommittee system codes, names, and URLs to the subcommittee items in the API). Filters can be added to the URL in order to limit results returned to committees in a certain chamber (e.g. https://api.congress.gov/v3/committee/senate).
+
+The base request for committee data in the API is <https://api.congress.gov/v3/committee>. The request will return 20 results by default. Basic information about each committee item will be included in the response. Included in that basic information is the committee's system code (e.g. hsag00), name (e.g. Agriculture Committee), a URL to the committee item in the API (e.g. <https://api.congress.gov/v3/committee/house/hsag00>), chamber (e.g. House), committee type (e.g. Standing), and subcommittee information (including subcommittee system codes, names, and URLs to the subcommittee items in the API). Filters can be added to the URL in order to limit results returned to committees in a certain chamber (e.g. <https://api.congress.gov/v3/committee/senate>).
+
 ### Item
-Depending on the data available, each committee item in the API may contain the following: the committee's system code (e.g. hsag00), parent committee information (if a subcommittee), an update date in Congress.gov (e.g. 2019-10-03T18:19:10Z), a true/false flag for current committee status (e.g. True), subcommittee information (including subcommittee system codes, names, and URLs to the subcommittee items in the API), report count (e.g. 617), bill count (e.g. 16170), name history information (if the committee changed names over time), and committee type (e.g. Standing). 
+
+Depending on the data available, each committee item in the API may contain the following: the committee's system code (e.g. hsag00), parent committee information (if a subcommittee), an update date in Congress.gov (e.g. 2019-10-03T18:19:10Z), a true/false flag for current committee status (e.g. True), subcommittee information (including subcommittee system codes, names, and URLs to the subcommittee items in the API), report count (e.g. 617), bill count (e.g. 16170), name history information (if the committee changed names over time), and committee type (e.g. Standing).
+
 ## Levels
+
 Depending on the data available, each committee item in the API may contain a referrer URL to the following deeper levels: reports, bills, nominations, and Senate communications. These levels contain information on committee reports, legislation, nominations, and Senate communications associated with the committee. For example, the bills level contains the following for associated legislation to the committee: congress (e.g. 112), bill type (e.g. HR), bill number (e.g. 3914), relationship type to the committee (e.g. Referred to), the date of action (e.g. 2012-02-07T15:05:25Z), an update date in Congress.gov (e.g. 2019-02-17T21:05:21Z), and the count of legislation associated to the committee (e.g. 16170).
+
 ## nomination
+
 ### Coverage
+
 Coverage information for nominations data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates) on Congress.gov. Read more nominations data at [About Nominations by the U.S. President](https://www.congress.gov/help/nominations). View expanded documentation for the nomination endpoints at [NominationEndpoint](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/NominationEndpoint.md).
+
 ### Base Request
-The base request for nominations data in the API is https://api.congress.gov/v3/nomination. The request will return 20 results by default. Basic information about each nomination item will be included in the response. Included in that basic information is the congress (e.g. 117), nomination number (e.g. 1783), partition number (e.g. 00), citation (e.g. PN1783), description (e.g. Ketanji Brown Jackson, of the District of Columbia, to be an Associate Justice of the Supreme Court of the United States, vice Stephen G. Breyer, retiring.), received date (e.g. 2022-02-28), the type of nomination (e.g. Civilian) and the organization (e.g. Supreme Court of the United States), an update date in Congress.gov (e.g. 2022-04-06 13:03:52+00:00), the latest action on the nomination (e.g. Confirmed by the Senate by Yea-Nay Vote. 53 - 47. Record Vote Number: 134.), a URL to the item in the API (e.g. https://api.congress.gov/v3/nomination/117/1783), and the organization (e.g. Supreme Court of the United States). Filters can be added to the URL in order to limit results returned to nominations in a single congress (e.g. https://api.congress.gov/v3/nomination/117).
+
+The base request for nominations data in the API is <https://api.congress.gov/v3/nomination>. The request will return 20 results by default. Basic information about each nomination item will be included in the response. Included in that basic information is the congress (e.g. 117), nomination number (e.g. 1783), partition number (e.g. 00), citation (e.g. PN1783), description (e.g. Ketanji Brown Jackson, of the District of Columbia, to be an Associate Justice of the Supreme Court of the United States, vice Stephen G. Breyer, retiring.), received date (e.g. 2022-02-28), the type of nomination (e.g. Civilian) and the organization (e.g. Supreme Court of the United States), an update date in Congress.gov (e.g. 2022-04-06 13:03:52+00:00), the latest action on the nomination (e.g. Confirmed by the Senate by Yea-Nay Vote. 53 - 47. Record Vote Number: 134.), a URL to the item in the API (e.g. <https://api.congress.gov/v3/nomination/117/1783>), and the organization (e.g. Supreme Court of the United States). Filters can be added to the URL in order to limit results returned to nominations in a single congress (e.g. <https://api.congress.gov/v3/nomination/117>).
+
 ### Item
+
 Depending on the data available, each nomination item in the API may contain the following: the nomination's congress (e.g. 117), nomination number (e.g. 1783), partition number (e.g. 00), citation (e.g. PN1783), executive calendar information, authority date, the received date (e.g. 2022-02-28), the description (e.g. Ketanji Brown Jackson, of the District of Columbia, to be an Associate Justice of the Supreme Court of the United States, vice Stephen G. Breyer, retiring.), nominee position information (including the organization - e.g. Supreme Court of the United States, position title - e.g. Associate Justice of the Supreme Count of the United States, and count - e.g. 1), committee count (e.g. 1), latest action on the nomination (e.g. Confirmed by the Senate by Yea-Nay Vote. 53 - 47. Record Vote Number: 134.), actions count (e.g. 19), printed hearings count (e.g. 0), and the update date in Congress.gov (e.g. 2022-04-06T13:03:52Z).
+
 ### Levels
+
 Depending on the data available, each nomination item in the API may contain a referrer URL to the following deeper levels: nominees, committees, actions, and printed hearings. These levels contain information on the nomination's nominees, associated committees, actions on the nominations, and associated printed hearings. For example, the actions level may contain the following for each action on the nomination: date of action (e.g. 2022-04-07), text of the action (e.g. Confirmed by the Senate by Yea-Nay Vote. 53 - 47. Record Vote Number: 134.), the type of action (e.g. Floor), Senate action code (e.g. S051310), and associated committee information.
+
 ## treaty
+
 ### Coverage
+
 Coverage information for treaty data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates) on Congress.gov. Read more about treaty data at [About Treaty Documents](https://www.congress.gov/help/treaty-documents). View expanded documentation for the treaty endpoints at [TreatyEndpoint](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/TreatyEndpoint.md).
+
 ### Base Request
-The base request for treaty data in the API is https://api.congress.gov/v3/treaty. The request will return 20 results by default. Basic information about each treaty item will be included in the response. Included in that basic information is the congress during which the treaty was submitted (e.g. 116), treaty document number (e.g. 1), the congress during which the treaty was ratified (e.g. 116), the treaty suffix, the date the treaty document was transmitted to the Senate (e.g. 2019-04-29T00:00:00Z), the resolution of ratification text (note that the text is encased in CDATA), treaty subjects (e.g. International Law and Organization), any treaty parts, an update date in Congress.gov (e.g. 2022-07-12T16:01:15Z), and a URL to the item in the API (e.g. https://api.congress.gov/v3/treaty/116/1). Filters can be added to the URL in order to limit results returned to treaties submitted in single congress (e.g. https://api.congress.gov/v3/treaty/116).
+
+The base request for treaty data in the API is <https://api.congress.gov/v3/treaty>. The request will return 20 results by default. Basic information about each treaty item will be included in the response. Included in that basic information is the congress during which the treaty was submitted (e.g. 116), treaty document number (e.g. 1), the congress during which the treaty was ratified (e.g. 116), the treaty suffix, the date the treaty document was transmitted to the Senate (e.g. 2019-04-29T00:00:00Z), the resolution of ratification text (note that the text is encased in CDATA), treaty subjects (e.g. International Law and Organization), any treaty parts, an update date in Congress.gov (e.g. 2022-07-12T16:01:15Z), and a URL to the item in the API (e.g. <https://api.congress.gov/v3/treaty/116/1>). Filters can be added to the URL in order to limit results returned to treaties submitted in single congress (e.g. <https://api.congress.gov/v3/treaty/116>).
+
 ### Item
-Depending on the data available, each treaty item in the API may contain the following: the congress during which the treaty was submitted (e.g. 116), treaty document number (e.g. 1), the congress during which the treaty was ratified (e.g. 116), the treaty suffix, the former treaty number, the date the treaty document was transmitted to the Senate (e.g. 2019-04-29T00:00:00Z), the date the treaty became in force, related documents to the treaty and a URL to that item in the API (e.g. Ex. Rept. 116-5, https://api.congress.gov/v3/committeeReport/116/ERPT/5), the resolution of ratification text (the text is encased in CDATA), treaty subjects (e.g. International Law and Organization), any treaty parts, an update date in Congress.gov (e.g. 2022-07-12T16:01:15Z), and an actions count (e.g. 18).
+
+Depending on the data available, each treaty item in the API may contain the following: the congress during which the treaty was submitted (e.g. 116), treaty document number (e.g. 1), the congress during which the treaty was ratified (e.g. 116), the treaty suffix, the former treaty number, the date the treaty document was transmitted to the Senate (e.g. 2019-04-29T00:00:00Z), the date the treaty became in force, related documents to the treaty and a URL to that item in the API (e.g. Ex. Rept. 116-5, <https://api.congress.gov/v3/committeeReport/116/ERPT/5>), the resolution of ratification text (the text is encased in CDATA), treaty subjects (e.g. International Law and Organization), any treaty parts, an update date in Congress.gov (e.g. 2022-07-12T16:01:15Z), and an actions count (e.g. 18).
+
 ### Levels
+
 Depending on the data available, each treaty item in the API may contain a referrer URL to the actions deeper level. The actions level may contain the following for each action on the treaty: date of action (e.g. 2019-10-17), Senate action code (e.g. S05235), text of the action (e.g. Cloture motion presented in Senate.), the type of action (e.g. Floor), and associated committee information.
+
 ## committee-report
+
 ### Coverage
+
 Coverage information for committee report data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates) on Congress.gov. Read more about committee report data at [About Committee Reports of the U.S. Congress](https://www.congress.gov/help/committee-reports). View expanded documentation for the committee report endpoints at [CommitteeReportEndpoint](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/CommitteeReportEndpoint.md).
+
 ### Base Request
-The base request for committee report data in the API is https://api.congress.gov/v3/committee-report. The request will return 20 results by default. Basic information about each committee report item will be included in the response. Included in that basic information is the committee report citation (e.g. H. Rept. 117-403), a URL to the item in the API (e.g. https://api.congress.gov/v3/committee-report/117/HRPT/403), an update date in Congress.gov (e.g. 2022-07-06 23:56:19+00:00), the congress (e.g. 117), the chamber (e.g. House), the report type (e.g. HRPT), the report number (e.g. 351), and the part (e.g. 1). Filters can be added to the URL in order to limit results returned to committee reports in a single congress (e.g. https://api.congress.gov/v3/committee-report/117) or congress and report type (e.g. https://api.congress.gov/v3/committee-report/117/HRPT).
+
+The base request for committee report data in the API is <https://api.congress.gov/v3/committee-report>. The request will return 20 results by default. Basic information about each committee report item will be included in the response. Included in that basic information is the committee report citation (e.g. H. Rept. 117-403), a URL to the item in the API (e.g. <https://api.congress.gov/v3/committee-report/117/HRPT/403>), an update date in Congress.gov (e.g. 2022-07-06 23:56:19+00:00), the congress (e.g. 117), the chamber (e.g. House), the report type (e.g. HRPT), the report number (e.g. 351), and the part (e.g. 1). Filters can be added to the URL in order to limit results returned to committee reports in a single congress (e.g. <https://api.congress.gov/v3/committee-report/117>) or congress and report type (e.g. <https://api.congress.gov/v3/committee-report/117/HRPT>).
+
 ### Item
-Depending on the data available, each committee report item in the API may contain the following: the congress during which the committee report was published (e.g. 117), the chamber (e.g. House), the session of congress (e.g. 2), the citation (e.g. H. Rept. 117-403), the report number (e.g. 403), the part number (e.g. 1), the report type (e.g. HRPT), an update date in Congress.gov (e.g. 2022-07-06T23:56:19Z), a true/false flag if the report is a conference report[^10] (e.g. False), the title of the report (e.g. DEPARTMENTS OF LABOR, HEALTH AND HUMAN SERVICES, AND EDUCATION, AND RELATED AGENCIES APPROPRIATIONS BILL, 2023), the date of issue (e.g. 2022-07-05T04:00:00Z), associated committee information (e.g. Appropriations Committee) including a URL to the committee item in the API (e.g. https://api.congress.gov/v3/committee/house/hsap00), and a text count (e.g. 2). 
+
+Depending on the data available, each committee report item in the API may contain the following: the congress during which the committee report was published (e.g. 117), the chamber (e.g. House), the session of congress (e.g. 2), the citation (e.g. H. Rept. 117-403), the report number (e.g. 403), the part number (e.g. 1), the report type (e.g. HRPT), an update date in Congress.gov (e.g. 2022-07-06T23:56:19Z), a true/false flag if the report is a conference report[^10] (e.g. False), the title of the report (e.g. DEPARTMENTS OF LABOR, HEALTH AND HUMAN SERVICES, AND EDUCATION, AND RELATED AGENCIES APPROPRIATIONS BILL, 2023), the date of issue (e.g. 2022-07-05T04:00:00Z), associated committee information (e.g. Appropriations Committee) including a URL to the committee item in the API (e.g. <https://api.congress.gov/v3/committee/house/hsap00>), and a text count (e.g. 2).
+
 ### Levels
+
 Depending on the data available, each committee report item in the API may contain a referrer URL to the text deeper level. The text level may contain the following: a URL for the text in Congress.gov (e.g. www.congress.gov/117/crpt/hrpt403/CRPT-117hrpt403.pdf), the type of format (e.g. PDF), and whether the text is errata (e.g. Y/N).
+
 ## congressional-record
+
 ### Coverage
+
 Coverage information for Congressional Record data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates) on Congress.gov. Note that while the Bound Congressional Record is available in Congress.gov, it is not yet available in the API. Read more about Congressional Record data at [About the Congressional Record](https://www.congress.gov/help/congressional-record). View expanded documentation for the congressional record endpoint at [CongressionalRecordEndpoint](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/CongressionalRecordEndpoint.md).
+
 ### Base Request
-The base request for Congressional Record data in the API is https://api.congress.gov/v3/congressional-record. The request will return 20 results by default. Basic information about each Congressional Record issue are included in the response. Included in that basic information is the issue's congress (e.g. 117), the issue number (e.g. 114), the issue's publish date (e.g. 2022-07-12), the session of congress (e.g. 2), the volume number (e.g. 168), and URLs for the issue's sections and the entire issue in PDF format (e.g. Daily Digest, https://www.congress.gov/117/crec/2022/07/12/168/114/CREC-2022-07-12-dailydigest.pdf).
+
+The base request for Congressional Record data in the API is <https://api.congress.gov/v3/congressional-record>. The request will return 20 results by default. Basic information about each Congressional Record issue are included in the response. Included in that basic information is the issue's congress (e.g. 117), the issue number (e.g. 114), the issue's publish date (e.g. 2022-07-12), the session of congress (e.g. 2), the volume number (e.g. 168), and URLs for the issue's sections and the entire issue in PDF format (e.g. Daily Digest, <https://www.congress.gov/117/crec/2022/07/12/168/114/CREC-2022-07-12-dailydigest.pdf>).
+
 ## house-communication
+
 ### Coverage
+
 Coverage information for House communications data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates) on Congress.gov. Read more about House communications data at [About Communications to the House](https://www.congress.gov/help/house-communications). View expanded documentation for the House communication endpoints at [HouseCommunicationEndpoint](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/HouseCommunicationEndpoint.md).
+
 ### Base Request
-The base request for House communications data in the API is https://api.congress.gov/v3/house-communication. The request will return 20 results by default. Basic information about each House communication item will be included in the response. Included in that basic information is the chamber (e.g. House), communication number (e.g. 3273), type of communication (e.g. Executive Communication), congress (e.g. 117), and a URL to the item in the API (e.g. https://api.congress.gov/v3/house-communication/117/ec/3273). Filters can be added to the URL in order to limit results returned to House Communications in a single congress (e.g. https://api.congress.gov/v3/house-communication/117) or congress and communication type (e.g. https://api.congress.gov/v3/house-communication/117/ec).
+
+The base request for House communications data in the API is <https://api.congress.gov/v3/house-communication>. The request will return 20 results by default. Basic information about each House communication item will be included in the response. Included in that basic information is the chamber (e.g. House), communication number (e.g. 3273), type of communication (e.g. Executive Communication), congress (e.g. 117), and a URL to the item in the API (e.g. <https://api.congress.gov/v3/house-communication/117/ec/3273>). Filters can be added to the URL in order to limit results returned to House Communications in a single congress (e.g. <https://api.congress.gov/v3/house-communication/117>) or congress and communication type (e.g. <https://api.congress.gov/v3/house-communication/117/ec>).
+
 ### Item
+
 Depending on the data available, each House communication item in the API may contain the following: the chamber (e.g. House), communication number (e.g. 3273), type of communication (e.g. Executive Communication), congress (e.g. 117), the abstract (e.g. A letter from the Secretary, Department of Defense, transmitting a letter stating the Department is honored to, and will, provide military funeral support for former Senator Robert J. Dole; to the Committee on Armed Services.), the date the communication was published in the Congressional Record (e.g. 2022-01-28), and associated committee information (e.g. Armed Services Committee) including the date the communication was referred to committee (e.g. 2022-01-28).
+
 ## house-requirement
+
 ### Coverage
+
 Coverage information for House requirements data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates). Read more about House requirements data within [About Communications to the House](https://www.congress.gov/help/house-communications) on Congress.gov. View expanded documentation for the House requirement endpoints at [HouseRequirementEndpoint](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/HouseRequirementEndpoint.md).
+
 ### Base Request
-The base request for House requirements data in the API is https://api.congress.gov/v3/house-requirement. The request will return 20 results by default. Basic information about each House requirement item will be included in the response. Included in that basic information is the requirement number (e.g. 12478), an update date in Congress.gov (e.g. 2021-11-05), and a URL to the item in the API (e.g. https://api.congress.gov/v3/house-requirement/12478). 
+
+The base request for House requirements data in the API is <https://api.congress.gov/v3/house-requirement>. The request will return 20 results by default. Basic information about each House requirement item will be included in the response. Included in that basic information is the requirement number (e.g. 12478), an update date in Congress.gov (e.g. 2021-11-05), and a URL to the item in the API (e.g. <https://api.congress.gov/v3/house-requirement/12478>).
+
 ### Item
+
 Depending on the data available, each House requirement item in the API may contain the following:  the requirement number (e.g. 12478), an update date in Congress.gov (e.g. 2021-11-05), an agency or government entity associated with the report (e.g. Executive Office of the President), the frequency upon which the report must be submitted (e.g. If specified circumstances arise.), the nature of the report (e.g. Approval of recommendations related to reducing the costs of federal real estate.), and an associated statute citation (e.g. Public Law 114–287, section 13(c)(1); (130 Stat. 1471)).
+
 ## senate-communication
+
 ### Coverage
+
 Coverage information for Senate communications data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates). Read more about Senate communications data at [About Senate Executive and Other Communications](https://www.congress.gov/help/senate-communications) on Congress.gov. View expanded documentation for the Senate communication endpoints at [SenateCommunicationEndpoint](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/SenateCommunicationEndpoint.md).
+
 ### Base Request
-The base request for Senate communications data in the API is https://api.congress.gov/v3/senate-communication. The request will return 20 results by default. Basic information about each Senate communication item will be included in the response. Included in that basic information is the chamber (e.g. Senate), communication number (e.g. 2561), type of communication (e.g. Executive Communication), congress (e.g. 117), and a URL to the item in the API (e.g. https://api.congress.gov/v3/senate-communication/117/ec/2561). Filters can be added to the URL in order to limit results returned to Senate Communications in a single congress (e.g. https://api.congress.gov/v3/senate-communication/117) or congress and communication type (e.g. https://api.congress.gov/v3/senate-communication/117/ec).
+
+The base request for Senate communications data in the API is <https://api.congress.gov/v3/senate-communication>. The request will return 20 results by default. Basic information about each Senate communication item will be included in the response. Included in that basic information is the chamber (e.g. Senate), communication number (e.g. 2561), type of communication (e.g. Executive Communication), congress (e.g. 117), and a URL to the item in the API (e.g. <https://api.congress.gov/v3/senate-communication/117/ec/2561>). Filters can be added to the URL in order to limit results returned to Senate Communications in a single congress (e.g. <https://api.congress.gov/v3/senate-communication/117>) or congress and communication type (e.g. <https://api.congress.gov/v3/senate-communication/117/ec>).
+
 ### Item
-Depending on the data available, each Senate communication item in the API may contain the following: the chamber (e.g. Senate), communication number (e.g. 2561), type of communication (e.g. Executive Communication), congress (e.g. 117), the abstract (e.g. A communication from the Board Chairman and Chief Executive Officer, Farm Credit Administration, transmitting, pursuant to law, the Administration's annual report for calendar year 2021; to the Committee on Agriculture, Nutrition, and Forestry.), the date the communication was published in the Congressional Record (e.g. 2021-11-03), and associated committee information (e.g. Agriculture, Nutrition, and Forestry Committee) including the date the communication was referred to committee (e.g. 2021-11-03) and a URL to the committee item in the API (e.g. https://api.congress.gov/v3/committee/senate/ssaf00).
+
+Depending on the data available, each Senate communication item in the API may contain the following: the chamber (e.g. Senate), communication number (e.g. 2561), type of communication (e.g. Executive Communication), congress (e.g. 117), the abstract (e.g. A communication from the Board Chairman and Chief Executive Officer, Farm Credit Administration, transmitting, pursuant to law, the Administration's annual report for calendar year 2021; to the Committee on Agriculture, Nutrition, and Forestry.), the date the communication was published in the Congressional Record (e.g. 2021-11-03), and associated committee information (e.g. Agriculture, Nutrition, and Forestry Committee) including the date the communication was referred to committee (e.g. 2021-11-03) and a URL to the committee item in the API (e.g. <https://api.congress.gov/v3/committee/senate/ssaf00>).
 
 [^1]: Read more about [titles](https://www.congress.gov/help/legislative-glossary#glossary_title) on Congress.gov.
 [^2]: Read more [About Committee Reports](https://www.congress.gov/help/committee-reports) on Congress.gov. Click [here](#committeereport) to review brief documentation about the committee reports endpoints.
