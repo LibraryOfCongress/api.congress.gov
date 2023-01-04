@@ -1,6 +1,5 @@
 # CDG Example Client with Python
 
-
 ## Table of contents
 
 - [Requirements](#requirements)
@@ -13,8 +12,9 @@
 - [Additional Information](#additional-information)
 
 ## Requirements
+
 This client with developed and tested with Python 3.8 so should work with that version
-and above. We have tested with older Python versions. 
+and above. We have tested with older Python versions.
 
 This example client requires the `requests` package, and optionally the `keyring`
 package.
@@ -32,7 +32,7 @@ JSON is the default data serialization format.
 On Unix, you may want to directly run the example scripts as executable files,
 though they work after the `python` command as well:
 
-```
+```bash
 ⏵ chmod a+x cdg_cli bill_example.py
 ```
 
@@ -40,9 +40,8 @@ Windows folks will probably need to type `python` before any scripts,
 assuming python is on your PATH.
 
 ## API Credentials
-Sign up for and retrieve your API key from https://api.congress.gov/sign-up
 
-
+Sign up for and retrieve your API key from <https://api.congress.gov/sign-up>
 
 ## Typical Use of CDGClient
 
@@ -65,7 +64,6 @@ data, status_code = client.get(endpoint, *args, **kwargs)
 
 Below are a few fleshed out examples.
 
-
 ### Command line interface ➧ `cdg_cli`
 
 `cdg_cli` is an example of:
@@ -87,50 +85,71 @@ API Key:               # Do paste it here ✓
   INFO     API Key was saved.
 
 # Now you can run it
-now you want to look at bill/hr/21/committeess, write:
+```
 
+Now, to look at bill/hr/21/committeess, write:
+
+```sh
 ⏵ python cdg_cli bill/117/hr/21/committees
   INFO     __main__/main:111 HTTP Status: 200
   INFO     __main__/main:112 API Returned:
-{'committees': [{'activities': [{'date': '2021-01-07T01:26:34Z',
-                                 'name': 'Referred to'}],
-                 'chamber': 'Senate',
-                 'name': 'Homeland Security and Governmental Affairs Committee',
-                 'subcommittees': [],
-                 'systemCode': 'ssga00',
-                 'type': 'Standing',
-                 'url': 'https://api.congress.gov/v3/committee/senate/ssga00?format=json'},
-                {'activities': [{'date': '2021-01-04T15:11:25Z',
-                                 'name': 'Referred to'}],
-                 'chamber': 'House',
-                 'name': 'Oversight and Reform Committee',
-                 'subcommittees': [],
-                 'systemCode': 'hsgo00',
-                 'type': 'Standing',
-                 'url': 'https://api.congress.gov/v3/committee/house/hsgo00?format=json'}],
- 'request': {'billNumber': '21',
-             'billType': 'hr',
-             'billUrl': 'https://api.congress.gov/v3/bill/117/hr/21?format=json',
-             'congress': '117',
-             'contentType': 'application/json',
-             'format': 'json'}}
 ```
 
-<p>&nbsp;</p>
+```json
+{
+    "committees": [
+        {
+            "activities": [
+                {
+                    "date": "2021-01-07T01: 26: 34Z",
+                    "name": "Referred to"
+                }
+            ],
+            "chamber": "Senate",
+            "name": "Homeland Security and Governmental Affairs Committee",
+            "subcommittees": [],
+            "systemCode": "ssga00",
+            "type": "Standing",
+            "url": "https: //api.congress.gov/v3/committee/senate/ssga00?format=json"
+        },
+        {
+            "activities": [
+                {
+                    "date": "2021-01-04T15:11:25Z",
+                    "name": "Referred to"
+                }
+            ],
+            "chamber": "House",
+            "name": "Oversight and Reform Committee",
+            "subcommittees": [],
+            "systemCode": "hsgo00",
+            "type": "Standing",
+            "url": "https://api.congress.gov/v3/committee/house/hsgo00?format=json"
+        }
+    ],
+    "request": {
+        "billNumber": "21",
+        "billType": "hr",
+        "billUrl": "https://api.congress.gov/v3/bill/117/hr/21?format=json",
+        "congress": "117",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}
+```
 
 ## Configurable options
 
 | Key                      | Description                                                        | Values                                       |
 |--------------------------|--------------------------------------------------------------------|----------------------------------------------|
-| *API_KEY*                | The API key used to authenticate calls                             | Retrieved from https://api.congress.gov      |
+| *API_KEY*                | The API key used to authenticate calls                             | Retrieved from <https://api.congress.gov>      |
 | *RESPONSE_FORMAT*        | Sets the response format returned by the API                       | xml, json                                    |
 | *BILL.CONGRESS*          | The numerical value of the congress to query                       | 1 - 117 (or current congress)                |
 | *BILL.CHAMBER*           | The congressional chamber                                          | hr, s, sjres, hjres                          |
-| *BILL.NUMBER*            | The bill number to query                                           | A valid bill number from https://congress.gov |
+| *BILL.NUMBER*            | The bill number to query                                           | A valid bill number from <https://congress.gov> |
 | *BILL.URL*               | The bill url for the API to query                                  | bill                                         |
 
-
-### How to talk to various endpoints:
+### How to talk to various endpoints
 
 `bill_example` is an example of:
 
@@ -139,8 +158,7 @@ now you want to look at bill/hr/21/committeess, write:
 - Using an external "secrets" config file.
 - Using the XML format.
 
-
-```
+```sh
 ⏵  python3 bill_example.py
  1. bill:
    - congress:            '117'
@@ -155,9 +173,8 @@ now you want to look at bill/hr/21/committeess, write:
  ...
 ```
 
-<p>&nbsp;</p>
-
 ## Client arguments
+
 Other options allowed as arguments to python bill_example.py are:
 
 | Argument             | Description                              |
@@ -179,7 +196,9 @@ Other options allowed as arguments to python bill_example.py are:
 |  *bill_titles*       | Gets a bills titles                      |
 
 ## Additional Information
-- For more information and the full API reference, please visit https://api.congress.gov/
-- Alternative ways to make use of your API key when making calls can be found here: https://api.data.gov/docs/api-key/
+
+- For more information and the full API reference, please visit <https://api.congress.gov/>
+- Alternative ways to make use of your API key when making calls can be found here: <https://api.data.gov/docs/api-key/>
+
 ---
 © 2022, Library of Congress via Congress.gov
