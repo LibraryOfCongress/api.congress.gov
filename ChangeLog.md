@@ -13,11 +13,10 @@ Empty elements will be suppressed.
 ## Change #4
 ### Impacted endpoint: amendment
 Submitted-only Senate amendments will be present at the amendment list level. Currently, only proposed Senate amendments and House amendments are present at the list level (see [issue #52](https://github.com/LibraryOfCongress/api.congress.gov/issues/52)). Note that these submitted-only Senate amendments are still available in the API by direct URL.
-# UPCOMING January 2023
-**Expected production release date:** January 9, 2023
+# COMPLETED January 2023
 ## Change #1
 ### Impacted endpoint: bill
-A `<description>` element will be added for CBO cost estimates on bill detail pages. The element is sourced from CBO and provides a brief description on the cost estimate.
+A `<description>` element was added for CBO cost estimates on bill detail pages. The element is sourced from CBO and provides a brief description on the cost estimate.
 # COMPLETED December 2022 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/7)
 ## Change #1
 New House Requirements API endpoints were released. The House Requirements API consists of a list level and an item level.  Data elements at the list level include requirement numbers, referrer URLs to the item level, and update dates in Congress.gov. Detailed information about each House Requirement are available at the item level. The new endpoints are available from https://api.congress.gov/v3/house-requirement. Also see [https://api.congress.gov](https://api.congress.gov/#/house-requirement/house_requirement) for OpenAPI Specification on the endpoints.
