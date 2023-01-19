@@ -1,4 +1,16 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
+# UPCOMING February 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/10)
+**Expected production release date:** February 20, 2023
+## Change #1
+New Committee Meeting API endpoints will be released. The Committee Meetings API will consist of a list level and an item level. The list level will be filterable by congress and chamber. Data elements at the list level will include an event identifier, chamber, congress, referrer URL to the item level, and update date in Congress.gov. Detailed information about each meeting will be available at the item level. The new endpoints will be available from https://api.congress.gov/v3/committee-meeting and https://api.congress.gov/v3/committee-meeting/{congress}/{chamber}/{eventId}.
+## Change #2
+New Hearing Transcript API endpoints will be released. The Hearing Transcript API will consist of a list level and an item level. The list level will be filterable by congress and chamber. Data elements at the list level will include a jacket number, chamber, congress, hearing number, part number, referrer URL to the item level, and update date in Congress.gov. Detailed information about each hearing transcript will be available at the item level. The new endpoints will be available from https://api.congress.gov/v3/hearing-transcript and https://api.congress.gov/v3/hearing-transcript/{congress}/{chamber}/{jacketNumber}.
+## Change #3
+### Impacted endpoint: committee/{house-communication}
+Within the committee API, a new endpoint will be created for House Communications. The endpoint will be available at https://api.congress.gov/v3/committee/house/{committeeCode}/house-communication and will contain communications available in Congress.gov that are associated with that committee.
+## Change #4
+### Impacted endpoint: senate-communication/{congress}/{communicationType}/{communicationNumber}
+Within the Senate Communications API, the data format type will be added to the end of referrer URLs to committee items in the API (e.g., https://api.congress.gov/v3/committee/senate/ssas00?format=json). The data format in the URL will be either xml or json, depending on the data format used to view the API response. 
 # UPCOMING January 2023, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/9)
 **Expected production release date:** January 30, 2023
 ## Change #1
