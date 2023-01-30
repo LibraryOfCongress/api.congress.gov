@@ -11,20 +11,19 @@ Within the committee API, a new endpoint will be created for House Communication
 ## Change #4
 ### Impacted endpoint: senate-communication/{congress}/{communicationType}/{communicationNumber}
 Within the Senate Communications API, the data format type will be added to the end of referrer URLs to committee items in the API (e.g., https://api.congress.gov/v3/committee/senate/ssas00?format=json). The data format in the URL will be either xml or json, depending on the data format used to view the API response. 
-# UPCOMING January 2023, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/9)
-**Expected production release date:** January 30, 2023
+## Change #5
+### Impacted endpoint: member
+Empty elements will be suppressed. This work is ongoing from a prior release. 
+## Change #6
+### Impacted endpoint: committee
+Empty elements will be suppressed. This work is ongoing from a prior release. 
+## Change #7
+### Impacted endpoint: amendment
+Submitted-only Senate amendments will be present at the amendment list level. Currently, only proposed Senate amendments and House amendments are present at the list level (see [issue #52](https://github.com/LibraryOfCongress/api.congress.gov/issues/52)). Note that these submitted-only Senate amendments are still available in the API by direct URL. This work is ongoing from a prior release. 
+# COMPLETED January 2023, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/9)
 ## Change #1
 ### Impacted endpoint: member
-Referrer URLs at member item levels to the sponsored-legislation and cosponsored-legislation sub-levels will be corrected to be https://api.congress.gov and not https://api.data.gov/congress (see [issue #50](https://github.com/LibraryOfCongress/api.congress.gov/issues/50)).
-## Change #2
-### Impacted endpoint: member
-Empty elements will be suppressed. 
-## Change #3
-### Impacted endpoint: committee
-Empty elements will be suppressed. 
-## Change #4
-### Impacted endpoint: amendment
-Submitted-only Senate amendments will be present at the amendment list level. Currently, only proposed Senate amendments and House amendments are present at the list level (see [issue #52](https://github.com/LibraryOfCongress/api.congress.gov/issues/52)). Note that these submitted-only Senate amendments are still available in the API by direct URL.
+Referrer URLs at member item levels to the sponsored-legislation and cosponsored-legislation sub-levels were corrected to be https://api.congress.gov and not https://api.data.gov/congress (see [issue #50](https://github.com/LibraryOfCongress/api.congress.gov/issues/50)).
 # COMPLETED January 2023
 ## Change #1
 ### Impacted endpoint: bill
