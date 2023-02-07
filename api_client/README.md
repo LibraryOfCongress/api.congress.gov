@@ -1,10 +1,8 @@
 # Congress Dot Gov - Example API Client
 
-
 Example code for a CDG API Client is located here.
 
-
-### Important note about the API Authorization Key
+## Important note about the API Authorization Key
 
 The API key assigned to your organization is not meant to be shared.  It should:
 
@@ -29,15 +27,11 @@ to your application.  In absence of such system, other reasonable choices are:
 - For manually run programs, use the "keyring" functionality of your
   Operating System to store the secret (see Python example).
 
-
 ### Example Code
 
 There are examples in more than one programming language,
 see the subfolders in this repository.
 Kindly click on the folders to view.
-
-
-<p>&nbsp;</p>
 
 ---
 © 2022, Library of Congress via Congress.gov
