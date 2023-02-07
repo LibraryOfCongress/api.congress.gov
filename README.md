@@ -12,9 +12,11 @@ For every request, three elements are returned:
 - The **Pagination** element contains a count of how many total data items are contained within the response, a URL containing the next page of results; and, if the offset is greater than 1, a URL containing the previous page of results.
 - The **Data** element, the name of which changes depending on the endpoint utilized (i.e. `<bills>` for the bill endpoint, `<amendments>` for the amendment endpoint, etc.). This element contains a list of all data items returned by your API call.
 
-## Key/Authentication
+## Keys
 
-An API key is required for access. Sign up for a key [here](https://api.congress.gov/sign-up/).
+An API key is required for access. Sign up for a key [here](https://api.congress.gov/sign-up/). 
+
+Learn more on how you can use your API key to access the Congress.gov API on [api.data.gov](https://api.data.gov/docs/api-key/).
 
 ## Versioning
 
@@ -26,11 +28,11 @@ The rate limit is set to 1,000 requests per hour.
 
 ## Limit and Offset
 
-By default, the API returns 20 results starting with the first record. The 20 results limit can be adjusted up to 250 results. If the limit is adjusted to be greater than 250 results, only 250 results will be returned. The offset, or the starting record, can also be adjusted to be greater than 0.
+By default, the API returns 20 results starting with the first record. The 20 results limit can be adjusted up to 250 results. If the limit is adjusted to be greater than 250 results, only 250 results will be returned. The offset, or the starting record, can also be adjusted to be greater than 0. 
 
 ## Support
 
-Congress.gov staff will monitor and respond to any [issues](https://github.com/LibraryOfCongress/api.congress.gov/issues) created in this repository, and will initiate actions, as necessary. Before creating an issue in the repository, please review existing issues and add a comment to any issues relevant to yours.
+Congress.gov staff will monitor and respond to any [issues](https://github.com/LibraryOfCongress/api.congress.gov/issues) created in this repository, and will initiate actions, as necessary. Before creating an issue in the repository, please review existing issues and add a comment to any issues relevant to yours. 
 
 ## Change Management
 

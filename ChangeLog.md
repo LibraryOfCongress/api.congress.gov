@@ -1,23 +1,33 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
-# UPCOMING January 2023, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/9)
-**Expected production release date:** January 30, 2023
+# UPCOMING February 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/10)
+**Expected production release date:** February 20, 2023
+## Change #1
+New Committee Meeting API endpoints will be released. The Committee Meetings API will consist of a list level and an item level. The list level will be filterable by congress and chamber. Data elements at the list level will include an event identifier, chamber, congress, referrer URL to the item level, and update date in Congress.gov. Detailed information about each meeting will be available at the item level. The new endpoints will be available from https://api.congress.gov/v3/committee-meeting and https://api.congress.gov/v3/committee-meeting/{congress}/{chamber}/{eventId}.
+## Change #2
+New Hearing Transcript API endpoints will be released. The Hearing Transcript API will consist of a list level and an item level. The list level will be filterable by congress and chamber. Data elements at the list level will include a jacket number, chamber, congress, hearing number, part number, referrer URL to the item level, and update date in Congress.gov. Detailed information about each hearing transcript will be available at the item level. The new endpoints will be available from https://api.congress.gov/v3/hearing-transcript and https://api.congress.gov/v3/hearing-transcript/{congress}/{chamber}/{jacketNumber}.
+## Change #3
+### Impacted endpoint: committee/{house-communication}
+Within the committee API, a new endpoint will be created for House Communications. The endpoint will be available at https://api.congress.gov/v3/committee/house/{committeeCode}/house-communication and will contain communications available in Congress.gov that are associated with that committee.
+## Change #4
+### Impacted endpoint: senate-communication/{congress}/{communicationType}/{communicationNumber}
+Within the Senate Communications API, the data format type will be added to the end of referrer URLs to committee items in the API (e.g., https://api.congress.gov/v3/committee/senate/ssas00?format=json). The data format in the URL will be either xml or json, depending on the data format used to view the API response. 
+## Change #5
+### Impacted endpoint: member
+Empty elements will be suppressed. This work is ongoing from a prior release. 
+## Change #6
+### Impacted endpoint: committee
+Empty elements will be suppressed. This work is ongoing from a prior release. 
+## Change #7
+### Impacted endpoint: amendment
+Submitted-only Senate amendments will be present at the amendment list level. Currently, only proposed Senate amendments and House amendments are present at the list level (see [issue #52](https://github.com/LibraryOfCongress/api.congress.gov/issues/52)). Note that these submitted-only Senate amendments are still available in the API by direct URL. This work is ongoing from a prior release. 
+# COMPLETED January 2023, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/9)
 ## Change #1
 ### Impacted endpoint: member
-Referrer URLs at member item levels to the sponsored-legislation and cosponsored-legislation sub-levels will be corrected to be https://api.congress.gov and not https://api.data.gov/congress (see [issue #50](https://github.com/LibraryOfCongress/api.congress.gov/issues/50)).
-## Change #2
-### Impacted endpoint: member
-Empty elements will be suppressed. 
-## Change #3
-### Impacted endpoint: committee
-Empty elements will be suppressed. 
-## Change #4
-### Impacted endpoint: amendment
-Submitted-only Senate amendments will be present at the amendment list level. Currently, only proposed Senate amendments and House amendments are present at the list level (see [issue #52](https://github.com/LibraryOfCongress/api.congress.gov/issues/52)). Note that these submitted-only Senate amendments are still available in the API by direct URL.
-# UPCOMING January 2023
-**Expected production release date:** January 9, 2023
+Referrer URLs at member item levels to the sponsored-legislation and cosponsored-legislation sub-levels were corrected to be https://api.congress.gov and not https://api.data.gov/congress (see [issue #50](https://github.com/LibraryOfCongress/api.congress.gov/issues/50)).
+# COMPLETED January 2023
 ## Change #1
 ### Impacted endpoint: bill
-A `<description>` element will be added for CBO cost estimates on bill detail pages. The element is sourced from CBO and provides a brief description on the cost estimate.
+A `<description>` element was added for CBO cost estimates on bill detail pages. The element is sourced from CBO and provides a brief description on the cost estimate.
 # COMPLETED December 2022 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/7)
 ## Change #1
 New House Requirements API endpoints were released. The House Requirements API consists of a list level and an item level.  Data elements at the list level include requirement numbers, referrer URLs to the item level, and update dates in Congress.gov. Detailed information about each House Requirement are available at the item level. The new endpoints are available from https://api.congress.gov/v3/house-requirement. Also see [https://api.congress.gov](https://api.congress.gov/#/house-requirement/house_requirement) for OpenAPI Specification on the endpoints.
