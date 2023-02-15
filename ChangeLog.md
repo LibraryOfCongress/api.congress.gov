@@ -8,7 +8,7 @@ New Hearing Transcript API endpoints will be released. The Hearing Transcript AP
 ## Change #3
 New Committee Print API endpoints will be released. The Committee Print API will consist of a list level, an item level, and a text sub-level. The list level will be filterable by congress and chamber. Data elements at the list level will include a jacket number, chamber, congress, referrer URL to the item level, and update date in Congress.gov. Detailed information about each committee print will be available at the item level. URLs and descriptive metadata on the text will be available at the text sub-level. The new endpoints will be available from https://api.congress.gov/v3/committee-print, https://api.congress.gov/v3/committee-print/{congress}/, https://api.congress.gov/v3/committee-print/{congress}/{chamber}, https://api.congress.gov/v3/committee-print/{congress}/{chamber}/{jacketNumber}, and https://api.congress.gov/v3/committee-print/{congress}/{chamber}/{jacketNumber}/text. 
 # UPCOMING February 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/10)
-**Expected production release date:** February 20, 2023
+**Expected production release date:** February 21, 2023
 ## Change #1
 ### Impacted endpoint: committee/{house-communication}
 Within the committee API, a new endpoint will be created for House Communications. The endpoint will be available at https://api.congress.gov/v3/committee/house/{committeeCode}/house-communication and will contain communications available in Congress.gov that are associated with that committee.
