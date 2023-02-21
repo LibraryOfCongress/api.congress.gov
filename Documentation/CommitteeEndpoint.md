@@ -98,11 +98,11 @@ Parent container for an individual committee or subcommittee entry. A `<committe
     - `<count>` (e.g., 1373)
       - The number of reports present in the committee's reports API endpoint.  
 - `<communications>`
-  - Container for Senate communications associated with a committee. A `<communications>` element may contain the following children (the below data is taken from <https://api.congress.gov/v3/committee/senate/ssas00>):
-    - `<url>` (e.g., <https://api.congress.gov/v3/committee/senate/ssas00/senate-communication>)
-      - A referrer URL to the Senate communications level of the committee API. Click [here](#senate-communications-level) for more information about the Senate communications level.
-    - `<count>` (e.g., 11117)
-      - The number of Senate communications in the committee's Senate communications API endpoint.  
+  - Container for communications associated with a committee. A `<communications>` element may contain the following children:
+    - `<url>` (e.g., <https://api.congress.gov/v3/committee/house/hspw00/house-communication>)
+      - A referrer URL to the communications level of the committee API. Click [here](#house-communications-level) for more information on the House communications level and [here](#senate-communications-level) for more information on the Senate communications level.
+    - `<count>` (e.g., 6796)
+      - The number of communications in the committee's House or Senate communications API endpoint.  
 - `<bills>`
   - Container for bills associated with a committee. A `<bills>` element may contain the following children:
     - `<url>` (e.g., <https://api.congress.gov/v3/committee/house/hspw00/bills>)
@@ -249,6 +249,38 @@ Parent container for nominations associated with a Senate committee (the below d
           - The text of the latest action taken on the nomination.
         - `<url>` (e.g., <https://api.congress.gov/v3/nomination/117/2439>)
           - A referrer URL to the nomination item in the API. Documentation for the nomination endpoint is available [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/NominationEndpoint.md).
+
+### House Communications Level
+
+`<api-root>`
+
+The `<api-root>` is only present in the XML format.
+
+`<houseCommunications>`
+
+Parent container for communications associated with a House committee. The `<houseCommunications>` element may contain the following children, which are repeatable:
+
+- `<item>`
+  - `<chamber>` (e.g., House)
+    - The chamber where the communication was received. This value will always be set to "House".
+  - `<number>` (e.g., 3262)
+    - The assigned communication number.
+  - `<communicationType>`
+    - Container for communication type information. A `<communicationType>` element may include the following children:
+      - `<code>` (e.g., EC)
+        - The code for the type of communication.
+        - Possible values are "EC", "PM", "PT", and "ML".
+      - `<name>` (e.g., Executive Communication)
+        - The name of the type of communication.
+        - Possible values are "Executive Communication", "Presidential Message", "Petition", and "Memorial".
+      - `<congress>` (e.g., 114)
+        - The congress during which the communication was received.
+      - `<referralDate>` (e.g., 2015-10-27)
+        - The date the communication was referred to the committee(s).
+      - `<updateDate>` (e.g., 2018-02-02)
+        - The date of update in Congress.gov.
+      - `<url>` (e.g., <https://api.congress.gov/v3/house-communication/114/ec/3262>)
+        - A referrer URL to the House communication item in the API. Documentation for the House communication endpoint is available [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/HouseCommunicationEndpoint.md).
 
 ### Senate Communications Level
 
