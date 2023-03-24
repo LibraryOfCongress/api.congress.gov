@@ -1,4 +1,19 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
+# UPCOMING April 2023, Part 2
+**Expected production release date:** April 24, 2023
+## Change #1
+A new endpoint will be released for the House Requirements API to reflect matching communications to each House Requirement item. The endpoint will be available from https://api.congress.gov/v3/house-requirement/{requirementNumber}/matchingCommunications. For requirements with matching communications, the following elements will be available from the new endpoint for each matching communication item: chamber, number, communicationType (including the communicationType code and name), congress, and a referrer URL to the communication item in the API. These elements mirror what is available from the list level of the House Communication API (e.g., at https://api.congress.gov/v3/house-communication?api_key=DEMO_KEY). 
+## Change #2
+### Impacted endpoint: house-requirement/{requirementNumber}
+1. The following new elements will be added: 
+- `<activeRecord>` (with Y and N values)
+- `<submittingAgency>` (with values like Environmental Protection Agency)
+- `<submittingOfficial>` (with values like Administrator)
+2. The `<agency>` element will be renamed to be `<parentAgency>`.
+3. A `<matchingCommunications>` container will be added that includes a referrer `<url>` element (to the new matchingCommunications endpoint) and a `<count>` element containing the number of matching communications to the requirement item. 
+## Change #3
+### Impacted endpoint: committee-report/{congress}/{reportType}/{reportNumber}
+Empty elements will be suppressed. 
 # UPCOMING April 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/11)
 **Expected production release date:** April 3, 2023
 ## Change #1
