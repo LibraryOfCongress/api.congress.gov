@@ -63,6 +63,9 @@ Parent container for a single committee print. A `<committeePrint>` element may 
          - The assigned committee print number. 
      - `<title>` (e.g., RULES COMMITTEE PRINT 117-62 TEXT OF H.R. 5768, VIOLENT INCIDENT CLEAR- ANCE AND TECHNOLOGICAL INVESTIGATIVE METHODS ACT OF 2022)
          - The title of the committee print. 
+     - `<chamber>` (e.g., House)
+         - The chamber where the committee print was produced.
+         - Possible values are "House", "Senate" and "NoChamber".
      - `<committees>` 
          - Container for the committees associated with the committee print. A `<committees>` element may include the following children:
              - `<item>`
