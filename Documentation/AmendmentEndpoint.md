@@ -1,4 +1,4 @@
-# Amendment endpoint
+# Amendment endpoints
 
 ## Coverage
 
