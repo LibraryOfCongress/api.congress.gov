@@ -6,7 +6,7 @@ Coverage information for hearing data in the API can be found at [Coverage Dates
 
 ## OpenAPI Specification
 
-View OpenAPI Specification on the committee print API, supported endpoints, and available parameters at [https://api.congress.gov](https://api.congress.gov/#/hearing/hearing_list).
+View OpenAPI Specification on the hearing API, supported endpoints, and available parameters at [https://api.congress.gov](https://api.congress.gov/#/hearing/hearing_list).
 
 ## Elements and Descriptions
 
