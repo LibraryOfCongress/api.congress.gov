@@ -1,4 +1,4 @@
-# Congress endpoint
+# Congress endpoints
 
 ## Coverage
 
