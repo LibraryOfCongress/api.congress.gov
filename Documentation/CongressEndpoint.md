@@ -49,6 +49,8 @@ Parent container for congress and congressional sessions. A `<congresses>` eleme
             - `<number>` (e.g. 1)
               - The assigned session's number.
               - For special sessions, this value is suppressed.
+     - `<url>` (e.g. <https://api.congress.gov/v3/congress/117>)
+       - A referrer URL to the congress item in the API. 
 
 ### Item Level
 
