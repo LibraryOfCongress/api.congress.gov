@@ -1,4 +1,4 @@
-# Senate communication endpoint
+# Senate communication endpoints
 
 ## Coverage
 
