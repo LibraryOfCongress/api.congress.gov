@@ -1,4 +1,4 @@
-# House communication endpoint
+# House communication endpoints
 
 ## Coverage
 
