@@ -1,4 +1,4 @@
-# Treaty endpoint
+# Treaty endpoints
 
 ## Coverage
 
