@@ -11,6 +11,8 @@ This documentation provides a brief overview of available endpoints in the Congr
 - [nomination](#nomination)
 - [treaty](#treaty)
 - [committee-report](#committee-report)
+- [committee-print](#committee-print)
+- [hearing](#hearing)
 - [congressional-record](#congressional-record)
 - [house-communication](#house-communication)
 - [house-requirement](#house-requirement)
@@ -167,6 +169,38 @@ Depending on the data available, each committee report item in the API may conta
 ### Levels
 
 Depending on the data available, each committee report item in the API may contain a referrer URL to the text deeper level. The text level may contain the following: a URL for the text in Congress.gov (e.g. www.congress.gov/117/crpt/hrpt403/CRPT-117hrpt403.pdf), the type of format (e.g. PDF), and whether the text is errata (e.g. Y/N).
+
+## committee-print
+
+### Coverage 
+
+Coverage information for committee print data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates). Read more about committee print data at [About Committees and Committee Materials](https://www.congress.gov/help/committee-materials#committee-prints) on Congress.gov. View expanded documentation for the committee print endpoints at [CommitteePrintEndpoint](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/CommitteePrintEndpoint.md).
+
+### Base Request
+
+The base request for committee print data in the API is <https://api.congress.gov/v3/committee-print>. The request will return 20 results by default. Basic information about each committee print item will be included in the response. Included in that basic information is the committee print jacket number (e.g. 48144), a URL to the item in the API (e.g. <https://api.congress.gov/v3/committee-print/117/house/48144>), an update date in Congress.gov (e.g. 2022-08-01 21:19:33+00:00), the congress (e.g. 117), and the chamber (e.g. House). Filters can be added to the URL in order to limit results returned to committee prints in a single congress (e.g. <https://api.congress.gov/v3/committee-print/117>) or congress and chamber (e.g. <https://api.congress.gov/v3/committee-print/117/house>). 
+
+### Item
+
+Depending on the data available, each committee print item in the API may contain the following: the jacket number for the print (e.g. 48144), the print's citation (e.g. 117-62), the congress during which the committee print was published (e.g. 117), the print's number (e.g. 62), the title of the print (e.g. RULES COMMITTEE PRINT 117-62 TEXT OF H.R. 5768, VIOLENT INCIDENT CLEAR- ANCE AND TECHNOLOGICAL INVESTIGATIVE METHODS ACT OF 2022), the chamber (e.g. House), associated committee information (e.g. Rules Committee) - including a URL to the committee item in the API (e.g. <https://api.congress.gov/v3/committee/house/hsru00>) and a system code (e.g. hsru00), associated bills to the print - including a URL to the bill item in the API (e.g. <https://api.congress.gov/v3/bill/117/hr/5768>) and identifier information for the bill, and a text format count (e.g. 4) and URL to the text sub-level (e.g. <https://api.congress.gov/v3/committee-print/117/house/48144/text>).
+
+### Levels
+
+Depending on the data available, each committee print item in the API may contain a referrer URL to the text deeper level. The text level may contain the following: a URL for the text in Congress.gov (e.g. <https://www.congress.gov/117/cprt/HPRT48144/CPRT-117HPRT48144.pdf>) and the type of format (e.g. PDF).
+
+## hearing
+
+### Coverage
+
+Coverage information for hearing data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates). Read more about hearing data at [About Committees and Committee Materials](https://www.congress.gov/help/committee-materials#committee-hearings) on Congress.gov. View expanded documentation for the hearing endpoints at [HearingEndpoint](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/HearingEndpoint.md).
+
+### Base Request
+
+The base request for hearing data in the API is <https://api.congress.gov/v3/hearing>. The request will return 20 results by default. Basic information about each committee print item will be included in the response. Included in that basic information is the hearing jacket number (e.g. 37721), a URL to the item in the API (e.g. <https://api.congress.gov/v3/hearing/116/senate/37721>), an update date in Congress.gov (e.g. 2022-06-30 03:50:22+00:00), the congress (e.g. 116), and the chamber (e.g. Senate). Filters can be added to the URL in order to limit results returned to hearings in a single congress (e.g. <https://api.congress.gov/v3/hearing/116>) or congress and chamber (e.g. <https://api.congress.gov/v3/hearing/116/senate>). 
+
+### Item
+
+Depending on the data available, each hearing item in the API may contain the following: the jacket number for the hearing (e.g. 37721), a Library of Congress identifier (e.g. LC64252), the hearing number (e.g. 64), the part number, an update date in Congress.gov (e.g. 2022-06-30 03:50:22+00:00), the congress during which the hearing was held (e.g. 116), the title of the hearing (e.g. OUTSIDE PERSPECTIVES ON THE COLLECTION OF BENEFICIAL OWNERSHIP INFORMATION), the hearing's citation (e.g. S.Hrg.116-64), the chamber (e.g. Senate), associated committee information (e.g. Senate Banking, Housing, and Urban Affairs Committee) - including a URL to the committee item in the API (e.g. <https://api.congress.gov/v3/committee/senate/ssbk00>) and a system code (e.g. ssbk00), hearing held dates (e.g. 2019-06-20), and text formats - including a URL for the hearing transcript in Congress.gov (e.g. <https://congress.gov/116/chrg/CHRG-116shrg37721/CHRG-116shrg37721.pdf>) and the format type (e.g. PDF). 
 
 ## congressional-record
 
