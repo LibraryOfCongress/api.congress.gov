@@ -1,4 +1,4 @@
-# House requirement endpoint
+# House requirement endpoints
 
 ## Coverage
 
