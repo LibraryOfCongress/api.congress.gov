@@ -1,4 +1,4 @@
-# Member endpoint
+# Member endpoints
 
 ## Coverage
 
