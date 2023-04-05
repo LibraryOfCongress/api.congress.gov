@@ -1,4 +1,4 @@
-# Committee Report endpoint
+# Committee Report endpoints
 
 ## Coverage
 
