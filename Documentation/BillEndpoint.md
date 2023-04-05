@@ -1,4 +1,4 @@
-# Bill endpoint
+# Bill endpoints
 
 ## Coverage
 
