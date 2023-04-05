@@ -1,4 +1,4 @@
-# Nomination endpoint
+# Nomination endpoints
 
 ## Coverage
 
