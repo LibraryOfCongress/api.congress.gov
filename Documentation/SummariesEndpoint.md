@@ -1,4 +1,4 @@
-# Summaries endpoint
+# Summaries endpoints
 
 ## Coverage
 
