@@ -160,6 +160,8 @@ Parent container for a bill or resolution. A `<bill>` element may include the fo
           - The title of the CBO cost estimate.
         - `<url>` (e.g. <https://www.cbo.gov/publication/57356>)
           - The URL for the CBO cost estimate on [CBO.gov](https://www.cbo.gov/).
+        - `<description>` (e.g. As ordered reported by the House Committee on Oversight and Reform on May 13, 2021)
+          - The description of the CBO cost estimate.
 - `<laws>`
   - Container for public or private law data for the bill or joint resolution. A `<laws>` element may include the following children:
     - `<type>` (e.g. Public Law)
