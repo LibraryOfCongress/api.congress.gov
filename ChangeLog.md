@@ -1,4 +1,40 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
+# UPCOMING May 2023
+**Expected production release date:** May 15, 2023
+## Change #1
+### Impacted endpoints: senate-communication & senate-communication/{congress}/{communicationType}/{communicationNumber}
+1. At the list level (e.g., https://api.congress.gov/v3/senate-communication), an `<updateDate>` element will be added to reflect the last update date in Congress.gov for each Senate Communication item.
+2. At the item level (e.g., https://api.congress.gov/v3/senate-communication/118/ec/1), the following elements will be renamed and added:
+- `<senate-communication>` will be renamed to be `<senateCommunication>`
+- `<sessionNumber>` will be added (with values like 1, 2)
+- `<updateDate>` will be added (with values like 2023-01-25 04:15:17-05)
+- `<systemCode>` will be added within each `<item>` under `<committees>` (with values like ssag00)
+3. Empty elements will be suppressed.
+## Change #2
+### Impacted endpoints: house-communication & house-communication/{congress}/{communicationType}/{communicationNumber}
+1. At the list level (e.g., https://api.congress.gov/v3/house-communication), an `<updateDate>` element will be added to reflect the last update date in Congress.gov for each House Communication item. 
+2. At the item level (e.g., https://api.congress.gov/v3/house-communication/118/ec/1), the following elements will be renamed and added:
+- `<house-communication>` will be renamed to be `<houseCommunication>`
+- `<referredToCommitteeDate>` will be renamed to be `<referralDate>`
+- `<sessionNumber>` will be added (with values like 1, 2)
+- `<isRulemaking>` will be added (with True, False values)
+- `<reportNature>` will be added (with values like The Department's Major final rule - Mitigating the Spread of COVID-19 in Head Start Programs (RIN: 0970-AC90) received January 9, 2023.)
+- `<updateDate>` will be added (with values like 2023-01-11 14:05:07-05)
+- `<systemCode>` will be added (with values like hsed00)
+- `<submittingAgency>` will be added (with values like Office of Head Start, Administration for Children and Families, Department of Health and Human Services)
+- `<submittingOfficial>` will be added (with values like Regulations Coordinator)
+- `<legalAuthority>` will be added (with values like 5 U.S.C. 801(a)(1)(A); Public Law 104–121, section 251; (110 Stat. 868))
+- `<matchingRequirements>` container element will be added to House Communications with matching House Communication Requirements. Within `<matchingRequirements>`, an `<item>` container will be present for each matching requirement item. Within `<item>`, the `<number>` (with values like 8070) and `<url>` (with values like https://api.congress.gov/v3/house-requirement/8070) elements will be available
+- `<houseDocument>` container element will be added to House Communications with associated House Documents. Within `<houseDocument>`, a `<citation>` element (with values like H. Doc. 118-5) and `<title>` element (with values like Statement Of Disbursements Of The U.S. House of Representatives For The Period October 1, 2022, Through December 31, 2022) will be available. 
+3. At the item level (e.g., https://api.congress.gov/v3/house-communication/118/ec/1), the data format type will be added to the end of referrer URLs to committee items in the API (e.g., https://api.congress.gov/v3/committee/house/hsed00?format=json). The data format in the URL will be either xml or json, depending on the data format used to view the API response. 
+4. Empty elements will be suppressed. 
+## Change #3
+### Impacted endpoints: member & member/{bioguideId}
+1. At the list level (e.g., https://api.congress.gov/v3/member), an `<updateDate>` element will be added to reflect the last update date in Congress.gov for the member record.
+2. At the item level (e.g., https://api.congress.gov/v3/S000148), the `<updateDate>` element will reflect the most current last update date in Congress.gov for the member record.
+## Change #4
+### Impacted endpoints: hearing & hearing/{congress}/{chamber}/{jacketNumber}
+Empty elements will be suppressed.
 # UPCOMING April 2023, Part 2
 **Expected production release date:** April 24, 2023
 ## Change #1
@@ -6,7 +42,7 @@ A new endpoint will be released for the House Requirements API to reflect matchi
 ## Change #2
 ### Impacted endpoint: house-requirement/{requirementNumber}
 1. The following new elements will be added: 
-- `<activeRecord>` (with Y and N values)
+- `<activeRecord>` (with True, False values)
 - `<submittingAgency>` (with values like Environmental Protection Agency)
 - `<submittingOfficial>` (with values like Administrator)
 2. The `<agency>` element will be renamed to be `<parentAgency>`.
