@@ -1,5 +1,5 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
-# UPCOMING May 2023
+# UPCOMING May 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/11)
 **Expected production release date:** May 15, 2023
 ## Change #1
 ### Impacted endpoints: senate-communication & senate-communication/{congress}/{communicationType}/{communicationNumber}
@@ -35,27 +35,26 @@ This change log will contain information on updates to the Congress.gov API, the
 ## Change #4
 ### Impacted endpoints: hearing & hearing/{congress}/{chamber}/{jacketNumber}
 Empty elements will be suppressed.
-# UPCOMING April 2023, Part 2
-**Expected production release date:** April 24, 2023
+## Change #5
+New Committee Meeting API endpoints will be released. The Committee Meetings API will consist of a list level and an item level. The list level will be filterable by congress and chamber. Data elements at the list level will include an event identifier, chamber, congress, referrer URL to the item level, and update date in Congress.gov. Detailed information about each meeting will be available at the item level. The new endpoints will be available from https://api.congress.gov/v3/committee-meeting, https://api.congress.gov/v3/committee-meeting/{congress}, https://api.congress.gov/v3/committee-meeting/{congress}/{chamber}, and https://api.congress.gov/v3/committee-meeting/{congress}/{chamber}/{eventId}. This work is ongoing from prior releases.
+# COMPLETED April 2023, Part 2
 ## Change #1
-A new endpoint will be released for the House Requirements API to reflect matching communications to each House Requirement item. The endpoint will be available from https://api.congress.gov/v3/house-requirement/{requirementNumber}/matching-communications. For requirements with matching communications, the following elements will be available from the new endpoint for each matching communication item: chamber, number, communicationType (including the communicationType code and name), congress, and a referrer URL to the communication item in the API. These elements mirror what is available from the list level of the House Communication API (e.g., at https://api.congress.gov/v3/house-communication?api_key=DEMO_KEY). 
+A new endpoint was released for the House Requirements API reflecting matching communications to each House Requirement item. The endpoint is available from https://api.congress.gov/v3/house-requirement/{requirementNumber}/matching-communications. For requirements with matching communications, the following elements are available from the new endpoint for each matching communication item: chamber, number, communicationType (including the communicationType code and name), congress, and a referrer URL to the communication item in the API. These elements mirror what is available from the list level of the House Communication API (e.g., at https://api.congress.gov/v3/house-communication?api_key=DEMO_KEY). 
 ## Change #2
 ### Impacted endpoint: house-requirement/{requirementNumber}
-1. The following new elements will be added: 
+1. The following new elements were added: 
 - `<activeRecord>` (with True, False values)
 - `<submittingAgency>` (with values like Environmental Protection Agency)
 - `<submittingOfficial>` (with values like Administrator)
-2. The `<agency>` element will be renamed to be `<parentAgency>`.
-3. A `<matchingCommunications>` container will be added that includes a referrer `<url>` element (to the new matching-communications endpoint) and a `<count>` element containing the number of matching communications to the requirement item. 
+2. The `<agency>` element was renamed to be `<parentAgency>`.
+3. A `<matchingCommunications>` container was added that includes a referrer `<url>` element (to the new matching-communications endpoint) and a `<count>` element containing the number of matching communications to the requirement item. 
 ## Change #3
 ### Impacted endpoint: committee-report/{congress}/{reportType}/{reportNumber}
-Empty elements will be suppressed. 
+Empty elements were suppressed. 
 ## Change #4
-New Committee Meeting API endpoints will be released. The Committee Meetings API will consist of a list level and an item level. The list level will be filterable by congress and chamber. Data elements at the list level will include an event identifier, chamber, congress, referrer URL to the item level, and update date in Congress.gov. Detailed information about each meeting will be available at the item level. The new endpoints will be available from https://api.congress.gov/v3/committee-meeting, https://api.congress.gov/v3/committee-meeting/{congress}, https://api.congress.gov/v3/committee-meeting/{congress}/{chamber}, and https://api.congress.gov/v3/committee-meeting/{congress}/{chamber}/{eventId}. This work is ongoing from a prior release.
-## Change #5
 ### Impacted endpoint: committee-report/{congress}/{reportType}/{reportNumber}
-Text containers, with a text count and a URL to the text sub-level, will be re-added to committee report items. These elements were inadvertently dropped. For example, at [HRPT117-15](https://api.congress.gov/v3/committee-report/117/hrpt/15?api_key=DEMO_KEY), there will be a `<text>` container element with a `<count>` element (with a value of 2) and a `<url>` element (with a value of https://api.congress.gov/v3/committee-report/117/hrpt/15/text). This work is ongoing from a prior release.
-# COMPLETED April 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/11)
+Text containers, with a text count and a URL to the text sub-level, were re-added to committee report items. These elements were inadvertently dropped. For example, at [HRPT117-15](https://api.congress.gov/v3/committee-report/117/hrpt/15?api_key=DEMO_KEY), there is a `<text>` container element with a `<count>` element (with a value of 2) and a `<url>` element (with a value of https://api.congress.gov/v3/committee-report/117/hrpt/15/text). This work was ongoing from a prior release.
+# COMPLETED April 2023 
 ## Change #1
 New Hearing API endpoints (for published hearings) were released. The Hearing API consists of a list level and an item level. The list level is filterable by congress and chamber. Data elements at the list level include a jacket number, chamber, congress, hearing number, part number, referrer URL to the item level, and update date in Congress.gov. Detailed information about each published hearing is available at the item level. The new endpoints are available from https://api.congress.gov/v3/hearing, https://api.congress.gov/v3/hearing/{congress}, https://api.congress.gov/v3/hearing/{congress}/{chamber}, and https://api.congress.gov/v3/hearing/{congress}/{chamber}/{jacketNumber}. This work was ongoing from a prior release.
 ## Change #2
