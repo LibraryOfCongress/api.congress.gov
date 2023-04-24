@@ -47,7 +47,7 @@ Parent container for a House requirement item. A `<houseRequirement>` element ma
   - The assigned House requirement number.
 - `<updateDate>` (e.g. 2021-11-05)
   - The date of update in Congress.gov.
-- `<agency>` (e.g. Executive Office of the President)
+- `<parentAgency>` (e.g. Executive Office of the President)
   - The government entity mandated to submit a report.
 - `<frequency>` (e.g. If specified circumstances arise.)
   - The set interval for when a report is mandated to be submitted.
@@ -55,3 +55,46 @@ Parent container for a House requirement item. A `<houseRequirement>` element ma
   - The brief description of the report.
 - `<legalAuthority>` (e.g. Public Law 114–287, section 13(c)(1); (130 Stat. 1471))
   - Citations to the statute associated with the House requirement.
+- `<activeRecord>` (e.g., True)
+  - Flag to indicate whether the requirement is active.
+  - Possible values are "True" and "False".
+- `<submittingAgency>` (e.g., Office of Management and Budget)
+  - The government agency mandated to submit a report.
+- `<submittingOfficial>` (e.g., Director)
+  - The government official mandated to submit a report.
+- `<matchingCommunications>` (the below data is taken from <https://api.congress.gov/v3/house-requirement/8070?api_key=>):
+  - Container for matching communications to the requirement. A `<matchingCommunications>` element includes the following children:
+    - `<count>` (e.g., 85138)
+      - The number of matching communications to the requirement.
+    - `<url>` (e.g., <https://api.congress.gov/v3/house-requirement/8070/matching-communications>)
+      - A referrer URL to the matching communications level of the house requirement API. Click [here](#matching-communications-level) for more information on the matching communications level. 
+
+### Matching Communications Level
+
+`<api-root>`
+
+The `<api-root>` is only present in the XML format.
+
+`<matchingCommunications>`
+
+Parent container for matching House communications to the requirement. A `<matchingCommunications>` element may include the following children:
+
+- `<item>`
+  - Container for a House communication item. An `<item>` element is repeatable and may include the following children:
+    - `<chamber>` (e.g. House)
+      - The chamber where the communication was received. This value will always be set to "House".
+    - `<number>` (e.g. 1)
+      - The assigned communication number.
+    - `<communicationType>`
+      - Container for communication type information. A `<communicationType>` element may include the following children:
+        - `<code>` (e.g. EC)
+          - The code for the type of communication.
+          - Possible values are "EC", "PM", "PT", and "ML".
+        - `<name>` (e.g. Executive Communication)
+          - The name of the type of communication.
+          - Possible values are "Executive Communication", "Presidential Message", "Petition", and "Memorial".
+    - `<congress>` (e.g. 115)
+      - The congress during which the communication was received.
+      - View the [field values list of Congresses](https://www.congress.gov/help/field-values/congresses) on Congress.gov. Read more [about Congresses](https://www.congress.gov/help/legislative-glossary#glossary_congress) on Congress.gov.
+    - `<url>` (e.g. <https://api.congress.gov/v3/house-communication/115/EC/1>)
+      - A referrer URL to the communication item in the API.
