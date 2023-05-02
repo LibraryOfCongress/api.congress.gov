@@ -1,4 +1,18 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
+# UPCOMING June 2023
+**Expected production release date:** June 5, 2023
+## Change #1
+### Impacted endpoints: bill & bill/{congress}/{billType}/{billNumber}
+Reserved bill data will be added to the API. For example, this request https://api.congress.gov/v3/bill/117/hr/2?api_key= will retrieve bill data, which is available on [Congress.gov](https://www.congress.gov/bill/117th-congress/house-bill/2).
+## Change #2
+### Impacted endpoint: amendment/{congress}/{amendmentType}/{amendmentNumber}
+In response to [issue #82](https://github.com/LibraryOfCongress/api.congress.gov/issues/82), referrer URLs to treaty items in the API within the amendment API will be fixed so that the URLs do not retrieve a 404 and instead retrieve the treaty item. This bug only impacts amendments to treaties where the congresses differ between the items (e.g., https://api.congress.gov/v3/amendment/116/samdt/924?api_key=).  
+## Change #3
+### Impacted endpoint: committee-meeting/{congress}/{chamber}/{eventId}
+Empty elements will be suppressed in the committee meeting API.
+## Change #4
+### Impacted endpoints: bill/{congress}/{billType}/{billNumber}/text, bill/{congress}/{billType}/{billNumber}/cosponsors, bill/{congress}/{billType}/{billNumber}/amendments, bill/{congress}/{billType}/{billNumber}/titles, bill/{congress}/{billType}/{billNumber}/relatedbills, bill/{congress}/{billType}/{billNumber}/committees, bill/{congress}/{billType}/{billNumber}/actions, bill/{congress}/{billType}/{billNumber}/subjects, bill/{congress}/{billType}/{billNumber}/summaries, amendment/{congress}/{amendmentType}/{amendmentNumber}/cosponsors, amendment/{congress}/{amendmentType}/{amendmentNumber}/actions, member/{bioguideId}/sponsored-legislation, member/{bioguideId}/cosponsored-legislation, committee/{chamber}/{committeeCode}/reports, committee/{chamber}/{committeeCode}/nominations, committee/{chamber}/{committeeCode}/bills, nomination/{congress}/{nominationNumber}/actions, nomination/{congress}/{nominationNumber}/committees, nomination/{congress}/{nominationNumber}/hearings
+URLs in the request will be updated to reflect https://api.congress.gov/v3 instead of https://api.data.gov/congress/v3.
 # UPCOMING May 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/11)
 **Expected production release date:** May 15, 2023
 ## Change #1
