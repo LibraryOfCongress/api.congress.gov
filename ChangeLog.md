@@ -10,9 +10,6 @@ In response to [issue #82](https://github.com/LibraryOfCongress/api.congress.gov
 ## Change #3
 ### Impacted endpoint: committee-meeting/{congress}/{chamber}/{eventId}
 Empty elements will be suppressed in the committee meeting API.
-## Change #4
-### Impacted endpoints: bill/{congress}/{billType}/{billNumber}/text, bill/{congress}/{billType}/{billNumber}/cosponsors, bill/{congress}/{billType}/{billNumber}/amendments, bill/{congress}/{billType}/{billNumber}/titles, bill/{congress}/{billType}/{billNumber}/relatedbills, bill/{congress}/{billType}/{billNumber}/committees, bill/{congress}/{billType}/{billNumber}/actions, bill/{congress}/{billType}/{billNumber}/subjects, bill/{congress}/{billType}/{billNumber}/summaries, amendment/{congress}/{amendmentType}/{amendmentNumber}/cosponsors, amendment/{congress}/{amendmentType}/{amendmentNumber}/actions, member/{bioguideId}/sponsored-legislation, member/{bioguideId}/cosponsored-legislation, committee/{chamber}/{committeeCode}/reports, committee/{chamber}/{committeeCode}/nominations, committee/{chamber}/{committeeCode}/bills, nomination/{congress}/{nominationNumber}/actions, nomination/{congress}/{nominationNumber}/committees, nomination/{congress}/{nominationNumber}/hearings
-URLs in the request will be updated to reflect https://api.congress.gov/v3 instead of https://api.data.gov/congress/v3.
 # UPCOMING May 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/11)
 **Expected production release date:** May 15, 2023
 ## Change #1
