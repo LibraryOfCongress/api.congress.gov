@@ -2,12 +2,9 @@ This change log will contain information on updates to the Congress.gov API, the
 # UPCOMING June 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/12)
 **Expected production release date:** June 5, 2023
 ## Change #1
-### Impacted endpoints: bill & bill/{congress}/{billType}/{billNumber}
-Reserved bill data will be added to the API. For example, this request https://api.congress.gov/v3/bill/117/hr/2?api_key= will retrieve bill data, which is available on [Congress.gov](https://www.congress.gov/bill/117th-congress/house-bill/2).
-## Change #2
 ### Impacted endpoint: amendment/{congress}/{amendmentType}/{amendmentNumber}
 In response to [issue #82](https://github.com/LibraryOfCongress/api.congress.gov/issues/82), referrer URLs to treaty items in the API within the amendment API will be fixed so that the URLs do not retrieve a 404 and instead retrieve the treaty item. This bug only impacts amendments to treaties where the congresses differ between the items (e.g., https://api.congress.gov/v3/amendment/116/samdt/924?api_key=).  
-## Change #3
+## Change #2
 ### Impacted endpoint: committee-meeting/{congress}/{chamber}/{eventId}
 Empty elements will be suppressed in the committee meeting API.
 # UPCOMING May 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/11)
