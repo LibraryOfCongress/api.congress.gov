@@ -7,6 +7,9 @@ In response to [issue #82](https://github.com/LibraryOfCongress/api.congress.gov
 ## Change #2
 ### Impacted endpoint: committee-meeting/{congress}/{chamber}/{eventId}
 Empty elements will be suppressed in the committee meeting API.
+## Change #3
+### Impacted endpoints: bill, bill/{congress}/, bill/{congress}/{chamber}, bill/{congress}/{chamber}/{billNumber}
+In response to [issues #79](https://github.com/LibraryOfCongress/api.congress.gov/issues/79) and [#83](https://github.com/LibraryOfCongress/api.congress.gov/issues/83), 1/2 bill numbers and bill numbers with roman numerals will be retrievable in the API.
 # UPCOMING May 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/11)
 **Expected production release date:** May 15, 2023
 ## Change #1
