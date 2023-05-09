@@ -1,4 +1,22 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
+# UPCOMING June 2023, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/13)
+**Expected production release date:** June 26, 2023
+## Change #1
+### Impacted endpoints: member & member/{bioguideId}
+In response to [issue #71](https://github.com/LibraryOfCongress/api.congress.gov/issues/71), the member API structure will be adjusted for consistency. 
+Specifically, at the member list level (<https://api.congress.gov/v3/member?api_key=DEMO_KEY>):
+1. the extra nested `<member>` will be removed,
+2. `<party>` will be renamed to be `<partyName>`,
+3. `<served>` will be renamed to be `<terms>` (at members.member.served)
+4. `<House>` and/or `<Senate>` will be renamed to be `<item>` (at members.member.terms.House/Senate where 'terms' was renamed at number 3),
+5. a new `<chamber>` element will be added under `<item>` within `<terms>` (at members.member.terms.item where 'item' was renamed at number 4 and terms was renamed at number 3),
+6. `<start>` will be renamed to be `<startYear>` (at members.member.terms.item where 'item' was renamed at number 4 and terms was renamed at number 3), and
+7. `<end>` will be renamed to be `<endYear>` (at members.member.terms.item where 'item' was renamed at number 4 and terms was renamed at number 3).
+At the member item level (e.g., at <https://api.congress.gov/v3/member/B001230?api_key=DEMO_KEY>):
+1. `<termBeginYear>` will be renamed to be `<startYear>` (within each member.terms.item),
+2. `<termEndYear>` will be renamed to be `<endYear>` (within each member.terms.item),
+3. the `<identifiers>` container will be removed so that `<bioguideId>` is only nested under member, and
+4. the `<officeTelephone>` container will be removed so that `<phoneNumber>` is only nested within member.addressInformation.
 # UPCOMING June 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/12)
 **Expected production release date:** June 5, 2023
 ## Change #1
