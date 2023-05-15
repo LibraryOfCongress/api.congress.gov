@@ -28,44 +28,43 @@ Empty elements will be suppressed in the committee meeting API.
 ## Change #3
 ### Impacted endpoints: bill, bill/{congress}/, bill/{congress}/{chamber}, bill/{congress}/{chamber}/{billNumber}
 In response to [issues #79](https://github.com/LibraryOfCongress/api.congress.gov/issues/79) and [#83](https://github.com/LibraryOfCongress/api.congress.gov/issues/83), 1/2 bill numbers and bill numbers with roman numerals will be retrievable in the API.
-# UPCOMING May 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/11)
-**Expected production release date:** May 15, 2023
+# COMPLETED May 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/11)
 ## Change #1
 ### Impacted endpoints: senate-communication & senate-communication/{congress}/{communicationType}/{communicationNumber}
-1. At the list level (e.g., https://api.congress.gov/v3/senate-communication), an `<updateDate>` element will be added to reflect the last update date in Congress.gov for each Senate Communication item.
-2. At the item level (e.g., https://api.congress.gov/v3/senate-communication/118/ec/1), the following elements will be renamed and added:
-- `<senate-communication>` will be renamed to be `<senateCommunication>`
-- `<sessionNumber>` will be added (with values like 1, 2)
-- `<updateDate>` will be added (with values like 2023-01-25 04:15:17-05)
-- `<systemCode>` will be added within each `<item>` under `<committees>` (with values like ssag00)
-3. Empty elements will be suppressed.
+1. At the list level (e.g., https://api.congress.gov/v3/senate-communication), an `<updateDate>` element was added to reflect the last update date in Congress.gov for each Senate Communication item.
+2. At the item level (e.g., https://api.congress.gov/v3/senate-communication/118/ec/1), the following elements were renamed and added:
+- `<senate-communication>` was renamed to be `<senateCommunication>`
+- `<sessionNumber>` was added (with values like 1, 2)
+- `<updateDate>` was added (with values like 2023-01-25 04:15:17-05)
+- `<systemCode>` was added within each `<item>` under `<committees>` (with values like ssag00)
+3. Empty elements are suppressed.
 ## Change #2
 ### Impacted endpoints: house-communication & house-communication/{congress}/{communicationType}/{communicationNumber}
-1. At the list level (e.g., https://api.congress.gov/v3/house-communication), an `<updateDate>` element will be added to reflect the last update date in Congress.gov for each House Communication item. 
-2. At the item level (e.g., https://api.congress.gov/v3/house-communication/118/ec/1), the following elements will be renamed and added:
-- `<house-communication>` will be renamed to be `<houseCommunication>`
-- `<referredToCommitteeDate>` will be renamed to be `<referralDate>`
-- `<sessionNumber>` will be added (with values like 1, 2)
-- `<isRulemaking>` will be added (with True, False values)
-- `<reportNature>` will be added (with values like The Department's Major final rule - Mitigating the Spread of COVID-19 in Head Start Programs (RIN: 0970-AC90) received January 9, 2023.)
-- `<updateDate>` will be added (with values like 2023-01-11 14:05:07-05)
-- `<systemCode>` will be added (with values like hsed00)
-- `<submittingAgency>` will be added (with values like Office of Head Start, Administration for Children and Families, Department of Health and Human Services)
-- `<submittingOfficial>` will be added (with values like Regulations Coordinator)
-- `<legalAuthority>` will be added (with values like 5 U.S.C. 801(a)(1)(A); Public Law 104–121, section 251; (110 Stat. 868))
-- `<matchingRequirements>` container element will be added to House Communications with matching House Communication Requirements. Within `<matchingRequirements>`, an `<item>` container will be present for each matching requirement item. Within `<item>`, the `<number>` (with values like 8070) and `<url>` (with values like https://api.congress.gov/v3/house-requirement/8070) elements will be available.
-- `<houseDocument>` container element will be added to House Communications with associated House Documents. Within `<houseDocument>`, a `<citation>` element (with values like H. Doc. 118-5) and `<title>` element (with values like Statement Of Disbursements Of The U.S. House of Representatives For The Period October 1, 2022, Through December 31, 2022) will be available. 
-3. At the item level (e.g., https://api.congress.gov/v3/house-communication/118/ec/1), the data format type will be added to the end of referrer URLs to committee items in the API (e.g., https://api.congress.gov/v3/committee/house/hsed00?format=json). The data format in the URL will be either xml or json, depending on the data format used to view the API response. 
-4. Empty elements will be suppressed. 
+1. At the list level (e.g., https://api.congress.gov/v3/house-communication), an `<updateDate>` element was added to reflect the last update date in Congress.gov for each House Communication item. 
+2. At the item level (e.g., https://api.congress.gov/v3/house-communication/118/ec/1), the following elements were renamed and added:
+- `<house-communication>` was renamed to be `<houseCommunication>`
+- `<referredToCommitteeDate>` was renamed to be `<referralDate>`
+- `<sessionNumber>` was added (with values like 1, 2)
+- `<isRulemaking>` was added (with True, False values)
+- `<reportNature>` was added (with values like The Department's Major final rule - Mitigating the Spread of COVID-19 in Head Start Programs (RIN: 0970-AC90) received January 9, 2023.)
+- `<updateDate>` was added (with values like 2023-01-11 14:05:07-05)
+- `<systemCode>` was added (with values like hsed00)
+- `<submittingAgency>` was added (with values like Office of Head Start, Administration for Children and Families, Department of Health and Human Services)
+- `<submittingOfficial>` was added (with values like Regulations Coordinator)
+- `<legalAuthority>` was added (with values like 5 U.S.C. 801(a)(1)(A); Public Law 104–121, section 251; (110 Stat. 868))
+- `<matchingRequirements>` container element was added to House Communications with matching House Communication Requirements. Within `<matchingRequirements>`, an `<item>` container is present for each matching requirement item. Within `<item>`, the `<number>` (with values like 8070) and `<url>` (with values like https://api.congress.gov/v3/house-requirement/8070) elements are available.
+- `<houseDocument>` container element was added to House Communications with associated House Documents. Within `<houseDocument>`, a `<citation>` element (with values like H. Doc. 118-5) and `<title>` element (with values like Statement Of Disbursements Of The U.S. House of Representatives For The Period October 1, 2022, Through December 31, 2022) are available. 
+3. At the item level (e.g., https://api.congress.gov/v3/house-communication/118/ec/1), the data format type was added to the end of referrer URLs to committee items in the API (e.g., https://api.congress.gov/v3/committee/house/hsed00?format=json). The data format in the URL is either xml or json, depending on the data format used to view the API response. 
+4. Empty elements are suppressed. 
 ## Change #3
 ### Impacted endpoints: member & member/{bioguideId}
-1. At the list level (e.g., https://api.congress.gov/v3/member), an `<updateDate>` element will be added to reflect the last update date in Congress.gov for the member record.
-2. At the item level (e.g., https://api.congress.gov/v3/S000148), the `<updateDate>` element will reflect the most current last update date in Congress.gov for the member record.
+1. At the list level (e.g., https://api.congress.gov/v3/member), an `<updateDate>` element was added to reflect the last update date in Congress.gov for the member record.
+2. At the item level (e.g., https://api.congress.gov/v3/S000148), the `<updateDate>` element reflects the most current last update date in Congress.gov for the member record.
 ## Change #4
 ### Impacted endpoints: hearing & hearing/{congress}/{chamber}/{jacketNumber}
-Empty elements will be suppressed.
+Empty elements are suppressed.
 ## Change #5
-New Committee Meeting API endpoints will be released. The Committee Meetings API will consist of a list level and an item level. The list level will be filterable by congress and chamber. Data elements at the list level will include an event identifier, chamber, congress, referrer URL to the item level, and update date in Congress.gov. Detailed information about each meeting will be available at the item level. The new endpoints will be available from https://api.congress.gov/v3/committee-meeting, https://api.congress.gov/v3/committee-meeting/{congress}, https://api.congress.gov/v3/committee-meeting/{congress}/{chamber}, and https://api.congress.gov/v3/committee-meeting/{congress}/{chamber}/{eventId}. This work is ongoing from prior releases.
+New Committee Meeting API endpoints were released. The Committee Meetings API consists of a list level and an item level. The list level is filterable by congress and chamber. Data elements at the list level include an event identifier, chamber, congress, referrer URL to the item level, and update date in Congress.gov. Detailed information about each meeting is available at the item level. The new endpoints are available from https://api.congress.gov/v3/committee-meeting, https://api.congress.gov/v3/committee-meeting/{congress}, https://api.congress.gov/v3/committee-meeting/{congress}/{chamber}, and https://api.congress.gov/v3/committee-meeting/{congress}/{chamber}/{eventId}. This work was ongoing from prior releases.
 # COMPLETED April 2023, Part 2
 ## Change #1
 A new endpoint was released for the House Requirements API reflecting matching communications to each House Requirement item. The endpoint is available from https://api.congress.gov/v3/house-requirement/{requirementNumber}/matching-communications. For requirements with matching communications, the following elements are available from the new endpoint for each matching communication item: chamber, number, communicationType (including the communicationType code and name), congress, and a referrer URL to the communication item in the API. These elements mirror what is available from the list level of the House Communication API (e.g., at https://api.congress.gov/v3/house-communication?api_key=DEMO_KEY). 
