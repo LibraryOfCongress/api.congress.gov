@@ -30,8 +30,8 @@ Empty elements will be suppressed in the committee meeting API.
 In response to [issues #79](https://github.com/LibraryOfCongress/api.congress.gov/issues/79) and [#83](https://github.com/LibraryOfCongress/api.congress.gov/issues/83), 1/2 bill numbers and bill numbers with roman numerals will be retrievable in the API.
 ## Change #4
 ### Impacted endpoints: house-communication & house-communication/{congress}/{communicationType}/{communicationNumber}
-1. At the list level (e.g., https://api.congress.gov/v3/house-communication), an `<updateDate>` element wwill be added to reflect the last update date in Congress.gov for each House Communication item. 
-2. At the item level (e.g., https://api.congress.gov/v3/house-communication/118/ec/1), the following elements wwill be renamed and added:
+1. At the list level (e.g., https://api.congress.gov/v3/house-communication), an `<updateDate>` element will be added to reflect the last update date in Congress.gov for each House Communication item. 
+2. At the item level (e.g., https://api.congress.gov/v3/house-communication/118/ec/1), the following elements will be renamed and added:
 - `<house-communication>` will be renamed to be `<houseCommunication>`
 - `<referredToCommitteeDate>` will be renamed to be `<referralDate>`
 - `<sessionNumber>` will be added (with values like 1, 2)
