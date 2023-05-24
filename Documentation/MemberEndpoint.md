@@ -88,7 +88,7 @@ Parent container for an individual member’s entry. A `<member>` element may in
       - Container for the member’s service in an individual Congress. An `<item>` element is repeatable and may include the following children:
         - `<memberType>` (e.g., Senator)
           - The membership type.
-          - Possible values are "Representative", "Resident Commissioner", "Delgate", or "Senator".
+          - Possible values are "Representative", "Resident Commissioner", "Delegate", or "Senator".
         - `<congress>` (e.g., 94)
           - The Congress during which the member served.  
           - View the [field values list of Congresses](https://www.congress.gov/help/field-values/congresses) on Congress.gov. Read more [about Congresses](https://www.congress.gov/help/legislative-glossary#glossary_congress) on Congress.gov.
@@ -129,7 +129,7 @@ Parent container for an individual member’s entry. A `<member>` element may in
   - The honorific title of the member.
 - `<firstName>` (e.g., Patrick)  
   - The member’s first name.
-- `<middleName>` (e.g., Jospeh)
+- `<middleName>` (e.g., Joseph)
   - The member’s middle name.
 - `<lastName>` (e.g., Leahy)
   - The member’s last name.

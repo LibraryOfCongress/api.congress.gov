@@ -180,7 +180,7 @@ if __name__ == "__main__":
         python bill.py <optional api version v3/v4>
         Example - python bill.py v3 or python bill.py
     """
-    # This section demostrates how to store your key in a config file that should be
+    # This section demonstrates how to store your key in a config file that should be
     # out of the source code repo and in a secure location only readable by the user
     # of your application:
     from configparser import ConfigParser
