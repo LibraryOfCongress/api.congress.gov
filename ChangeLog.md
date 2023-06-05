@@ -33,7 +33,6 @@ An API response for committee prints without an associated committeewill be prov
 ### Impacted endpoints: member & member/{bioguideId}
 Congress.gov API member items will have an updateDate regardless of currentMember=True or False.
 # COMPLETED June 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/12)
-**Expected production release date:** June 5, 2023
 ## Change #1
 ### Impacted endpoint: committee-meeting/{congress}/{chamber}/{eventId}
 Empty elements were suppressed in the committee meeting API.
