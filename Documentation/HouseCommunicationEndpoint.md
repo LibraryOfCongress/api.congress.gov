@@ -28,7 +28,7 @@ Parent container for House communications. A `<houseCommunications>` element may
   - Container for a House communication item. An `<item>` element is repeatable and may include the following children:
     - `<chamber>` (e.g. House)
       - The chamber where the communication was received. This value will always be set to "House".
-    - `<communicationNumber>` (e.g. 1)
+    - `<number>` (e.g. 1)
       - The assigned communication number.
     - `<communicationType>`
       - Container for communication type information. A `<communicationType>` element may include the following children:
@@ -56,7 +56,7 @@ Parent container for a House communication item. A `<house-communication>` eleme
 
 - `<chamber>` (e.g. House)
   - The chamber where the communication was received. This value will always be set to "House".
-- `<communicationNumber>` (e.g. 1)
+- `<number>` (e.g. 1)
   - The assigned communication number.
 - `<communicationType>`
   - Container for communication type information. A `<communicationType>` element may include the following children:
@@ -66,18 +66,49 @@ Parent container for a House communication item. A `<house-communication>` eleme
     - `<name>` (e.g. Executive Communication)
       - The name of the type of communication.
       - Possible values are "Executive Communication", "Presidential Message", "Petition", and "Memorial".
-- `<congressNumber>` (e.g. 115)
-  - The congress during which the communication was received.
+- `<congress>` (e.g. 115)
+   - The congress during which the communication was received.
+- `<updateDate>` (e.g. 2023-01-22)
+   - The date the communication was updated.
   - View the [field values list of Congresses](https://www.congress.gov/help/field-values/congresses) on Congress.gov. Read more [about Congresses](https://www.congress.gov/help/legislative-glossary#glossary_congress) on Congress.gov.
 - `<abstract>` (e.g. A letter from the Clerk, U.S. House of Representatives, transmitting a list of reports created by the Clerk, pursuant to Rule II, clause 2(b), of the Rules of the House; (H. Doc. No. 115–4); to the Committee on House Administration and ordered to be printed.)
-  - The abstract text for the communication.
+    - The abstract text for the communication.
 - `<congressionalRecordDate>` (e.g. 2017-01-03)
-  - The date the communication was published in the Congressional Record.
+    - The date the communication was published in the Congressional Record.
+- `<sessionNumber>` (e.g. 1 or 2)
+- `<isRulemaking>` (Y or N value)
 - `<committees>`
   - Container for committees associated with the communication. A `<committees>` element may include the following children:
     - `<item>`
       - Container for a single committee associated with the communication. An `<item>` element is repeatable and may include the following children:
         - `<name>` (e.g. House Administration Committee)
           - The name of the committee.
-        - `<referredToCommitteeDate>` (e.g. 2017-01-03)
+        - `<referralDate>` (e.g. 2017-01-03)
           - The date the communication was referred to the committee.
+        - `<systemCode>` (e.g. hsfa00)
+          - The assigned code used in Congress.gov for the committee
+   - `<matchingRequirements>`
+  - Container for matching requirements associated with the communication. A `<matchingRequirements>` element may include the following children:
+    - `<item>`
+      - Container for a single matching requirement associated with the communication. An `<item>` element is repeatable and may include the following children:
+        - `<number>` (e.g. House Administration Committee)
+          - The assigned number of the matching requirement.
+        - `<URL>` (e.g. https://api.congress.gov/v3/house-communication/115/ec/1)
+          - A referrer URL to the communication item in the API.
+   - `<reportNature>`
+     - The description of the nature of the report.
+    - `<submittingAgency>` (e.g. Department of the Treasury)
+       - The agency responsible for submitting the report.
+    - `<submittingOfficial>`
+       - The official responsible for submittnig the report. 
+    - `<legalAuthority>`
+       - The legal authority responsible for the report. 
+    - `<houseDocument>`
+  - Container for matching requirements associated with the communication. A `<houseDocument>` element may include the following children:
+    - `<item>`
+      - Container for a single house document associated with the communication. An `<item>` element is repeatable and may include the following children:
+        - `<citation>` 
+          - The citation of the house document.
+        - `<title>` 
+          - The title of the house document.
+     
