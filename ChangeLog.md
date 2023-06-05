@@ -17,11 +17,23 @@ At the member item level (e.g., at <https://api.congress.gov/v3/member/B001230?a
 2. `<termEndYear>` will be renamed to be `<endYear>` (within each member.terms.item),
 3. the `<identifiers>` container will be removed so that `<bioguideId>` is only nested under member, and
 4. the `<officeTelephone>` container will be removed so that `<phoneNumber>` is only nested within member.addressInformation.
-# UPCOMING June 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/12)
-**Expected production release date:** June 5, 2023
-## Change #1
+## Change #2
 ### Impacted endpoint: amendment/{congress}/{amendmentType}/{amendmentNumber}
 In response to [issue #82](https://github.com/LibraryOfCongress/api.congress.gov/issues/82), referrer URLs to treaty items in the API within the amendment API will be fixed so that the URLs do not retrieve a 404 and instead retrieve the treaty item. This bug only impacts amendments to treaties where the congresses differ between the items (e.g., https://api.congress.gov/v3/amendment/116/samdt/924?api_key=).  
+## Change #3
+### Impacted endpoints: house-communication & house-communication/{congress}/{communicationType}/{communicationNumber}
+At the list level (e.g., https://api.congress.gov/v3/house-communication), an `<updateDate>` element will be added to reflect the last update date in Congress.gov for each House Communication item. 
+## Change #4
+### Impacted endpoint: amendment/{congress}/{amendmentType}/{amendmentNumber} 
+A referrer URL will be added to treaty items in the amendment API to reflect treaty's congress of origin.
+## Change #5
+### Impacted endpoint: committee-print
+An API response for committee prints without an associated committeewill be provided. 
+## Change #6 
+### Impacted endpoints: member & member/{bioguideId}
+Congress.gov API member items will have an updateDate regardless of currentMember=True or False.
+# COMPLETED June 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/12)
+**Expected production release date:** June 5, 2023
 ## Change #2
 ### Impacted endpoint: committee-meeting/{congress}/{chamber}/{eventId}
 Empty elements will be suppressed in the committee meeting API.
