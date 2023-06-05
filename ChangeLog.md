@@ -23,12 +23,13 @@ In response to [issue #82](https://github.com/LibraryOfCongress/api.congress.gov
 ## Change #3
 ### Impacted endpoints: house-communication & house-communication/{congress}/{communicationType}/{communicationNumber}
 At the list level (e.g., https://api.congress.gov/v3/house-communication), an `<updateDate>` element will be added to reflect the last update date in Congress.gov for each House Communication item. 
+This work is ongoing from a previous sprint. 
 ## Change #4
 ### Impacted endpoint: amendment/{congress}/{amendmentType}/{amendmentNumber} 
 A referrer URL will be added to treaty items in the amendment API to reflect treaty's congress of origin.
 ## Change #5
 ### Impacted endpoint: committee-print
-An API response for committee prints without an associated committeewill be provided. 
+An API response for committee prints without an associated committee will be provided. 
 ## Change #6 
 ### Impacted endpoints: member & member/{bioguideId}
 Congress.gov API member items will have an updateDate regardless of currentMember=True or False.
