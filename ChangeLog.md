@@ -29,6 +29,8 @@ An API response for committee prints without an associated committee will be pro
 ## Change #5
 ### Impacted endpoints: member & member/{bioguideId}
 Congress.gov API member items will have an updateDate regardless of currentMember=True or False.
+## Change #6
+Request URLs will be updated at API sub-levels to reflect the current domain name, api.congress.gov/v3 instead of the former domain name, api.data.gov/congress/v3.
 # COMPLETED June 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/12)
 ## Change #1
 ### Impacted endpoint: committee-meeting/{congress}/{chamber}/{eventId}
