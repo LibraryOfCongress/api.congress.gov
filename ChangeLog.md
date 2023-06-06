@@ -22,7 +22,8 @@ At the member item level (e.g., at <https://api.congress.gov/v3/member/B001230?a
 In response to [issue #82](https://github.com/LibraryOfCongress/api.congress.gov/issues/82), referrer URLs to treaty items in the API within the amendment API will be fixed so that the URLs do not retrieve a 404 and instead retrieve the treaty item. This bug only impacts amendments to treaties where the congresses differ between the items (e.g., https://api.congress.gov/v3/amendment/116/samdt/924?api_key=).   
 ## Change #3
 ### Impacted endpoint: amendment/{congress}/{amendmentType}/{amendmentNumber} 
-A referrer URL will be added to treaty items in the amendment API to reflect treaty's congress of origin.
+A referrer URL will be added to treaty items in the amendment API to reflect treaty's congress of origin. 
+*This work is ongoing from a previous sprint.*
 ## Change #4
 ### Impacted endpoint: committee-print
 An API response for committee prints without an associated committee will be provided. 
