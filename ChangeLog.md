@@ -23,7 +23,7 @@ In response to [issue #82](https://github.com/LibraryOfCongress/api.congress.gov
 ## Change #3
 ### Impacted endpoint: amendment/{congress}/{amendmentType}/{amendmentNumber} 
 A referrer URL will be added to treaty items in the amendment API to reflect treaty's congress of origin. 
-*This work is ongoing from a previous sprint.*
+### *This work is ongoing from a previous sprint.*
 ## Change #4
 ### Impacted endpoint: committee-print
 An API response for committee prints without an associated committee will be provided. 
