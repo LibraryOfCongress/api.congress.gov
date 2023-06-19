@@ -38,7 +38,7 @@ Parent container for congress and congressional sessions. A `<congresses>` eleme
           - Container for a single session of congress for a chamber. An `<item>` element is repeatable and may include the following children:
             - `<chamber>`(e.g. House)
               - The chamber associated with the session of congress.
-              - Possible values are "House" and "Senate".
+              - Possible values are "House of Representatives" and "Senate".
             - `<type>` (e.g. R)
               - The type of session.
               - Possible values are "R" and "S" where "R" stands for "Regular" and "S" stands for "Special".
