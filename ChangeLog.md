@@ -20,17 +20,14 @@ At the member item level (e.g., at <https://api.congress.gov/v3/member/B001230?a
 ## Change #2
 ### Impacted endpoint: amendment/{congress}/{amendmentType}/{amendmentNumber}
 In response to [issue #82](https://github.com/LibraryOfCongress/api.congress.gov/issues/82), referrer URLs to treaty items in the API within the amendment API will be fixed so that the URLs do not retrieve a 404 and instead retrieve the treaty item. This bug only impacts amendments to treaties where the congresses differ between the items (e.g., https://api.congress.gov/v3/amendment/116/samdt/924?api_key=).   
-## Change #3
-### Impacted endpoint: amendment/{congress}/{amendmentType}/{amendmentNumber} 
-A referrer URL will be added to treaty items in the amendment API to reflect treaty's congress of origin. 
 ### *This work is ongoing from a previous sprint.*
-## Change #4
+## Change #3
 ### Impacted endpoint: committee-print
 An API response for committee prints without an associated committee will be provided. 
-## Change #5
+## Change #4
 ### Impacted endpoints: member & member/{bioguideId}
 Congress.gov API member items will have an updateDate regardless of currentMember=True or False.
-## Change #6
+## Change #5
 Request URLs will be updated at API sub-levels to reflect the current domain name, api.congress.gov/v3 instead of the former domain name, api.data.gov/congress/v3.
 # COMPLETED June 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/12)
 ## Change #1
