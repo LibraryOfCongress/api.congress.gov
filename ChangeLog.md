@@ -1,4 +1,21 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
+# UPCOMING July 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/14)
+**Expected production release date:** July 17, 2023
+## Change #1
+### Impacted endpoint: congressional-record
+A list level endpoint will be created for the daily Congressional Record. The new endpoint will be availabe from <https://api.congress.gov/v3/daily-congressional-record>. At the list level,  filtering by volume number (e.g., https://api.congress.gov/v3/daily-congressional-record/168) will be allowed. 
+## Change #2
+### Impacted endpoint: congressional-record
+Endpoints will be created for the bound Congressional Record. The `<boundCongressionalRecord>` endpoint will consist of a list level and a detail page. At the list level (<https://api.congress.gov/v3/bound-congressional-record>);  filtering by year (<https://api.congress.gov/v3/bound-congressional-record/{year}>) and by year and month (<https://api.congress.gov/v3/bound-congressional-record/{year}/{month}>) will be allowed. Data elements at the list level will include: date, volume number, congress, session number, and update date. The detail page will include:  date, volume number, congress, session number, update date, start and end pages for the Daily Digest, name, type, and URL. 
+## Change #3
+### Impacted endpoint: house-requirement
+The `<submittingOfficial/>` wll be supressed when empty in the House Requirement API item level (e.g., at <https://api.congress.gov/v3/house-requirement/8070?api_key=DEMO_KEY>).
+## Change #4
+### Impacted endpoint: committee-print
+The `<number/>`, `<associatedBill/>`, and `<committees/>` wll be supressed when empty in the Committee Print API item level (e.g., at <https://api.congress.gov/v3/committee-print/118/house/50485?api_key=DEMO_KEY>).
+## Change #5
+### Impacted endpoint: bill
+In response to [issue #65](https://github.com/LibraryOfCongress/api.congress.gov/issues/65), the `<date/>`, `<formats/>`, and `<type/>` elements will be supressed when empty or when they return a null value (e.g., at <https://api.congress.gov/v3/bill/117/hr/500/text?format=json&api_key=DEMO_KEY>). 
 # UPCOMING June 2023, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/13)
 **Expected production release date:** June 26, 2023
 ## Change #1
