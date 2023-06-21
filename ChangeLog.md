@@ -16,6 +16,9 @@ The `<number/>`, `<associatedBill/>`, and `<committees/>` wll be supressed when 
 ## Change #5
 ### Impacted endpoint: bill
 In response to [issue #65](https://github.com/LibraryOfCongress/api.congress.gov/issues/65), the `<date/>`, `<formats/>`, and `<type/>` elements will be supressed when empty or when they return a null value (e.g., at <https://api.congress.gov/v3/bill/117/hr/500/text?format=json&api_key=DEMO_KEY>). 
+## Change #6
+### Impacted endpoint: house-communication
+In response to user feedback, the house-communication endpoint will be fixed so that when a user requests 81+ records, the appropriate number of records will be retrieved. Additionally, URLs derived from pagination `<next>` values will be fixed so they return the results requested. Currently, these bugs are only impacting records from the 118th Congress (e.g., <https://api.congress.gov/v3/house-communication/118?format=xml&offset=0&limit=98&api_key=DEMO_KEY> or <https://api.congress.gov/v3/house-communication/118?offset=80&limit=80&format=xml&api_key=DEMO_KEY>). 
 # UPCOMING June 2023, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/13)
 **Expected production release date:** June 26, 2023
 ## Change #1
