@@ -19,36 +19,35 @@ In response to [issue #65](https://github.com/LibraryOfCongress/api.congress.gov
 ## Change #6
 ### Impacted endpoint: house-communication
 In response to user feedback, the house-communication endpoint will be fixed so that when a user requests 81+ records, the appropriate number of records will be retrieved. Additionally, URLs derived from pagination `<next>` values will be fixed so they return the results requested. Currently, these bugs are only impacting records from the 118th Congress (e.g., <https://api.congress.gov/v3/house-communication/118?format=xml&offset=0&limit=98&api_key=DEMO_KEY> or <https://api.congress.gov/v3/house-communication/118?offset=80&limit=80&format=xml&api_key=DEMO_KEY>). 
-# UPCOMING June 2023, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/13)
-**Expected production release date:** June 26, 2023
+# COMPLETED June 2023, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/13)
 ## Change #1
 ### Impacted endpoints: member & member/{bioguideId}
-In response to [issue #71](https://github.com/LibraryOfCongress/api.congress.gov/issues/71), the member API structure will be adjusted for consistency. 
+In response to [issue #71](https://github.com/LibraryOfCongress/api.congress.gov/issues/71), the member API structure were adjusted for consistency. 
 Specifically, at the member list level (<https://api.congress.gov/v3/member?api_key=DEMO_KEY>):
-1. the extra nested `<member>` will be removed,
-2. `<party>` will be renamed to be `<partyName>`,
-3. `<served>` will be renamed to be `<terms>` (at members.member.served)
-4. `<House>` and/or `<Senate>` will be renamed to be `<item>` (at members.member.terms.House/Senate where 'terms' was renamed at number 3),
+1. the extra nested `<member>` was removed,
+2. `<party>` was renamed to be `<partyName>`,
+3. `<served>` was renamed to be `<terms>` (at members.member.served)
+4. `<House>` and/or `<Senate>` was renamed to be `<item>` (at members.member.terms.House/Senate where 'terms' was renamed at number 3),
 5. a new `<chamber>` element will be added under `<item>` within `<terms>` (at members.member.terms.item where 'item' was renamed at number 4 and terms was renamed at number 3),
-6. `<start>` will be renamed to be `<startYear>` (at members.member.terms.item where 'item' was renamed at number 4 and terms was renamed at number 3), and
-7. `<end>` will be renamed to be `<endYear>` (at members.member.terms.item where 'item' was renamed at number 4 and terms was renamed at number 3).
+6. `<start>` was renamed to be `<startYear>` (at members.member.terms.item where 'item' was renamed at number 4 and terms was renamed at number 3), and
+7. `<end>` was renamed to be `<endYear>` (at members.member.terms.item where 'item' was renamed at number 4 and terms was renamed at number 3).
 At the member item level (e.g., at <https://api.congress.gov/v3/member/B001230?api_key=DEMO_KEY>):
-1. `<termBeginYear>` will be renamed to be `<startYear>` (within each member.terms.item),
-2. `<termEndYear>` will be renamed to be `<endYear>` (within each member.terms.item),
-3. the `<identifiers>` container will be removed so that `<bioguideId>` is only nested under member, and
-4. the `<officeTelephone>` container will be removed so that `<phoneNumber>` is only nested within member.addressInformation.
+1. `<termBeginYear>` was renamed to be `<startYear>` (within each member.terms.item),
+2. `<termEndYear>` was renamed to be `<endYear>` (within each member.terms.item),
+3. the `<identifiers>` container was removed so that `<bioguideId>` is only nested under member, and
+4. the `<officeTelephone>` container was removed so that `<phoneNumber>` is only nested within member.addressInformation.
 ## Change #2
 ### Impacted endpoint: amendment/{congress}/{amendmentType}/{amendmentNumber}
-In response to [issue #82](https://github.com/LibraryOfCongress/api.congress.gov/issues/82), referrer URLs to treaty items in the API within the amendment API will be fixed so that the URLs do not retrieve a 404 and instead retrieve the treaty item. This bug only impacts amendments to treaties where the congresses differ between the items (e.g., https://api.congress.gov/v3/amendment/116/samdt/924?api_key=).   
+In response to [issue #82](https://github.com/LibraryOfCongress/api.congress.gov/issues/82), referrer URLs to treaty items in the API within the amendment API were fixed so that the URLs do not retrieve a 404 and instead retrieve the treaty item. This bug only impacted amendments to treaties where the congresses differ between the items (e.g., https://api.congress.gov/v3/amendment/116/samdt/924?api_key=).   
 ### *This work is ongoing from a previous sprint.*
 ## Change #3
 ### Impacted endpoint: committee-print
-An API response for committee prints without an associated committee will be provided. 
+An API response for committee prints without an associated committee was provided. 
 ## Change #4
 ### Impacted endpoints: member & member/{bioguideId}
-Congress.gov API member items will have an updateDate regardless of currentMember=True or False.
+Congress.gov API member items have an updateDate regardless of currentMember=True or False.
 ## Change #5
-Request URLs will be updated at API sub-levels to reflect the current domain name, api.congress.gov/v3 instead of the former domain name, api.data.gov/congress/v3.
+Request URLs were updated at API sub-levels to reflect the current domain name, api.congress.gov/v3 instead of the former domain name, api.data.gov/congress/v3.
 # COMPLETED June 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/12)
 ## Change #1
 ### Impacted endpoint: committee-meeting/{congress}/{chamber}/{eventId}
