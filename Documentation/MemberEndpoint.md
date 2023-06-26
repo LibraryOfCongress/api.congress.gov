@@ -31,23 +31,24 @@ Parent container for all member entries. A `<members>` element may include the f
       - View a [field values list of Bioguide identifiers](https://www.congress.gov/help/field-values/member-bioguide-ids) for current and former members in Congress.gov.
     - `<state>` (e.g., Vermont)
       - The state represented by the member.
-    - `<party>`  (e.g., Democrat)
+    - `<partyName>`  (e.g., Democrat)
       - The political party of the member.
       - Possible values are "Democratic", "Independent", "Independent Democrat", "Libertarian", or "Republican".
     - `<district>`  
       - The Congressional district represented by the member (exclusive to House). The value of zero indicates the state, district or territory has only one member in the House.
     - `<name>`  (e.g.,  Leahy, Patrick J.)
       - The name of the member in last-name-first order.
-    - `<served>`
-      - Container for service history of the member. A `<served>` element may include the following children:
-        - `<House>` or `<Senate>`
-          - The chamber in which the member served. A `<House>` or `<Senate>` element may include the following children:
-            - `<item>`
-              - Container for member’s years of service in the designated chamber. An `<item>` element may include the following children:
-                - `<start>` (e.g., 1975)
-                  - The year in which the member began serving in the designated chamber.
-                - `<end>` (e.g., 1990)
-                  - The year in which the member ceased serving in the designated chamber.
+  - `<terms>`
+  - Container of a member’s terms of service in chronological order. A `<terms>` element may include the following child, which is repeatable:
+    - `<item>`
+      - Container for the member’s service in an individual Congress. An `<item>` element is repeatable and may include the following children:
+        - `<chamber>` (e.g., Senator)
+          - The chamber the member served in.
+          - Possible values are "Senate" and "House of Representatives".
+        - `<startYear>` (e.g., 1975)
+          - The year in which the member began serving in the designated chamber.
+        - `<endYear>` (e.g., 1990)
+          - The year in which the member ceased serving in the designated chamber.
     - `<url>`  (e.g., <https://api.congress.gov/v3/member/L000174>)
       - A referrer URL to the member item in the API.
     - `<depiction>`
@@ -105,17 +106,15 @@ Parent container for an individual member’s entry. A `<member>` element may in
         - `<partyCode>` (e.g., D)
           - The single letter abbreviation for the political party of the member.
           - Possible values are "D", "I", "ID", "L", and "R".
-        - `<termBeginYear>` (e.g., 1975)
+        - `<startYear>` (e.g., 1975)
           - The year in which the member’s service in that Congress began.
-        - `<termEndYear>` (e.g., 1977)
+        - `<endYear>` (e.g., 1977)
           - The year in which the member’s service in that Congress ended.
         - `<district>`  
           - The Congressional district represented by the member (exclusive to the House). The value of zero indicates the state, district or territory has only one member in the House.
-- `<identifiers>`
-  - Container for member’s identifying information. The `<identifiers>` element may include the following child:
-    - `<bioguideID>` (e.g., L000174)
-      - The unique ID value that originates in the [Biographical Directory of the United States Congress, 1774-Present](https://bioguide.congress.gov/).
-      - View a [field values list of Bioguide identifiers](https://www.congress.gov/help/field-values/member-bioguide-ids) for current and former members in Congress.gov.
+- `<bioguideID>` (e.g., L000174)
+  - The unique ID value that originates in the [Biographical Directory of the United States Congress, 1774-Present](https://bioguide.congress.gov/).
+  - View a [field values list of Bioguide identifiers](https://www.congress.gov/help/field-values/member-bioguide-ids) for current and former members in Congress.gov.
 - `<party>` (e.g., Democatic)
   - The current political party of the member. Note: This does not currently reflect party changes.
   - Possible values are "Democratic", "Independent", "Independent Democrat", "Libertarian", and "Republication".
@@ -151,10 +150,8 @@ Parent container for an individual member’s entry. A `<member>` element may in
       - The two letter postal abbreviation for the District of Columbia.
     - `<zipCode>` (e.g., 20510)
       - The postal zip code for the member’s office in Washington, D.C.
-    - `<officeTelephone>`
-      - Container for the member’s telephone contact information. An `<officeTelephone>` container may include the following child:
-        - `<phoneNumber>` (e.g., (202) 224-4242)
-          - The telephone number for the member’s office in Washington, D.C.
+    - `<phoneNumber>` (e.g., (202) 224-4242)
+      - The telephone number for the member’s office in Washington, D.C.
 - `<leadership>`
   - Container for the leadership positions available on Congress.gov that the member has held during their membership/tenure of service. A `<leadership>` container may include the following child, which is repeatable:
     - `<item>`
