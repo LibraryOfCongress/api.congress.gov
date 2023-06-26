@@ -42,7 +42,7 @@ Parent container for all member entries. A `<members>` element may include the f
   - Container of a member’s terms of service in chronological order. A `<terms>` element may include the following child, which is repeatable:
     - `<item>`
       - Container for the member’s service in an individual Congress. An `<item>` element is repeatable and may include the following children:
-        - `<chamber>` (e.g., Senator)
+        - `<chamber>` (e.g., Senate)
           - The chamber the member served in.
           - Possible values are "Senate" and "House of Representatives".
         - `<startYear>` (e.g., 1975)
