@@ -1,4 +1,9 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
+# UPCOMING August 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/15)
+**Expected production release date:** August 7, 2023
+## Change #1
+### Impacted endpoint: house-communication (list level) 
+Related to ongoing work on the house-communication endpoint and user feedback [issue #103](https://github.com/LibraryOfCongress/api.congress.gov/issues/103), the house-communication list-level endpoint will be fixed so that it returns a full list of House communications. 
 # UPCOMING July 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/14)
 **Expected production release date:** July 17, 2023
 ## Change #1
