@@ -63,7 +63,7 @@ Parent container for all member entries. A `<members>` element may include the f
 
 The `<api-root>` is only present in the XML format.
 
-`<member-lis>`
+`<member>`
 
 Parent container for an individual member’s entry. A `<member>` element may include the following children:
 
