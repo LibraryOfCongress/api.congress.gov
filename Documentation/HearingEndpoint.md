@@ -101,3 +101,9 @@ Parent container for a single hearing. A `<hearing>` element may include the fol
                      - Possible values are "PDF" and "Formatted Text".
                  - `<url>` (e.g., <https://congress.gov/116/chrg/CHRG-116shrg37721/CHRG-116shrg37721.pdf>)
                      - The URL for the hearing transcript text in Congress.gov.
+- `<associatedMeeting>`
+     - Container for the hearing meeting information. An `<associatedMeeting>` element may include the following children:
+         - `<eventID>`
+             - The individual hearing meeting event identifier.
+         - `<URL>`
+             - Referrer URL to the committee hearing meeting item in the API. 
