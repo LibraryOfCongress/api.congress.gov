@@ -4,6 +4,9 @@ This change log will contain information on updates to the Congress.gov API, the
 ## Change #1
 ### Impacted endpoint: house-communication (list level) 
 Related to ongoing work on the house-communication endpoint and [issue #103](https://github.com/LibraryOfCongress/api.congress.gov/issues/103), the house-communication list-level endpoint will be fixed so that it returns a full list of House communications. 
+## Change #2
+### Impacted endpoints: bill, bill/{congress}/, bill/{congress}/{chamber}, bill/{congress}/{chamber}/{billNumber}
+Reserved bill data will be re-added to the API. A reserved bill is, per House of Representatives internal rules of procedure, a bill number reserved for use by the Speaker of the House of Representatives or the Minority Leader in the House of Representatives. The Congress.gov API will be updated to include these reserved bill numbers. 
 # UPCOMING July 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/14)
 **Expected production release date:** July 17, 2023
 ## Change #1
