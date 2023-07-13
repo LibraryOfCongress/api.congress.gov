@@ -13,7 +13,7 @@ Work on the Daily Congressional Record enDpoints will continue at the issues lev
 # UPCOMING July 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/14)
 **Expected production release date:** July 17, 2023
 ## Change #1
-### Impacted endpoint: congressional-record
+### Impacted endpoint: daily-congressional-record
 A list level endpoint will be created for the daily Congressional Record. The new endpoint will be availabe from <https://api.congress.gov/v3/daily-congressional-record>. At the list level,  filtering by volume number (e.g., https://api.congress.gov/v3/daily-congressional-record/168) will be allowed. 
 ## Change #2
 ### Impacted endpoint: congressional-record
