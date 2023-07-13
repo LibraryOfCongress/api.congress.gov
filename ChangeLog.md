@@ -7,6 +7,9 @@ Related to ongoing work on the house-communication endpoint and [issue #103](htt
 ## Change #2
 ### Impacted endpoints: bill, bill/{congress}/, bill/{congress}/{chamber}, bill/{congress}/{chamber}/{billNumber}
 Reserved bill data will be re-added to the API. A reserved bill is, per House of Representatives internal rules of procedure, a bill number reserved for use by the Speaker of the House of Representatives or the Minority Leader in the House of Representatives. The Congress.gov API will be updated to include these reserved bill numbers. 
+## Change #3
+### Impacted endpoint: daily-congressional-record/{volumeNumber}/{issueNumber} 
+Work on the Daily Congressional Record enDpoints will continue at the issues level (which also has the section level information). This endpoint will feature a list level (created in the previous sprint) and a detail page. he detail page will include:  date, volume number, congress, session number, update date, start and end pages for the Daily Digest, name, type, and URL. 
 # UPCOMING July 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/14)
 **Expected production release date:** July 17, 2023
 ## Change #1
@@ -14,7 +17,7 @@ Reserved bill data will be re-added to the API. A reserved bill is, per House of
 A list level endpoint will be created for the daily Congressional Record. The new endpoint will be availabe from <https://api.congress.gov/v3/daily-congressional-record>. At the list level,  filtering by volume number (e.g., https://api.congress.gov/v3/daily-congressional-record/168) will be allowed. 
 ## Change #2
 ### Impacted endpoint: congressional-record
-Endpoints will be created for the bound Congressional Record. The `<boundCongressionalRecord>` endpoint will consist of a list level and a detail page. At the list level (<https://api.congress.gov/v3/bound-congressional-record>);  filtering by year (<https://api.congress.gov/v3/bound-congressional-record/{year}>) and by year and month (<https://api.congress.gov/v3/bound-congressional-record/{year}/{month}>) will be allowed. Data elements at the list level will include: date, volume number, congress, session number, and update date. The detail page will include:  date, volume number, congress, session number, update date, start and end pages for the Daily Digest, name, type, and URL. 
+Endpoints will be created for the bound Congressional Record. The `<boundCongressionalRecord>` endpoint will consist of a list level and a detail page. At the list level (<https://api.congress.gov/v3/bound-congressional-record>);  filtering by year (<https://api.congress.gov/v3/bound-congressional-record/{year}>) and by year and month (<https://api.congress.gov/v3/bound-congressional-record/{year}/{month}>) will be allowed. Data elements at the list level will include: date, volume number, congress, session number, and update date. 
 ## Change #3
 ### Impacted endpoint: house-requirement
 The `<submittingOfficial/>` wll be supressed when empty in the House Requirement API item level (e.g., at <https://api.congress.gov/v3/house-requirement/8070?api_key=DEMO_KEY>).
