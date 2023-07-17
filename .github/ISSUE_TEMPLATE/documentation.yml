@@ -1,0 +1,14 @@
+---
+name: "📕 Documentation Issue"
+description: Report an issue in the documentation
+title: "(API name): (short issue description)"
+labels: [documentation]
+assignees: []
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the issue
+      description: A clear and concise description of the issue.
+    validations:
+      required: true
