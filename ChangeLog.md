@@ -10,26 +10,26 @@ Reserved bill data will be re-added to the API. A reserved bill is, per House of
 ## Change #3
 ### Impacted endpoint: daily-congressional-record/{volumeNumber}/{issueNumber} 
 Work on the Daily Congressional Record enDpoints will continue at the issues level (which also has the section level information). This endpoint will feature a list level (created in the previous sprint) and a detail page. he detail page will include:  date, volume number, congress, session number, update date, start and end pages for the Daily Digest, name, type, and URL. 
-# UPCOMING July 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/14)
-**Expected production release date:** July 17, 2023
-## Change #1
-### Impacted endpoint: daily-congressional-record
-A list level endpoint will be created for the daily Congressional Record. The new endpoint will be availabe from <https://api.congress.gov/v3/daily-congressional-record>. At the list level,  filtering by volume number (e.g., https://api.congress.gov/v3/daily-congressional-record/168) will be allowed. 
-## Change #2
+## Change #4
 ### Impacted endpoint: congressional-record
 Endpoints will be created for the bound Congressional Record. The `<boundCongressionalRecord>` endpoint will consist of a list level and a detail page. At the list level (<https://api.congress.gov/v3/bound-congressional-record>);  filtering by year (<https://api.congress.gov/v3/bound-congressional-record/{year}>) and by year and month (<https://api.congress.gov/v3/bound-congressional-record/{year}/{month}>) will be allowed. Data elements at the list level will include: date, volume number, congress, session number, and update date. 
+### <i> This work is ongoing from a previous sprint. </i> ###
+# COMPLETED July 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/14)
+## Change #1
+### Impacted endpoint: daily-congressional-record
+A list level endpoint was created for the daily Congressional Record. The new endpoint is availabe from <https://api.congress.gov/v3/daily-congressional-record>. At the list level, filtering by volume number (e.g., https://api.congress.gov/v3/daily-congressional-record/168) is now allowed. 
 ## Change #3
 ### Impacted endpoint: house-requirement
-The `<submittingOfficial/>` wll be supressed when empty in the House Requirement API item level (e.g., at <https://api.congress.gov/v3/house-requirement/8070?api_key=DEMO_KEY>).
+The `<submittingOfficial/>` was suppressed when empty in the House Requirement API item level (e.g., at <https://api.congress.gov/v3/house-requirement/8070?api_key=DEMO_KEY>).
 ## Change #4
 ### Impacted endpoint: committee-print
-The `<number/>`, `<associatedBill/>`, and `<committees/>` wll be supressed when empty in the Committee Print API item level (e.g., at <https://api.congress.gov/v3/committee-print/118/house/50485?api_key=DEMO_KEY>).
+The `<number/>`, `<associatedBill/>`, and `<committees/>` were supressed when empty in the Committee Print API item level (e.g., at <https://api.congress.gov/v3/committee-print/118/house/50485?api_key=DEMO_KEY>).
 ## Change #5
 ### Impacted endpoint: bill
-In response to [issue #65](https://github.com/LibraryOfCongress/api.congress.gov/issues/65), the `<date/>`, `<formats/>`, and `<type/>` elements will be supressed when empty or when they return a null value (e.g., at <https://api.congress.gov/v3/bill/117/hr/500/text?format=json&api_key=DEMO_KEY>). 
+In response to [issue #65](https://github.com/LibraryOfCongress/api.congress.gov/issues/65), the `<date/>`, `<formats/>`, and `<type/>` elements are supressed when empty or when they return a null value (e.g., at <https://api.congress.gov/v3/bill/117/hr/500/text?format=json&api_key=DEMO_KEY>). 
 ## Change #6
 ### Impacted endpoint: house-communication
-In response to user feedback, the house-communication endpoint will be fixed so that when a user requests 81+ records, the appropriate number of records will be retrieved. Additionally, URLs derived from pagination `<next>` values will be fixed so they return the results requested. Currently, these bugs are only impacting records from the 118th Congress (e.g., <https://api.congress.gov/v3/house-communication/118?format=xml&offset=0&limit=98&api_key=DEMO_KEY> or <https://api.congress.gov/v3/house-communication/118?offset=80&limit=80&format=xml&api_key=DEMO_KEY>). 
+In response to user feedback, the house-communication endpoint was fixed so that when a user requests 81+ records, the appropriate number of records are retrieved. Additionally, URLs derived from pagination `<next>` values were fixed so they return the results requested.  
 # COMPLETED June 2023, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/13)
 ## Change #1
 ### Impacted endpoints: member & member/{bioguideId}
@@ -50,7 +50,7 @@ At the member item level (e.g., at <https://api.congress.gov/v3/member/B001230?a
 ## Change #2
 ### Impacted endpoint: amendment/{congress}/{amendmentType}/{amendmentNumber}
 In response to [issue #82](https://github.com/LibraryOfCongress/api.congress.gov/issues/82), referrer URLs to treaty items in the API within the amendment API were fixed so that the URLs do not retrieve a 404 and instead retrieve the treaty item. This bug only impacted amendments to treaties where the congresses differ between the items (e.g., https://api.congress.gov/v3/amendment/116/samdt/924?api_key=).   
-### *This work is ongoing from a previous sprint.*
+This work was ongoing from prior releases.
 ## Change #3
 ### Impacted endpoint: committee-print
 An API response for committee prints without an associated committee was provided. 
