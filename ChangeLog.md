@@ -1,15 +1,26 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
+# UPCOMING September 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/16)
+**Expected production release date:** September 18, 2023
+## Change #1 
+### Impacted endpoint: bill, bill/{congress}, bill/{congress}/{chamber}, bill/{congress}/{chamber}/{billNumber}
+A bug related to formerly reserved bills titles and actions will be investigated. Currently, title and other actions updates are not being recorded properly for reserved bills that are no longer reserved bills. A reserved bill is, per House of Representatives internal rules of procedure, a bill number reserved for use by the Speaker of the House of Representatives or the Minority Leader in the House of Representatives.
+## Change #2
+### Impacted endpoint: bill/{congress}
+A bug in bill/{congress} endpoint will be investigated and fixed. Currently, users are having issues with returning results in the /bill/{congress} API when filtering by fromDateTime and toDateTime. This change is related to [issue #111](https://github.com/LibraryOfCongress/api.congress.gov/issues/111).
+## Change #3
+### Impacted endpoint: committee
+Committees will be adjusted and updated in the 118th Congress so that `<isCurrent>` values reflect current, existing committees and commmittees that are no longer current as of the 118th Congress. This work is related to [issue #95](https://github.com/LibraryOfCongress/api.congress.gov/issues/95). 
 # UPCOMING August 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/15)
 **Expected production release date:** August 7, 2023
 ## Change #1
 ### Impacted endpoint: house-communication (list level) 
 Related to ongoing work on the house-communication endpoint and [issue #103](https://github.com/LibraryOfCongress/api.congress.gov/issues/103), the house-communication list-level endpoint will be fixed so that it returns a full list of House communications. 
 ## Change #2
-### Impacted endpoints: bill, bill/{congress}/, bill/{congress}/{chamber}, bill/{congress}/{chamber}/{billNumber}
+### Impacted endpoints: bill, bill/{congress}, bill/{congress}/{chamber}, bill/{congress}/{chamber}/{billNumber}
 Reserved bill data will be re-added to the API. A reserved bill is, per House of Representatives internal rules of procedure, a bill number reserved for use by the Speaker of the House of Representatives or the Minority Leader in the House of Representatives. The Congress.gov API will be updated to include these reserved bill numbers. 
 ## Change #3
 ### Impacted endpoint: daily-congressional-record/{volumeNumber}/{issueNumber} 
-Work on the Daily Congressional Record enDpoints will continue at the issues level (which also has the section level information). This endpoint will feature a list level (created in the previous sprint) and a detail page. he detail page will include:  date, volume number, congress, session number, update date, start and end pages for the Daily Digest, name, type, and URL. 
+Work on the Daily Congressional Record endpoints will continue at the issues level (which also has the section level information). This endpoint will feature a list level (created in the previous sprint) and a detail page. he detail page will include:  date, volume number, congress, session number, update date, start and end pages for the Daily Digest, name, type, and URL. 
 ## Change #4
 ### Impacted endpoint: congressional-record
 Endpoints will be created for the bound Congressional Record. The `<boundCongressionalRecord>` endpoint will consist of a list level and a detail page. At the list level (<https://api.congress.gov/v3/bound-congressional-record>);  filtering by year (<https://api.congress.gov/v3/bound-congressional-record/{year}>) and by year and month (<https://api.congress.gov/v3/bound-congressional-record/{year}/{month}>) will be allowed. Data elements at the list level will include: date, volume number, congress, session number, and update date. 
