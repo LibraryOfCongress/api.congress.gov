@@ -8,8 +8,11 @@ A bug related to formerly reserved bills titles and actions will be investigated
 ### Impacted endpoint: bill/{congress}
 A bug in bill/{congress} endpoint will be investigated and fixed. Currently, users are having issues with returning results in the /bill/{congress} API when filtering by `<fromDateTime>` and `<toDateTime>`. This change is related to [issue #111](https://github.com/LibraryOfCongress/api.congress.gov/issues/111).
 ## Change #3
-### Impacted endpoint: committee
+### Impacted endpoint: /committee
 Committees will be adjusted and updated in the 118th Congress so that `<isCurrent>` values reflect current, existing committees and commmittees that are no longer current as of the 118th Congress. This work is related to [issue #95](https://github.com/LibraryOfCongress/api.congress.gov/issues/95). 
+## Change #4
+### Impacted endpoint: /house-communication/{congress}/{communicationType}/communicationNumber
+In response to user feedback, the house-communication endpoint will be fixed so that certain communications no longer return a "list index out of range (IndexError)" error message. This is related to [issue #121](https://github.com/LibraryOfCongress/api.congress.gov/issues/121). 
 # UPCOMING August 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/15)
 **Expected production release date:** August 7, 2023
 ## Change #1
