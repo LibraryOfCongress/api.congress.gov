@@ -25,8 +25,8 @@ Reserved bill data will be re-added to the API. A reserved bill is, per House of
 ### Impacted endpoint: daily-congressional-record/{volumeNumber}/{issueNumber} 
 Work on the Daily Congressional Record endpoints will continue at the issues level (which also has the section level information). This endpoint will feature a list level (created in the previous sprint) and a detail page. he detail page will include:  date, volume number, congress, session number, update date, start and end pages for the Daily Digest, name, type, and URL. 
 ## Change #4
-### Impacted endpoint: congressional-record
-Endpoints will be created for the bound Congressional Record. The `<boundCongressionalRecord>` endpoint will consist of a list level and a detail page. At the list level (<https://api.congress.gov/v3/bound-congressional-record>);  filtering by year (<https://api.congress.gov/v3/bound-congressional-record/{year}>) and by year and month (<https://api.congress.gov/v3/bound-congressional-record/{year}/{month}>) will be allowed. Data elements at the list level will include: date, volume number, congress, session number, and update date. 
+### Impacted endpoint: bound-congressional-record
+Endpoints will be created for the bound Congressional Record. The `<bound-congressional-record>` endpoint will consist of a list level and a detail page. At the list level (<https://api.congress.gov/v3/bound-congressional-record>);  filtering by year (<https://api.congress.gov/v3/bound-congressional-record/{year}>) and by year and month (<https://api.congress.gov/v3/bound-congressional-record/{year}/{month}>) will be allowed. Data elements at the list level will include: date, volume number, congress, session number, and update date. 
 ### <i> This work is ongoing from a previous sprint. </i> ###
 # COMPLETED July 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/14)
 ## Change #1
