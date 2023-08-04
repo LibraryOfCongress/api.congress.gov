@@ -2,17 +2,23 @@ This change log will contain information on updates to the Congress.gov API, the
 # UPCOMING September 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/16)
 **Expected production release date:** September 18, 2023
 ## Change #1 
-### Impacted endpoint: bill, bill/{congress}, bill/{congress}/{chamber}, bill/{congress}/{chamber}/{billNumber}
+### Impacted endpoints: bill, bill/{congress}, bill/{congress}/{chamber}, bill/{congress}/{chamber}/{billNumber}
 A bug related to formerly reserved bills titles and actions will be investigated. Currently, title and other actions updates are not being recorded properly for reserved bills that are no longer reserved bills. A reserved bill is, per House of Representatives internal rules of procedure, a bill number reserved for use by the Speaker of the House of Representatives or the Minority Leader in the House of Representatives.
 ## Change #2
 ### Impacted endpoint: bill/{congress}
 A bug in bill/{congress} endpoint will be investigated and fixed. Currently, users are having issues with returning results in the /bill/{congress} API when filtering by `<fromDateTime>` and `<toDateTime>`. This change is related to [issue #111](https://github.com/LibraryOfCongress/api.congress.gov/issues/111).
 ## Change #3
-### Impacted endpoint: /committee
+### Impacted endpoints: /committee, /committee/{chamber}, /committee/{congress}, /committee/{congress}/{chamber}, /committee/{chamber}/{committeeCode}, /committee/{chamber}/{committeeCode}/bills, /committee/{chamber}/{committeeCode}/reports, /committee/{chamber}/{committeeCode}/nominations, /committee/{chamber}/{committeeCode}/house-communication, /committee/{chamber}/{committeeCode}/senate-communication
 Committees will be adjusted and updated in the 118th Congress so that `<isCurrent>` values reflect current, existing committees and commmittees that are no longer current as of the 118th Congress. This work is related to [issue #95](https://github.com/LibraryOfCongress/api.congress.gov/issues/95). 
 ## Change #4
 ### Impacted endpoint: /house-communication/{congress}/{communicationType}/communicationNumber
 In response to user feedback, the house-communication endpoint will be fixed so that certain communications no longer return a "list index out of range (IndexError)" error message. This is related to [issue #121](https://github.com/LibraryOfCongress/api.congress.gov/issues/121). 
+## Change #5 
+### Impacted endpoints: /nomination, /nomination/{congress}, /nomination/{congress}/{nominationNumber}, /nomination/{congress}/{nominationNumber}/{ordinal}, /nomination/{congress}/{nominationNumber}/actions, /nomination/{congress}/{nominationNumber}/committees, /nomination/{congress}/{nominationNumber}/hearings
+The API code will be reviewed to ensure that we are using the nomination's entityUpdateDate and not just its updateDate (which will only capture the nomination level metadata changes). 
+## Change #6
+### Impacted endpoints: /hearing, /hearing/{congress}, /hearing{congress}/{chamber}, /hearing{congress}/{chamber}/{jacketNumber}
+In the hearings API, at hearing items, a referrer URL element will be added to the associated committee meeting item in the API (if available). A `<url>` element will be added, when applicable, under the `<associatedMeeting>` container element.
 # UPCOMING August 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/15)
 **Expected production release date:** August 7, 2023
 ## Change #1
