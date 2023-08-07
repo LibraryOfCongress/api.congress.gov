@@ -3,16 +3,16 @@ This change log will contain information on updates to the Congress.gov API, the
 **Expected production release date:** October 10, 2023
 ## Change #1 
 ### Impacted endpoints: /amendment/{congress}/{amendmentType}/{amendmentNumber}/actions
-Developers will investigate and fix actions in the /amendment/{congress}/{amendmentType}/{amendmentNumber}/actions endpoint that have just an `<actionDate>` field with no additional elements or additional metadata present. Additional elements, such as `<text>` and `<type>`,  will be added for context. This change is related to [issue #109].(https://github.com/LibraryOfCongress/api.congress.gov/issues/109). 
+Developers will investigate and fix actions in the /amendment/{congress}/{amendmentType}/{amendmentNumber}/actions endpoint that have just an `<actionDate>` field with no additional elements or additional metadata present. Additional elements, such as `<text>` and `<type>`,  will be added for context. This change is related to [issue #109](https://github.com/LibraryOfCongress/api.congress.gov/issues/109). 
 ## Change #2 
 ### Impacted endpoints: all committee-meeting endpoints
-Committee meeting events with no location (e.g., 'Data will display when it becomes available') specified on Congress.gov (see below) are returning an error message in the API. This error message will be investigated and fixed so that committee meeting events without location data still return relevant data. This change is related to [issue #122].(https://github.com/LibraryOfCongress/api.congress.gov/issues/122).
+Committee meeting events with no location (e.g., 'Data will display when it becomes available') specified on Congress.gov (see below) are returning an error message in the API. This error message will be investigated and fixed so that committee meeting events without location data still return relevant data. This change is related to [issue #122](https://github.com/LibraryOfCongress/api.congress.gov/issues/122).
 ## Change #3
 ### Impacted endpoints: all committee endpoints 
-Certain offset values are returning error messages in the committee endpoint. This error message will be investigated and fixed. This change is related to [issue #116].(https://github.com/LibraryOfCongress/api.congress.gov/issues/116). 
+Certain offset values are returning error messages in the committee endpoint. This error message will be investigated and fixed. This change is related to [issue #116](https://github.com/LibraryOfCongress/api.congress.gov/issues/116). 
 ## Change #4 
 ### Impacted endpoint: /member
-In the member list API endpoint, an empty object is being returned in both the JSON and XML formats. This empty object will be removed. This change is related to [issue #120](https://github.com/LibraryOfCongress/api.congress.gov/issues/120) and [issue #125](https://github.com/LibraryOfCongress/api.congress.gov/issues/125). 
+In the member list API endpoint, an empty object is being returned in both the JSON and XML formats. This empty object will be removed. This change is related to [issue #120](https://github.com/LibraryOfCongress/api.congress.gov/issues/120) and [issue #125](https://github.com/LibraryOfCongress/api.congress.gov/issues/125).
 # UPCOMING September 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/16)
 **Expected production release date:** September 18, 2023
 ## Change #1 
