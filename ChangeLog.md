@@ -1,4 +1,18 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
+# UPCOMING October 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/17)
+**Expected production release date:** October 10, 2023
+## Change #1 
+### Impacted endpoints: /amendment/{congress}/{amendmentType}/{amendmentNumber}/actions
+Developers will investigate and fix actions in the /amendment/{congress}/{amendmentType}/{amendmentNumber}/actions endpoint that have just an `<actionDate>` field with no additional elements or additional metadata present. Additional elements, such as `<text>` and `<type>`,  will be added for context. This change is related to [issue #109].(https://github.com/LibraryOfCongress/api.congress.gov/issues/109). 
+## Change #2 
+### Impacted endpoints: all committee-meeting endpoints
+Committee meeting events with no location (e.g., 'Data will display when it becomes available') specified on Congress.gov (see below) are returning an error message in the API. This error message will be investigated and fixed so that committee meeting events without location data still return relevant data. This change is related to [issue #122].(https://github.com/LibraryOfCongress/api.congress.gov/issues/122).
+## Change #3
+### Impacted endpoints: all committee endpoints 
+Certain offset values are returning error messages in the committee endpoint. This error message will be investigated and fixed. This change is related to [issue #116].(https://github.com/LibraryOfCongress/api.congress.gov/issues/116). 
+## Change #4 
+### Impacted endpoint: /member
+In the member list API endpoint, an empty object is being returned in both the JSON and XML formats. This empty object will be removed. This change is related to [issue #120](https://github.com/LibraryOfCongress/api.congress.gov/issues/120) and [issue #125](https://github.com/LibraryOfCongress/api.congress.gov/issues/125). 
 # UPCOMING September 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/16)
 **Expected production release date:** September 18, 2023
 ## Change #1 
@@ -8,13 +22,13 @@ A bug related to formerly reserved bills titles and actions will be investigated
 ### Impacted endpoint: bill/{congress}
 A bug in bill/{congress} endpoint will be investigated and fixed. Currently, users are having issues with returning results in the /bill/{congress} API when filtering by `<fromDateTime>` and `<toDateTime>`. This change is related to [issue #111](https://github.com/LibraryOfCongress/api.congress.gov/issues/111).
 ## Change #3
-### Impacted endpoints: /committee, /committee/{chamber}, /committee/{congress}, /committee/{congress}/{chamber}, /committee/{chamber}/{committeeCode}, /committee/{chamber}/{committeeCode}/bills, /committee/{chamber}/{committeeCode}/reports, /committee/{chamber}/{committeeCode}/nominations, /committee/{chamber}/{committeeCode}/house-communication, /committee/{chamber}/{committeeCode}/senate-communication
+##### Impacted endpoints: /committee, /committee/{chamber}, /committee/{congress}, /committee/{congress}/{chamber}, /committee/{chamber}/{committeeCode}, /committee/{chamber}/{committeeCode}/bills, /committee/{chamber}/{committeeCode}/reports, /committee/{chamber}/{committeeCode}/nominations, /committee/{chamber}/{committeeCode}/house-communication, /committee/{chamber}/{committeeCode}/senate-communication
 Committees will be adjusted and updated in the 118th Congress so that `<isCurrent>` values reflect current, existing committees and commmittees that are no longer current as of the 118th Congress. This work is related to [issue #95](https://github.com/LibraryOfCongress/api.congress.gov/issues/95). 
 ## Change #4
 ### Impacted endpoint: /house-communication/{congress}/{communicationType}/communicationNumber
 In response to user feedback, the house-communication endpoint will be fixed so that certain communications no longer return a "list index out of range (IndexError)" error message. This is related to [issue #121](https://github.com/LibraryOfCongress/api.congress.gov/issues/121). 
 ## Change #5 
-### Impacted endpoints: /nomination, /nomination/{congress}, /nomination/{congress}/{nominationNumber}, /nomination/{congress}/{nominationNumber}/{ordinal}, /nomination/{congress}/{nominationNumber}/actions, /nomination/{congress}/{nominationNumber}/committees, /nomination/{congress}/{nominationNumber}/hearings
+##### Impacted endpoints: /nomination, /nomination/{congress}, /nomination/{congress}/{nominationNumber}, /nomination/{congress}/{nominationNumber}/{ordinal}, /nomination/{congress}/{nominationNumber}/actions, /nomination/{congress}/{nominationNumber}/committees, /nomination/{congress}/{nominationNumber}/hearings
 The API code will be reviewed to ensure that we are using the nomination's entityUpdateDate and not just its updateDate (which will only capture the nomination level metadata changes). 
 ## Change #6
 ### Impacted endpoints: /hearing, /hearing/{congress}, /hearing{congress}/{chamber}, /hearing{congress}/{chamber}/{jacketNumber}
