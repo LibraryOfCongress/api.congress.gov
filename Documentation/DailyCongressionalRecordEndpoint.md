@@ -39,15 +39,15 @@ Parent container for congressional record issues. A `<dailyCongressionalRecord>`
     - `<UpdateDate>` 
        - The date that the daily congressional record was updated.
       
-  ### Item Level
+### Item Level
 
 `<api-root>`
 
-The `<api-root>` is only present in the XML format.
+ The `<api-root>` is only present in the XML format.
 
-`<issue>`
+ `<issue>`
 
-Parent container for the daily congressional record issues. An `<issue>` element may include the following children:
+ Parent container for the daily congressional record issues. An `<issue>` element may include the following children:
 
    - `<issueNumber>`
       - The daily congressional record's issue number.
@@ -105,15 +105,15 @@ Parent container for the daily congressional record issues. An `<issue>` element
       - `<URL> `
          - The daily Congressional Record's URL for articles. 
   
-  ### Articles Sub-Level
+### Articles Sub-Level
 
   `<api-root>`
 
-The `<api-root>` is only present in the XML format.
+  The `<api-root>` is only present in the XML format.
 
-`<articles>`
+ `<articles>`
 
-Parent container for the daily congressional record articles. An `<articles>` element may include the following children:
+ Parent container for the daily congressional record articles. An `<articles>` element may include the following children:
 
    - `<section>`
       - The container for articles in a section. A `<section>` container may include: 
