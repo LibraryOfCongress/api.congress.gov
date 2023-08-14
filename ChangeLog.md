@@ -34,7 +34,7 @@ The API code will be reviewed to ensure that we are using the nomination's entit
 ### Impacted endpoints: /hearing, /hearing/{congress}, /hearing{congress}/{chamber}, /hearing{congress}/{chamber}/{jacketNumber}
 In the hearings API, at hearing items, a referrer URL element will be added to the associated committee meeting item in the API (if available). A `<url>` element will be added, when applicable, under the `<associatedMeeting>` container element.
 # Upcoming August 2023, Part 2
-** Expected production release date:** August 28. 2023
+**Expected production release date:** August 28. 2023
 ## Change #1
 ### Impacted endpoint: bound-congressional-record
 Endpoints will be created for the bound Congressional Record. The `<bound-congressional-record>` endpoint will consist of a list level and a detail page. At the list level (<https://api.congress.gov/v3/bound-congressional-record>);  filtering by year (<https://api.congress.gov/v3/bound-congressional-record/{year}>) and by year and month (<https://api.congress.gov/v3/bound-congressional-record/{year}/{month}>) will be allowed. Data elements at the list level will include: date, volume number, congress, session number, and update date. 
