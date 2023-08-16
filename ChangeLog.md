@@ -10,9 +10,6 @@ Committee meeting events with no location (e.g., 'Data will display when it beco
 ## Change #3
 ### Impacted endpoints: all committee endpoints 
 Certain offset values are returning error messages in the committee endpoint. This error message will be investigated and fixed. This change is related to [issue #116](https://github.com/LibraryOfCongress/api.congress.gov/issues/116). 
-## Change #4 
-### Impacted endpoint: /member
-In the member list API endpoint, an empty object is being returned in both the JSON and XML formats. This empty object will be removed. This change is related to [issue #120](https://github.com/LibraryOfCongress/api.congress.gov/issues/120) and [issue #125](https://github.com/LibraryOfCongress/api.congress.gov/issues/125).
 # UPCOMING September 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/16)
 **Expected production release date:** September 18, 2023
 ## Change #1 
