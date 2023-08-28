@@ -2,7 +2,7 @@
 
 ## Coverage
 
-Coverage information for congressional record data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates). Note that while the Bound Congressional Record is available in Congress.gov, it is not yet available in the API. Read more about Congressional Record data at [About the Congressional Record](https://www.congress.gov/help/congressional-record) on Congress.gov.
+Coverage information for Congressional Record data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates). Note that while the Bound Congressional Record is available in Congress.gov, it is not yet available in the API. Read more about Congressional Record data at [About the Congressional Record](https://www.congress.gov/help/congressional-record) on Congress.gov.
 
 ## OpenAPI Specification
 
@@ -14,7 +14,7 @@ The section below details available element names, their description, and possib
 
 ### List Level
 
-Note that congressional record items can be filtered down to a specific year, month, or date by adding ?y=YYYY&m=MM&d=DD to the request URL (e.g., <https://api.congress.gov/v3/congressional-record/?y=2022&m=8&d=16&api_key>=)
+Note that Congressional Record items can be filtered down to a specific year, month, or date by adding ?y=YYYY&m=MM&d=DD to the request URL (e.g., <https://api.congress.gov/v3/congressional-record/?y=2022&m=8&d=16&api_key>=)
 
 `<api-root>`
 
@@ -22,17 +22,17 @@ The `<api-root>` is only present in the XML format.
 
 `<Results>`
 
-Parent container for congressional record issues. A `<Results>` element may include the following children:
+Parent container for Congressional Record issues. A `<Results>` element may include the following children:
 
 - `<Issues>`
-  - Container for congressional record issues. An `<Issues>` element may include the following children:
+  - Container for Congressional Record issues. An `<Issues>` element may include the following children:
     - `<item>`
-      - Container for an individual congressional record issue. An `<item>` element is repeatable and may include the following children:
+      - Container for an individual COngressional Record issue. An `<item>` element is repeatable and may include the following children:
         - `<Congress>` (e.g., 117)
-          - The congress associated with the congressional record issue.
+          - The Congress associated with the Congressional Record issue.
           - View the [field values list of Congresses](https://www.congress.gov/help/field-values/congresses) on Congress.gov. Read more [about Congresses](https://www.congress.gov/help/legislative-glossary#glossary_congress) on Congress.gov.
         - `<Issue>` (e.g., 136)
-          - The congressional record's issue number.
+          - The Congressional Records's issue number.
         - `<Links>`
           - Container for links to the individual sections of the issue. A `<Links>` element may include the following children:
             - `<Digest>`
