@@ -19,7 +19,7 @@ Note that bound Congressional Record items can be filtered down to volume by add
 Examples of these searches include:
 - /{year}: <https://api.congress.gov/v3/bound-congressional-record/1990?api_key=[INSERT_KEY]>
 - /{year}/{month}: <https://api.congress.gov/v3/bound-congressional-record/1990/05?api_key=[INSERT_KEY]>
-- /{year}/{month}/{day}: <https://api.congress.gov/v3/bound-congressional-record/1990/05/20?api_key=[INSERT_KEY]>
+- /{year}/{month}/{day}: <https://api.congress.gov/v3/bound-congressional-record/1990/05/21?api_key=[INSERT_KEY]>
 
 `<api-root>`
 
