@@ -14,7 +14,7 @@ The section below details available element names, their description, and possib
 
 ### List Level
 
-Note that daily Congressional Record items can be filtered down to volume by adding /{year}?api_key=[INSERT_KEY]  (e.g.,<https://api.congress.gov/v3/bound-congressional-record/166?api_key=[INSERT_KEY]>), /{volumeNumber}/{issueNumber} (e.g., e.g.,<https://api.congress.gov/v3/daily-congressional-record/166/23?api_key=[INSERT_KEY]>), or  /{volumeNumber}/{issueNumber}/articles (e.g.,<https://api.congress.gov/v3/daily-congressional-record/167/21?api_key=[INSERT_KEY]>) to your search. 
+Note that daily Congressional Record items can be filtered down to volume by adding /{year}?api_key=[INSERT_KEY], /{volumeNumber}/{issueNumber}?api_key=[INSERT_KEY], or /{volumeNumber}/{issueNumber}/articles?api_key=[INSERT_KEY] (e.g.,<https://api.congress.gov/v3/daily-congressional-record/167/21?api_key=[INSERT_KEY]>) to your search. 
 
 `<api-root>`
 
