@@ -25,19 +25,19 @@ The `<api-root>` is only present in the XML format.
 Parent container for congressional record issues. A `<dailyCongressionalRecord>` element may include the following children:
 
 - `<Issue>`
-  - Container for a daily congressional record issue. An `<Issue>` element may include the following children:
+  - Container for a daily Congressional Record issue. An `<Issue>` element may include the following children:
     - `<issueNumber>`
-      - The daily congressional record's issue number.
+      - The daily Congressional Record's issue number.
     - `<volumeNumber>`
-      - The daily congressional record's volume number. 
+      - The daily Congressional Record's volume number. 
     - `<congress>`
-      - The congress associated with the daily congressional record issue.
+      - The Congress associated with the daily congressional record issue.
     - `<SessionNumber>`
       - The session number. Possible values are "1" and "2". 
     - `<URL>` 
-      - The URL to the entire issue of the daily congressional record. 
+      - The URL to the entire issue of the daily Congressional Record. 
     - `<UpdateDate>` 
-       - The date that the daily congressional record was updated.
+       - The date that the daily Congressional Record was updated.
       
 ### Item Level
 
@@ -47,22 +47,22 @@ Parent container for congressional record issues. A `<dailyCongressionalRecord>`
 
  `<issue>`
 
- Parent container for the daily congressional record issues. An `<issue>` element may include the following children:
+ Parent container for the daily Congressional Record issues. An `<issue>` element may include the following children:
 
    - `<issueNumber>`
-      - The daily congressional record's issue number.
+      - The daily Congressional Record's issue number.
    - `<volumeNumber>`
-      - The daily congressional record's volume number.
+      - The daily Congressional Record's volume number.
    - `<issueNumber>`
-      - The daily congressional record's issue number. 
+      - The daily Congressional Record's issue number. 
    - `<congress>`
-      - The congress associated with the daily congressional record issue.
+      - The Congress associated with the daily Congressional Record issue.
    - `<SessionNumber>`
       - The session number. Possible values are "1" and "2". 
    - `<URL>` 
-      - The URL to the entire issue of the daily congressional record. 
+      - The URL to the entire issue of the daily Congressional Record. 
     - `<UpdateDate>` 
-       - The date that the daily congressional record was updated.
+       - The date that the daily Congressional Record was updated.
 
 `<fullIssue>`
 
@@ -99,7 +99,7 @@ Parent container for congressional record issues. A `<dailyCongressionalRecord>`
 - `<text>`
       - Container for section textx. A `<text>` element may include the following children:
   - `<articles>`
-      - Container for Container for articles in the congressional record issue. An `<articles>` element may include the following children:
+      - Container for Container for articles in the Congressional Record issue. An `<articles>` element may include the following children:
       - `<count>`
          - The number of articles in the daily Congressional Record issue.
       - `<URL> `
@@ -113,7 +113,7 @@ Parent container for congressional record issues. A `<dailyCongressionalRecord>`
 
  `<articles>`
 
- Parent container for the daily congressional record articles. An `<articles>` element may include the following children:
+ Parent container for the daily Congressional Record articles. An `<articles>` element may include the following children:
 
    - `<section>`
       - The container for articles in a section. A `<section>` container may include: 
@@ -136,7 +136,7 @@ Parent container for congressional record issues. A `<dailyCongressionalRecord>`
         - `<item>`
            - Container for an article text item. An `<item>` element may include the following children:
            - `<type>`
-              - The type of document that the daily Congressional article is (e.g., PDF).
+              - The type of document that the daily Congressional Record article is (e.g., PDF).
            - `<URL>`
               - The article URL.
      
