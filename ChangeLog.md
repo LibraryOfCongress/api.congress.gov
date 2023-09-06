@@ -4,10 +4,10 @@ This change log will contain information on updates to the Congress.gov API, the
 ## Change #1 
 ### Impacted endpoints: /amendment/{congress}/{amendmentType}/{amendmentNumber}/actions
 Developers will investigate and fix actions in the /amendment/{congress}/{amendmentType}/{amendmentNumber}/actions endpoint that have just an `<actionDate>` field with no additional elements or additional metadata present. Additional elements, such as `<text>` and `<type>`,  will be added for context. This change is related to [issue #109](https://github.com/LibraryOfCongress/api.congress.gov/issues/109). 
-## Change #3
+## Change #2
 ### Impacted endpoint: /committee-meeting/{congress}/{chamber}/{eventId}
 Updated URLs will be added to committee-meeting/{congress}/{chamber}/{eventId} endpoint to ensure that the correct committee is appearing in the URL. For example, for the House Committee on Agriculture committee, "house-agriculture" will display. 
-## Change #4
+## Change #3
 ### Impacted endpoint: /nomination list level endpoints
 The nominations list API returns updateDate in the following format: `2023-07-14 10:14:22+00:00`. This format differs from the nomination details API which returns in the following format `2023-07-14T10:14:22Z`.
 The following format will be used throughout the nominations API endpoint at both the list and detail level: `YYYY-MM-DDT00:00:00Z`. This relates to [issue #113](https://github.com/LibraryOfCongress/api.congress.gov/issues/113).
