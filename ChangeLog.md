@@ -36,7 +36,6 @@ In response to user feedback, the house-communication endpoint will be fixed so 
 Load tests will be conducted to investigate if it is possible to increase the maximum number of calls per hour in the API. 
 #### This work is ongoing from a previous sprint.
 #  September 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/16)
-**Expected production release date:** September 18, 2023 
 ## Change #1
 ### Impacted endpoints: /hearing, /hearing/{congress}, /hearing{congress}/{chamber}, /hearing{congress}/{chamber}/{jacketNumber}
 In the hearings API, at hearing items, a referrer URL element will be added to the associated committee meeting item in the API (if available). A `<url>` element will be added, when applicable, under the `<associatedMeeting>` container element.
