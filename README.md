@@ -2,9 +2,9 @@
 
 ## Introduction
 
-The beta [Congress.gov Application Programming Interface (API)](https://api.congress.gov/)  provides a method for Congress and the public to view, retrieve, and re-use machine-readable data from collections available on Congress.gov. This repository contains information on accessing and using the beta Congress.gov API, as well as documentation on available endpoints.
+The  [Congress.gov Application Programming Interface (API)](https://api.congress.gov/)  provides a method for Congress and the public to view, retrieve, and re-use machine-readable data from collections available on Congress.gov. This repository contains information on accessing and using the Congress.gov API, as well as documentation on available endpoints.
 
-Within the beta Congress.gov API, responses are returned in XML or JSON formats. An `<api-root>` element will be visible for responses returned in XML.
+Within the Congress.gov API, responses are returned in XML or JSON formats. An `<api-root>` element will be visible for responses returned in XML.
 
 For every request, three elements are returned:
 
