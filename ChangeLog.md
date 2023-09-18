@@ -31,7 +31,11 @@ A bug in bill/{congress} endpoint will be investigated and fixed. Currently, use
 ## Change #6
 ### Impacted endpoint: /house-communication/{congress}/{communicationType}/communicationNumber
 In response to user feedback, the house-communication endpoint will be fixed so that certain communications no longer return a "list index out of range (IndexError)" error message. This is related to [issue #121](https://github.com/LibraryOfCongress/api.congress.gov/issues/121).
-# UPCOMING September 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/16)
+## Change #7
+### Impacted endpoints: ALL
+Load tests will be conducted to investigate if it is possible to increase the maximum number of calls per hour in the API. 
+#### This work is ongoing from a previous sprint.
+#  September 2023 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/16)
 **Expected production release date:** September 18, 2023 
 ## Change #1
 ### Impacted endpoints: /hearing, /hearing/{congress}, /hearing{congress}/{chamber}, /hearing{congress}/{chamber}/{jacketNumber}
@@ -39,9 +43,6 @@ In the hearings API, at hearing items, a referrer URL element will be added to t
 ## Change #2
 ### Impacted endpoints: all committee-meeting endpoints
 Committee meeting events with no location (e.g., 'Data will display when it becomes available') specified on Congress.gov (see below) are returning an error message in the API. This error message will be investigated and fixed so that committee meeting events without location data still return relevant data. This change is related to [issue #122](https://github.com/LibraryOfCongress/api.congress.gov/issues/122).
-## Change #3
-### Impacted endpoints: ALL
-Load tests will be conducted to investigate if it is possible to increase the maximum number of calls per hour in the API. 
 # COMPLETED August 2023, Part 2
 ## Change #1
 ### Impacted endpoint: bound-congressional-record
