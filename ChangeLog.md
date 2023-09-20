@@ -46,7 +46,7 @@ In the hearings API, at hearing items, a referrer URL element will be added to t
 ### Impacted endpoints: all committee-meeting endpoints
 Committee meeting events with no location (e.g., 'Data will display when it becomes available') specified on Congress.gov (see below) are returning an error message in the API. This error message will be investigated and fixed so that committee meeting events without location data still return relevant data. This change is related to [issue #122](https://github.com/LibraryOfCongress/api.congress.gov/issues/122).
 ## Change #3
-### Impacted endpoints: all endpoints in the congress.gov APPI
+### Impacted endpoints: all endpoints in the congress.gov API
 Lower case parameters (e.g., "hr") have been the default in the API and the documentation reflects this on api.congress.gov. However, some endpoints <b>unofficially</b> allowed for upper case parameters (e.g., "HR"). As a result of upgrades in our web framework, which is the underlying library that we use to implement the API, this is no longer available. Please use lower case parameters. For example, in this search (https://api.congress.gov/v3/bill/117/hr/3076?api_key=[INSERT_KEY]), "hr" is lower case.    
 # COMPLETED August 2023, Part 2
 ## Change #1
