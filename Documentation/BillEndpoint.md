@@ -53,7 +53,7 @@ Parent container for bills and resolutions. A `<bills>` element may include the 
         - `<actionTime>`
           - The time of the latest action taken on the bill or resolution. Certain actions taken by the House contain this element.
     - `<updateDate>` (e.g. 2022-05-05)
-      - The date of update on Congress.gov. This update date does not include updates to bill text.
+      - The date of update on Congress.gov. This update date does not include updates to bill text. The updateDate is the date of the last update received for the legislative entity .  It’s not a date corresponding to the legislative date or legislative action date.  
 
 ### Item Level
 
