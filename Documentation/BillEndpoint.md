@@ -53,7 +53,7 @@ Parent container for bills and resolutions. A `<bills>` element may include the 
         - `<actionTime>`
           - The time of the latest action taken on the bill or resolution. Certain actions taken by the House contain this element.
     - `<updateDate>` (e.g. 2022-05-05)
-      - The date of update on Congress.gov. This update date does not include updates to bill text. The updateDate is the date of the last update received for the legislative entity .  It’s not a date corresponding to the legislative date or legislative action date.  
+      - The date of update on Congress.gov. This update date does not include updates to bill text. The `<updateDate>` is the date of the last update received for the legislative entity .  It’s not a date corresponding to the legislative date or legislative action date.  
 
 ### Item Level
 
@@ -68,9 +68,9 @@ Parent container for a bill or resolution. A `<bill>` element may include the fo
 - `<number>` (e.g. 3076)
   - The assigned bill or resolution number.
 - `<updateDate>` (e.g. 2022-05-05)
-  - The date of update on Congress.gov. This update date does not include updates to bill text.
+  - The date of update on Congress.gov. This update date does not include updates to bill text. The `<updateDate>` is the date of the last update received for the legislative entity .  It’s not a date corresponding to the legislative date or legislative action date.  
 - `<updateDateIncludingText>` (e.g. 2022-09-29T03:27:05Z)
-  - The date of update on Congress.gov, including if the update was to bill text.
+  - The date of update on Congress.gov, including if the update was to bill text.The `<updateDate>` is the date of the last update received for the legislative entity .  It’s not a date corresponding to the legislative date or legislative action date.  
 - `<originChamber>` (e.g. House)
   - The chamber of origin where a bill or resolution was introduced or submitted.
   - Possible values are "House" and "Senate".
@@ -470,7 +470,7 @@ A `<summaries>` element may include the following children:
     - `<actionDesc>` (e.g. Introduced in House)
       - The description of the action associated with the bill summary.
     - `<updateDate>` (e.g. 2021-06-07T20:24:30Z)
-      - The update date for the bill summary on Congress.gov. This may be the date the summary was published or re-published.
+      - The update date for the bill summary on Congress.gov. This may be the date the summary was published or re-published. The `<updateDate>` is the date of the last update received for the legislative entity .  It’s not a date corresponding to the legislative date or legislative action date.  
     - `<text>` (e.g. `<![CDATA[ <p><strong>Postal Service Reform Act of 2021</strong></p> <p>This bill addresses the finances and operations of the U.S. Postal Service (USPS).</p> <p>The bill requires the Office of Personnel Management to establish the Postal Service Health Benefits Program for USPS employees and retirees and provides for coordinated enrollment of retirees under this program and Medicare. The bill repeals the requirement that the USPS annually prepay future retirement health benefits.</p> <p>Additionally, the USPS may establish a program to enter into agreements with an agency of any state government, local government, or tribal government, and with other government agencies, to provide certain nonpostal products and services that reasonably contribute to the costs of the USPS and meet other specified criteria.</p> <p>The USPS must develop and maintain a publicly available dashboard to track service performance and must report regularly on its operations and financial condition.</p> <p>The Postal Regulatory Commission must annually submit to the USPS a budget of its expenses. It must also conduct a study to identify the causes and effects of postal inefficiencies relating to flats (e.g., large envelopes).</p> <p>The USPS Office of Inspector General shall perform oversight of the Postal Regulatory Commission.</p> <ul> <ul> </ul> </ul> ]]>`)
       - The text of the bill summary.
       - Note that the text is encased in CDATA and contains HTML codes (e.g. `<p>`). The HTML codes may not be valid (see [#2](https://github.com/LibraryOfCongress/api.congress.gov/issues/2)); efforts are underway to improve the validity of the HTML codes.
