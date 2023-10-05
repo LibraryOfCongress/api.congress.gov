@@ -14,9 +14,6 @@ The following format will be used throughout the nominations API endpoint at bot
 ## Change #4
 ##### Impacted endpoints: /committee, /committee/{chamber}, /committee/{congress}, /committee/{congress}/{chamber}, /committee/{chamber}/{committeeCode}, /committee/{chamber}/{committeeCode}/bills, /committee/{chamber}/{committeeCode}/reports, /committee/{chamber}/{committeeCode}/nominations, /committee/{chamber}/{committeeCode}/house-communication, /committee/{chamber}/{committeeCode}/senate-communication
 Committees will be adjusted and updated in the 118th Congress so that `<isCurrent>` values reflect current, existing committees and commmittees that are no longer current as of the 118th Congress. This work is related to [issue #95](https://github.com/LibraryOfCongress/api.congress.gov/issues/95).
-## Change #5
-### Impacted endpoint: all member endpoints
-The API code will be investigated so that members who have resigned but were members of the 118th Congress no longer have the `currentMember: true` value in their API call. 
 # UPCOMING October 2023, Part 1| [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/17)
 **Expected production release date:** October 10, 2023
 ## Change #1
