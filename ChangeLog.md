@@ -3,7 +3,7 @@ This change log will contain information on updates to the Congress.gov API, the
 **Expected Production Release Date: December 4, 2023**
 ## Change #1
 ### Impacted endpoints: all /amendment endpoints
-The amendments endpoint will be investigated so that the updateDate element match between the detail and list levels. This is related to [issue #112].
+The amendments endpoint will be investigated so that the updateDate element match between the detail and list levels. This is related to [issue #112](https://github.com/LibraryOfCongress/api.congress.gov/issues/112).
 ## Change #2
 ### Impacted endpoints: all /committee-meeting endpoints
 URLs in the /committee-meeting endpoint should have the appropraite committee withing the URL. The URLs will be investigated and corrected so that the correct committee is labeled within the URL. For example, URLs for the House Agriculture committee should have "house-agriculture."
