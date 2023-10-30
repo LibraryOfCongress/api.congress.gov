@@ -10,6 +10,10 @@ URLs in the /committee-meeting endpoint should have the appropraite committee wi
 ## Change #3
 ### Impacted endpoints: all /member endpoints
 Developers will investigate and fix the API code so that members who have resigned but were members of the 118th Congress no longer have the `<currentMember: true>` value in their API call. 
+## Change #4
+### Impacted endpoint: /amendment/{congress}/{amendmentType}/{amendmentNumber}/text
+For the 117th Congress and onwards, a new amendment text endpoint will be made available to API users. This change is related to [issue #18](https://github.com/LibraryOfCongress/api.congress.gov/issues/18).
+### Impacted endpoint: 
 # UPCOMING November 2023
 **Expected Production Release Date: November 6, 2023**
 ## Change #1
