@@ -20,7 +20,7 @@ Load tests will be conducted to investigate if it is possible to increase the ma
 ### Impacted endpoint: /bound-congressional-record
 Large bound Congressional Record PDFs will be investigated to see how they can be incorporated in the /bound-congressional-record endpoint. 
 #### This work is ongoing from a previous sprint.
-#  October 2023, Part 2| [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/18)
+# COMPLETED October 2023, Part 2| [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/18)
 ## Change #1 
 ### Impacted endpoints: /amendment/{congress}/{amendmentType}/{amendmentNumber}/actions
 Developers investigated and fixed actions in the /amendment/{congress}/{amendmentType}/{amendmentNumber}/actions endpoint that have just an `<actionDate>` field with no additional elements or additional metadata present. Additional elements, such as `<text>` and `<type>`, weree added for context. This change is related to [issue #109](https://github.com/LibraryOfCongress/api.congress.gov/issues/109). 
