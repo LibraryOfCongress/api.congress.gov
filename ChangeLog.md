@@ -1,23 +1,35 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
-# UPCOMING October 2023, Part 2| [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/18)
-**Expected production release date:** October 30, 2023
-## Change #1 
-### Impacted endpoints: /amendment/{congress}/{amendmentType}/{amendmentNumber}/actions
-Developers will investigate and fix actions in the /amendment/{congress}/{amendmentType}/{amendmentNumber}/actions endpoint that have just an `<actionDate>` field with no additional elements or additional metadata present. Additional elements, such as `<text>` and `<type>`,  will be added for context. This change is related to [issue #109](https://github.com/LibraryOfCongress/api.congress.gov/issues/109). 
+# UPCOMING December 2023| [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/20)
+**Expected Production Release Date: December 4, 2023**
+## Change #1
+### Impacted endpoints: all /amendment endpoints
+The amendments endpoint will be investigated so that the updateDate element match between the detail and list levels. This is related to [issue #112].
 ## Change #2
-### Impacted endpoint: /nomination list level endpoints
-The nominations list API returns updateDate in the following format: `2023-07-14 10:14:22+00:00`. This format differs from the nomination details API which returns in the following format `2023-07-14T10:14:22Z`.
-The following format will be used throughout the nominations API endpoint at both the list and detail level: `YYYY-MM-DDT00:00:00Z`. This relates to [issue #113](https://github.com/LibraryOfCongress/api.congress.gov/issues/113).
+### Impacted endpoints: all /committee-meeting endpoints
+URLs in the /committee-meeting endpoint should have the appropraite committee withing the URL. The URLs will be investigated and corrected so that the correct committee is labeled within the URL. For example, URLs for the House Agriculture committee should have "house-agriculture."
 ## Change #3
-##### Impacted endpoints: /committee, /committee/{chamber}, /committee/{congress}, /committee/{congress}/{chamber}, /committee/{chamber}/{committeeCode}, /committee/{chamber}/{committeeCode}/bills, /committee/{chamber}/{committeeCode}/reports, /committee/{chamber}/{committeeCode}/nominations, /committee/{chamber}/{committeeCode}/house-communication, /committee/{chamber}/{committeeCode}/senate-communication
-Committees will be adjusted and updated in the 118th Congress so that `<isCurrent>` values reflect current, existing committees and commmittees that are no longer current as of the 118th Congress. This work is related to [issue #95](https://github.com/LibraryOfCongress/api.congress.gov/issues/95).
-## Change #4
+### Impacted endpoints: all /member endpoints
+Developers will investigate and fix the API code so that members who have resigned but were members of the 118th Congress no longer have the `<currentMember: true>` value in their API call. 
+# UPCOMING November 2023
+**Expected Production Release Date: November 6, 2023**
+## Change #1
 ### Impacted endpoints: ALL
 Load tests will be conducted to investigate if it is possible to increase the maximum number of calls per hour in the API. 
 #### This work is ongoing from a previous sprint.
-## Change #5
+## Change #2
 ### Impacted endpoint: /bound-congressional-record
-Large bound Congressional Record PDFs will be investigated to see how they can be incorporated in the /bound-congressional-record endpoint.  
+Large bound Congressional Record PDFs will be investigated to see how they can be incorporated in the /bound-congressional-record endpoint. 
+#### This work is ongoing from a previous sprint.
+#  October 2023, Part 2| [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/18)
+## Change #1 
+### Impacted endpoints: /amendment/{congress}/{amendmentType}/{amendmentNumber}/actions
+Developers investigated and fixed actions in the /amendment/{congress}/{amendmentType}/{amendmentNumber}/actions endpoint that have just an `<actionDate>` field with no additional elements or additional metadata present. Additional elements, such as `<text>` and `<type>`, weree added for context. This change is related to [issue #109](https://github.com/LibraryOfCongress/api.congress.gov/issues/109). 
+## Change #2
+### Impacted endpoint: /nomination list level endpoints
+The nominations list API returned the `<updateDate>` element in the following format: `2023-07-14 10:14:22+00:00`. This format differed from the nomination details API which returns in the following format `2023-07-14T10:14:22Z`. The following format is now used throughout the nominations API endpoint at both the list and detail level: `YYYY-MM-DDT00:00:00Z`. This relates to [issue #113](https://github.com/LibraryOfCongress/api.congress.gov/issues/113).
+## Change #3
+##### Impacted endpoints: /committee, /committee/{chamber}, /committee/{congress}, /committee/{congress}/{chamber}, /committee/{chamber}/{committeeCode}, /committee/{chamber}/{committeeCode}/bills, /committee/{chamber}/{committeeCode}/reports, /committee/{chamber}/{committeeCode}/nominations, /committee/{chamber}/{committeeCode}/house-communication, /committee/{chamber}/{committeeCode}/senate-communication
+Committees were adjusted and updated in the 118th Congress so that `<isCurrent>` values reflect current, existing committees. This work is related to [issue #95](https://github.com/LibraryOfCongress/api.congress.gov/issues/95).
 # COMPLETED October 2023, Part 1| [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/17)
 ## Change #1
 ### Impacted endpoints: all committee endpoints 
