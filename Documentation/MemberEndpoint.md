@@ -2,7 +2,7 @@
 
 ## Coverage
 
-Coverage information for member data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates). Read more about member data at [About Congressional Member Profiles](https://www.congress.gov/help/members) on Congress.gov.
+Coverage information for member data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates). Read more about member data at [About Congressional Member Profiles](https://www.congress.gov/help/members) on Congress.gov. Vacancies and changes to members of the House of Representatives can be found at [current vacancies page](https://clerk.house.gov/Members#Vacancies) on the Office of the Clerk website. 
 
 ## OpenAPI Specification
 
