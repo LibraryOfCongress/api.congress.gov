@@ -1,16 +1,21 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
-# UPCOMING January 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/21)
-**Expected Production Release Date: January 2, 2024**
+# UPCOMING January 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/22)
+**Expected Production Release Date: January 16, 2024**
 ## Change #1
 ### Impacted endpoint: bill/:congress/:billType/:billNumber/cosponsors
-For bills in the 1973-1980 (93rd, 94th, 95th, and 96th Congresses) bills, for which we do not have cosponsorship dates, the error message that appears in the API will be fixed and corrected so that accurate cosponsor data is returned. 
+For bills in the 1973-1980 (93rd, 94th, 95th, and 96th Congresses) bills, for which we do not have cosponsorship dates, the error message that appears in the API will be fixed and corrected so that accurate cosponsor data is returned.
 ## Change #2
+### Impacted endpoint: N/A
+The API's swagger definition file will be added to the repository which will allow users to streamline the process of generating a Typescript API service using tools like NSwag.
+# UPCOMING January 2024, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/21)
+**Expected Production Release Date: January 2, 2024** 
+## Change #1
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}
 The `<originChamberCode>` element will be added to the detail level in the bill endpoint. 
-## Change #3
+## Change #2
 ### Impacted endpoint: /committee-meeting/{congress}/{chamber}/{eventID}
 Error messages associated with specific event IDs in the committee-meeting endpoint will be investigated in fixed. This is related to issues https://github.com/LibraryOfCongress/api.congress.gov/issues/129 and https://github.com/LibraryOfCongress/api.congress.gov/issues/173.
-## Change #4
+## Change #3
 ### Impacted endpoint: /treaty
 Several elements at the list level within the treaty endpoint will be renamed. These include: 
 1. `<congress>` to be `<congressReceived>`
@@ -37,7 +42,7 @@ These elements will be added:
 4. `<titles>` container element under `<treaty>`, which will contain  an `<item>` container with a `<title>` element and `<titleType>` element.
 
 Empty elements will be suppressed.
-## Change #5
+## Change #4
 ### Impacted endpoint: all /hearing endpoints
 The hearing API endpoints returns the `<updateDate>` element in the following format: `2023-07-14 10:14:22+00:00`. This format differs from other endpoints which returns in the following format `2023-07-14T10:14:22Z`. The following format is will be used throughout the hearings API endpoint at both the list and detail level: `YYYY-MM-DDT00:00:00Z`. 
 # UPCOMING December 2023| [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/20)
