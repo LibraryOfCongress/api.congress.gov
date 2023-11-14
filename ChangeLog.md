@@ -36,8 +36,8 @@ Several elements at the detail level within the treaty endpoint will be renamed.
 These elements will be added:
 1. A `<countriesParties>` container element (under `<treaty>`).
 2. Within each new `<countriesParties>` container element, an `<item>` container will be added. In the `<item>` container a `<name>` element will be present with the treaty partner name.
-3. `<indexTerms>` container element with an `<item>` for each item. In each `<item>` container, `<name>` element will be added for each index term.
-4. `<titles>` container element under `<treaty>` which will contain  an `<item>` container with a `<title>` element and `<titleType>` element.
+3. `<indexTerms>` container element with an `<item>` for each item. In each `<item>` container, a `<name>` element will be added for each index term.
+4. `<titles>` container element under `<treaty>`, which will contain  an `<item>` container with a `<title>` element and `<titleType>` element.
 
 Empty elements will be suppressed.
 ## Change #6
