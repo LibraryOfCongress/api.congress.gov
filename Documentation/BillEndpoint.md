@@ -8,6 +8,10 @@ Coverage information for bill data in the API can be found at [Coverage Dates fo
 
 View OpenAPI Specification on the bill API, supported endpoints, and available parameters at [https://api.congress.gov](https://api.congress.gov/#/bill/bill_list_all).
 
+## A Note on Bill Numbers
+
+Records are also available for some bills and joint resolutions from 1799 (6th Congress) to 1873 (42nd Congress); please reference Legislation from the 6th to 42nd Congresses (1799-1873) for more information about this collection. While these records do have text, titles, and some actions, they do not have sponsors, cosponsors, summaries, amendments, committees, and related bill information. Texts for these records are not searchable on Congress.gov, however, you may search for these bills and joint resolutions using keywords in the title or by searching using the bill number citation. Projects are underway to add more metadata to these records. Historical bills and bill text predate authenticated digital publishing. Additionally it is important to note that bills from 1799 (6th Congress) to 1817 (14th Congress) were not numbered and appear as such on Congress.gov. That means that there is not an authoritative bill number associated with these bills and the number that appears in the URL is not a bill number. Consequently, we are still looking for ways to improve the incorporation of measures from 1799 to 1873 into the Congress.gov API. This is a work in progress and a long term goal, which means that returning results from these earlier Congresses might yield results that are different from more recent Congresses, such as those from 1973 to the present. We encourage users to reach out should they have any questions about this. 
+
 ## Elements and Descriptions
 
 The section below details available element names, their description, and possible values.
