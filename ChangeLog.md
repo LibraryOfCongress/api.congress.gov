@@ -6,21 +6,18 @@ This change log will contain information on updates to the Congress.gov API, the
 The amendments endpoint will be investigated so that the updateDate element match between the detail and list levels. This is related to [issue #112](https://github.com/LibraryOfCongress/api.congress.gov/issues/112).
 ## Change #2
 ### Impacted endpoints: all /committee-meeting endpoints
-URLs in the /committee-meeting endpoint should have the appropraite committee withing the URL. The URLs will be investigated and corrected so that the correct committee is labeled within the URL. For example, URLs for the House Agriculture committee should have "house-agriculture."
+URLs in the /committee-meeting endpoint should have the appropriate committee withing the URL. The URLs will be investigated and corrected so that the correct committee is labeled within the URL. For example, URLs for the House Agriculture committee should have "house-agriculture."
 ## Change #3
 ### Impacted endpoints: all /member endpoints
 Developers will investigate and fix the API code so that members who have resigned but were members of the 118th Congress no longer have the `<currentMember: true>` value in their API call. 
 ## Change #4
 ### Impacted endpoint: /amendment/{congress}/{amendmentType}/{amendmentNumber}/text
 For the 117th Congress and onwards, a new amendment text endpoint will be made available to API users. This change is related to [issue #18](https://github.com/LibraryOfCongress/api.congress.gov/issues/18).
-### Impacted endpoint: 
-# UPCOMING November 2023
-**Expected Production Release Date: November 6, 2023**
-## Change #1
+## Change #5
 ### Impacted endpoints: ALL
 Load tests will be conducted to investigate if it is possible to increase the maximum number of calls per hour in the API. 
 #### This work is ongoing from a previous sprint.
-## Change #2
+## Change #6
 ### Impacted endpoint: /bound-congressional-record
 Large bound Congressional Record PDFs will be investigated to see how they can be incorporated in the /bound-congressional-record endpoint. 
 #### This work is ongoing from a previous sprint.
