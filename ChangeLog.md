@@ -26,7 +26,7 @@ For Senate committee meeting video data, there will be two URLs in the API respo
 1. Senate.gov URL
 2. Congress.gov URL
    
-For House video data, there will be two URLs in the API response:
+For House of Representatives committee meeting video data, there will be two URLs in the API response:
 
 1. YouTube Video URL
 2. Congress.gov URL 
