@@ -3,10 +3,34 @@ This change log will contain information on updates to the Congress.gov API, the
 **Expected Production Release Date: January 16, 2024**
 ## Change #1
 ### Impacted endpoint: bill/:congress/:billType/:billNumber/cosponsors
-For bills in the 1973-1980 (93rd, 94th, 95th, and 96th Congresses) bills, for which we do not have cosponsorship dates, the error message that appears in the API will be fixed and corrected so that accurate cosponsor data is returned.
+For bills dated  1973-1980 (93rd, 94th, 95th, and 96th Congresses), for which we do not have cosponsorship dates, the error message that appears in the API will be fixed and corrected so that accurate cosponsor data is returned.
 ## Change #2
 ### Impacted endpoint: N/A
-The API's swagger definition file will be added to the repository which will allow users to streamline the process of generating a Typescript API service using tools like NSwag.
+The API's swagger definition file will be added to the repository which will allow users to streamline the process of generating a Typescript API service using tools like NSwag. [Issue #29](https://github.com/LibraryOfCongress/api.congress.gov/issues/29).
+## Change #3
+### Impacted endpoint: /treaty/{congress}/{treatyNumber}/committees
+An error message, which is occuring when calls are made to the /treaty/{congress}/{treatyNumber}/committees, wil be investigated and fixed. This is related to [Issue #60](https://github.com/LibraryOfCongress/api.congress.gov/issues/60).
+## Change #4
+### Impacted endpoint: all /treaty endpoints
+When requesting data related to a partioned treaty (e.g., TD 106-37A or TD 106-37B), the lower case suffix will be supported (e.g., 106-37a). This is related to [Issue #153](https://github.com/LibraryOfCongress/api.congress.gov/issues/153).
+## Change #5
+### Impacted endpoint: /member
+Congress.gov URLs are duplicating for certain members in the /member endpoint. This bug will be addressed and fixed.  This is related to [Issue #156](https://github.com/LibraryOfCongress/api.congress.gov/issues/156).
+## Change #6
+### Impacted endpoint: /member/L000174/cosponsored-legislation
+A bug that is impacting the return of results related to Senator Leahy's cosponsored legislation will be investigated and fixed. 
+## Change #6
+### Impacted endpoint: /committee-meeting/{congress}/{chamber}/{eventId}
+For Senate committee meeting video data, there will be two URLs in the API response:
+
+1. Senate.gov URL
+2. Congress.gov URL
+   
+For House video data, there will be two URLs in the API response:
+
+1. YouTube Video URL
+2. Congress.gov URL 
+
 # UPCOMING January 2024, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/21)
 **Expected Production Release Date: January 2, 2024** 
 ## Change #1
