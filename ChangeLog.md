@@ -12,7 +12,7 @@ The API's swagger definition file will be added to the repository which will all
 An error message, which is occuring when calls are made to the /treaty/{congress}/{treatyNumber}/committees, wil be investigated and fixed. This is related to [Issue #60](https://github.com/LibraryOfCongress/api.congress.gov/issues/60).
 ## Change #4
 ### Impacted endpoint: all /treaty endpoints
-When requesting data related to a partioned treaty (e.g., TD 106-37A or TD 106-37B), the lower case suffix will be supported (e.g., 106-37a). This is related to [Issue #153](https://github.com/LibraryOfCongress/api.congress.gov/issues/153).
+When requesting data related to a partioned treaty (e.g., TD 106-37A or TD 106-37B), the lower case suffix will be supported in API calls (e.g., 106-37a). This is related to [Issue #153](https://github.com/LibraryOfCongress/api.congress.gov/issues/153).
 ## Change #5
 ### Impacted endpoint: /member
 Congress.gov URLs are duplicating for certain members in the /member endpoint. This bug will be addressed and fixed.  This is related to [Issue #156](https://github.com/LibraryOfCongress/api.congress.gov/issues/156).
