@@ -33,7 +33,7 @@ For House of Representatives committee meeting video data, there will be two URL
 
 ## Change #7
 ### Impacted endpoints: ALL
-Recurring network errors will be investigated and fixed, which relate to ongoing load test work. 
+Recurring network errors will be investigated and fixed, which relates to ongoing load test work. 
 ## Change #8
 ### Impacted endpoints: ALL
 Load tests will be conducted to investigate if it is possible to increase the maximum number of calls per hour in the API. 
