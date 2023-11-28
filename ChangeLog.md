@@ -29,8 +29,14 @@ For Senate committee meeting video data, there will be two URLs in the API respo
 For House of Representatives committee meeting video data, there will be two URLs in the API response:
 
 1. YouTube Video URL
-2. Congress.gov URL 
+2. Congress.gov URL
 
+## Change #7
+### Impacted endpoints: ALL
+Recurring network errors will be investigated and fixed, which relate to ongoing load test work. 
+## Change #8
+### Impacted endpoints: ALL
+Load tests will be conducted to investigate if it is possible to increase the maximum number of calls per hour in the API. 
 # UPCOMING January 2024, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/21)
 **Expected Production Release Date: January 2, 2024** 
 ## Change #1
@@ -84,10 +90,6 @@ Developers will investigate and fix the API code so that members who have resign
 ### Impacted endpoint: /amendment/{congress}/{amendmentType}/{amendmentNumber}/text
 For the 117th Congress and onwards, a new amendment text endpoint will be made available to API users. This change is related to [issue #18](https://github.com/LibraryOfCongress/api.congress.gov/issues/18).
 ## Change #5
-### Impacted endpoints: ALL
-Load tests will be conducted to investigate if it is possible to increase the maximum number of calls per hour in the API. 
-#### This work is ongoing from a previous sprint.
-## Change #6
 ### Impacted endpoint: /bound-congressional-record
 Large bound Congressional Record PDFs will be investigated to see how they can be incorporated in the /bound-congressional-record endpoint. 
 #### This work is ongoing from a previous sprint.
