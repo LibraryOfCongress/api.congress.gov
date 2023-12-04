@@ -75,10 +75,6 @@ Empty elements will be suppressed.
 ## Change #4
 ### Impacted endpoint: all /hearing endpoints
 The hearing API endpoints returns the `<updateDate>` element in the following format: `2023-07-14 10:14:22+00:00`. This format differs from other endpoints which returns in the following format `2023-07-14T10:14:22Z`. The following format is will be used throughout the hearings API endpoint at both the list and detail level: `YYYY-MM-DDT00:00:00Z`. 
-## Change #5
-### Impacted endpoint: /bound-congressional-record
-Large bound Congressional Record PDFs will be investigated to see how they can be incorporated in the /bound-congressional-record endpoint. 
-#### This work is ongoing from a previous sprint.
 # COMPLETED December 2023| [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/20)
 ## Change #1
 ### Impacted endpoints: all /amendment endpoints
@@ -92,6 +88,9 @@ Developers investigated and fiedx the API code so that members who have resigned
 ## Change #4
 ### Impacted endpoint: /amendment/{congress}/{amendmentType}/{amendmentNumber}/text
 For the 117th Congress and onwards, a new amendment text endpoint was made available to API users for Senate amendments and some House amendments. This change is related to [issue #18](https://github.com/LibraryOfCongress/api.congress.gov/issues/18).
+## Change #5
+### Impacted endpoint: /bound-congressional-record
+Large bound Congressional Record PDFs were investigated to see how they can be incorporated in the /bound-congressional-record endpoint. 
 # COMPLETED October 2023, Part 2| [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/18)
 ## Change #1 
 ### Impacted endpoints: /amendment/{congress}/{amendmentType}/{amendmentNumber}/actions
