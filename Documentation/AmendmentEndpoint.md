@@ -2,7 +2,7 @@
 
 ## Coverage
 
-Coverage information for amendment data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates) on Congress.gov. Read more [about amendments](https://www.congress.gov/help/legislative-glossary#glossary_amendment) on Congress.gov.
+Coverage information for amendment data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates) on Congress.gov. Read more [about amendments](https://www.congress.gov/help/legislative-glossary#glossary_amendment) on Congress.gov. 
 
 ## OpenAPI Specification
 
@@ -331,3 +331,34 @@ Parent container for cosponsors of an amendment. Read more [about cosponsors](ht
     - The current count of cosponsors of the amendment, not including any withdrawn cosponsors.
   - `<countIncludingWithdrawnCosponsors>` (e.g. 2)
     - The total number of cosponsors of the amendment, including any withdrawn cosponsors.
+   
+      
+## Text Level
+
+Note: Full text of Senate submitted amendments is displayed and searchable on Congress.gov for the 117th Congress forward.  Links to text in the Congressional Record are provided for Senate amendments prior to the 117th Congress and for House amendments.  See [About the Congressional Record](https://www.congress.gov/help/congressional-record) to learn more about searching the Congressional Record. Not all House amendments from the 117th Congress forward have text granules available at this time. 
+
+`<api-root>`
+
+The `<api-root>` is only present in the XML format.
+
+`<textVersions>`
+
+Parent container for text versions of an amendment. Only Senate amendments and some House amendments from the 117th Congress foward will have this deeper level. A `<textVersions>` element may include the following children:
+
+- `<item>`
+  - Container for text versions of an amendment. An `<item>` element is repeatable and may include the following children:
+    - `<type>`
+      - The type of the amendment. For example, "Submitted" or "Modified".
+    - `<date>` 
+      - The date of the amendment text.
+    - `<formats>` (e.g. Rob)
+      - Container for amendment text format types. A `<formats>` element is repeateable and may include the following children:
+        - `<item>`
+            - Container for format items. An `<item>` element is repeatable and may include the following children:
+              - `<URL>`
+                - URL for the amendment text version.
+              - `<type>`
+                - The format type. For example, "PDF" or "HTML".
+- `<pagination>`
+  - `<count>` (e.g. 1)
+    - The current count of text versions of the amendment.
