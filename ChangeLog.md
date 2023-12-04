@@ -1,5 +1,6 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
 # UPCOMING February 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/23)
+**Expected Production Release Date: February 5, 2024**
 ## Change #1
 ### Impacted endpoint: bill/:congress/:billType/:billNumber/cosponsors
 For bills dated  1973-1980 (93rd, 94th, 95th, and 96th Congresses), for which we do not have cosponsorship dates, the error message that appears in the API will be fixed and corrected so that accurate cosponsor data is returned.
