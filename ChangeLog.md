@@ -6,6 +6,20 @@ For bills dated  1973-1980 (93rd, 94th, 95th, and 96th Congresses), for which we
 ## Change #2
 ### Impacted endpoint: /member/L000174/cosponsored-legislation
 A bug that is impacting the return of results related to Senator Leahy's cosponsored legislation will be investigated and fixed. 
+## Change #3
+### Impacted endpoint: /committee-meeting/{congress}/{chamber}/{eventId}
+For Senate committee meeting video data, there will be two URLs in the API response:
+
+1. Senate.gov URL
+2. Congress.gov URL
+   
+For House of Representatives committee meeting video data, there will be two URLs in the API response:
+
+1. YouTube Video URL
+2. Congress.gov URL
+## Change #4
+### Impacted endpoint: /senate-communication
+The following format will be used throughout the Senate Communications API endpoint at both the list and detail level: YYYY-MM-DDT00:00:00Z.
 # UPCOMING January 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/22)
 **Expected Production Release Date: January 16, 2024**
 ## Change #1
@@ -21,23 +35,8 @@ When requesting data related to a partioned treaty (e.g., TD 106-37A or TD 106-3
 ### Impacted endpoint: /member
 Congress.gov URLs are duplicating for certain members in the /member endpoint. This bug will be addressed and fixed.  This is related to [Issue #156](https://github.com/LibraryOfCongress/api.congress.gov/issues/156).
 ## Change #5
-### Impacted endpoint: /committee-meeting/{congress}/{chamber}/{eventId}
-For Senate committee meeting video data, there will be two URLs in the API response:
-
-1. Senate.gov URL
-2. Congress.gov URL
-   
-For House of Representatives committee meeting video data, there will be two URLs in the API response:
-
-1. YouTube Video URL
-2. Congress.gov URL
-
-## Change #6
-### Impacted endpoints: ALL
-Recurring network errors will be investigated and fixed, which relates to ongoing load test work. 
-## Change #7
-### Impacted endpoints: ALL
-Load tests will be conducted to investigate if it is possible to increase the maximum number of calls per hour in the API. 
+### Impacted endpoint: /bill
+The bill endpoint will be updated so it can accomodate historical bill data. n earlier Congresses, such as those of the late 18th and early 19th centuries, there will be instances where bill numbering is not clear or evident. At this point in time, Congressional staff had not yet standardized how bills get numbered. Thus, there are instances where two legitimate bills have been assigned the same number. To make a distinction between the first session-introduced bill and the second session-introduced bill we add the “introduction date” to the URLs for these bills on Congress.gov. However, this distinction is not evident when returning data within the Congress.gov API. The API will be adjusted to do this. This is related to [Issue #161](https://github.com/LibraryOfCongress/api.congress.gov/issues/161).
 # UPCOMING January 2024, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/21)
 **Expected Production Release Date: January 2, 2024** 
 ## Change #1
@@ -76,6 +75,15 @@ Empty elements will be suppressed.
 ## Change #4
 ### Impacted endpoint: all /hearing endpoints
 The hearing API endpoints returns the `<updateDate>` element in the following format: `2023-07-14 10:14:22+00:00`. This format differs from other endpoints which returns in the following format `2023-07-14T10:14:22Z`. The following format is will be used throughout the hearings API endpoint at both the list and detail level: `YYYY-MM-DDT00:00:00Z`. 
+## Change #5 
+### Impacted endpoint: all /amendment detail-level endpoints
+The amendments endpoint will be investigated so that the `<updateDate>` elements match between the detail and list levels. 
+## Change #6
+### Impacted endpoints: ALL
+Recurring network errors will be investigated and fixed, which relates to ongoing load test work. 
+## Change #7
+### Impacted endpoints: ALL
+Load tests will be conducted to investigate if it is possible to increase the maximum number of calls per hour in the API. 
 # COMPLETED December 2023| [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/20)
 ## Change #1
 ### Impacted endpoints: all /amendment endpoints
