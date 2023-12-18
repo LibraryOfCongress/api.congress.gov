@@ -30,6 +30,10 @@ The rate limit is set to 1,000 requests per hour.
 
 By default, the API returns 20 results starting with the first record. The 20 results limit can be adjusted up to 250 results. If the limit is adjusted to be greater than 250 results, only 250 results will be returned. The offset, or the starting record, can also be adjusted to be greater than 0. 
 
+## Coverage and Estimated Update Times for Congress.gov Collections
+
+Coverage information for Congress.gov collections data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates) on Congress.gov. This page also provides estimated update times for Congress.gov collections. 
+
 ## Support
 
 Congress.gov staff will monitor and respond to any [issues](https://github.com/LibraryOfCongress/api.congress.gov/issues) created in this repository, and will initiate actions, as necessary. Before creating an issue in the repository, please review existing issues and add a comment to any issues relevant to yours. 
