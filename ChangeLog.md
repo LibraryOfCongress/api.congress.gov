@@ -22,7 +22,7 @@ For bills dated  1973-1980 (93rd, 94th, 95th, and 96th Congresses), for which we
 A bug that is impacting the return of results related to Senator Leahy's cosponsored legislation will be investigated and fixed. 
 ## Change #3
 ### Impacted endpoints: ALL
-Intermittent API timeout issues reported in [Issue #47](https://github.com/LibraryOfCongress/api.congress.gov/issues/147) will be investigated and fixed. 
+Intermittent API timeout issues reported in [Issue #147](https://github.com/LibraryOfCongress/api.congress.gov/issues/147) will be investigated and fixed. 
 ## Change #4
 ### Impacted endpoint: committee
 Related to [Issue #180](https://github.com/LibraryOfCongress/api.congress.gov/issues/180) and [Issue #162](https://github.com/LibraryOfCongress/api.congress.gov/issues/162), the API will be updated to account for new committee codes. Once completed, this will address error messages reported by users regarding the committee endpoint. 
