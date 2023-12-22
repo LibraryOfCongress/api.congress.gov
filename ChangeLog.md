@@ -1,5 +1,5 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
-# UPCOMING February 2024, Part 2
+# UPCOMING February 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/24)
 **Expected Production Release Date: February 26, 2023**
 ## Change #1
 ### Impacted endpoint: /committee-meeting/{congress}/{chamber}/{eventId}
@@ -22,10 +22,10 @@ For bills dated  1973-1980 (93rd, 94th, 95th, and 96th Congresses), for which we
 A bug that is impacting the return of results related to Senator Leahy's cosponsored legislation will be investigated and fixed. 
 ## Change #3
 ### Impacted endpoints: ALL
-Intermittent API timeout issues reported in (Issue #47)[https://github.com/LibraryOfCongress/api.congress.gov/issues/147] will be investigated and fixed. 
+Intermittent API timeout issues reported in [Issue #47](https://github.com/LibraryOfCongress/api.congress.gov/issues/147) will be investigated and fixed. 
 ## Change #4
 ### Impacted endpoint: committee
-Related to (Issue #180)[https://github.com/LibraryOfCongress/api.congress.gov/issues/180] and (Issue #162)[https://github.com/LibraryOfCongress/api.congress.gov/issues/162], the API will be updated to account for new committee codes. Once completed, this will address error messages reported by users regarding the committee endpoint. 
+Related to [Issue #180](https://github.com/LibraryOfCongress/api.congress.gov/issues/180) and [Issue #162](https://github.com/LibraryOfCongress/api.congress.gov/issues/162), the API will be updated to account for new committee codes. Once completed, this will address error messages reported by users regarding the committee endpoint. 
 ## Change #5
 ### Impacted endpoint: /senate-communication
 The following format will be used throughout the Senate Communications API endpoint at both the list and detail level: YYYY-MM-DDT00:00:00Z.
