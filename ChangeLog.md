@@ -12,6 +12,9 @@ For House of Representatives committee meeting video data, there will be two URL
 
 1. YouTube Video URL
 2. Congress.gov URL
+# Change #2
+Impacted endpoint: N/A
+The API's swagger definition file will be added to the repository, which will allow users to streamline the process of generating a Typescript API service using tools like NSwag. This is related to [Issue #128](https://github.com/LibraryOfCongress/api.congress.gov/issues/128). 
 # UPCOMING February 2024, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/23)
 **Expected Production Release Date: February 5, 2024**
 ## Change #1
