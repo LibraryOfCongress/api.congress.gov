@@ -20,7 +20,7 @@ The API's swagger definition file will be added to the repository, which will al
 Accessing the certain committee report urls throws a 500 error and an error about "NoneType" `('NoneType' object does not support item assignment (TypeError)).` Ideally, if the report doesn't exist, a 403 error should be thrown, with a "No Committee Report matches this query" message. These issues will be investigated and fixed. 
 # Change #4
 ## Impacted endpoint: member
-Developers will investigate why empty member tags are created and prevent this from happening in the API.
+Developers will investigate why empty member tags are created and prevent this from happening in the API. This is related to [Issue #183](https://github.com/LibraryOfCongress/api.congress.gov/issues/183).
 ## Change #5
 ### Impacted endpoint: bill/:congress/:billType/:billNumber/cosponsors
 For bills dated  1973-1980 (93rd, 94th, 95th, and 96th Congresses), for which we do not have cosponsorship dates, the error message that appears in the API will be fixed and corrected so that accurate cosponsor data is returned.
