@@ -126,7 +126,7 @@ The `<api-root>` is only present in the XML format.
     - Container for title information for the treaty. An `<titles>` element may include the following children:
       - `<title>` 
         - The title of the treeaty.
-      - `<titleType>` (e.g., <https://api.congress.gov/congress/v3/treaty/117/3/actions>)
+      - `<titleType>` (e.g., https://api.congress.gov/v3/treaty/114/13/B)
         - Type of title (e.g., Treaty- Formal Title)
   - `<actions>`
     - Container for actions on the treaty. An `<actions>` element may include the following children:
