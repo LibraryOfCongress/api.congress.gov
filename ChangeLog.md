@@ -38,7 +38,7 @@ Related to [Issue #180](https://github.com/LibraryOfCongress/api.congress.gov/is
 ## Change #4
 ### Impacted endpoint: /senate-communication
 The following format will be used throughout the Senate Communications API endpoint at both the list and detail level: YYYY-MM-DDT00:00:00Z.
-# COMPLETED January 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/22)
+# UPCOMING January 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/22)
 **Expected Production Release Date: January 16, 2024**
 ## Change #1
 ### Impacted endpoint: /treaty/{congress}/{treatyNumber}/committees
