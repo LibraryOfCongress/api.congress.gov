@@ -38,11 +38,11 @@ Related to [Issue #180](https://github.com/LibraryOfCongress/api.congress.gov/is
 ## Change #4
 ### Impacted endpoint: /senate-communication
 The following format will be used throughout the Senate Communications API endpoint at both the list and detail level: YYYY-MM-DDT00:00:00Z.
-# UPCOMING January 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/22)
+# COMPLETED January 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/22)
 **Expected Production Release Date: January 16, 2024**
 ## Change #1
 ### Impacted endpoint: /treaty/{congress}/{treatyNumber}/committees
-An error message, which is occuring when calls are made to the /treaty/{congress}/{treatyNumber}/committees, wil be investigated and fixed. This is related to [Issue #60](https://github.com/LibraryOfCongress/api.congress.gov/issues/60).
+An error message, which is occuring when calls are made to the /treaty/{congress}/{treatyNumber}/committees, will be investigated and fixed. This is related to [Issue #60](https://github.com/LibraryOfCongress/api.congress.gov/issues/60).
 ## Change #2
 ### Impacted endpoint: all /treaty endpoints
 When requesting data related to a partioned treaty (e.g., TD 106-37A or TD 106-37B), the lower case suffix will be supported in API calls (e.g., 106-37a). This is related to [Issue #153](https://github.com/LibraryOfCongress/api.congress.gov/issues/153).
@@ -58,24 +58,23 @@ Recurring network errors will be investigated and fixed, which relates to ongoin
 ## Change #6
 ### Impacted endpoints: ALL
 Load tests will be conducted to investigate if it is possible to increase the maximum number of calls per hour in the API.
-# UPCOMING January 2024, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/21)
-**Expected Production Release Date: January 2, 2024** 
+# COMPLETED January 2024, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/21)
 ## Change #1
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}
-The `<originChamberCode>` element will be added to the detail level in the bill endpoint. 
+The `<originChamberCode>` element was added to the detail level in the bill endpoint. 
 ## Change #2
 ### Impacted endpoint: /committee-meeting/{congress}/{chamber}/{eventID}
-Error messages associated with specific event IDs in the committee-meeting endpoint will be investigated in fixed. This is related to issues https://github.com/LibraryOfCongress/api.congress.gov/issues/129 and https://github.com/LibraryOfCongress/api.congress.gov/issues/173.
+Error messages associated with specific event IDs in the committee-meeting endpoint were investigated and fixed fixed. This is related to issues https://github.com/LibraryOfCongress/api.congress.gov/issues/129 and https://github.com/LibraryOfCongress/api.congress.gov/issues/173.
 ## Change #3
 ### Impacted endpoint: /treaty
-Several elements at the list level within the treaty endpoint will be renamed. These include: 
+Several elements at the list level within the treaty endpoint were renamed. These include: 
 1. `<congress>` to be `<congressReceived>`
 2. `<endCongressId>` to be `<congressConsidered>`
 3. `<treatyNum>` to be `<number>`
 4. `<treatySuffix>` to be `<suffix>`
 5. `<treatySubject>` to be `<topic>`
    
-Several elements at the detail level within the treaty endpoint will be renamed. These include: 
+Several elements at the detail level within the treaty endpoint were renamed. These include: 
 1. `<congress>` to be `<congressReceived>`
 2. `<endCongressId>` to be `<congressConsidered>`
 3. `<treatyNum>` to be `<number>`
@@ -86,19 +85,18 @@ Several elements at the detail level within the treaty endpoint will be renamed.
 8. `<name>` (within relatedDocs.item) to be `<citation>`
 9.  referrer URL values to relatedDoc items (within relatedDocs.item.url) will use the current API base URL for v3 - https://api.congress.gov/v3...)
     
-These elements will be added:
+These elements were added:
 1. A `<countriesParties>` container element (under `<treaty>`).
 2. Within each new `<countriesParties>` container element, an `<item>` container will be added. In the `<item>` container a `<name>` element will be present with the treaty partner name.
 3. `<indexTerms>` container element with an `<item>` for each item. In each `<item>` container, a `<name>` element will be added for each index term.
 4. `<titles>` container element under `<treaty>`, which will contain  an `<item>` container with a `<title>` element and `<titleType>` element.
 
-Empty elements will be suppressed.
 ## Change #4
 ### Impacted endpoint: all /hearing endpoints
-The hearing API endpoints returns the `<updateDate>` element in the following format: `2023-07-14 10:14:22+00:00`. This format differs from other endpoints which returns in the following format `2023-07-14T10:14:22Z`. The following format is will be used throughout the hearings API endpoint at both the list and detail level: `YYYY-MM-DDT00:00:00Z`. 
+The hearing API endpoints returned the `<updateDate>` element in the following format: `2023-07-14 10:14:22+00:00`. This format differed from other endpoints, which returns in the following format `2023-07-14T10:14:22Z`. The following format is now used throughout the hearings API endpoint at both the list and detail level: `YYYY-MM-DDT00:00:00Z`. 
 ## Change #5 
 ### Impacted endpoint: all /amendment detail-level endpoints
-The amendments endpoint will be investigated so that the `<updateDate>` elements match between the detail and list levels. 
+The amendments endpoint was investigated so that the `<updateDate>` elements match between the detail and list levels. 
 # COMPLETED December 2023| [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/20)
 ## Change #1
 ### Impacted endpoints: all /amendment endpoints
