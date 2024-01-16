@@ -1,5 +1,5 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
-# UPCOMING March 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/24)
+# UPCOMING March 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/25)
 **Expected Production Release Date: March 18, 2024**
 ## Change #1
 ### Impacted endpoint: /amendment/{congress}/{amendmentType}/{amendmentNumber}/text
@@ -9,7 +9,7 @@ An error message for certain amendment texts will be investigated and fixed.
 For bills in the 1973-1980 (93rd, 94th, 95th, and 96th Congresses) bills for which we do NOT have cosponsorship dates, an error message appears. While we do not have the dates of cosponsorship, information should be returned so that cosponsor data is available. For example, 94 HR 118353 has 34 cosponsors. This will be addressed and fixed.
 # Change #3
 ## Impacted endpoint: N/A
-The API's swagger definition file will be added to the repository, which will allow users to streamline the process of generating a Typescript API service using tools like NSwag. This is related to [Issue #128](https://github.com/LibraryOfCongress/api.congress.gov/issues/128). 
+The API's swagger definition file will be added to the repository, which will allow users to streamline the process of generating a Typescript API service using tools like NSwag. This is related to [Issue #29](https://github.com/LibraryOfCongress/api.congress.gov/issues/29) and [Issue #128](https://github.com/LibraryOfCongress/api.congress.gov/issues/128). 
 # Change #4
 ## Impacted endpoint: /v3/committee-meeting/118/house/116205
 An error message associated with House of Represenatives committee meeting ID 116205 will be investigated and fixed. 
