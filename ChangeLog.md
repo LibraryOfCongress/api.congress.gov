@@ -57,7 +57,7 @@ Recurring network errors will be investigated and fixed, which relates to ongoin
 ### Impacted endpoints: ALL
 Load tests will be conducted to investigate if it is possible to increase the maximum number of calls per hour in the API.
 ##### **This work is ongoing from a previous sprint.**
-# COMP:ETED January 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/22)
+# COMPLETED January 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/22)
 ## Change #1
 ### Impacted endpoint: /treaty/{congress}/{treatyNumber}/committees
 An error message, which was occuring when calls were made to the /treaty/{congress}/{treatyNumber}/committees, was  investigated and fixed. This is related to [Issue #60](https://github.com/LibraryOfCongress/api.congress.gov/issues/60).
