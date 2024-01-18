@@ -26,6 +26,8 @@ For House of Representatives committee meeting video data, there will be two URL
 
 1. YouTube Video URL
 2. Congress.gov URL
+
+This is related to [Issue #141](https://github.com/LibraryOfCongress/api.congress.gov/issues/141).
 # Change #2
 ## Impacted endpoint: committee-report
 Accessing the certain committee report urls throws a 500 error and an error about "NoneType" `('NoneType' object does not support item assignment (TypeError)).` Ideally, if the report doesn't exist, a 403 error should be thrown, with a "No Committee Report matches this query" message. These issues will be investigated and fixed. 
