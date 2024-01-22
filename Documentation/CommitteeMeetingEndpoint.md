@@ -2,7 +2,7 @@
 
 ## Coverage
 
-Coverage information for committee meeting data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates). Read more about committee meeting data at [About Committees and Committee Materials](https://www.congress.gov/help/committee-materials#committee-schedule) on Congress.gov.
+Coverage information for committee meeting data in the API can be found at [Coverage Dates for Congress.gov Collections](https://www.congress.gov/help/coverage-dates). Read more about committee meeting data at [About Committees and Committee Materials](https://www.congress.gov/help/committee-materials#committee-schedule) on Congress.gov. For information on conference committees, please click [here](https://www.congress.gov/help/legislative-glossary#c). 
 
 ## OpenAPI Specification
 
