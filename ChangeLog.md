@@ -47,7 +47,7 @@ A bug that is impacting the return of results related to Senator Leahy's cospons
 Intermittent API timeout issues reported in [Issue #147](https://github.com/LibraryOfCongress/api.congress.gov/issues/147) will be investigated and fixed. 
 ## Change #2
 ### Impacted endpoint: committee
-Related to [Issue #180](https://github.com/LibraryOfCongress/api.congress.gov/issues/180) and [Issue #162](https://github.com/LibraryOfCongress/api.congress.gov/issues/162), the API will be updated to account for new committee codes. Once completed, this will address error messages reported by users regarding the committee endpoint. 
+Related to [Issue #180](https://github.com/LibraryOfCongress/api.congress.gov/issues/180), [Issue #195](https://github.com/LibraryOfCongress/api.congress.gov/issues/195) and [Issue #162](https://github.com/LibraryOfCongress/api.congress.gov/issues/162), the API will be updated to account for new committee codes. Once completed, this will address error messages reported by users regarding the committee endpoint. 
 ## Change #3
 ### Impacted endpoint: /senate-communication
 The following format will be used throughout the Senate Communications API endpoint at both the list and detail level: YYYY-MM-DDT00:00:00Z.
