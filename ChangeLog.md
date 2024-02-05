@@ -1,17 +1,25 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
-# UPCOMING March 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/25)
+# UPCOMING APRIL 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/26)
+**Expected Production Release Date: April 8, 2024**
+## Change #1
+## Impacted endpoint: N/A
+The API's swagger definition file will be added to the repository, which will allow users to streamline the process of generating a Typescript API service using tools like NSwag. This is related to [Issue #29](https://github.com/LibraryOfCongress/api.congress.gov/issues/29) and [Issue #128](https://github.com/LibraryOfCongress/api.congress.gov/issues/128).
+## Change #2
+### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/cosponsors
+For bills in the 1973-1980 (93rd, 94th, 95th, and 96th Congresses) bills for which we do NOT have cosponsorship dates, an error message appears. While we do not have the dates of cosponsorship, information should be returned so that cosponsor data is available. For example, 94 HR 118353 has 34 cosponsors. This will be addressed and fixed. 
+## Change #3
+### Impacted endpoint: NONE (documentation fix)
+The/treaty/:congress/:treatyNumber/:treatySuffix example request on api.congress.gov will be fixed and will match the example request found in the YAML file. 
+## Change #4
+### Impacted endpoint: hearing
+An error message in the hearing endpoint will be investigated and fixed. This is related to [Issue #166](https://github.com/LibraryOfCongress/api.congress.gov/issues/166)
+## UPCOMING March 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/25)
 **Expected Production Release Date: March 18, 2024**
 ## Change #1
 ### Impacted endpoint: /amendment/{congress}/{amendmentType}/{amendmentNumber}/text
 An error message for certain amendment texts will be investigated and fixed.
 ## Change #2
-### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/cosponsors
-For bills in the 1973-1980 (93rd, 94th, 95th, and 96th Congresses) bills for which we do NOT have cosponsorship dates, an error message appears. While we do not have the dates of cosponsorship, information should be returned so that cosponsor data is available. For example, 94 HR 118353 has 34 cosponsors. This will be addressed and fixed.
-# Change #3
-## Impacted endpoint: N/A
-The API's swagger definition file will be added to the repository, which will allow users to streamline the process of generating a Typescript API service using tools like NSwag. This is related to [Issue #29](https://github.com/LibraryOfCongress/api.congress.gov/issues/29) and [Issue #128](https://github.com/LibraryOfCongress/api.congress.gov/issues/128). 
-# Change #4
-## Impacted endpoint: /v3/committee-meeting/118/house/116205
+### Impacted endpoint: /v3/committee-meeting/118/house/116205
 An error message associated with House of Represenatives committee meeting ID 116205 will be investigated and fixed. 
 # UPCOMING February 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/24)
 **Expected Production Release Date: February 26, 2024**
@@ -27,12 +35,12 @@ For House of Representatives committee meeting video data, there will be two URL
 1. YouTube Video URL
 2. Congress.gov URL
 
-This is related to [Issue #141](https://github.com/LibraryOfCongress/api.congress.gov/issues/141).
-# Change #2
+This is related to [Issue #141](https://github.com/LibraryOfCongress/api.congress.gov/issues/141). Additionally, [Issue #196](https://github.com/LibraryOfCongress/api.congress.gov/issues/196) will be addressed in this change.
+## Change #2
 ## Impacted endpoint: committee-report
 Accessing the certain committee report urls throws a 500 error and an error about "NoneType" `('NoneType' object does not support item assignment (TypeError)).` Ideally, if the report doesn't exist, a 403 error should be thrown, with a "No Committee Report matches this query" message. These issues will be investigated and fixed. 
-# Change #3
-## Impacted endpoint: member
+## Change #3
+### Impacted endpoint: member
 Developers will investigate why empty member tags are created and prevent this from happening in the API. This is related to [Issue #183](https://github.com/LibraryOfCongress/api.congress.gov/issues/183).
 ## Change #4
 ### Impacted endpoint: bill/{congress}/{billType}/{billNumber}/cosponsors
@@ -40,24 +48,24 @@ For bills dated  1973-1980 (93rd, 94th, 95th, and 96th Congresses), for which we
 ## Change #5
 ### Impacted endpoint: /member/L000174/cosponsored-legislation
 A bug that is impacting the return of results related to Senator Leahy's cosponsored legislation will be investigated and fixed. 
-# UPCOMING February 2024, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/23)
-**Expected Production Release Date: February 5, 2024**
-## Change #1
+## Change #6
 ### Impacted endpoints: ALL
 Intermittent API timeout issues reported in [Issue #147](https://github.com/LibraryOfCongress/api.congress.gov/issues/147) will be investigated and fixed. 
-## Change #2
+##### **This work is ongoing from a previous sprint.**
+# COMPLETED February 2024, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/23)
+## Change #1
 ### Impacted endpoint: committee
-Related to [Issue #180](https://github.com/LibraryOfCongress/api.congress.gov/issues/180), [Issue #195](https://github.com/LibraryOfCongress/api.congress.gov/issues/195) and [Issue #162](https://github.com/LibraryOfCongress/api.congress.gov/issues/162), the API will be updated to account for new committee codes. Once completed, this will address error messages reported by users regarding the committee endpoint. 
-## Change #3
+Related to [Issue #162](https://github.com/LibraryOfCongress/api.congress.gov/issues/162), the API was updated to account for new committee codes. This addressed error messages reported by users regarding the committee endpoint. 
+## Change #2
 ### Impacted endpoint: /senate-communication
-The following format will be used throughout the Senate Communications API endpoint at both the list and detail level: YYYY-MM-DDT00:00:00Z.
+The following format is now used throughout the Senate Communications API endpoint at both the list and detail level: YYYY-MM-DDT00:00:00Z.
+## Change #3
+### Impacted endpoints: ALL
+Recurring network errors were investigated and fixed, which relates to ongoing load test work. 
+##### **This work is ongoing from a previous sprint.**
 ## Change #4
 ### Impacted endpoints: ALL
-Recurring network errors will be investigated and fixed, which relates to ongoing load test work. 
-##### **This work is ongoing from a previous sprint.**
-## Change #5
-### Impacted endpoints: ALL
-Load tests will be conducted to investigate if it is possible to increase the maximum number of calls per hour in the API.
+Load tests were conducted to investigate if it is possible to increase the maximum number of calls per hour in the API.
 ##### **This work is ongoing from a previous sprint.**
 # COMPLETED January 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/22)
 ## Change #1
