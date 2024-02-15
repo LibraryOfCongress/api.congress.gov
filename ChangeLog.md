@@ -48,7 +48,7 @@ Developers will investigate why empty member tags are created and prevent this f
 ## Change #4
 ### Impacted endpoint: /member/L000174/cosponsored-legislation
 A bug that is impacting the return of results related to Senator Leahy's cosponsored legislation will be investigated and fixed. 
-## Change #6
+## Change #5
 ### Impacted endpoints: ALL
 Intermittent API timeout issues reported in [Issue #147](https://github.com/LibraryOfCongress/api.congress.gov/issues/147) will be investigated and fixed. 
 ##### **This work is ongoing from a previous sprint.**
