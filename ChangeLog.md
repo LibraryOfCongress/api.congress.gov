@@ -13,6 +13,9 @@ The/treaty/:congress/:treatyNumber/:treatySuffix example request on api.congress
 ## Change #4
 ### Impacted endpoint: hearing
 An error message in the hearing endpoint will be investigated and fixed. This is related to [Issue #166](https://github.com/LibraryOfCongress/api.congress.gov/issues/166)
+## Change #5
+### Impacted endpoint: bill/{congress}/{billType}/{billNumber}/cosponsors
+For bills dated  1973-1980 (93rd, 94th, 95th, and 96th Congresses), for which we do not have cosponsorship dates, the error message that appears in the API will be fixed and corrected so that accurate cosponsor data is returned.
 ## UPCOMING March 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/25)
 **Expected Production Release Date: March 18, 2024**
 ## Change #1
@@ -43,9 +46,6 @@ Accessing the certain committee report urls throws a 500 error and an error abou
 ### Impacted endpoint: member
 Developers will investigate why empty member tags are created and prevent this from happening in the API. This is related to [Issue #183](https://github.com/LibraryOfCongress/api.congress.gov/issues/183).
 ## Change #4
-### Impacted endpoint: bill/{congress}/{billType}/{billNumber}/cosponsors
-For bills dated  1973-1980 (93rd, 94th, 95th, and 96th Congresses), for which we do not have cosponsorship dates, the error message that appears in the API will be fixed and corrected so that accurate cosponsor data is returned.
-## Change #5
 ### Impacted endpoint: /member/L000174/cosponsored-legislation
 A bug that is impacting the return of results related to Senator Leahy's cosponsored legislation will be investigated and fixed. 
 ## Change #6
