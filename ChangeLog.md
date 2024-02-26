@@ -6,7 +6,7 @@ This change log will contain information on updates to the Congress.gov API, the
 The/treaty/:congress/:treatyNumber/:treatySuffix example request on api.congress.gov will be fixed and will match the example request found in the YAML file. 
 ## Change #2
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/committees 
-The Bill endpoint's committees level will be changed so that it returns a pagination object. This is related to [Issue #56](https://github.com/LibraryOfCongress/api.congress.gov/issues/56)
+The bill endpoint's committees level will be changed so that it returns a pagination object. This is related to [Issue #56](https://github.com/LibraryOfCongress/api.congress.gov/issues/56)
 # UPCOMING APRIL 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/26)
 **Expected Production Release Date: April 8, 2024**
 ## Change #1
