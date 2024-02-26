@@ -1,4 +1,12 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
+# UPCOMING APRIL 2024, Part 2 |[Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/27)
+**Expected Production Release Date: April 29, 2024**
+## Change #1
+### Impacted endpoint: NONE (documentation fix)
+The/treaty/:congress/:treatyNumber/:treatySuffix example request on api.congress.gov will be fixed and will match the example request found in the YAML file. 
+# Change #2
+### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/committees 
+The /bill/{congress}/{billType}/{billNumber}/committees API endpoint will be changed so that it returns a pagination object. This is related to [Issue #56](https://github.com/LibraryOfCongress/api.congress.gov/issues/56)
 # UPCOMING APRIL 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/26)
 **Expected Production Release Date: April 8, 2024**
 ## Change #1
@@ -7,26 +15,24 @@ The API's swagger definition file will be added to the repository, which will al
 ## Change #2
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/cosponsors
 For bills in the 1973-1980 (93rd, 94th, 95th, and 96th Congresses) bills for which we do NOT have cosponsorship dates, an error message appears. While we do not have the dates of cosponsorship, information should be returned so that cosponsor data is available. For example, 94 HR 118353 has 34 cosponsors. This will be addressed and fixed. 
-## Change #3
-### Impacted endpoint: NONE (documentation fix)
-The/treaty/:congress/:treatyNumber/:treatySuffix example request on api.congress.gov will be fixed and will match the example request found in the YAML file. 
 ## Change #4
 ### Impacted endpoint: hearing
 An error message in the hearing endpoint will be investigated and fixed. This is related to [Issue #166](https://github.com/LibraryOfCongress/api.congress.gov/issues/166)
 ## Change #5
 ### Impacted endpoint: bill/{congress}/{billType}/{billNumber}/cosponsors
 For bills dated  1973-1980 (93rd, 94th, 95th, and 96th Congresses), for which we do not have cosponsorship dates, the error message that appears in the API will be fixed and corrected so that accurate cosponsor data is returned.
-## UPCOMING March 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/25)
-**Expected Production Release Date: March 18, 2024**
-## Change #1
+## Change #6
 ### Impacted endpoint: /amendment/{congress}/{amendmentType}/{amendmentNumber}/text
 An error message for certain amendment texts will be investigated and fixed.
+# UPCOMING March 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/25)
+**Expected Production Release Date: March 18, 2024**
+## Change #1
+### Impacted endpoint: /committee
+The committee will be investigated to verify that all current committees have "isCurrent" values of "true" and not "false."
 ## Change #2
 ### Impacted endpoint: /v3/committee-meeting/118/house/116205
 An error message associated with House of Represenatives committee meeting ID 116205 will be investigated and fixed. 
-# UPCOMING February 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/24)
-**Expected Production Release Date: February 26, 2024**
-## Change #1
+## Change #3
 ### Impacted endpoint: /committee-meeting/{congress}/{chamber}/{eventId}
 For Senate committee meeting video data, there will be two URLs in the API response:
 
@@ -39,16 +45,19 @@ For House of Representatives committee meeting video data, there will be two URL
 2. Congress.gov URL
 
 This is related to [Issue #141](https://github.com/LibraryOfCongress/api.congress.gov/issues/141). Additionally, [Issue #196](https://github.com/LibraryOfCongress/api.congress.gov/issues/196) will be addressed in this change.
-## Change #2
+*This work is ongoing from a previous sprint*
+## Change #4
 ## Impacted endpoint: committee-report
 Accessing the certain committee report urls throws a 500 error and an error about "NoneType" `('NoneType' object does not support item assignment (TypeError)).` Ideally, if the report doesn't exist, a 403 error should be thrown, with a "No Committee Report matches this query" message. These issues will be investigated and fixed. 
-## Change #3
+*This work is ongoing from a previous sprint*
+# COMPLETED February 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/24)
+## Change #1
 ### Impacted endpoint: member
 Developers will investigate why empty member tags are created and prevent this from happening in the API. This is related to [Issue #183](https://github.com/LibraryOfCongress/api.congress.gov/issues/183).
-## Change #4
+## Change #2
 ### Impacted endpoint: /member/L000174/cosponsored-legislation
 A bug that is impacting the return of results related to Senator Leahy's cosponsored legislation will be investigated and fixed. 
-## Change #5
+## Change #3
 ### Impacted endpoints: ALL
 Intermittent API timeout issues reported in [Issue #147](https://github.com/LibraryOfCongress/api.congress.gov/issues/147) will be investigated and fixed. 
 ##### **This work is ongoing from a previous sprint.**
