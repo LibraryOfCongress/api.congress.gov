@@ -19,9 +19,6 @@ For bills in the 1973-1980 (93rd, 94th, 95th, and 96th Congresses) bills for whi
 ### Impacted endpoint: hearing
 An error message in the hearing endpoint will be investigated and fixed. This is related to [Issue #166](https://github.com/LibraryOfCongress/api.congress.gov/issues/166)
 ## Change #5
-### Impacted endpoint: bill/{congress}/{billType}/{billNumber}/cosponsors
-For bills dated  1973-1980 (93rd, 94th, 95th, and 96th Congresses), for which we do not have cosponsorship dates, the error message that appears in the API will be fixed and corrected so that accurate cosponsor data is returned.
-## Change #6
 ### Impacted endpoint: /amendment/{congress}/{amendmentType}/{amendmentNumber}/text
 An error message for certain amendment texts will be investigated and fixed.
 # UPCOMING March 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/25)
