@@ -13,10 +13,10 @@ An error message for certain amendment texts will be investigated and fixed.
 ## Change #4
 ## Impacted endpoint: N/A
 The API's swagger definition file will be added to the repository, which will allow users to streamline the process of generating a Typescript API service using tools like NSwag. This is related to [Issue #29](https://github.com/LibraryOfCongress/api.congress.gov/issues/29) and [Issue #128](https://github.com/LibraryOfCongress/api.congress.gov/issues/128).
-# UPCOMING APRIL 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/27)
 ## Change #5
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/cosponsors
 For bills in the 1973-1980 (93rd, 94th, 95th, and 96th Congresses) bills for which we do NOT have cosponsorship dates, an error message appears. While we do not have the dates of cosponsorship, information should be returned so that cosponsor data is available. For example, 94 HR 118353 has 34 cosponsors. This will be addressed and fixed.
+# UPCOMING APRIL 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/27)
 **Expected Production Release Date: April 29, 2024**
 ## Change #1
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/committees 
