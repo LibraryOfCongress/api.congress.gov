@@ -9,7 +9,7 @@ A bug in the Committee list-level endpoint throws an "UnboundLocalError" when in
 It looks like when `currentMember` is set to false the API does not return the prop at all. After this patch, the member endpoint will return `"currentMember": false` in applicable scenarios.
 ## Change #3
 ### Impacted endpoint: /amendment/{congress}/{amendmentType}/{amendmentNumber}/text
-An error message for certain amendment texts will be investigated and fixed.
+An error message for certain amendment texts will be investigated and fixed. This is related to [Issue #205](https://github.com/LibraryOfCongress/api.congress.gov/issues/205). 
 ## Change #4
 ## Impacted endpoint: N/A
 The API's swagger definition file will be added to the repository, which will allow users to streamline the process of generating a Typescript API service using tools like NSwag. This is related to [Issue #29](https://github.com/LibraryOfCongress/api.congress.gov/issues/29) and [Issue #128](https://github.com/LibraryOfCongress/api.congress.gov/issues/128).
