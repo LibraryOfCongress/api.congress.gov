@@ -2,28 +2,25 @@ This change log will contain information on updates to the Congress.gov API, the
 # UPCOMING May 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/28)
 **Expected Production Release Date: May 20, 2024**
 ## Change #1
-### Impacted endpoint: NONE (documentation fix)
-The/treaty/:congress/:treatyNumber/:treatySuffix example request on api.congress.gov will be fixed and will match the example request found in the YAML file. 
-## Change #2
 ### Impacted endpoint: /committee
 A bug in the Committee list-level endpoint throws an "UnboundLocalError" when including "fromDateTime" and "toDateTime" parameters in the call. This will be investigated and fixed. 
-## Change #3
+## Change #2
 ### Impacted endpoint: /member
 It looks like when `currentMember` is set to false the API does not return the prop at all. After this patch, the member endpoint will return `"currentMember": false` in applicable scenarios.
+## Change #3
+### Impacted endpoint: /amendment/{congress}/{amendmentType}/{amendmentNumber}/text
+An error message for certain amendment texts will be investigated and fixed.
+## Change #4
+## Impacted endpoint: N/A
+The API's swagger definition file will be added to the repository, which will allow users to streamline the process of generating a Typescript API service using tools like NSwag. This is related to [Issue #29](https://github.com/LibraryOfCongress/api.congress.gov/issues/29) and [Issue #128](https://github.com/LibraryOfCongress/api.congress.gov/issues/128).
 # UPCOMING APRIL 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/27)
+## Change #5
+### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/cosponsors
+For bills in the 1973-1980 (93rd, 94th, 95th, and 96th Congresses) bills for which we do NOT have cosponsorship dates, an error message appears. While we do not have the dates of cosponsorship, information should be returned so that cosponsor data is available. For example, 94 HR 118353 has 34 cosponsors. This will be addressed and fixed.
 **Expected Production Release Date: April 29, 2024**
 ## Change #1
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/committees 
-The bill endpoint's committees level will be changed so that it returns a pagination object. This is related to [Issue #56](https://github.com/LibraryOfCongress/api.congress.gov/issues/56)
-## Change #2
-### Impacted endpoint: /amendment/{congress}/{amendmentType}/{amendmentNumber}/text
-An error message for certain amendment texts will be investigated and fixed.
-## Change #3
-## Impacted endpoint: N/A
-The API's swagger definition file will be added to the repository, which will allow users to streamline the process of generating a Typescript API service using tools like NSwag. This is related to [Issue #29](https://github.com/LibraryOfCongress/api.congress.gov/issues/29) and [Issue #128](https://github.com/LibraryOfCongress/api.congress.gov/issues/128).
-## Change #4
-### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/cosponsors
-For bills in the 1973-1980 (93rd, 94th, 95th, and 96th Congresses) bills for which we do NOT have cosponsorship dates, an error message appears. While we do not have the dates of cosponsorship, information should be returned so that cosponsor data is available. For example, 94 HR 118353 has 34 cosponsors. This will be addressed and fixed. 
+The bill endpoint's committees level will be changed so that it returns a pagination object. This is related to [Issue #56](https://github.com/LibraryOfCongress/api.congress.gov/issues/56) 
 # UPCOMING APRIL 2024, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/26)
 **Expected Production Release Date: April 8, 2024**
 ## Change #1
