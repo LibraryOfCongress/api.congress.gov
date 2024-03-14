@@ -63,7 +63,7 @@ We are at the beginning of an effort to populate data for the following elements
 ### Impacted endpoint: /committee
 We are at the beginning of an effort to produce committee authority records for standing committees terminated prior to 1973. Examples include: 
 - U.S. House of Representatives. Committee on Patents. 
-- API: https://api.congress.gov/v3/committee/house/n79036852?api_key=[INSERT KEY]
+- API: https://api.congress.gov/v3/committee/house/n79036852?api_key=[INSERT_KEY]
 
 - U.S. Senate. Committee on Immigration. 
 - API: https://api.congress.gov/v3/committee/senate/no00001702?api_key=[INSERT_KEY]
