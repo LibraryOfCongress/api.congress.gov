@@ -49,13 +49,25 @@ For House of Representatives committee meeting video data, there will be two URL
 This is related to [Issue #141](https://github.com/LibraryOfCongress/api.congress.gov/issues/141). Additionally, [Issue #196](https://github.com/LibraryOfCongress/api.congress.gov/issues/196) will be addressed in this change.
 *This work is ongoing from a previous sprint*
 ## Change #4
-## Impacted endpoint: committee-report
+### Impacted endpoint: committee-report
 Accessing the certain committee report urls throws a 500 error and an error about "NoneType" `('NoneType' object does not support item assignment (TypeError)).` Ideally, if the report doesn't exist, a 403 error should be thrown, with a "No Committee Report matches this query" message. These issues will be investigated and fixed. 
 *This work is ongoing from a previous sprint*
-# COMPLETED March 2024, Part 1
+# COMPLETED March 2024, Part 1 
 ## Change #1 
 ### API Rate Limit
 The API rate limit is now 5000 requests per hour. 
+## Change #2
+### Impacted endpoint: /committee
+We are at the beginning of an effort to populate data for the following elements, when available: `<establishingAuthority>`, `<locLinkedDataId>`, `<superintendentDocumentNumber>`, and `<naraId>`
+## Change #3
+### Impacted endpoint: /committee
+We are at the beginning of an effort to produce committee authority records for standing committees terminated prior to 1973. Examples include: 
+- U.S. House of Representatives. Committee on Patents. 
+- API: https://api.congress.gov/v3/committee/house/n79036852?api_key=[INSERT KEY]
+
+- U.S. Senate. Committee on Immigration. 
+- API: https://api.congress.gov/v3/committee/senate/no00001702?api_key=[INSERT_KEY]
+
 # COMPLETED February 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/24)
 ## Change #1
 ### Impacted endpoint: member
