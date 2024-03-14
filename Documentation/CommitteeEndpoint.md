@@ -131,13 +131,13 @@ Parent container for an individual committee or subcommittee entry. A `<committe
           - The type of committee.
           - Possible values are "Commission or Caucus", "Joint", "Other", "Select", "Special", "Standing", "Subcommittee", and "Task Force".
         - `<establishingAuthority>`
-          - The legislative authority for the committee.
+          - The legislative authority for the committee (e.g., 79 H.Res. 5). 
         - `<locLinkedDataId>`
-          - ID value to support linking with Library of Congress data. NOTE: Not currently in use.
+          - ID value to support linking with Library of Congress data (e.g., n79036852). NOTE: Displays when available.
         - `<superintendentDocumentNumber>`
-          - ID value to support linking with GPO data. NOTE: Not currently in use.
+          - ID value to support linking with GPO data (e.g., Y 4.IM 6/2:). NOTE: Displays when available. 
         - `<naraId>`
-          - ID value to support linking with NARA data. NOTE: Not currently in use.
+          - ID value to support linking with NARA data (e.g., 10531570). NOTE: Displays when available.
 - `<type>`  (e.g., Standing)
   - Type of committee.
   - Possible values are "Commission or Caucus", "Joint", "Other", "Select", "Special", "Standing", "Subcommittee" and "Task Force".
