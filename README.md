@@ -24,7 +24,7 @@ The current version of the API is version 3 (v3). Prior versions were used by th
 
 ## Rate Limit
 
-The rate limit is set to 1,000 requests per hour.
+The rate limit is set to 5,000 requests per hour.
 
 ## Limit and Offset
 
