@@ -23,7 +23,7 @@ The bill endpoint's committees level will be changed so that it returns a pagina
 ## Change #1
 ### Impacted endpoint: hearing
 An error message in the hearing endpoint will be investigated and fixed. This is related to [Issue #166](https://github.com/LibraryOfCongress/api.congress.gov/issues/166)
-# UPCOMING March 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/25)
+# COMPLETED March 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/25)
 **Expected Production Release Date: March 18, 2024**
 ## Change #1
 ### Impacted endpoint: /committee
