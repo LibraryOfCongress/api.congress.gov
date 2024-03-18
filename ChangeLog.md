@@ -13,8 +13,6 @@ The API's swagger definition file will be added to the repository, which will al
 ## Change #4
 ### Impacted endpoint: /amendment/{congress}/{admendmentType}/{amendmentNumber}/text
 The amendment text-level endpoint's `<URL>` element in the `<textVersions>` container will be modified so that it returns the actual text content from the linked webpages. This is related to [Issue #206](https://github.com/LibraryOfCongress/api.congress.gov/issues/206). 
-# UPCOMING APRIL 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/27)
-**Expected Production Release Date: April 29, 2024**
 # UPCOMING APRIL 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/26)
 **Expected Production Release Date: April 8, 2024**
 ## Change #1
