@@ -11,11 +11,17 @@ The API key assigned to your organization is not meant to be shared.  It should:
   centralized servers and/or cloud hosting services,
   such as github, bitbucket, or others.
 
-- Not be given as an URL?=parameter, which may be recorded in transit and will be in
-  server logs and metrics products.
-
 - Nor should it be given as a command-line parameter,
   which are typically recorded to a history file.
+
+Your API key may be passed to the service in a few different ways. Pick which ever method is easiest for you:
+
+ - The API may support passing the API key into the api_key GET query string parameter:
+   - curl 'https://api.congress.gov/v3/bill/117/hr/3076/titles?api_key=[INSERT_KEY]’
+   - https://api.congress.gov/v3/bill/117/hr/3076/titles?api_key=[INSERT_KEY]
+
+- Pass the API key into the X-Api-Key header:
+  - curl -H 'API_KEY': [INSERT_KEY]' ''https://api.congress.gov/v3/bill/117/hr/3076/titles?limit=1'
 
 Use a secure storage system of your choosing which can deploy the key securely
 to your application.  In absence of such system, other reasonable choices are:
