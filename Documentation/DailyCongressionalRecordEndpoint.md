@@ -92,7 +92,7 @@ Parent container for congressional record issues. A `<dailyCongressionalRecord>`
       - `<endPage>`
          - The end page of the daily Congressional Record section. 
 - `<text>`
-      - Container for section textx. A `<text>` element may include the following children:
+      - Container for section text. A `<text>` element may include the following children:
   - `<item>`
       - Container for an entire issue item. An `<item>` element may include the following children:
       - `<part>`
@@ -102,7 +102,7 @@ Parent container for congressional record issues. A `<dailyCongressionalRecord>`
       - `<URL> `
          - The daily Congressional Record's URL for the section. 
 - `<text>`
-      - Container for section textx. A `<text>` element may include the following children:
+      - Container for section text. A `<text>` element may include the following children:
   - `<articles>`
       - Container for Container for articles in the Congressional Record issue. An `<articles>` element may include the following children:
       - `<count>`
