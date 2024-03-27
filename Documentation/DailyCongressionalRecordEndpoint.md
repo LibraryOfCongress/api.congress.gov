@@ -135,8 +135,11 @@ Parent container for congressional record issues. A `<dailyCongressionalRecord>`
               - The container for article text items.  A `<text>` element may include the following children:
                 - `<item>`
                    - Container for an article text item. An `<item>` element may include the following children:
-                   - `<type>`
-                      - The type of document that the daily Congressional Record article is (e.g. PDF, "Formatted Text").
-                   - `<url>`
-                      - The article URL.
+                     - `<part>`
+                     - The part of the daily Congressional Record issue.
+                     - `<type>`
+                     - The type of document that the daily Congressional Record article is (e.g. PDF, "Formatted Text").
+                     - `<url>`
+                     - The article URL.
+                        
      
