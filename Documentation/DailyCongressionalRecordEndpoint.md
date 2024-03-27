@@ -29,19 +29,21 @@ The `<api-root>` is only present in the XML format.
 
 Parent container for congressional record issues. A `<dailyCongressionalRecord>` element may include the following children:
 
-- `<Issue>`
-  - Container for a daily Congressional Record issue. An `<Issue>` element may include the following children:
+- `<issue>`
+  - Container for a daily Congressional Record issue. An `<issue>` element may include the following children:
     - `<issueNumber>`
       - The daily Congressional Record's issue number.
     - `<volumeNumber>`
-      - The daily Congressional Record's volume number. 
+      - The daily Congressional Record's volume number.
+    - `<issueDate>`
+       - The date that the daily Congressional Record was issued.
     - `<congress>`
       - The Congress associated with the daily congressional record issue.
-    - `<SessionNumber>`
+    - `<sessionNumber>`
       - The session number. Possible values are "1" and "2". 
-    - `<URL>` 
+    - `<url>` 
       - The URL to the entire issue of the daily Congressional Record. 
-    - `<UpdateDate>` 
+    - `<updateDate>` 
        - The date that the daily Congressional Record was updated.
       
 ### Item Level
@@ -58,57 +60,52 @@ Parent container for congressional record issues. A `<dailyCongressionalRecord>`
       - The daily Congressional Record's issue number.
    - `<volumeNumber>`
       - The daily Congressional Record's volume number.
-   - `<issueNumber>`
-      - The daily Congressional Record's issue number. 
+   - `<issueDate>`
+      - The date that the daily Congressional Record was issued.
    - `<congress>`
       - The Congress associated with the daily Congressional Record issue.
-   - `<SessionNumber>`
+   - `<sessionNumber>`
       - The session number. Possible values are "1" and "2". 
-   - `<URL>` 
-      - The URL to the entire issue of the daily Congressional Record. 
-    - `<UpdateDate>` 
-       - The date that the daily Congressional Record was updated.
-
-`<fullIssue>`
-
-  Container for full issue and sections. A `<fullIssue>` element may include the following children:
-
-  - `<entireIssue>`
-      - Container for entire issue items. An `<entireIssue>` element may include the following children:
-  - `<item>`
-      - Container for an entire issue item. An `<item>` element may include the following children:
-      - `<part>`
-         - The part of the daily Congressional Record issue.
-      -`<type>`
-         - The type of document that the daily Congressional Record is (e.g., PDF).
-      - `<URL> `
-         - The daily Congressional Record's URL.
-  - `<item>`
-      - Container for an entire issue item. An `<item>` element may include the following children:
-      - `<name>`
-         - The section name of the daily Congressional Record issue.
-      -`<startPage>`
-         - The start page of the daily Congressional Record section. 
-      - `<endPage>`
-         - The end page of the daily Congressional Record section. 
-- `<text>`
-      - Container for section text. A `<text>` element may include the following children:
-  - `<item>`
-      - Container for an entire issue item. An `<item>` element may include the following children:
-      - `<part>`
-         - The part of the daily Congressional Record issue.
-      - `<type>`
-         - The type of document that the daily Congressional Record is (e.g., PDF).
-      - `<URL> `
-         - The daily Congressional Record's URL for the section. 
-- `<text>`
-      - Container for section text. A `<text>` element may include the following children:
-  - `<articles>`
-      - Container for Container for articles in the Congressional Record issue. An `<articles>` element may include the following children:
-      - `<count>`
-         - The number of articles in the daily Congressional Record issue.
-      - `<URL> `
-         - The daily Congressional Record's URL for articles. 
+   - `<url>` 
+      - The URL to the entire issue of the daily Congressional Record (the URL used to request this issue).
+   - `<updateDate>` 
+      - The date that the daily Congressional Record was updated.
+   - `<fullIssue>`
+      - Container for full issue, sections, and articles. A `<fullIssue>` element may include the following children:
+        - `<entireIssue>`
+          - Container for entire issue items. An `<entireIssue>` element may include the following children:
+            - `<item>`
+              - Container for an entire issue item. An `<item>` element may include the following children:
+              - `<part>`
+                 - The part of the daily Congressional Record issue.
+              - `<type>`
+                 - The type of document that the daily Congressional Record is (e.g. PDF, "Formatted Text").
+              - `<url>`
+                 - The daily Congressional Record's URL.
+          - `<sections>`
+              - Container for section items. A `<sections>` element may include the following children:
+            - `<item>`
+              - Container for a section item. An `<item>` element may include the following children:
+              - `<name>`
+                 - The section name of the daily Congressional Record issue.
+              - `<startPage>`
+                 - The start page of the daily Congressional Record section. (e.g. D291)
+              - `<endPage>`
+                 - The end page of the daily Congressional Record section. (e.g. D296)
+              - `<text>`
+                - Container for section text items. A `<text>` element may include the following children:
+                - `<item>`
+                  - Container for a section text item. An `<item>` element may include the following children:
+                  - `<type>`
+                     - The type of document that the daily Congressional Record is (e.g. PDF, "Formatted Text").
+                  - `<url>`
+                     - The daily Congressional Record's URL for the section. 
+            - `<articles>`
+                - Container for articles. An `<articles>` element may include the following children:
+                  - `<count>`
+                     - The number of articles in the daily Congressional Record issue.
+                  - `<url>`
+                     - The daily Congressional Record's URL for articles. 
   
 ### Articles Sub-Level
 
@@ -121,27 +118,25 @@ Parent container for congressional record issues. A `<dailyCongressionalRecord>`
  Parent container for the daily Congressional Record articles. An `<articles>` element may include the following children:
 
    - `<section>`
-      - The container for articles in a section. A `<section>` container may include: 
+      - Container for articles in a section. A `<section>` element may include the following children:
         - `<name>`
            - The section name (e.g., Senate).
         - `<sectionArticles>`
-          
-           Container for section artices. A `<sectionArticles>` element may include the following children:
-           - `<title>`
-             - The title of the article.
-           - `<sectionName>`
-              - The section name of the daily Congressional Record article.
-          - `<startPage>`
-             - The start page of the daily Congressional Record article. 
-           - `<endPage>`
-              - The end page of the daily Congressional Record article.
-                
-      `<text>`
-      - The container for article text  A `<text>` container may include: 
-        - `<item>`
-           - Container for an article text item. An `<item>` element may include the following children:
-           - `<type>`
-              - The type of document that the daily Congressional Record article is (e.g., PDF).
-           - `<URL>`
-              - The article URL.
+           - Container for section article items. A `<sectionArticles>` element may include the following children:
+          - `<item>`
+            - Container for a section article. An `<item>` element may include the following children:
+            - `<title>`
+              - The title of the article.
+            - `<startPage>`
+              - The start page of the daily Congressional Record article. (e.g. D291)
+            - `<endPage>`
+              - The end page of the daily Congressional Record article. (e.g. D296)
+            - `<text>`
+              - The container for article text items.  A `<text>` element may include the following children:
+                - `<item>`
+                   - Container for an article text item. An `<item>` element may include the following children:
+                   - `<type>`
+                      - The type of document that the daily Congressional Record article is (e.g. PDF, "Formatted Text").
+                   - `<url>`
+                      - The article URL.
      
