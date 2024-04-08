@@ -1,26 +1,36 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
+# UPCOMING JUNE 2024 | [Milestone]()
+**Expected Production Release Date: June 10, 2024**
+## Change #1
+### Impacted endpoint: N/A
+The API's swagger definition file will be added to the repository, which will allow users to streamline the process of generating a Typescript API service using tools like NSwag. This is related to [Issue #29](https://github.com/LibraryOfCongress/api.congress.gov/issues/29) and [Issue #128](https://github.com/LibraryOfCongress/api.congress.gov/issues/128).
+## Change #2
+### Impacted endpoint: /bill
+The `<updateDate>` element will be investigated. Users are reporting that the `<updateDate>` is being constantly updated for certain bills. This is related to [Issue #201](https://github.com/LibraryOfCongress/api.congress.gov/issues/201).
+## Change #3
+### Impacted endpoint: /member
+It looks like when `currentMember` is set to false the API does not return the prop at all. After this patch, the member endpoint will return `"currentMember": false` in applicable scenarios.
+## Change #4
+### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/actions
+When the bill actions list item includes a link to the corresponding Clerk House Roll Call Vote, the link it returns is invalid for roll call votes numbered 70 and higher in the 118th Congress. This will be investigated and fixed. This is related to [Issue #210](https://github.com/LibraryOfCongress/api.congress.gov/issues/210).
+## Change #5
+### Impacted endpoint: /committee-report
+The date and time format will be adjusted in the committee report API so that all dates/times are returned in this format: YYYY-MM-DDT00:00:00Z. This is related to [Issue #214](https://github.com/LibraryOfCongress/api.congress.gov/issues/214).
 # UPCOMING May 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/28)
 **Expected Production Release Date: May 20, 2024**
 ## Change #1
 ### Impacted endpoint: /committee
 A bug in the Committee list-level endpoint throws an "UnboundLocalError" when including "fromDateTime" and "toDateTime" parameters in the call. This will be investigated and fixed. 
 ## Change #2
-### Impacted endpoint: /member
-It looks like when `currentMember` is set to false the API does not return the prop at all. After this patch, the member endpoint will return `"currentMember": false` in applicable scenarios.
-## Change #3
-## Impacted endpoint: N/A
-The API's swagger definition file will be added to the repository, which will allow users to streamline the process of generating a Typescript API service using tools like NSwag. This is related to [Issue #29](https://github.com/LibraryOfCongress/api.congress.gov/issues/29) and [Issue #128](https://github.com/LibraryOfCongress/api.congress.gov/issues/128).
-## Change #4
 ### Impacted endpoint: /amendment/{congress}/{admendmentType}/{amendmentNumber}/text
 The amendment text-level endpoint's `<URL>` element in the `<textVersions>` container will be modified so that it returns the actual text content from the linked webpages. This is related to [Issue #206](https://github.com/LibraryOfCongress/api.congress.gov/issues/206). 
-# UPCOMING APRIL 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/26)
-**Expected Production Release Date: April 8, 2024**
+# COMPLETED APRIL 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/26)
 ## Change #1
 ### Impacted endpoint: hearing
-An error message in the hearing endpoint will be investigated and fixed. This is related to [Issue #166](https://github.com/LibraryOfCongress/api.congress.gov/issues/166)
+An error message in the hearing endpoint was investigated and fixed. This is related to [Issue #166](https://github.com/LibraryOfCongress/api.congress.gov/issues/166)
 ## Change #2
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/committees 
-The bill endpoint's committees level will be changed so that it returns a pagination object. This is related to [Issue #56](https://github.com/LibraryOfCongress/api.congress.gov/issues/56) 
+The bill endpoint's committees level was changed so that it returns a pagination object. This is related to [Issue #56](https://github.com/LibraryOfCongress/api.congress.gov/issues/56) 
 # COMPLETED March 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/25)
 **Expected Production Release Date: March 18, 2024**
 ## Change #1
