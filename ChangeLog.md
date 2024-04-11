@@ -21,6 +21,9 @@ A bug in the Committee list-level endpoint throws an "UnboundLocalError" when in
 ## Change #2
 ### Impacted endpoint: /amendment/{congress}/{admendmentType}/{amendmentNumber}/text
 The amendment text-level endpoint's `<URL>` element in the `<textVersions>` container will be modified so that it returns the actual text content from the linked webpages. This is related to [Issue #206](https://github.com/LibraryOfCongress/api.congress.gov/issues/206). 
+## Change #3
+### Impacted endpoint: /member
+The ability filter members by state, district, and/or whether they are a current member will be investigated and implemented within the member endpoint. This is related to [Issue #30](https://github.com/LibraryOfCongress/api.congress.gov/issues/30)
 # COMPLETED APRIL 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/26)
 ## Change #1
 ### Impacted endpoint: hearing
