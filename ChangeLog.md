@@ -13,7 +13,7 @@ When the bill actions list item includes a link to the corresponding Clerk House
 ## Change #4
 ### Impacted endpoint: /committee-report
 The date and time format will be adjusted in the committee report API so that all dates/times are returned in this format: YYYY-MM-DDT00:00:00Z. This is related to [Issue #214](https://github.com/LibraryOfCongress/api.congress.gov/issues/214).
-## Change #4
+## Change #5
 ### Impacted endpoint: /committee
 A bug in the Committee list-level endpoint throws an "UnboundLocalError" when including "fromDateTime" and "toDateTime" parameters in the call. This will be investigated and fixed. 
 # UPCOMING May 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/28)
