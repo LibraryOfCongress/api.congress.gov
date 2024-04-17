@@ -13,15 +13,15 @@ When the bill actions list item includes a link to the corresponding Clerk House
 ## Change #4
 ### Impacted endpoint: /committee-report
 The date and time format will be adjusted in the committee report API so that all dates/times are returned in this format: YYYY-MM-DDT00:00:00Z. This is related to [Issue #214](https://github.com/LibraryOfCongress/api.congress.gov/issues/214).
+## Change #4
+### Impacted endpoint: /committee
+A bug in the Committee list-level endpoint throws an "UnboundLocalError" when including "fromDateTime" and "toDateTime" parameters in the call. This will be investigated and fixed. 
 # UPCOMING May 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/28)
 **Expected Production Release Date: May 20, 2024**
 ## Change #1
-### Impacted endpoint: /committee
-A bug in the Committee list-level endpoint throws an "UnboundLocalError" when including "fromDateTime" and "toDateTime" parameters in the call. This will be investigated and fixed. 
-## Change #2
 ### Impacted endpoint: /amendment/{congress}/{admendmentType}/{amendmentNumber}/text
 The amendment text-level endpoint's `<URL>` element in the `<textVersions>` container will be modified so that it returns the actual text content from the linked webpages. This is related to [Issue #206](https://github.com/LibraryOfCongress/api.congress.gov/issues/206). 
-## Change #3
+## Change #2
 ### Impacted endpoint: /member
 The ability to filter members by state, district, and/or whether they are a current member will be investigated and implemented within the member endpoint. This is related to [Issue #30](https://github.com/LibraryOfCongress/api.congress.gov/issues/30)
 # COMPLETED APRIL 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/26)
