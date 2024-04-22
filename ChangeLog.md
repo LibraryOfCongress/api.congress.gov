@@ -24,6 +24,17 @@ The amendment text-level endpoint's `<URL>` element in the `<textVersions>` cont
 ## Change #2
 ### Impacted endpoint: /member
 The ability to filter members by state, district, and/or whether they are a current member will be investigated and implemented within the member endpoint. This is related to [Issue #30](https://github.com/LibraryOfCongress/api.congress.gov/issues/30)
+## Change #3
+### Impacted endpoint: /bill
+A law endpoint will be added to the bill endpoint. Users will be able to filter law by congress, law number, and if the law is public or private. This is related to [Issue #225](https://github.com/LibraryOfCongress/api.congress.gov/issues/225).
+## Change #4
+### Impacted endpoint: /member
+A new endpoint will return member data specified by Congress. This is PARTIALLY related to [Issue #30] (https://github.com/LibraryOfCongress/api.congress.gov/issues/30).
+## Change #5
+### Impacted endpoint: /congress
+A new /current endpoint will return detailed information for the current Congress. 
+## Change #4
+### 
 # COMPLETED APRIL 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/26)
 ## Change #1
 ### Impacted endpoint: hearing
