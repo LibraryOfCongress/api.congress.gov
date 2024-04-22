@@ -33,8 +33,6 @@ A new endpoint will return member data specified by Congress. This is PARTIALLY 
 ## Change #5
 ### Impacted endpoint: /congress
 A new /current endpoint will return detailed information for the current Congress. 
-## Change #4
-### 
 # COMPLETED APRIL 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/26)
 ## Change #1
 ### Impacted endpoint: hearing
