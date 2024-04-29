@@ -15,7 +15,7 @@ Records are also available for some bills and joint resolutions from 1799 (6th C
 ## A Note on Reserved Bills
 In recent Congresses, the resolution specifying House internal rules of procedure includes reserving bill numbers for assignment by the Speaker. In the 112th Congress (2011-2012) the practice was extended to reserve additional bill numbers for assignment by the Minority Leader. In the Senate, some of the lowest bills numbers are reserved for leadership.
 
-## A Note on the /Law Endpoints
+## A Note on the Law Endpoints
 Users can now retrieve bill data by specifying one of the following options: 
 - Laws by Congress
 - Laws by Congress and Law type (public or private)
