@@ -51,7 +51,7 @@ A bug in the Committee list-level endpoint throws an "UnboundLocalError" when in
 **Expected Production Release Date: May 20, 2024**
 ## Change #1
 ### Impacted endpoint: /member
-The ability to filter members by state, district, and/or whether they are a current member will be investigated and implemented within the member endpoint. This is related to [Issue #30](https://github.com/LibraryOfCongress/api.congress.gov/issues/30)
+The ability to filter members by state, district, and/or whether they are a current member will be investigated and implemented within the member endpoint. This is related to [Issue #30](https://github.com/LibraryOfCongress/api.congress.gov/issues/30).
 # COMPLETED April 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/27)
 ## Change #1
 ### Impacted endpoint: /bill
