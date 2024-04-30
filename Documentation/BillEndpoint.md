@@ -20,7 +20,7 @@ Users can now retrieve bill data by specifying one of the following options:
 - Laws by Congress
 - Laws by Congress and Law type (public or private)
 - Law by Congress, Law type, and Law number.
-<p>These new endpoints will use the bill endpoint's elements so please refer to the "Elements and Descriptions" section for detailed information on possible values. Please use the law number assigned by NARA when making a request by law number. Law numbers can be found for [Public Laws[(https://www.congress.gov/public-laws/118th-congress) and for [Private Laws](https://www.congress.gov/private-laws/118th-congress). You can use the dropdrown menus on both pages to switch to different Congresses.  </p>
+<p>These new endpoints will use the bill endpoint's elements so please refer to the "Elements and Descriptions" section for detailed information on possible values. Please use the law number assigned by NARA when making a request by law number. Law numbers can be found for [Public Laws](https://www.congress.gov/public-laws/118th-congress) and for [Private Laws](https://www.congress.gov/private-laws/118th-congress). You can use the dropdrown menus on both pages to switch to different Congresses.  </p>
   
 ## Elements and Descriptions
 
