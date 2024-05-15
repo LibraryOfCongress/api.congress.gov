@@ -30,11 +30,14 @@ The 'NoChamberMeetingVideo' API error in the /committee-meeting endpoint will be
 ## Change #6
 ### Impacted endpoint: /bill
 The bill list API is missing 14 pieces of legislation from the 118th congress. This will be investigated and fixed. This is related to [Issue #233](https://github.com/LibraryOfCongress/api.congress.gov/issues/233). 
+## Change #7
+### Impacted endpoint: /amendment/{congress}/{admendmentType}/{amendmentNumber}/text
+The amendment text-level endpoint's `<URL>` element in the `<textVersions>` container will be modified so that it returns the actual text content from the linked webpages. This is related to [Issue #206](https://github.com/LibraryOfCongress/api.congress.gov/issues/206). 
 # UPCOMING JUNE 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/29)
 **Expected Production Release Date: June 10, 2024**
 ## Change #1
-### Impacted endpoint: /amendment/{congress}/{admendmentType}/{amendmentNumber}/text
-The amendment text-level endpoint's `<URL>` element in the `<textVersions>` container will be modified so that it returns the actual text content from the linked webpages. This is related to [Issue #206](https://github.com/LibraryOfCongress/api.congress.gov/issues/206). 
+### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/titles
+A <titleTypeCode> element will be added to the /bill/{congress}/{billType}/{billNumber}/titles endpoint. Documentation will be updated to account for this new element. 
 ## Change #2
 ### Impacted endpoint: /member
 It looks like when `currentMember` is set to false the API does not return the prop at all. After this patch, the member endpoint will return `"currentMember": false` in applicable scenarios.
