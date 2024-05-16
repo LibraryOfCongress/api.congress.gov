@@ -30,9 +30,6 @@ The 'NoChamberMeetingVideo' API error in the /committee-meeting endpoint will be
 ## Change #6
 ### Impacted endpoint: /bill
 The bill list API is missing 14 pieces of legislation from the 118th congress. This will be investigated and fixed. This is related to [Issue #233](https://github.com/LibraryOfCongress/api.congress.gov/issues/233). 
-## Change #7
-### Impacted endpoint: /amendment/{congress}/{admendmentType}/{amendmentNumber}/text
-The amendment text-level endpoint's `<URL>` element in the `<textVersions>` container will be modified so that it returns the actual text content from the linked webpages. This is related to [Issue #206](https://github.com/LibraryOfCongress/api.congress.gov/issues/206). 
 # UPCOMING JUNE 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/29)
 **Expected Production Release Date: June 10, 2024**
 ## Change #1
@@ -50,6 +47,9 @@ The date and time format will be adjusted in the committee report API so that al
 ## Change #5
 ### Impacted endpoint: /committee
 A bug in the Committee list-level endpoint throws an "UnboundLocalError" when including "fromDateTime" and "toDateTime" parameters in the call. This will be investigated and fixed. 
+## Change #6
+### Impacted endpoint: /amendment/{congress}/{admendmentType}/{amendmentNumber}/text
+The amendment text-level endpoint's `<URL>` element in the `<textVersions>` container will be modified so that it returns the actual text content from the linked webpages. This is related to [Issue #206](https://github.com/LibraryOfCongress/api.congress.gov/issues/206). 
 # UPCOMING May 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/28)
 **Expected Production Release Date: May 20, 2024**
 ## Change #1
