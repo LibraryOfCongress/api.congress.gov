@@ -2,58 +2,53 @@ This change log will contain information on updates to the Congress.gov API, the
 # UPCOMING JULY 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/30)
 **Expected Production Release Date: July 22, 2024**
 ## Change #1
-### Impacted endpoint: N/A
-The API's swagger definition file will be added to the repository which will allow users to streamline the process of generating a Typescript API service using tools like NSwag. Related to [Issue #29](https://github.com/LibraryOfCongress/api.congress.gov/issues/29). 
-## Change #2
 ### Impacted endpoint: bill/{congress}/{billType}/{billNumber}/cosponsors
 For bills in the 1973-1980 (93rd, 94th, 95th, and 96th Congresses) bills for which we do NOT have cosponsorship dates, an error message that currently appears in the Congress.gov API will be investigated and fixed. 
-## Change #3
+## Change #2
 ### Impacted endpoint: /treaty/{congress}/{treatyNumber}/{treatySuffix}
 For the /treaty/:congress/:treatyNumber/:treatySuffix example on api.congress.gov, the example is being cut off. This will be investigated and fixed. 
 # UPCOMING July 2024, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/31)
 **Expected Production Release Date: July 1, 2024**
 ## Change #1
+### Impacted endpoint: N/A
+The API's swagger definition file will be added to the repository which will allow users to streamline the process of generating a Typescript API service using tools like NSwag. Related to [Issue #29](https://github.com/LibraryOfCongress/api.congress.gov/issues/29). 
+## Change #2
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/text
 Developers will adjust how the API counts <textVersions> so that it includes bill texts, slip law texts, and statute texts. 
-## Change #2
-### Impacted endpoint: /bill
-The `<updateDate>` element will be investigated. Users are reporting that the `<updateDate>` is being constantly updated for certain bills. This is related to [Issue #201](https://github.com/LibraryOfCongress/api.congress.gov/issues/201).
 ## Change #3
 ### Impacted endpoint: /member
 The /members endpoint is currently not returning the full set for the requested limit when within the range of the first page. It's currently one member short. For example, requesting with a limit of 20 yields 19 items. This will be investigated and fixed. Related to [Issue #212](https://github.com/LibraryOfCongress/api.congress.gov/issues/212). 
 ## Change #4
 ### Impacted endpoint: /committee-report
-The committee report API will be adjusted so that all dates/times are returned in this format: YYYY-MM-DDT00:00:00Z.
+The date and time format will be adjusted in the committee report API so that all dates/times are returned in this format: YYYY-MM-DDT00:00:00Z. This is related to [Issue #214](https://github.com/LibraryOfCongress/api.congress.gov/issues/214).
 ## Change #5
 ### Impacted endpoint: /committee-meeting
 The 'NoChamberMeetingVideo' API error in the /committee-meeting endpoint will be investigated and fixed. 
 ## Change #6
-### Impacted endpoint: /bill
-The bill list API is missing 14 pieces of legislation from the 118th congress. This will be investigated and fixed. This is related to [Issue #233](https://github.com/LibraryOfCongress/api.congress.gov/issues/233). 
+### Impacted endpoint: /member
+It looks like when `currentMember` is set to false the API does not return the prop at all. After this patch, the member endpoint will return `"currentMember": false` in applicable scenarios.
 # UPCOMING JUNE 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/29)
 **Expected Production Release Date: June 10, 2024**
 ## Change #1
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/titles
-A <titleTypeCode> element will be added to the /bill/{congress}/{billType}/{billNumber}/titles endpoint. Documentation will be updated to account for this new element. 
+A `<titleTypeCode>` element will be added to the /bill/{congress}/{billType}/{billNumber}/titles endpoint. Documentation will be updated to account for this new element. 
 ## Change #2
-### Impacted endpoint: /member
-It looks like when `currentMember` is set to false the API does not return the prop at all. After this patch, the member endpoint will return `"currentMember": false` in applicable scenarios.
-## Change #3
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/actions
 When the bill actions list item includes a link to the corresponding Clerk House Roll Call Vote, the link it returns is invalid for roll call votes numbered 70 and higher in the 118th Congress. This will be investigated and fixed. This is related to [Issue #210](https://github.com/LibraryOfCongress/api.congress.gov/issues/210).
-## Change #4
-### Impacted endpoint: /committee-report
-The date and time format will be adjusted in the committee report API so that all dates/times are returned in this format: YYYY-MM-DDT00:00:00Z. This is related to [Issue #214](https://github.com/LibraryOfCongress/api.congress.gov/issues/214).
-## Change #5
+## Change #3
 ### Impacted endpoint: /committee
 A bug in the Committee list-level endpoint throws an "UnboundLocalError" when including "fromDateTime" and "toDateTime" parameters in the call. This will be investigated and fixed. 
-## Change #6
+## Change #4
 ### Impacted endpoint: /amendment/{congress}/{admendmentType}/{amendmentNumber}/text
-The amendment text-level endpoint's `<URL>` element in the `<textVersions>` container will be modified so that it returns the actual text content from the linked webpages. This is related to [Issue #206](https://github.com/LibraryOfCongress/api.congress.gov/issues/206). 
-# UPCOMING May 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/28)
-**Expected Production Release Date: May 20, 2024**
-## Change #1
+The amendment text-level endpoint's `<URL>` element in the `<textVersions>` container will be modified so that it returns the actual text content from the linked webpages. This is related to [Issue #206]
+(https://github.com/LibraryOfCongress/api.congress.gov/issues/206). 
+## Change #5
 ### Impacted endpoint: /member
+The API will be further refined to return current members for particular districts. This is related to work completed in [Issue #30](https://github.com/LibraryOfCongress/api.congress.gov/issues/30).
+# COMPLETED May 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/28)
+## Change #1
+### Impacted endpoint: /member/congress/{congressNumber}/{stateCode}/{district}
+The ability to filter members by state, district, and/or whether they are a current member was investigated and implemented within the member endpoint.This is related to [Issue #30](https://github.com/LibraryOfCongress/api.congress.gov/issues/30).
 The ability to filter members by state, district, and/or whether they are a current member will be investigated and implemented within the member endpoint. This is related to [Issue #30](https://github.com/LibraryOfCongress/api.congress.gov/issues/30).
 # COMPLETED April 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/27)
 ## Change #1
