@@ -40,8 +40,7 @@ When the bill actions list item includes a link to the corresponding Clerk House
 A bug in the Committee list-level endpoint throws an "UnboundLocalError" when including "fromDateTime" and "toDateTime" parameters in the call. This will be investigated and fixed. 
 ## Change #4
 ### Impacted endpoint: /amendment/{congress}/{admendmentType}/{amendmentNumber}/text
-The amendment text-level endpoint's `<URL>` element in the `<textVersions>` container will be modified so that it returns the actual text content from the linked webpages. This is related to [Issue #206]
-(https://github.com/LibraryOfCongress/api.congress.gov/issues/206). 
+The amendment text-level endpoint's `<URL>` element in the `<textVersions>` container will be modified so that it returns the actual text content from the linked webpages. This is related to [Issue #206](https://github.com/LibraryOfCongress/api.congress.gov/issues/206). 
 ## Change #5
 ### Impacted endpoint: /member
 The API will be further refined to return current members for particular districts. This is related to work completed in [Issue #30](https://github.com/LibraryOfCongress/api.congress.gov/issues/30).
