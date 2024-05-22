@@ -581,7 +581,45 @@ Parent container for titles associated with the bill or resolution. A title may 
     - `<billTextVersionName>` (e.g. Engrossed in House)
       - The name of the bill text version associated with the title. This element is not populated for all titles (e.g. a display title will never have an associated bill text version).
     - `<billTextVersionCode>` (e.g. EH)
-      - The file extension code for the bill text version associated with the title. This element is not populate for all titles (e.g. a display title will never have an associated bill text version).
+      - The file extension code for the bill text version associated with the title. This element will not populate for all titles (e.g. a display title will never have an associated bill text version).
+    - `<titleTypeCode>` (e.g., 45)
+       - The title code for the title type. Please note that Congress.gov is transitioning from a legacy process that involved manual curation to an automated process that associates titles with bill text versions. As a result, certain title types can be duplicated. Please refer to the chart below for a list of common title types.
+
+##### Common title type version codes and descriptions
+
+| Title Type Code | Description | 
+| ----------- | ---------- |
+| 6 | Official Title as Introduced | 
+| 7 | Official Titles as Amended by House |
+| 8 | Official Titles as Amended by Senate |
+| 9 | Official Title as Agreed to by House and Senate |
+| 14 | Short Titles as Introduced |
+| 17 | Short Titles as Passed House |
+| 18 | Short Titles as Passed Senate |
+| 19 | Short Titles as Enacted |
+| 22 | Short Titles as Introduced for portions of this bill |
+| 23 |Short Titles as Reported to House for portions of this bill |
+| 24 | Short Titles as Reported to Senate for portions of this bill |
+| 25 | Short Titles as Passed House for portions of this bill |
+| 26 | Short Titles as Passed Senate for portions of this bill |
+| 27 | Short Titles as Enacted for portions of this bill |
+| 30 | Popular Title |
+| 45 | Display Title |
+| 101 | Short Title(s) as Introduced |
+| 102 | Short Title(s) as Reported to House |
+| 103 | Short Title(s) as Reported to Senate |
+| 104 | Short Title(s) as Passed House |
+| 105 | Short Title(s) as Passed Senate |
+| 106 | Short Title(s) as Introduced for portions of this bill |
+| 107 | Short Title(s) as Reported to House for portions of this bill |
+| 108 | Short Title(s) as Reported to Senate for portions of this bill |
+| 109 | Short Title(s) as Passed House for portions of this bill |
+| 110 | Short Title(s) as Passed Senate for portions of this bill |
+| 147 | Short Title(s) from ENR (Enrolled) bill text |
+| 250 | Short Title(s) from Engrossed Amendment Senate |
+| 253 | Short Title(s) from Engrossed Amendment House for portions of this bill |
+| 254 | Short Title(s) from Engrossed Amendment Senate for portions of this bill |
+
 
 #### Text Level
 
