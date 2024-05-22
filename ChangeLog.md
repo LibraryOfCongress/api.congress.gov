@@ -30,25 +30,24 @@ It looks like when `currentMember` is set to false the API does not return the p
 # UPCOMING JUNE 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/29)
 **Expected Production Release Date: June 10, 2024**
 ## Change #1
-### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/titles
-A `<titleTypeCode>` element will be added to the /bill/{congress}/{billType}/{billNumber}/titles endpoint. Documentation will be updated to account for this new element. 
-## Change #2
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/actions
 When the bill actions list item includes a link to the corresponding Clerk House Roll Call Vote, the link it returns is invalid for roll call votes numbered 70 and higher in the 118th Congress. This will be investigated and fixed. This is related to [Issue #210](https://github.com/LibraryOfCongress/api.congress.gov/issues/210).
-## Change #3
+## Change #2
 ### Impacted endpoint: /committee
 A bug in the Committee list-level endpoint throws an "UnboundLocalError" when including "fromDateTime" and "toDateTime" parameters in the call. This will be investigated and fixed. 
-## Change #4
+## Change #3
 ### Impacted endpoint: /amendment/{congress}/{admendmentType}/{amendmentNumber}/text
 The amendment text-level endpoint's `<URL>` element in the `<textVersions>` container will be modified so that it returns the actual text content from the linked webpages. This is related to [Issue #206](https://github.com/LibraryOfCongress/api.congress.gov/issues/206). 
-## Change #5
+## Change #4
 ### Impacted endpoint: /member
 The API will be further refined to return current members for particular districts. This is related to work completed in [Issue #30](https://github.com/LibraryOfCongress/api.congress.gov/issues/30).
 # COMPLETED May 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/28)
 ## Change #1
 ### Impacted endpoint: /member/congress/{congressNumber}/{stateCode}/{district}
 The ability to filter members by state, district, and/or whether they are a current member was investigated and implemented within the member endpoint.This is related to [Issue #30](https://github.com/LibraryOfCongress/api.congress.gov/issues/30).
-The ability to filter members by state, district, and/or whether they are a current member will be investigated and implemented within the member endpoint. This is related to [Issue #30](https://github.com/LibraryOfCongress/api.congress.gov/issues/30).
+## Change #w
+### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/titles
+A `<titleTypeCode>` element was added to the /bill/{congress}/{billType}/{billNumber}/titles endpoint. Bill endpoint documentation was updated to account for this new element. Please refer to the updated [documentation](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/BillEndpoint.md) for a list of common title type codes. 
 # COMPLETED April 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/27)
 ## Change #1
 ### Impacted endpoint: /bill
