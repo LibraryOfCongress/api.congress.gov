@@ -1,7 +1,7 @@
 """
     CDG Client - An example client for the Congress.gov API.
 
-    @copyright: 2022, Library of Congress
+    @copyright: 2024, Library of Congress
     @license: CC0 1.0
 """
 from urllib.parse import urljoin
@@ -42,6 +42,18 @@ class CDGClient:
         response_format=RESPONSE_FORMAT,
         raise_on_error=True,
     ):
+        ''' 
+        Install a query cache for your application that respects api.congress.gov 
+        rate limits by using CachedSession from the requests_cache package instead
+        of requests.Session() i.e. pip install requests-cache
+        
+        Example that allows one message sent per hour:
+        from requests_cache import CachedSession
+        from datetime import timedelta
+        self._session = CachedSession("/tmp/congress_cache_http", 
+            expire_after=timedelta(hours=1), 
+            backend='sqlite')
+        '''
         self.base_url = urljoin(ROOT_URL, api_version) + "/"
         self._session = requests.Session()
 
