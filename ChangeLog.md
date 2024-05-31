@@ -7,6 +7,9 @@ For bills in the 1973-1980 (93rd, 94th, 95th, and 96th Congresses) bills for whi
 ## Change #2
 ### Impacted endpoint: /treaty/{congress}/{treatyNumber}/{treatySuffix}
 For the /treaty/:congress/:treatyNumber/:treatySuffix example on api.congress.gov, the example is being cut off. This will be investigated and fixed. 
+## Change #3
+### Impacted endpoint: /amendment/{congress}/{amendmentType}/{amendmentNumber}, /amendment/{congress}/{amendmentType}/{amendmentNumber}/actions
+Inconsistencies in the count for amendment actions between API endpoints will be investigated and fixed. This is related to [Issue #246](https://github.com/LibraryOfCongress/api.congress.gov/issues/246). 
 # UPCOMING July 2024, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/31)
 **Expected Production Release Date: July 1, 2024**
 ## Change #1
