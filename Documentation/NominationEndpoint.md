@@ -8,6 +8,10 @@ Coverage information for nominations data in the API can be found at [Coverage D
 
 View OpenAPI Specification on the nomination API, supported endpoints, and available parameters at [https://api.congress.gov](https://api.congress.gov/#/nomination/nomination_list).
 
+## A Note on Partitioned Nominations
+
+A presidential nomination (PN) with multiple nominees may be partitioned by the Senate if the nominees follow a different confirmation path. Partitions are identified with a suffix; for example, PN230-1 (114th Congress) and PN230-2 (114th Congress). Searching on a PN number in Congress.gov API, such as PN230, without a partition designation will retrieve all partitions of a partitioned nomination.
+
 ## Elements and Descriptions
 
 The section below details available element names, their descriptions, and possible values.
@@ -101,7 +105,7 @@ Parent container for the nomination. A `<nomination>` element may contain the fo
     - `<item>`
       - Container for a nominee position. An `<item>` element is repeatable and may include the following children:
         - `<ordinal>` (e.g. 1)
-          - Ordinal used for the display order of nominees.
+          - Ordinal used for the display order of positions for a nomination.
         - `<introText>`
           - Introductory text for a nominee position.
         - `<organization>` (e.g. Corporation for National and Community Service)
