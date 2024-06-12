@@ -15,13 +15,13 @@ The committee report API endpoints will be adjusted so that all dates/times are 
 The committee print API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #213](https://github.com/LibraryOfCongress/api.congress.gov/issues/213).
 ## Change #5
 ### Impacted endpoint: /house-communication
-The house communication API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #213](https://github.com/LibraryOfCongress/api.congress.gov/issues/217).
+The house communication API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #217](https://github.com/LibraryOfCongress/api.congress.gov/issues/217).
 ## Change #6
 ### Impacted endpoint: /daily-congressional-record
-The daily Congressional Record API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #213](https://github.com/LibraryOfCongress/api.congress.gov/issues/223).
+The daily Congressional Record API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #223](https://github.com/LibraryOfCongress/api.congress.gov/issues/223).
 ## Change #7
 ### Impacted endpoint: /committee-report
-The daily committee report API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #213](https://github.com/LibraryOfCongress/api.congress.gov/issues/224).
+The daily committee report API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #224](https://github.com/LibraryOfCongress/api.congress.gov/issues/224).
 # UPCOMING JULY 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/30)
 **Expected Production Release Date: July 22, 2024**
 ## Change #1
