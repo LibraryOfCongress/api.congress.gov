@@ -48,7 +48,7 @@ The 'NoChamberMeetingVideo' API error in the /committee-meeting endpoint will be
 ### Impacted endpoint: /member
 It looks like when `currentMember` is set to false the API does not return the prop at all. After this patch, the member endpoint will return `"currentMember": false` in applicable scenarios.
 # COMPLETED June Documentation Update
-Change #1
+## Change #1
 The API's swagger definition file was added to the repository which will allow users to streamline the process of generating a Typescript API service using tools like NSwag. This is related to [Issue #29](https://github.com/LibraryOfCongress/api.congress.gov/issues/29) and [Issue #128](https://github.com/LibraryOfCongress/api.congress.gov/issues/128). You can view the swagger definition file [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/api_client/swagger.yaml). 
 # COMPLETED JUNE 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/29)
 ## Change #1
