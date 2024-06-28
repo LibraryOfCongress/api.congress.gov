@@ -30,10 +30,10 @@ Network errors will be investigated and fixed in the /member/congress/:congress/
 The /members endpoint is currently not returning the full set for the requested limit when within the range of the first page. It's currently one member short. For example, requesting with a limit of 20 yields 19 items. This will be investigated and fixed. Related to [Issue #212](https://github.com/LibraryOfCongress/api.congress.gov/issues/212). 
 ## Change #10
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/subjects
-An `<updateDate>` element will be added to each `<title>` element in the bill titles-level endpoint.
+An `<updateDate>` element will be added to each `<title>` element in the bill subject-level endpoint.
 ## Change #11 
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/titles
-An `<updateDate>` element will be added to each subject term `<name>` element in the bill subjects-level endpoint.
+An `<updateDate>` element will be added to each subject term `<name>` element in the bill titles-level endpoint.
 # UPCOMING JULY 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/30)
 **Expected Production Release Date: July 22, 2024**
 ## Change #1
@@ -81,13 +81,13 @@ The ability to filter members by state, district, and/or whether they are a curr
 A `<titleTypeCode>` element was added to the /bill/{congress}/{billType}/{billNumber}/titles endpoint. Bill endpoint documentation was updated to account for this new element. Please refer to the updated [documentation](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/BillEndpoint.md) for a list of common title type codes. 
 # COMPLETED April 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/27)
 ## Change #1
-### Impacted endpoint: /bill
+### Impacted endpoint: /law/{congress}, /law/{congress}/{lawType}, and /law/{congress}/{lawType}/{lawNumber}
 A law endpoint was added to the bill endpoint. Users are now able to filter law by congress, law number, and if the law is public or private. This is related to [Issue #225](https://github.com/LibraryOfCongress/api.congress.gov/issues/225).
 ## Change #2
-### Impacted endpoint: /member
-A new endpoint now returns member data specified by Congress. This is PARTIALLY related to [Issue #30] (https://github.com/LibraryOfCongress/api.congress.gov/issues/30).
+### Impacted endpoint: /member/congress/{congress}
+A new endpoint now returns member data specified by Congress. This is PARTIALLY related to [Issue #30](https://github.com/LibraryOfCongress/api.congress.gov/issues/30).
 ## Change #3
-### Impacted endpoint: /congress
+### Impacted endpoint: /congress/current
 A new /current endpoint now returns detailed information for the current Congress. 
 # COMPLETED APRIL 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/26)
 ## Change #1
