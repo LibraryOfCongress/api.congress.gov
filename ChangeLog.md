@@ -1,40 +1,51 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
-# UPCOMING August 2024| [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/32)
-**Expected Production Release Date: August 12, 2024**
+# UPCOMING September 2024| [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/33)
+**Expected Production Release Date: September 3, 2024**
 ## Change #1 
 ### Impacted endpoint: /amendment/{congress}/{amendmentType}/{amendmentNumber}/text
-An error message impacting some House amendments will be investigated and fixed.
+An error message impacting some House amendments will be investigated and fixed. This is related to [Issue #205](https://github.com/LibraryOfCongress/api.congress.gov/issues/205). 
 ## Change #2
+### Impacted endpoint: /committee
+An `<updateDate>` element will be added to the committee list-level endpoint. This is partially related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117). 
+## Change #3
+### Impacted endpoint: /hearing
+The hearing API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #215](https://github.com/LibraryOfCongress/api.congress.gov/issues/215).
+## Change #4
+### Impacted endpoint: /bill
+14 pieces of legislation from the 118th Congress are missing in the bill list-level API endpoint. This will be investigated and fixed. This is related to [Issue #233](https://github.com/LibraryOfCongress/api.congress.gov/issues/233). 
+# UPCOMING August 2024| [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/32)
+**Expected Production Release Date: August 12, 2024**
+## Change #1
 ### Impacted endpoint: bill/{congress}/{billType}/{billNumber}/cosponsors
 For bills in the 1973-1980 (93rd, 94th, 95th, and 96th Congresses) bills for which we do NOT have cosponsorship dates, an error message that currently appears in the Congress.gov API will be investigated and fixed. 
-## Change #3 
+## Change #2
 ### Impacted endpoint: /committee-report
 The committee report API endpoints will be adjusted so that all dates/times are returned in this format: YYYY-MM-DDT00:00:00Z.
-## Change #4
+## Change #3
 ### Impacted endpoint: /committee-print
 The committee print API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #213](https://github.com/LibraryOfCongress/api.congress.gov/issues/213).
-## Change #5
+## Change #4
 ### Impacted endpoint: /house-communication
 The house communication API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #217](https://github.com/LibraryOfCongress/api.congress.gov/issues/217).
-## Change #6
+## Change #5
 ### Impacted endpoint: /daily-congressional-record
 The daily Congressional Record API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #223](https://github.com/LibraryOfCongress/api.congress.gov/issues/223).
-## Change #7
+## Change #6
 ### Impacted endpoint: /committee-report
 The daily committee report API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #224](https://github.com/LibraryOfCongress/api.congress.gov/issues/224).
-## Change #8
+## Change #7
 ### Impacted endpoint: /member/congress/{congress}/{stateCode}/{district}
 Network errors will be investigated and fixed in the /member/congress/:congress/:stateCode/:district endpoint. This is related to [Issue #257](https://github.com/LibraryOfCongress/api.congress.gov/issues/257). 
-## Change #9
+## Change #8
 ### Impacted endpoint: /member
 The /members endpoint is currently not returning the full set for the requested limit when within the range of the first page. It's currently one member short. For example, requesting with a limit of 20 yields 19 items. This will be investigated and fixed. Related to [Issue #212](https://github.com/LibraryOfCongress/api.congress.gov/issues/212). 
-## Change #10
+## Change #9
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/subjects
 An `<updateDate>` element will be added to each `<title>` element in the bill subject-level endpoint.
-## Change #11 
+## Change #10
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/titles
 An `<updateDate>` element will be added to each subject term `<name>` element in the bill titles-level endpoint.
-## Change #12
+## Change #11
 ### Impacted endpoint: /treaty/{congress}/{treatyNumber}/{treatySuffix}
 For the /treaty/:congress/:treatyNumber/:treatySuffix example on api.congress.gov, the example is being cut off. This will be investigated and fixed. 
 # UPCOMING JULY 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/30)
