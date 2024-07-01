@@ -45,17 +45,16 @@ Inconsistencies in the count for amendment actions between API endpoints will be
 ## Change #3
 ### Impacted endpoint: /bill
 The `<updateDate>` on the Bill record is being constantly updated. This will be investigated. This is related to [Issue #201](https://github.com/LibraryOfCongress/api.congress.gov/issues/201). 
-# UPCOMING July 2024, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/31)
-**Expected Production Release Date: July 1, 2024** 
+# COMPLETED July 2024, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/31)
 ## Change #1
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/text
-Developers will adjust how the API counts <textVersions> so that it includes bill texts, slip law texts, and statute texts. 
+Developers adjusted how the API counts <textVersions> so that it includes bill texts, slip law texts, and statute texts. 
 ## Change #2
 ### Impacted endpoint: /committee-meeting
-The 'NoChamberMeetingVideo' API error in the /committee-meeting endpoint will be investigated and fixed. 
+The 'NoChamberMeetingVideo' API error in the /committee-meeting endpoint was investigated and fixed. 
 ## Change #3
 ### Impacted endpoint: /member
-It looks like when `currentMember` is set to false the API does not return the prop at all. After this patch, the member endpoint will return `"currentMember": false` in applicable scenarios.
+When `currentMember` was set to false the API did not return the prop at all. After this patch, the member endpoint now returns `"currentMember": false` in applicable scenarios.
 # COMPLETED June Documentation Update
 ## Change #1
 The API's swagger definition file was added to the repository which will allow users to streamline the process of generating a Typescript API service using tools like NSwag. This is related to [Issue #29](https://github.com/LibraryOfCongress/api.congress.gov/issues/29) and [Issue #128](https://github.com/LibraryOfCongress/api.congress.gov/issues/128). You can view the swagger definition file [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/swagger.yaml). 
