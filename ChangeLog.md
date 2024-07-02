@@ -1,5 +1,5 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
-# UPCOMING September 2024| [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/33)
+# UPCOMING September 2024, Part 1| [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/33)
 **Expected Production Release Date: September 3, 2024**
 ## Change #1 
 ### Impacted endpoint: /amendment/{congress}/{amendmentType}/{amendmentNumber}/text
