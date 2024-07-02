@@ -1,5 +1,5 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
-# UPCOMING September 2024, Part 1| [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/33)
+# UPCOMING September 2024, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/33)
 **Expected Production Release Date: September 3, 2024**
 ## Change #1 
 ### Impacted endpoint: /amendment/{congress}/{amendmentType}/{amendmentNumber}/text
@@ -13,7 +13,7 @@ The hearing API endpoints will be adjusted so that the default sort is by `<upda
 ## Change #4
 ### Impacted endpoint: /bill
 14 pieces of legislation from the 118th Congress are missing in the bill list-level API endpoint. This will be investigated and fixed. This is related to [Issue #233](https://github.com/LibraryOfCongress/api.congress.gov/issues/233). 
-# UPCOMING August 2024| [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/32)
+# UPCOMING August 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/32)
 **Expected Production Release Date: August 12, 2024**
 ## Change #1
 ### Impacted endpoint: bill/{congress}/{billType}/{billNumber}/cosponsors
