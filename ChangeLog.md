@@ -45,6 +45,16 @@ For bills in the 1973-1980 (93rd, 94th, 95th, and 96th Congresses) bills for whi
 ## Change #9
 ### Impacted endpoint: /treaty/{congress}/{treatyNumber}/{treatySuffix}
 For the /treaty/:congress/:treatyNumber/:treatySuffix example on api.congress.gov, the example is being cut off. This will be investigated and fixed. 
+## Change #10
+### Impacted endpoint: /bill
+The Bill list-level endpoint is currently showing one <updateDate> element. This automatically defaults to the `<updateDateIncludingText>` when available, which can be confusing to users. 
+
+The following elements will be incorporated into the Bill list-level endpoint: 
+
+1. The `<updateDate>` element (without text).
+2. The `<updateDateIncludingText>` element.
+
+This is related to [Issue #261](https://github.com/LibraryOfCongress/api.congress.gov/issues/261).
 # UPCOMING August 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/32)
 **Expected Production Release Date: August 12, 2024**
 ## Change #1
