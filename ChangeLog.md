@@ -12,7 +12,7 @@ An error message impacting some House amendments will be investigated and fixed.
 The bill endpoint is returning items out of order when sorting by `updateDate+desc`. This will be investigated and fixed. This is related to [Issue #231](https://github.com/LibraryOfCongress/api.congress.gov/issues/231). 
 ## Change #4
 ### Impacted endpoint: /daily-congressional-record
-When requesting a record from the daily-congressional-record API, links to the "Formatted Text" version of entireIssue do not include all of the text from the record. This will be investigated and fixed. This is realted to [Issue #220](https://github.com/LibraryOfCongress/api.congress.gov/issues/2200.
+When requesting a record from the daily-congressional-record API, links to the "Formatted Text" version of entireIssue do not include all of the text from the record. This will be investigated and fixed. This is realted to [Issue #220](https://github.com/LibraryOfCongress/api.congress.gov/issues/220).
 ## Change #5
 ### Impacted endpoint: /senate-communication
 The Senate communication API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #218](https://github.com/LibraryOfCongress/api.congress.gov/issues/218).
