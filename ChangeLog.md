@@ -65,10 +65,10 @@ The committee print API endpoints will be adjusted so that the default sort is b
 Network errors will be investigated and fixed in the /member/congress/:congress/:stateCode/:district endpoint. This is related to [Issue #257](https://github.com/LibraryOfCongress/api.congress.gov/issues/257). 
 ## Change #3
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/subjects
-An `<updateDate>` element will be added to each `<title>` element in the bill subject-level endpoint.
+An `<updateDate>` element will be added to each subject term `<name>` element in the bill titles-level endpoint.
 ## Change #4
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/titles
-An `<updateDate>` element will be added to each subject term `<name>` element in the bill titles-level endpoint.
+An `<updateDate>` element will be added to each `<title>` element in the bill subject-level endpoint.
 # UPCOMING JULY 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/30)
 **Expected Production Release Date: July 22, 2024**
 ## Change #1
