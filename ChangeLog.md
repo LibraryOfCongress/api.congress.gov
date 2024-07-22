@@ -75,7 +75,7 @@ The `<updateDate>` on the Bill record is being constantly updated. This was inve
 # COMPLETED July 2024, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/31)
 ## Change #1
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/text
-Developers adjusted how the API counts <textVersions> so that it includes bill texts, slip law texts, and statute texts. 
+Developers adjusted how the API counts <textVersions> so that it includes law texts, slip law texts, and statute texts. 
 ## Change #2
 ### Impacted endpoint: /committee-meeting
 The 'NoChamberMeetingVideo' API error in the /committee-meeting endpoint was investigated and fixed. 
