@@ -70,13 +70,12 @@ An `<updateDate>` element will be added to each subject term `<name>` element in
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/titles
 An `<updateDate>` element will be added to each `<title>` element in the bill subject-level endpoint.
 # UPCOMING JULY 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/30)
-**Expected Production Release Date: July 22, 2024**
 ## Change #1
 ### Impacted endpoint: /amendment/{congress}/{amendmentType}/{amendmentNumber}, /amendment/{congress}/{amendmentType}/{amendmentNumber}/actions
-Inconsistencies in the count for amendment actions between API endpoints will be investigated and fixed. This is related to [Issue #246](https://github.com/LibraryOfCongress/api.congress.gov/issues/246). 
+Inconsistencies in the count for amendment actions between API endpoints was investigated and fixed. This is related to [Issue #246](https://github.com/LibraryOfCongress/api.congress.gov/issues/246). 
 ## Change #2
 ### Impacted endpoint: /bill
-The `<updateDate>` on the Bill record is being constantly updated. This will be investigated. This is related to [Issue #201](https://github.com/LibraryOfCongress/api.congress.gov/issues/201). 
+The `<updateDate>` on the Bill record is being constantly updated. This was investigated. This is related to [Issue #201](https://github.com/LibraryOfCongress/api.congress.gov/issues/201). 
 # COMPLETED July 2024, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/31)
 ## Change #1
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/text
