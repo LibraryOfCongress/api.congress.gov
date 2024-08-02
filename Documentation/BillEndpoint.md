@@ -464,6 +464,8 @@ Parent container for [legislative subject terms](https://www.congress.gov/help/l
   - A `<policyArea>` element may include the following children:
     - `<name>` (e.g. Government Operations and Politics)
       - The name of the policy area term attached to a bill or resolution.
+    - `<updateDate>` (e.g. 2021-06-07T20:24:30Z)
+     - The update date for the bill subject on Congress.gov. This may be the date the subject was published or re-published. The `<updateDate>` is the date of the last update received for the legislative entity . It’s not a date corresponding to the legislative date or legislative action date.
 
 #### Summaries Level
 
@@ -584,6 +586,8 @@ Parent container for titles associated with the bill or resolution. A title may 
       - The file extension code for the bill text version associated with the title. This element will not populate for all titles (e.g. a display title will never have an associated bill text version).
     - `<titleTypeCode>` (e.g., 45)
        - The title code for the title type. Please note that Congress.gov is transitioning from a legacy process that involved manual curation to an automated process that associates titles with bill text versions. As a result, certain title types can be duplicated. Please refer to the chart below for a list of common title types.
+    - `<updateDate>` (e.g. 2021-06-07T20:24:30Z)
+        - The update date for the bill title on Congress.gov. This may be the date the title was published or re-published. The `<updateDate>` is the date of the last update received for the legislative entity . It’s not a date corresponding to the legislative date or legislative action date.
 
 ##### Common title type version codes and descriptions
 
