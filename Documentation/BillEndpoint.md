@@ -61,6 +61,8 @@ Parent container for bills and resolutions. A `<bills>` element may include the 
       - A referrer URL to the bill or resolution item in the API.
     - `<title>` (e.g. Postal Service Reform Act of 2022)
       - The display title for the bill or resolution on Congress.gov.
+    - `<updateDateIncludingText>` (e.g. 2022-09-29)
+      - The date of update on Congress.gov, including if the update was to bill text.The <updateDate> is the date of the last update received for the legislative entity . It’s not a date corresponding to the legislative date or legislative action date.
     - `<latestAction>`
       - Container for the latest action taken on the bill or resolution. A `<latestAction>` element may include the following children:
         - `<actionDate>` (e.g. 2022-04-06)
