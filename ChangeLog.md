@@ -36,6 +36,9 @@ The committee report API endpoints will be adjusted so that the default sort is 
 ## Change #9
 ### Impacted endpoint: /committee
 An `<updateDate>` element will be added to the committee list-level endpoint. This is partially related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117). 
+## Change #10
+### All member endpoints
+An issue related to inaccurate member data when filtering via `currentMember=True` will be investigated and fixed. This is related to [Issue #269](https://github.com/LibraryOfCongress/api.congress.gov/issues/269).
 # UPCOMING September 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/34)
 **Expected Production Release Date: September 23, 2024**
 ## Change #1
