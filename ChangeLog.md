@@ -62,16 +62,15 @@ For bills in the 1973-1980 (93rd, 94th, 95th, and 96th Congresses) bills for whi
 ### Impacted endpoint: /member/congress/{congress}/{stateCode}/{district}
 Network errors will be investigated and fixed in the /member/congress/:congress/:stateCode/:district endpoint. This is related to [Issue #257](https://github.com/LibraryOfCongress/api.congress.gov/issues/257).
 **This work is ongoing from a previous sprint**
-# UPCOMING September 2024, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/33)
-**Expected Production Release Date: September 3, 2024**
+# COMPLETED September 2024, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/33)
 ## Change #1
 ### Impacted endpoint: /bill
-14 pieces of legislation from the 118th Congress are missing in the bill list-level API endpoint. This will be investigated and fixed. This is related to [Issue #233](https://github.com/LibraryOfCongress/api.congress.gov/issues/233). 
+14 pieces of legislation from the 118th Congress were missing in the bill list-level API endpoint. This was investigated and fixed. This is related to [Issue #233](https://github.com/LibraryOfCongress/api.congress.gov/issues/233). 
 ## Change #2
 ### Impacted endpoint: /bill
-The Bill list-level endpoint is currently showing one <updateDate> element. This automatically defaults to the `<updateDateIncludingText>` when available, which can be confusing to users. 
+The Bill list-level endpoint was showing one <updateDate> element. This automatically defaults to the `<updateDateIncludingText>` when available, which can be confusing to users. 
 
-The following elements will be incorporated into the Bill list-level endpoint: 
+The following elements were incorporated into the Bill list-level endpoint: 
 
 1. The `<updateDate>` element (without text).
 2. The `<updateDateIncludingText>` element.
