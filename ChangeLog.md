@@ -78,7 +78,7 @@ The following elements were incorporated into the Bill list-level endpoint:
 This is related to [Issue #261](https://github.com/LibraryOfCongress/api.congress.gov/issues/261).
 ## Change #3
 ### Impacted endpoint: /hearing
-The hearing API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #215](https://github.com/LibraryOfCongress/api.congress.gov/issues/215).
+The hearing API endpoints were adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #215](https://github.com/LibraryOfCongress/api.congress.gov/issues/215).
 # COMPLETED August 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/32)
 **Expected Production Release Date: August 12, 2024**
 ## Change #1
