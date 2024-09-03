@@ -1,4 +1,15 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
+# UPCOMING November 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/36)
+**Expected Production Release Date: November 25, 2024**
+## Change #1 
+### Impacted endpoint: /committee-meeting
+`fromDateTime` and `toDateTime` filters will be added to the committee-meeting endpoint. The default sort will be via `updateDate`. This is realted to [Issue #158](https://github.com/LibraryOfCongress/api.congress.gov/issues/158).
+## Change #2
+### Impacted endpoint: /bill
+When requesting details for a bill that does not exist the API returns a 500. After this fix, the bill endpoint will return a 404 error instead. This is is related to [Issue #232](https://github.com/LibraryOfCongress/api.congress.gov/issues/232).
+## Change #3
+### Impacted endpoint: /treaty/{congress}/{treatyNumber}/{treatySuffix}
+Lower case characters for treaties with suffixes (e.g., 'a') will be supported and no longer will return an error message. This is related to [Issue #252](https://github.com/LibraryOfCongress/api.congress.gov/issues/252). 
 # UPCOMING November 2024, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/36)
 **Expected Production Release Date: November 4, 2024**
 ## Change #1 
@@ -7,43 +18,50 @@ For the /treaty/:congress/:treatyNumber/:treatySuffix example on api.congress.go
 ## Change #2
 ### Impacted endpoint: /committee
 The committee list-level API endpoint will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117).
+## Change #3
+### Impacted endpoint: /member
+The /members endpoint is currently not returning the full set for the requested limit when within the range of the first page. It's currently one member short. For example, requesting with a limit of 20 yields 19 items. This will be investigated and fixed. Related to [Issue #212](https://github.com/LibraryOfCongress/api.congress.gov/issues/212). 
+## Change #4
+### Impacted endpoint: /house-communication
+The House communication API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #217](https://github.com/LibraryOfCongress/api.congress.gov/issues/217). 
+## Change #5
+### Impacted endpoint: /daily-congressional-record
+The daily Congressional Record API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #223](https://github.com/LibraryOfCongress/api.congress.gov/issues/223).
+## Change #6
+### Impacted endpoint: /committee-report
+The committee report API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #224](https://github.com/LibraryOfCongress/api.congress.gov/issues/224).
 # UPCOMING October 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/35)
 **Expected Production Release Date: October 14, 2024**
 ## Change #1
 ### Impacted endpoint: /amendment/{congress}/{amendmentType}/{amendmentNumber}/text
 An error message impacting some House amendments will be investigated and fixed. This is related to [Issue #205](https://github.com/LibraryOfCongress/api.congress.gov/issues/205). 
 ## Change #2
-### Impacted endpoint: /member
-The /members endpoint is currently not returning the full set for the requested limit when within the range of the first page. It's currently one member short. For example, requesting with a limit of 20 yields 19 items. This will be investigated and fixed. Related to [Issue #212](https://github.com/LibraryOfCongress/api.congress.gov/issues/212). 
-## Change #3
 ### Impacted endpoint: /senate-communication
 The Senate communication API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #218](https://github.com/LibraryOfCongress/api.congress.gov/issues/218).
-## Change #4
+## Change #3
 ### Impacted endpoint: /committee-report
 The committee report API endpoints will be adjusted so that all dates/times are returned in this format: YYYY-MM-DDT00:00:00Z.
-## Change #5
+## Change #4
 ### Impacted endpoint: /committee-print
 The committee print API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #213](https://github.com/LibraryOfCongress/api.congress.gov/issues/213).
-## Change #6
-### Impacted endpoint: /house-communication
-The House communication API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #217](https://github.com/LibraryOfCongress/api.congress.gov/issues/217). 
-## Change #7
-### Impacted endpoint: /daily-congressional-record
-The daily Congressional Record API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #223](https://github.com/LibraryOfCongress/api.congress.gov/issues/223).
-## Change #8
-### Impacted endpoint: /committee-report
-The committee report API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #224](https://github.com/LibraryOfCongress/api.congress.gov/issues/224).
-## Change #9
+## Change #5
 ### Impacted endpoint: /committee
 An `<updateDate>` element will be added to the committee list-level endpoint. This is partially related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117). 
-## Change #10
+## Change #6
 ### All member endpoints
 An issue related to inaccurate member data when filtering via `currentMember=True` will be investigated and fixed. This is related to [Issue #269](https://github.com/LibraryOfCongress/api.congress.gov/issues/269).
+## Change #7
+### Impacted endpoint: /member 
+When using the `currentMember=True` filter, certain members who were present in the 118th Congress but no longer in Congress are still being returned. This will be investigated and fixed. This is related to [Issue #269](https://github.com/LibraryOfCongress/api.congress.gov/issues/269). 
 # UPCOMING September 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/34)
 **Expected Production Release Date: September 23, 2024**
 ## Change #1
 ### Impacted endpoint: bill/{congress}/{billType}/{billNumber}/cosponsors
 For bills in the 1973-1980 (93rd, 94th, 95th, and 96th Congresses) bills for which we do NOT have cosponsorship dates, an error message that currently appears in the Congress.gov API will be investigated and fixed.
+## Change #2
+### Impacted endpoint: /member/congress/{congress}/{stateCode}/{district}
+Network errors will be investigated and fixed in the /member/congress/:congress/:stateCode/:district endpoint. This is related to [Issue #257](https://github.com/LibraryOfCongress/api.congress.gov/issues/257).
+**This work is ongoing from a previous sprint**
 # UPCOMING September 2024, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/33)
 **Expected Production Release Date: September 3, 2024**
 ## Change #1
@@ -62,10 +80,6 @@ This is related to [Issue #261](https://github.com/LibraryOfCongress/api.congres
 ## Change #3
 ### Impacted endpoint: /hearing
 The hearing API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #215](https://github.com/LibraryOfCongress/api.congress.gov/issues/215).
-## Change #4
-### Impacted endpoint: /member/congress/{congress}/{stateCode}/{district}
-Network errors will be investigated and fixed in the /member/congress/:congress/:stateCode/:district endpoint. This is related to [Issue #257](https://github.com/LibraryOfCongress/api.congress.gov/issues/257).
-**This work is ongoing from a previous sprint**
 # COMPLETED August 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/32)
 **Expected Production Release Date: August 12, 2024**
 ## Change #1
