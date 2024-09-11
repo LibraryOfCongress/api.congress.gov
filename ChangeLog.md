@@ -31,7 +31,7 @@ The daily Congressional Record API endpoints will be adjusted so that the defaul
 ### Impacted endpoint: /committee-report
 The committee report API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #224](https://github.com/LibraryOfCongress/api.congress.gov/issues/224).
 # UPCOMING October 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/35)
-**Expected Production Release Date: October 14, 2024**
+**Expected Production Release Date: October 15, 2024**
 ## Change #1
 ### Impacted endpoint: /amendment/{congress}/{amendmentType}/{amendmentNumber}/text
 An error message impacting some House amendments will be investigated and fixed. This is related to [Issue #205](https://github.com/LibraryOfCongress/api.congress.gov/issues/205). 
