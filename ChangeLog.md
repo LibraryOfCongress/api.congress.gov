@@ -44,14 +44,13 @@ An `<updateDate>` element will be added to the committee list-level endpoint. Th
 ## Change #4
 ### All member endpoints
 An issue related to inaccurate member data when filtering via `currentMember=True` will be investigated and fixed. This is related to [Issue #269](https://github.com/LibraryOfCongress/api.congress.gov/issues/269). 
-# UPCOMING September 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/34)
-**Expected Production Release Date: September 23, 2024**
+# COMPLETED September 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/34)
 ## Change #1
 ### Impacted endpoint: bill/{congress}/{billType}/{billNumber}/cosponsors
-For bills in the 1973-1980 (93rd, 94th, 95th, and 96th Congresses) bills for which we do NOT have cosponsorship dates, an error message that currently appears in the Congress.gov API will be investigated and fixed.
+For bills in the 1973-1980 (93rd, 94th, 95th, and 96th Congresses) bills for which we do NOT have cosponsorship dates, an error message that appeared in the Congress.gov API was investigated and fixed.
 ## Change #2
 ### Impacted endpoint: /member/congress/{congress}/{stateCode}/{district}
-Network errors will be investigated and fixed in the /member/congress/:congress/:stateCode/:district endpoint. This is related to [Issue #257](https://github.com/LibraryOfCongress/api.congress.gov/issues/257).
+Network errors were investigated and fixed in the /member/congress/:congress/:stateCode/:district endpoint. This was related to [Issue #257](https://github.com/LibraryOfCongress/api.congress.gov/issues/257).
 **This work is ongoing from a previous sprint**
 # COMPLETED September 2024, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/33)
 ## Change #1
