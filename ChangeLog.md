@@ -2,8 +2,8 @@ This change log will contain information on updates to the Congress.gov API, the
 # UPCOMING November 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/36)
 **Expected Production Release Date: November 25, 2024**
 ## Change #1 
-### Impacted endpoint: /committee-meeting
-The default sort in the committee meeting endpoint will be via `updateDate`. This is related to [Issue #158](https://github.com/LibraryOfCongress/api.congress.gov/issues/158).
+### Impacted endpoint: /committee
+The default sort in the committee  endpoint will be via `updateDate`. This is partially related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117).
 ## Change #2
 ### Impacted endpoint: /bill
 When requesting details for a bill that does not exist the API returns a 500. After this fix, the bill endpoint will return a 404 error instead. This is is related to [Issue #232](https://github.com/LibraryOfCongress/api.congress.gov/issues/232).
