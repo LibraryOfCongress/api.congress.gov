@@ -47,6 +47,9 @@ An `<updateDate>` element will be added to the committee list-level endpoint. Th
 ## Change #4
 ### All member endpoints
 An issue related to inaccurate member data when filtering via `currentMember=True` will be investigated and fixed. This is related to [Issue #269](https://github.com/LibraryOfCongress/api.congress.gov/issues/269). 
+## Change #5
+### DOCUMENTATION
+An updated swagger file will be uploaded to the Git repository. 
 # COMPLETED September 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/34)
 ## Change #1
 ### Impacted endpoint: bill/{congress}/{billType}/{billNumber}/cosponsors
