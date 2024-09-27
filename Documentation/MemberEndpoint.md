@@ -8,6 +8,9 @@ Coverage information for member data in the API can be found at [Coverage Dates 
 
 View OpenAPI Specification on the member API, supported endpoints, and available parameters at [https://api.congress.gov](https://api.congress.gov/#/member/member_list).
 
+## A note on filtering members by Congress.
+When calling for member data from prior congresses using the /member/congress/{congress} filters, please use 'currentMember=False' in your call to get the most complete data. An example API request is: https://api.congress.gov/v3/member/congress/117?currentMember=false&api_key=[INSERT_KEY]
+
 ## Elements and Descriptions
 
 The section below details available element names, their description, and possible values.
