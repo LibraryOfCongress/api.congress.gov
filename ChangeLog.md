@@ -16,6 +16,9 @@ The committee report API endpoints will be adjusted so that the default sort is 
 ## Change #5
 ### Impacted endpoint: /daily-congressional-record
 The daily Congressional Record API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #223](https://github.com/LibraryOfCongress/api.congress.gov/issues/223).
+## Change #6
+### Impacted endpoint: /house-communication
+The House communication API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #217](https://github.com/LibraryOfCongress/api.congress.gov/issues/217). 
 # UPCOMING November 2024, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/36)
 **Expected Production Release Date: November 4, 2024**
 ## Change #1 
@@ -25,12 +28,9 @@ For the /treaty/:congress/:treatyNumber/:treatySuffix example on api.congress.go
 ### Impacted endpoint: /member
 The /members endpoint is currently not returning the full set for the requested limit when within the range of the first page. It's currently one member short. For example, requesting with a limit of 20 yields 19 items. This will be investigated and fixed. Related to [Issue #212](https://github.com/LibraryOfCongress/api.congress.gov/issues/212). 
 ## Change #3
-### Impacted endpoint: /house-communication
-The House communication API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #217](https://github.com/LibraryOfCongress/api.congress.gov/issues/217). 
-## Change #4
 ### Impacted endpoint: /senate-communication
 The Senate communication API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #218](https://github.com/LibraryOfCongress/api.congress.gov/issues/218).
-## Change #5
+## Change #4
 ### Impacted endpoint: /member/congress/{congress}
 A bug with retrieving member data by Congress will be investigated. Pre-118th Congresses appear to be impacted. This is related to [Issue #263](https://github.com/LibraryOfCongress/api.congress.gov/issues/263).
 ## Change #6
