@@ -32,7 +32,7 @@ The House communication API endpoints will be adjusted so that the default sort 
 The Senate communication API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #218](https://github.com/LibraryOfCongress/api.congress.gov/issues/218).
 ## Change #5
 ### Impacted endpoint: /member/congress/{congress}
-A bug with retrieving member data by Congress will be investigated. Pre-118th Congresses appear to be impacted. This is related to [Issue #275](https://github.com/LibraryOfCongress/api.congress.gov/issues/275).
+A bug with retrieving member data by Congress will be investigated. Pre-118th Congresses appear to be impacted. This is related to [Issue #263](https://github.com/LibraryOfCongress/api.congress.gov/issues/263).
 ## Change #6
 ### Impacted endpoints: all summaries endpoints
 A bug impacting the `<count>` element will be investigated and fixed. This is related to [Issue #278](https://github.com/LibraryofCongress/api.congress.gov/issues/278). 
