@@ -29,7 +29,7 @@ The Senate communication API endpoints will be adjusted so that the default sort
 A bug with retrieving member data by Congress will be investigated. Pre-118th Congresses appear to be impacted. This is related to [Issue #263](https://github.com/LibraryOfCongress/api.congress.gov/issues/263).
 ## Change #4
 ### Impacted endpoint: /house-communication
-The House communication API endpoints will be adjusted so that the default sort is by <updateDate>. This is related to Issue #217.
+The House communication API endpoints will be adjusted so that the default sort is by <updateDate>. This is related to [Issue #217](https://github.com/LibraryofCongress/api.congress.gov/issues/217). 
 # UPCOMING October 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/35)
 **Expected Production Release Date: October 15, 2024**
 ## Change #1
