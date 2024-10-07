@@ -15,10 +15,7 @@ Lower case characters for treaties with suffixes (e.g., 'a') will be supported a
 The committee report API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #224](https://github.com/LibraryOfCongress/api.congress.gov/issues/224).
 ## Change #5
 ### Impacted endpoint: /daily-congressional-record
-The daily Congressional Record API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #223](https://github.com/LibraryOfCongress/api.congress.gov/issues/223).
-## Change #6
-### Impacted endpoint: /house-communication
-The House communication API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #217](https://github.com/LibraryOfCongress/api.congress.gov/issues/217). 
+The daily Congressional Record API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #223](https://github.com/LibraryOfCongress/api.congress.gov/issues/223). 
 # UPCOMING November 2024, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/36)
 **Expected Production Release Date: November 4, 2024**
 ## Change #1
@@ -30,6 +27,9 @@ The Senate communication API endpoints will be adjusted so that the default sort
 ## Change #3
 ### Impacted endpoint: /member/congress/{congress}
 A bug with retrieving member data by Congress will be investigated. Pre-118th Congresses appear to be impacted. This is related to [Issue #263](https://github.com/LibraryOfCongress/api.congress.gov/issues/263).
+## Change #4
+### Impacted endpoint: /house-communication
+The House communication API endpoints will be adjusted so that the default sort is by <updateDate>. This is related to Issue #217.
 # UPCOMING October 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/35)
 **Expected Production Release Date: October 15, 2024**
 ## Change #1
