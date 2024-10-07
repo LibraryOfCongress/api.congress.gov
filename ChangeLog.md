@@ -30,9 +30,6 @@ The Senate communication API endpoints will be adjusted so that the default sort
 ## Change #3
 ### Impacted endpoint: /member/congress/{congress}
 A bug with retrieving member data by Congress will be investigated. Pre-118th Congresses appear to be impacted. This is related to [Issue #263](https://github.com/LibraryOfCongress/api.congress.gov/issues/263).
-## Change #4
-### Impacted endpoint: /committee
-An `<updateDate>` element will be added to the committee list-level endpoint. This is partially related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117). 
 # UPCOMING October 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/35)
 **Expected Production Release Date: October 15, 2024**
 ## Change #1
@@ -44,6 +41,9 @@ The committee print API endpoints will be adjusted so that the default sort is b
 ## Change #3
 ### All member endpoints
 An issue related to inaccurate member data when filtering via `currentMember=True` will be investigated and fixed. This is related to [Issue #269](https://github.com/LibraryOfCongress/api.congress.gov/issues/269). 
+## Change #4
+### Impacted endpoint: /committee
+An `<updateDate>` element will be added to the committee list-level endpoint. This is partially related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117). 
 ## Change #5
 ### DOCUMENTATION
 An updated swagger file will be uploaded to the Git repository. 
