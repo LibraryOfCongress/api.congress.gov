@@ -25,7 +25,7 @@ Currently, the bill list-level API endpoint returns at least one item out of ord
 **Expected Production Release Date: November 25, 2024**
 ## Change #1 
 ### Impacted endpoint: /committee
-The default sort in the committee  endpoint will be via `updateDate`. This is partially related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117).
+The default sort in the committee list-level endpoint will be adjusted so that it is by `<updateDate>`. This is partially related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117).
 ## Change #2
 ### Impacted endpoint: /committee-report
 The committee report API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #224](https://github.com/LibraryOfCongress/api.congress.gov/issues/224).
