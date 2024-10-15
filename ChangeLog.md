@@ -47,7 +47,6 @@ A bug with retrieving member data by Congress will be investigated. Pre-118th Co
 ### Impacted endpoint: /house-communication
 The House communication API endpoints will be adjusted so that the default sort is by <updateDate>. This is related to [Issue #217](https://github.com/LibraryofCongress/api.congress.gov/issues/217). 
 # COMPLETED October 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/35)
-**Expected Production Release Date: October 15, 2024**
 ## Change #1
 ### Impacted endpoint: /amendment/{congress}/{amendmentType}/{amendmentNumber}/text
 An error message impacting some House amendments was investigated and fixed. This is related to [Issue #205](https://github.com/LibraryOfCongress/api.congress.gov/issues/205). 
