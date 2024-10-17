@@ -101,7 +101,8 @@ Parent container for a bill or resolution. A `<bill>` element may include the fo
 - `<congress>` (e.g. 117)
   - The congress during which a bill or resolution was introduced or submitted.
   - View the [field values list of Congresses](https://www.congress.gov/help/field-values/congresses) on Congress.gov. Read more [about Congresses](https://www.congress.gov/help/legislative-glossary#glossary_congress) on Congress.gov.
-- `<constitutionalAuthorityStatementText>` (e.g. `<![CDATA[ <pre>[Congressional Record Volume 167, Number 81 (Tuesday, May 11, 2021)][House]From the Congressional Record Online through the Government Publishing Office [<a href="https://www.gpo.gov">www.gpo.gov</a>]By Mrs. CAROLYN B. MALONEY of New York:H.R. 3076.Congress has the power to enact this legislation pursuantto the following:Article I, Section I, Clause 18 (Necessary and ProperClause)[Page H2195]</pre> ]]>`)
+- `<constitutionalAuthorityStatementText>` (e.g. `<![CDATA[ <pre>[Congressional Record Volume 169, Number 10 (Thursday, January 12, 2023)][House]From the Congressional Record Online through the Government Publishing Office [<a href="https://www.gpo.gov">www.gpo.gov</a>]By Mr. STAUBER:H.R. 346.Congress has the power to enact this legislation pursuantto the following:Article I, Section 8 of the United States Constitution,specifically Clause 3.[Page H235]</pre> ]]>
+`)
   - Text extracted from the Congressional Record to accompany House Bills (HR) and House Joint Resolutions (HJRES) that cites the power granted to Congress by the Constitution to enact the proposed law, as required by Clause 7 of House Rule XII. Read more about constitutional authority statements on the [House Rules Committee website](https://rules.house.gov/rules-and-resources/constitutional-authority-statements).
   - Note that the text is encased in CDATA.
 - `<committees>`
