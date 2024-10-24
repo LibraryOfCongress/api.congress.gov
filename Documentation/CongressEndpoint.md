@@ -31,7 +31,7 @@ Parent container for congress and congressional sessions. A `<congresses>` eleme
     - `<startYear>` (e.g. 2019)
       - The start year for the congress. Congresses span over a two-year period.
     - `<endYear>` (e.g. 2020)
-      - The end year for the congress. Congresses span over a two-year period.
+      - The generalized end year for the congress. Congresses span over a two-year period. See [Congresses - Field Values](https://www.congress.gov/help/field-values/congresses) for more information about congress field values.  
     - `<sessions>`
       - Container for sessions of congress. A `<sessions>` element may include the following children:
         - `<item>`
@@ -45,7 +45,7 @@ Parent container for congress and congressional sessions. A `<congresses>` eleme
             - `<startDate>` (e.g. 2019-01-03)
               - The start date of the session.
             - `<endDate>` (e.g. 2020-01-03)
-              - The end date of the session.
+              - The specific end date of the session. This value is specified for legislative research. See [Past Days in Session](https://www.congress.gov/past-days-in-session) for more information about past days in session of legislative sessions.
             - `<number>` (e.g. 1)
               - The assigned session's number.
               - For special sessions, this value is suppressed.
