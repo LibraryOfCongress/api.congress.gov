@@ -33,7 +33,7 @@ The committee report API endpoints will be adjusted so that the default sort is 
 ### Impacted endpoint: /daily-congressional-record
 The daily Congressional Record API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #223](https://github.com/LibraryOfCongress/api.congress.gov/issues/223). 
 # UPCOMING November 2024, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/36)
-**Expected Production Release Date: November 4, 2024**
+**Expected Production Release Date: November 12, 2024**
 ## Change #1
 ### Impacted endpoint: /member
 The /members endpoint is currently not returning the full set for the requested limit when within the range of the first page. It's currently one member short. For example, requesting with a limit of 20 yields 19 items. This will be investigated and fixed. Related to [Issue #212](https://github.com/LibraryOfCongress/api.congress.gov/issues/212). 
