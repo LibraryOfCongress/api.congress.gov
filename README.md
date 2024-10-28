@@ -41,3 +41,7 @@ Congress.gov staff will monitor and respond to any [issues](https://github.com/L
 ## Change Management
 
 Congress.gov staff will issue change management communication through the [ChangeLog](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/ChangeLog.md) so that consumers are able to adjust accordingly. The [ChangeLog](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/ChangeLog.md) will contain information on updates to the API, the impacted endpoints, and the expected production release date. Milestones are also used to tag issues with expected production release date information.
+
+## Relevant Privacy Policies 
+1. API keys and user registration follow the data.gov privacy policy. Read more [here](https://data.gov/privacy-policy/).
+2. API content follows the Library of Congress privacy policy. Read more [here](https://www.loc.gov/legal/privacy-policy/).
