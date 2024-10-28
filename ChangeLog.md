@@ -1,5 +1,16 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
-# UPCOMING January 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/39)
+# UPCOMING January 2025, Part 2 | [Milestone]()
+**Expected Production Release Date: January 27, 2025**
+## Change #1
+### Impacted endpoints: /treaty/{congress}/{treatyNumber}/{treatySuffix} and /treaty/{congress}/{treatyNumber}/{treatySuffix}/actions
+An error message when searching for a treaty with a lower case suffix (e.g., "a") will be investigated and fixed. This is related to [Issue #252](https://github.com/LibraryOfCongress/api.congress.gov/issues/252). 
+## Change #2
+### Impacted endpoint: /committee-report
+The date format will be adjusted for consistency so that it is YYYY-MM-DDT00:00:00Z.
+### Change #3
+### Impacted endpoint: /committee-meeting
+Filters will be added to the /committee-meeting endpoint. Users will have the ability to filter off of the `updateDate` via `fromDateTime` and `toDateTime` parameters. This is related to [Issue #158](https://github.com/LibraryOfCongress/api.congress.gov/issues/158). 
+# UPCOMING January 2025, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/39)
 **Expected Production Release Date: January 6, 2025**
 ## Change #1
 ### Impacted endpoint: /committee-meeting
@@ -10,9 +21,6 @@ When requesting a record from the daily-congressional-record API, links to the "
 ## Change #3
 ### Impacted endpoint: /member/congress/{congress}
 A bug in the /member/congress/{congress} endpoint will be investigated to ensure that accurate data for member districts is rendering properly. This is partially related to [Issue #243](https://github.com/LibraryOfCongress/api.congress.gov/issues/243). 
-## Change #4
-### Impacted endpoints: /treaty/{congress}/{treatyNumber}/{treatySuffix} and /treaty/{congress}/{treatyNumber}/{treatySuffix}/actions
-An error message when searching for a treaty with a lower case suffix (e.g., "a") will be investigated and fixed. This is related to [Issue #252](https://github.com/LibraryOfCongress/api.congress.gov/issues/252). 
 ## Change #5
 ### Impacted endpoint: /committee
 The default sort in the committee list-level endpoint will be adjusted so that it is by `<updateDate>`. This is partially related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117).
