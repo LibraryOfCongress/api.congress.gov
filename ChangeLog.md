@@ -19,9 +19,6 @@ The date format for the committee meeting will be updated to the API's existing 
 ### Impacted endpoint: /daily-congressional-record
 When requesting a record from the daily-congressional-record API, links to the "Formatted Text" version of `entireIssue` do not include all of the text from the Daily Congressional Record. This will be investigated and fixed. This is related to [Issue #220](https://github.com/LibraryOfCongress/api.congress.gov/issues/220). 
 ## Change #3
-### Impacted endpoint: /member/congress/{congress}
-A bug in the /member/congress/{congress} endpoint will be investigated to ensure that accurate data for member districts is rendering properly. This is partially related to [Issue #243](https://github.com/LibraryOfCongress/api.congress.gov/issues/243). 
-## Change #5
 ### Impacted endpoint: /committee
 The default sort in the committee list-level endpoint will be adjusted so that it is by `<updateDate>`. This is partially related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117).
 # UPCOMING December 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/38)
@@ -43,6 +40,9 @@ The committee report API endpoints will be adjusted so that the default sort is 
 ## Change #1
 ### Impacted endpoint: /committee-meeting
 The date format will be adjusted for consistency so that it is YYYY-MM-DDT00:00:00Z.
+## Change #2
+### Impacted endpoint: /member/congress/{congress}
+A bug in the /member/congress/{congress} endpoint will be investigated to ensure that accurate data for member districts is rendering properly. This is partially related to [Issue #243](https://github.com/LibraryOfCongress/api.congress.gov/issues/243). 
 # UPCOMING November 2024, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/36)
 **Expected Production Release Date: November 12, 2024**
 ## Change #1
