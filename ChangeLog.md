@@ -43,7 +43,7 @@ The date format will be adjusted for consistency so that it is YYYY-MM-DDT00:00:
 ## Change #2
 ### Impacted endpoint: /member/congress/{congress}
 A bug in the /member/congress/{congress} endpoint will be investigated to ensure that accurate data for member districts is rendering properly. This is partially related to [Issue #243](https://github.com/LibraryOfCongress/api.congress.gov/issues/243). 
-# Completed November 2024, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/36)
+# COMPLETED November 2024, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/36)
 ## Change #1
 ### Impacted endpoint: /member
 The /members endpoint is currently not returning the full set for the requested limit when within the range of the first page. It's currently one member short. For example, requesting with a limit of 20 yields 19 items. This will be investigated and fixed. Related to [Issue #212](https://github.com/LibraryOfCongress/api.congress.gov/issues/212). 
