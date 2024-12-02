@@ -35,14 +35,13 @@ The daily Congressional Record API endpoints will be adjusted so that the defaul
 ## Change #3
 ### Impacted endpoint: /committee-report
 The committee report API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #224](https://github.com/LibraryOfCongress/api.congress.gov/issues/224).
-# UPCOMING November 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/37)
-**Expected Production Release Date: November 25, 2024**
+# COMPLETED November 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/37)
 ## Change #1
 ### Impacted endpoint: /committee-meeting
-The date format will be adjusted for consistency so that it is YYYY-MM-DDT00:00:00Z.
+The date format was adjusted for consistency so that it is YYYY-MM-DDT00:00:00Z.
 ## Change #2
 ### Impacted endpoint: /member/congress/{congress}
-A bug in the /member/congress/{congress} endpoint will be investigated to ensure that accurate data for member districts is rendering properly. This is partially related to [Issue #243](https://github.com/LibraryOfCongress/api.congress.gov/issues/243). 
+A bug in the /member/congress/{congress} endpointwas investigated to ensure that accurate data for member districts is rendering properly. This was partially related to [Issue #243](https://github.com/LibraryOfCongress/api.congress.gov/issues/243). 
 # COMPLETED November 2024, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/36)
 ## Change #1
 ### Impacted endpoint: /member
