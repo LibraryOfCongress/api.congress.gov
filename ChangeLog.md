@@ -2,12 +2,12 @@ This change log will contain information on updates to the Congress.gov API, the
 # UPCOMING March 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/42)
 **Expected Production Release Date: March 10, 2025**
 ## Changes #1 
-### Imapcted Endpoint: NEW Congressional Research Service Endpoints
+### Imapcted Endpoints: NEW Congressional Research Service Endpoints
 A new list-level endpoint will be created that returns CRS Report data. A new detail-level endpoint will be created that returns detailed information for a particular CRS Report. Updated documentation with relevant information on data elements will be uploaded to the documentation section of this Git repository when the new endpoints go live. These new endpoints are related to [Issue #19](https://github.com/LibraryOfCongress/api.congress.gov/issues/19).
 # UPCOMING February 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/41)
 **Expected Production Release Date: February 18, 2025**
 ## Change #1
-### Impacted Endpoint: **NEW** House Roll Call Votes endpoints
+### Impacted Endpoints: **NEW** House Roll Call Votes endpoints
 New beta House Roll Call Votes API endpoints are targeted for release. The House Roll Call Votes endpoints will consist of a list level, an item level, and a member votes level for 2003-present (beginning with the 108th Congress). The list level is filterable by congress and session. Detailed information about each roll call vote will be available at the item level. Detailed information about member votes will be available at the member vote level. The endpoints, once development work is completed, are planned to be:
 1. api.congress.gov/v3/house-vote
 2. api.congress.gov/v3/house-vote/{congress}
