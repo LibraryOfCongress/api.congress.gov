@@ -2,7 +2,7 @@ This change log will contain information on updates to the Congress.gov API, the
 # UPCOMING March 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/42)
 **Expected Production Release Date: March 10, 2025**
 ## Changes #1 
-### Imapcted Endpoints: NEW Congressional Research Service (CRS) Reports Endpoints
+### Impacted Endpoints: NEW Congressional Research Service (CRS) Reports Endpoints
 A new list-level endpoint will be created that returns CRS Report data. A new detail-level endpoint will be created that returns detailed information for a particular CRS Report. Updated documentation with relevant information on data elements will be uploaded to the documentation section of this Git repository when the new endpoints go live. These new endpoints are related to [Issue #19](https://github.com/LibraryOfCongress/api.congress.gov/issues/19).
 # UPCOMING February 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/41)
 **Expected Production Release Date: February 18, 2025**
