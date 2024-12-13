@@ -1,7 +1,22 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
-# UPCOMING February 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/41)
+# UPCOMING March 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/42)
+**Expected Production Release Date: March 10, 2025**
+## Changes #1 
+### Imapcted Endpoint: NEW Congressional Research Service Endpoints
+A new list-level endpoint will be created that returns CRS Report data. A new detail-level endpoint will be created that returns detailed information for a particular CRS Report. Updated documentation with relevant information on data elements will be uploaded to the documentation section of this Git repository when the new endpoints go live. These new endpoints are related to [Issue #19](https://github.com/LibraryOfCongress/api.congress.gov/issues/19).
+# UPCOMING February 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/41)
 **Expected Production Release Date: February 18, 2025**
 ## Change #1
+### Impacted Endpoint: **NEW** House Roll Call Votes endpoints
+New beta House Roll Call Votes API endpoints are targeted for release. The House Roll Call Votes endpoints will consist of a list level, an item level, and a member votes level for 2003-present (beginning with the 108th Congress). The list level is filterable by congress and session. Detailed information about each roll call vote will be available at the item level. Detailed information about member votes will be available at the member vote level. The endpoints, once development work is completed, are planned to be:
+1. api.congress.gov/v3/house-vote
+2. api.congress.gov/v3/house-vote/{congress}
+3. api.congress.gov/v3/house-vote/{congress}/{session}
+4. api.congress.gov/v3/house-vote/{congress}/{session}{rollCallVoteNumber}
+5. api.congress.gov/v3/house-vote/{congress}/{session}/{rollCallVoteNumber}/members
+   
+This is related to [Issue #64](https://github.com/LibraryOfCongress/api.congress.gov/issues/64).
+## Change #2
 ### Impacted endpoint: /committee
 The default sort in the committee list-level endpoint will be adjusted so that it is by `<updateDate>`. This is partially related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117).
 ## Change #2
