@@ -8914,5 +8914,5 @@ paths:
 securityDefinitions:
   api_key:
     type: "apiKey"
-    name: "@auth_key"
+    name: "api_key"
     in: "query"
