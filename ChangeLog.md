@@ -4,6 +4,9 @@ This change log will contain information on updates to the Congress.gov API, the
 ## Changes #1 
 ### Impacted Endpoints: NEW Congressional Research Service (CRS) Reports Endpoints
 A new list-level endpoint will be created that returns CRS Report data. A new detail-level endpoint will be created that returns detailed information for a particular CRS Report. Updated documentation with relevant information on data elements will be uploaded to the documentation section of this Git repository when the new endpoints go live. These new endpoints are related to [Issue #19](https://github.com/LibraryOfCongress/api.congress.gov/issues/19).
+## Change #2
+### Impacted endpoint: /committee
+The default sort in the committee list-level endpoint will be adjusted so that it is by `<updateDate>`. This is partially related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117).
 # UPCOMING February 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/41)
 **Expected Production Release Date: February 18, 2025**
 ## Change #1
@@ -16,9 +19,6 @@ New beta House Roll Call Votes API endpoints are targeted for release. The House
 5. api.congress.gov/v3/house-vote/{congress}/{session}/{rollCallVoteNumber}/members
    
 This is related to [Issue #64](https://github.com/LibraryOfCongress/api.congress.gov/issues/64).
-## Change #2
-### Impacted endpoint: /committee
-The default sort in the committee list-level endpoint will be adjusted so that it is by `<updateDate>`. This is partially related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117).
 ## Change #2
 ### Impacted endpoints: /bill/{congress}/{billType}/{billNumber}, /amendment/{congress}/{amendmentType}/{amendmentNumber}
 On behalf of sponsor data will be incorporated into the Congress.gov API where applicable (for certain bills and amendments).
@@ -36,22 +36,21 @@ Filters will be added to the /committee-meeting endpoint. Users will have the ab
 # UPCOMING January 2025, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/39)
 **Expected Production Release Date: January 6, 2025**
 ## Change #1
-### Impacted endpoint: /committee-meeting
-The date format for the committee meeting will be updated to the API's existing standard: `YYYY-MM-DDT00:00:00Z`.
-## Change #2
 ### Impacted endpoint: /daily-congressional-record
 When requesting a record from the daily-congressional-record API, links to the "Formatted Text" version of `entireIssue` do not include all of the text from the Daily Congressional Record. This will be investigated and fixed. This is related to [Issue #220](https://github.com/LibraryOfCongress/api.congress.gov/issues/220). 
-## Change #3
+## Change #2
 ### Impacted endpoint: /bill/{congress}/{billType}
 Currently, the bill list-level API endpoint returns at least one item out of order when requested with the sort=updateDate+desc parameter. This will be investigated and fixed. This is related to [Issue #231](https://github.com/LibraryOfCongress/api.congress.gov/issues/231).
-# UPCOMING December 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/38)
-**Expected Production Release Date: December 16, 2024**
+## Change #3
+### Impacted endpoint: /congress
+An `<updateDate>` element will be added to the Congress endpoint. This is related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117). 
+# COMPLETED December 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/38)
 ## Change #1
 ### Impacted endpoint: /daily-congressional-record
-The daily Congressional Record API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #223](https://github.com/LibraryOfCongress/api.congress.gov/issues/223). 
+The daily Congressional Record API endpoints were adjusted so that the default sort is by `<updateDate>`. This was related to [Issue #223](https://github.com/LibraryOfCongress/api.congress.gov/issues/223). 
 ## Change #2
 ### Impacted endpoint: /committee-report
-The committee report API endpoints will be adjusted so that the default sort is by `<updateDate>`. This is related to [Issue #224](https://github.com/LibraryOfCongress/api.congress.gov/issues/224).
+The committee report API endpoints were adjusted so that the default sort is by `<updateDate>`. This was related to [Issue #224](https://github.com/LibraryOfCongress/api.congress.gov/issues/224).
 # COMPLETED November 2024, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/37)
 ## Change #1
 ### Impacted endpoint: /committee-meeting
