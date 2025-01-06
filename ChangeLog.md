@@ -51,11 +51,10 @@ Filters will be added to the /committee-meeting endpoint. Users will have the ab
 ### Impacted endpoint: /daily-congressional-record
 When requesting a record from the daily-congressional-record API, links to the "Formatted Text" version of `entireIssue` do not include all of the text from the Daily Congressional Record. This will be investigated and fixed. This is related to [Issue #220](https://github.com/LibraryOfCongress/api.congress.gov/issues/220). **This is ongoing work from a previous sprint**. 
 # Completed January 2025, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/39)
-**Expected Production Release Date: January 6, 2025**
-## Change #2
+## Change #1
 ### Impacted endpoint: /bill/{congress}/{billType}
 The bill list-level API endpoint no longer returns at least one item out of order when requested with the sort=updateDate+desc parameter. This was investigated and fixed. This was related to [Issue #231](https://github.com/LibraryOfCongress/api.congress.gov/issues/231).
-## Change #3
+## Change #2
 ### Impacted endpoint: /congress
 An `<updateDate>` element was added to the Congress endpoint. This was related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117). 
 # COMPLETED December 2024 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/38)
