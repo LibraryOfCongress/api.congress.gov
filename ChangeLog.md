@@ -1,12 +1,26 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
-# UPCOMING March 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/42)
+# UPCOMING March 2025, Part 2 | [Milestone]()
+**Expected Production Release Date: March 31, 2025**
+## Change #1 
+### Impacted endpoint: All committee report endpoints
+There is currently a discrepancy between the web and the API for committee reports. The web app does not display reports for which Congress.gov has not yet received text and metadata from GPO, but the API does. This will be addressed and fixed. 
+## Change #2
+### Impacted endpoint: All committee endpoints 
+When calling the /committee endpoint,  a 500 response if a fromDateTime parameter is passed with certain dates. This will be addressed and fixed. This is related to [Issue #290](https://github.com/LibraryOfCongress/api.congress.gov/issues/290).
+## Change #3
+### Imapcted endpoint: /congress
+The Congress list-level API currently returns items that are not in any particular order. The Congress list-level API endpoint will be modified so that the default sort is by updateDate. This is partially related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117).
+# UPCOMING March 2025, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/42)
 **Expected Production Release Date: March 10, 2025**
-## Changes #1 
-### Impacted Endpoints: NEW Congressional Research Service (CRS) Reports Endpoints
+## Change #1 
+### Impacted endpoints: NEW Congressional Research Service (CRS) Reports Endpoints
 A new list-level endpoint will be created that returns CRS Report data. A new detail-level endpoint will be created that returns detailed information for a particular CRS Report. Updated documentation with relevant information on data elements will be uploaded to the documentation section of this Git repository when the new endpoints go live. These new endpoints are related to [Issue #19](https://github.com/LibraryOfCongress/api.congress.gov/issues/19).
 ## Change #2
 ### Impacted endpoint: /committee
 The default sort in the committee list-level endpoint will be adjusted so that it is by `<updateDate>`. This is partially related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117).
+## Change #3
+### Impacted endpoint: N/A 
+When searching for the Congress.gov API, Google search results currently direct users to gpo.congress.gov. A new canonical URL will solve this issue. This is related to [Issue #302](https://github.com/LibraryOfCongress/api.congress.gov/issues/302).
 # UPCOMING February 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/41)
 **Expected Production Release Date: February 18, 2025**
 ## Change #1
