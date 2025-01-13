@@ -6,7 +6,7 @@ This change log will contain information on updates to the Congress.gov API, the
 There is currently a discrepancy between the web and the API for committee reports. The web app does not display reports for which Congress.gov has not yet received text and metadata from GPO, but the API does. This will be addressed and fixed. 
 ## Change #2
 ### Impacted endpoint: All committee endpoints 
-When calling the /committee endpoint,  a 500 response if a fromDateTime parameter is passed with certain dates. This will be addressed and fixed. This is related to [Issue #290](https://github.com/LibraryOfCongress/api.congress.gov/issues/290).
+When calling the /committee endpoint,  a 500 error response when using a `fromDateTime` parameter with certain dates is passed. This will be addressed and fixed. This is related to [Issue #290](https://github.com/LibraryOfCongress/api.congress.gov/issues/290).
 ## Change #3
 ### Imapcted endpoint: /congress
 The Congress list-level API currently returns items that are not in any particular order. The Congress list-level API endpoint will be modified so that the default sort is by updateDate. This is partially related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117).
