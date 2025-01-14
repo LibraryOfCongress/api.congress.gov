@@ -49,7 +49,7 @@ The date format will be adjusted for consistency so that it is YYYY-MM-DDT00:00:
 Filters will be added to the /committee-meeting endpoint. Users will have the ability to filter off of the `updateDate` via `fromDateTime` and `toDateTime` parameters. This is related to [Issue #158](https://github.com/LibraryOfCongress/api.congress.gov/issues/158). 
 ## Change #4
 ### Impacted endpoint: /daily-congressional-record
-When requesting a record from the daily-congressional-record API, links to the "Formatted Text" version of `entireIssue` do not include all of the text from the Daily Congressional Record. This will be investigated and fixed. This is related to [Issue #220](https://github.com/LibraryOfCongress/api.congress.gov/issues/220). **This is ongoing work from a previous sprint**. 
+When requesting a record from the daily-congressional-record API, links to the "Formatted Text" version of `entireIssue` do not include all of the text from the Daily Congressional Record. Because an HTML version is not made available for the entire issue, this section will be removed. HTML version of individual sections of the Daily Congressional Record will continue to be available in the Congress.gov API. This is related to [Issue #220](https://github.com/LibraryOfCongress/api.congress.gov/issues/220). **This is ongoing work from a previous sprint**. 
 # Completed January 2025, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/39)
 ## Change #1
 ### Impacted endpoint: /bill/{congress}/{billType}
