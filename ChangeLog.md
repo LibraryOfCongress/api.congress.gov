@@ -8,8 +8,8 @@ There is currently a discrepancy between the web and the API for committee repor
 ### Impacted endpoint: All committee endpoints 
 When calling the /committee endpoint,  a 500 error response when using a `fromDateTime` parameter with certain dates is passed. This will be addressed and fixed. This is related to [Issue #290](https://github.com/LibraryOfCongress/api.congress.gov/issues/290).
 ## Change #3
-### Imapcted endpoint: /committee-report
-There is currently a discrepancy between the web and the API for committee reports. The web app does not display reports for which Congress.gov has not yet received text and metadata from GPO, but the API does. This will be adjusted so the API doesn't display committee reports that do not have text and metadata from GPO. 
+### Imapcted endpoint: General API
+A user submitted [pull request](https://github.com/LibraryOfCongress/api.congress.gov/pull/300) will be reviewed. This relates to {Issue #299](https://github.com/LibraryOfCongress/api.congress.gov/issues/290) and [Issue #280](https://github.com/LibraryOfCongress/api.congress.gov/issues/280).
 # UPCOMING March 2025, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/42)
 **Expected Production Release Date: March 10, 2025**
 ## Change #1 
