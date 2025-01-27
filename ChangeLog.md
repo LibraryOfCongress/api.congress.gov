@@ -8,19 +8,19 @@ There is currently a discrepancy between the web and the API for committee repor
 ### Impacted endpoint: All committee endpoints 
 When calling the /committee endpoint,  a 500 error response when using a `fromDateTime` parameter with certain dates is passed. This will be addressed and fixed. This is related to [Issue #290](https://github.com/LibraryOfCongress/api.congress.gov/issues/290).
 ## Change #3
-### Imapcted endpoint: /congress
-The Congress list-level API currently returns items that are not in any particular order. The Congress list-level API endpoint will be modified so that the default sort is by updateDate. This is partially related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117).
+### Imapcted endpoint: /committee-report
+There is currently a discrepancy between the web and the API for committee reports. The web app does not display reports for which Congress.gov has not yet received text and metadata from GPO, but the API does. This will be adjusted so the API doesn't display committee reports that do not have text and metadata from GPO. 
 # UPCOMING March 2025, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/42)
 **Expected Production Release Date: March 10, 2025**
 ## Change #1 
 ### Impacted endpoints: NEW Congressional Research Service (CRS) Reports Endpoints
 A new list-level endpoint will be created that returns CRS Report data. A new detail-level endpoint will be created that returns detailed information for a particular CRS Report. Updated documentation with relevant information on data elements will be uploaded to the documentation section of this Git repository when the new endpoints go live. These new endpoints are related to [Issue #19](https://github.com/LibraryOfCongress/api.congress.gov/issues/19).
 ## Change #2
-### Impacted endpoint: /committee
-The default sort in the committee list-level endpoint will be adjusted so that it is by `<updateDate>`. This is partially related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117).
-## Change #3
 ### Impacted endpoint: N/A 
 When searching for the Congress.gov API, Google search results currently direct users to gpo.congress.gov. A new canonical URL will solve this issue. This is related to [Issue #302](https://github.com/LibraryOfCongress/api.congress.gov/issues/302).
+## Change #3
+### Impacted endpoint: /committee-meeting 
+An error message for certain committee meetings will be investigated and fixed. This seems to be impacting committee meetings that have a "LC" at the start of their meeting ID.
 # UPCOMING February 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/41)
 **Expected Production Release Date: February 18, 2025**
 ## Change #1
@@ -36,18 +36,23 @@ This is related to [Issue #64](https://github.com/LibraryOfCongress/api.congress
 ## Change #2
 ### Impacted endpoints: /bill/{congress}/{billType}/{billNumber}, /amendment/{congress}/{amendmentType}/{amendmentNumber}
 On behalf of sponsor data will be incorporated into the Congress.gov API where applicable (for certain bills and amendments).
-# UPCOMING January 2025, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/40)
-**Expected Production Release Date: January 27, 2025**
+## Change #3
+### Impacted endpoint: /committee-report
+The date format will be adjusted for consistency so that it is YYYY-MM-DDT00:00:00Z. **This ongoing work from a previous sprint.**
+## Change #3
+### Impacted endpoint: /committee-meeting
+Filters will be added to the /committee-meeting endpoint. Users will have the ability to filter off of the `updateDate` via `fromDateTime` and `toDateTime` parameters. This is related to [Issue #158].   (https://github.com/LibraryOfCongress/api.congress.gov/issues/158). **This ongoing work from a previous sprint.**
+## Change #4
+### Impacted endpoint: /committee
+Certain committee names are reverting to their older, previous Congress committee names. This bug will be investigated and fixed. 
+## Change #5 
+### Impacted endpoint: /amendment/{congress}/{amendmentType}/{amendmentNumber}
+Senate amendments can be submitted and/or proposed on behalf of another senator. An `<onBehalfOf>` container will be added (where applicable) for this data in the /amendment/{congress}/{amendmentType}/{amendmentNumber} endpoint. 
+# COMPLETED January 2025, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/40)
 ## Change #1
 ### Impacted endpoints: /treaty/{congress}/{treatyNumber}/{treatySuffix} and /treaty/{congress}/{treatyNumber}/{treatySuffix}/actions
-An error message when searching for a treaty with a lower case suffix (e.g., "a") will be investigated and fixed. This is related to [Issue #252](https://github.com/LibraryOfCongress/api.congress.gov/issues/252). 
+An error message when searching for a treaty with a lower case suffix (e.g., "a") was investigated and fixed. This was related to [Issue #252](https://github.com/LibraryOfCongress/api.congress.gov/issues/252). 
 ## Change #2
-### Impacted endpoint: /committee-report
-The date format will be adjusted for consistency so that it is YYYY-MM-DDT00:00:00Z.
-### Change #3
-### Impacted endpoint: /committee-meeting
-Filters will be added to the /committee-meeting endpoint. Users will have the ability to filter off of the `updateDate` via `fromDateTime` and `toDateTime` parameters. This is related to [Issue #158](https://github.com/LibraryOfCongress/api.congress.gov/issues/158). 
-## Change #4
 ### Impacted endpoint: /daily-congressional-record
 When requesting a record from the daily-congressional-record API, links to the "Formatted Text" version of `entireIssue` do not include all of the text from the Daily Congressional Record. Because an HTML version is not made available for the entire issue, this section will be removed. HTML version of individual sections of the Daily Congressional Record will continue to be available in the Congress.gov API. This is related to [Issue #220](https://github.com/LibraryOfCongress/api.congress.gov/issues/220). **This is ongoing work from a previous sprint**. 
 # Completed January 2025, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/39)
