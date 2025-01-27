@@ -41,7 +41,7 @@ On behalf of sponsor data will be incorporated into the Congress.gov API where a
 The date format will be adjusted for consistency so that it is YYYY-MM-DDT00:00:00Z. **This ongoing work from a previous sprint.**
 ## Change #3
 ### Impacted endpoint: /committee-meeting
-Filters will be added to the /committee-meeting endpoint. Users will have the ability to filter off of the `updateDate` via `fromDateTime` and `toDateTime` parameters. This is related to [Issue #158].   (https://github.com/LibraryOfCongress/api.congress.gov/issues/158). **This ongoing work from a previous sprint.**
+Filters will be added to the /committee-meeting endpoint. Users will have the ability to filter off of the `updateDate` via `fromDateTime` and `toDateTime` parameters. This is related to [Issue #158](https://github.com/LibraryOfCongress/api.congress.gov/issues/158). **This ongoing work from a previous sprint.**
 ## Change #4
 ### Impacted endpoint: /committee
 Certain committee names are reverting to their older, previous Congress committee names. This bug will be investigated and fixed. 
