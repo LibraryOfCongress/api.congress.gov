@@ -97,7 +97,7 @@ The `<api-root>` is only present in the XML format.
     - The index terms associated with a particular treaty.
     - `<item>`
       - Container element for individual index terms associated with the treaty. An <item> element may include the following children:
-         - `<name>` (e.g., Maritime)
+         - `<name>` (e.g., North Atlantic Treaty of 1949)
            - The name of the associated index term.
   - `<relatedDocs>`
     - Container for executive reports associated with the treaty. A `<relatedDocs>` element may include the following children (the data below is taken from <https://api.congress.gov/v3/treaty/116/1>):
