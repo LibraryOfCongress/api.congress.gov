@@ -37,6 +37,8 @@ Parent container for amendments. An `<amendments>` element may include the follo
     - `<type>` (e.g. SAMDT)
       - The type of amendment.
       - Possible values are "HAMDT", "SAMDT", and "SUAMDT". Note that the "SUAMDT" type value is only available for the 97th and 98th Congresses.
+    - `<updateDate>` (e.g., 2022-06-30T03:50:22Z)
+      - The date of update in Congress.gov.
     - `<latestAction>`
       - Container for the latest action taken on the amendment. A `<latestAction>` element may include the following children:
         - `<actionDate>` (e.g. 2021-08-08)
