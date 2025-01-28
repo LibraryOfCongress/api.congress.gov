@@ -28,7 +28,7 @@ Container for hearings. A `<hearings>` container may include the following child
      - Container for an individual hearing. An `<item>` element is repeatable and may include the following children:
          - `<jacketNumber>` (e.g., 37721)
              - The jacket identifier of the hearing. The `<jacketNumber>` is printed on the front page of a hearing and is usually five digits.
-         - `<updateDate>` (e.g., 2022-06-30 03:50:22+00:00)
+         - `<updateDate>` (e.g., 2022-06-30T03:50:22Z)
              - The date of update in Congress.gov.
          - `<chamber>` (e.g., Senate)
              - The chamber where the hearing was held. 
@@ -63,7 +63,7 @@ Parent container for a single hearing. A `<hearing>` element may include the fol
      - Hearings may or may not be numbered by their associated committee.
 - `<part>`
      - The hearing part number, if printed in parts.
-- `<updateDate>` (e.g., 2022-06-30 03:50:22+00:00)
+- `<updateDate>` (e.g., 2022-06-30T03:50:22Z)
      - The date of update in Congress.gov.
 - `<congress>` (e.g., 116)
      - The congress during which the hearing was held.
