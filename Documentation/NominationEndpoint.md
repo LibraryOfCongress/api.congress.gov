@@ -58,7 +58,7 @@ Parent container for nominations. A `<nominations>` element may include the foll
           - The date of the latest action taken on the nomination.
         - `<text>` (e.g., Confirmed by the Senate by Voice Vote.)
           - The text of the latest action taken on the nomination.
-    - `<updateDate>` (e.g. 2022-07-22 04:24:15+00:00)
+    - `<updateDate>` (e.g. 2022-07-22T04:24:15Z)
       - The date of update in Congress.gov.
     - `<url>` (e.g. <https://api.congress.gov/v3/nomination/117/1064>)
       - A referrer URL to the nomination item in the API.
