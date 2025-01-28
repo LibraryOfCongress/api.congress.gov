@@ -30,7 +30,7 @@ Container for committee meetings. A `<committeeMeetings>` container may include 
          - The event identifier of the committee meeting.
      - `<url>` (e.g., <https://api.congress.gov/v3/committee-meeting/118/house/115538>)
          - A referrer URL to the committee meeting item in the API.
-     - `<updateDate>` (e.g., 2023-03-27 18:11:19+00:00)
+     - `<updateDate>` (e.g., 2023-03-27T18:11:19Z)
          - The date of update in Congress.gov.
      - `<congress>` (e.g., 117)
          - The congress during which the committee meeting took place.
@@ -50,7 +50,7 @@ The `<api-root>` is only present in the XML format.
 Parent container for a single committee meeting. A `<committeeMeeting>` element may include the following children:
 - `<eventId>` (e.g., 115538)
     - The event identifier of the committee meeting.
-- `<updateDate>` (e.g., 2023-03-27 18:11:19+00:00)
+- `<updateDate>` (e.g., 2023-03-27 18T11:19:00Z)
     - The date of update in Congress.gov.
 - `<congress>` (e.g., 117)
     - The congress during which the committee meeting took place.
