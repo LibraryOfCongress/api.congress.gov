@@ -30,7 +30,7 @@ Container for committee prints. A `<committeePrints>` container may include the 
          - The jacket identifier of the committee print. The `<jacketNumber>` is printed on the front page of a print and is usually five digits.
      - `<url>` (e.g., <https://api.congress.gov/v3/committee-print/117/house/48144>)
          - A referrer URL to the committee print item in the API.
-     - `<updateDate>` (e.g., 2022-08-01 21:19:33+00:00)
+     - `<updateDate>` (e.g., 2022-08-01T21:19:33Z)
          - The date of update in Congress.gov.
      - `<congress>` (e.g., 117)
          - The congress during which the committee print was produced.
