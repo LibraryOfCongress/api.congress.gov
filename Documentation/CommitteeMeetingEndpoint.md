@@ -63,7 +63,7 @@ Parent container for a single committee meeting. A `<committeeMeeting>` element 
 - `<meetingStatus>` (e.g., Scheduled)
     - The status of the meeting.
     - Possible values are "Scheduled", "Canceled", "Postponed", and "Rescheduled".
-- `<date>` (e.g., 2023-03-24 13:00:00+00:00)
+- `<date>` (e.g., 2023-03-24 13T00:00:00Z)
     - The date of the meeting.
 - `<chamber>` (e.g., House)
     - The chamber where the committee meeting was held.
