@@ -30,7 +30,7 @@ The `<api-root>` is only present in the XML format.
       - The report's citation, which consists of the report type, congress number, and the assigned report number.
     - `<url>` (e.g., <https://api.congress.gov/v3/committee-report/117/HRPT/351>)
       - A referrer URL to the report item in the API.
-    - `<updateDate>` (e.g., 2022-08-13 19:26:27+00:00)
+    - `<updateDate>` (e.g., 2022-08-13 19:26:27T00:00:00Z)
       - The date of update in Congress.gov
     - `<congress>` (e.g., 117)
       - The congress during which the committee report was produced.
