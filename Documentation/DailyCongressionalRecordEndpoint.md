@@ -6,7 +6,7 @@ Coverage information for daily Congressional Record data in the API can be found
 
 ## OpenAPI Specification
 
-View OpenAPI Specification on the congressional record API and available parameters at [https://api.congress.gov](https://api.congress.gov/#/daily-congressional-record/daily-congressional-record_list).
+View OpenAPI Specification on the Congressional Record API and available parameters at [https://api.congress.gov](https://api.congress.gov/#/daily-congressional-record/daily-congressional-record_list).
 
 ## Elements and Descriptions
 
