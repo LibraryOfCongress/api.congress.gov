@@ -42,7 +42,9 @@ Parent container for House communications. A `<houseCommunications>` element may
       - The congress during which the communication was received.
       - View the [field values list of Congresses](https://www.congress.gov/help/field-values/congresses) on Congress.gov. Read more [about Congresses](https://www.congress.gov/help/legislative-glossary#glossary_congress) on Congress.gov.
     - `<url>` (e.g. <https://api.congress.gov/v3/house-communication/115/ec/1>)
-      - A referrer URL to the communication item in the API.
+      - A referrer URL to the communication item in the API.  
+     - `<updateDate>` (e.g., 2022-06-30T03:50:22Z)
+       - The date of update in Congress.gov.
 
 ### Item Level
 
