@@ -107,7 +107,7 @@ Parent container for an amendment. An `<amendment>` element may include the foll
         - `<district>`
           - The congressional district that the amendment's sponsor represents.
           - Note that this element will be empty for Senate sponsors and will be "0" for states, territories, or districts where there is only one congressional district.
-- `<onBehalfOf>`
+- `<onBehalfOfSponsor>`
   - Container for the person who submitted and/or proposed the amendment on behalf of the sponsor of the amendment. A `<onBehalfOf>` element may include the following children:
     - `<item>`
       - Container for a single senator who submitted and/or proposed the amendment on behalf of the sponsor of the amendment. An `<item>` element may include the following children:
