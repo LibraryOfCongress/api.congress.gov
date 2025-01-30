@@ -126,7 +126,7 @@ Parent container for an amendment. An `<amendment>` element may include the foll
           - The party code of the  senator who submitted and/or proposed the amendment on behalf of the sponsor of the amendment amendment's sponsor.
         - `<state>` (e.g. AZ)
           - A two-letter abbreviation for the state, territory, or district represented by the senator who submitted and/or proposed the amendment on behalf of the sponsor of the amendment amendment's sponsor.
-        -`<type>`
+       - `<type>`
           - The type of on behalf of sponsor action. This can  be "Submitted on behalf of" the sponsor and/or "Proposed on behalf of" the sponsor.
         - `<url>` (e.g. <https://api.congress.gov/v3/member/S001191>)
           - A referrer URL to the member item in the API. Documentation for the member endpoint is available [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/MemberEndpoint.md).
