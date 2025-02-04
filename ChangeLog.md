@@ -42,15 +42,12 @@ On behalf of sponsor data will be incorporated into the Congress.gov API where a
 ## Change #3
 ### Impacted endpoint: /committee-report
 The date format will be adjusted for consistency so that it is YYYY-MM-DDT00:00:00Z. **This ongoing work from a previous sprint.**
-## Change #3
+## Change #4
 ### Impacted endpoint: /committee-meeting
 Filters will be added to the /committee-meeting endpoint. Users will have the ability to filter off of the `updateDate` via `fromDateTime` and `toDateTime` parameters. This is related to [Issue #158](https://github.com/LibraryOfCongress/api.congress.gov/issues/158). **This ongoing work from a previous sprint.**
-## Change #4
+## Change #5
 ### Impacted endpoint: /committee
 Certain committee names are reverting to their older, previous Congress committee names. This bug will be investigated and fixed. 
-## Change #5 
-### Impacted endpoint: /amendment/{congress}/{amendmentType}/{amendmentNumber}
-Senate amendments can be submitted and/or proposed on behalf of another senator. An `<onBehalfOf>` container will be added (where applicable) for this data in the /amendment/{congress}/{amendmentType}/{amendmentNumber} endpoint. 
 # COMPLETED January 2025, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/40)
 ## Change #1
 ### Impacted endpoints: /treaty/{congress}/{treatyNumber}/{treatySuffix} and /treaty/{congress}/{treatyNumber}/{treatySuffix}/actions
