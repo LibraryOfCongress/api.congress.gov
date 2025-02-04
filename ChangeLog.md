@@ -12,7 +12,7 @@ When calling the /committee endpoint,  a 500 error response when using a `fromDa
 A user submitted [pull request](https://github.com/LibraryOfCongress/api.congress.gov/pull/300) will be reviewed. This relates to [Issue #299](https://github.com/LibraryOfCongress/api.congress.gov/issues/299) and [Issue #280](https://github.com/LibraryOfCongress/api.congress.gov/issues/280).
 ## Change #4 
 ### Imapcted endpoint: /bill/{congress}/{billType}/{billNumber}/text
-A CORS error message will be invesigated. This is related to [issue #292](https://github.com/LibraryOfCongress/api.congress.gov/issues/292). 
+A CORS error message will be invesigated. This is related to [Issue #292](https://github.com/LibraryOfCongress/api.congress.gov/issues/292). 
 # UPCOMING March 2025, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/42)
 **Expected Production Release Date: March 10, 2025**
 ## Change #1 
