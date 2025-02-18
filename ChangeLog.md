@@ -8,10 +8,10 @@ There is currently a discrepancy between the web and the API for committee repor
 ### Impacted endpoint: All committee endpoints 
 When calling the /committee endpoint,  a 500 error response when using a `fromDateTime` parameter with certain dates is passed. This will be addressed and fixed. This is related to [Issue #290](https://github.com/LibraryOfCongress/api.congress.gov/issues/290).
 ## Change #3
-### Imapcted endpoint: General API
+### Impacted endpoint: General API
 A user submitted [pull request](https://github.com/LibraryOfCongress/api.congress.gov/pull/300) will be reviewed. This relates to [Issue #299](https://github.com/LibraryOfCongress/api.congress.gov/issues/299) and [Issue #280](https://github.com/LibraryOfCongress/api.congress.gov/issues/280).
 ## Change #4 
-### Imapcted endpoint: /bill/{congress}/{billType}/{billNumber}/text
+### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/text
 A CORS error message will be invesigated. This is related to [Issue #292](https://github.com/LibraryOfCongress/api.congress.gov/issues/292). 
 # UPCOMING March 2025, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/42)
 **Expected Production Release Date: March 10, 2025**
@@ -24,9 +24,7 @@ When searching for the Congress.gov API, Google search results currently direct 
 ## Change #3
 ### Impacted endpoint: /committee-meeting 
 An error message for certain committee meetings will be investigated and fixed. This seems to be impacting committee meetings that have a "LC" at the start of their meeting ID.
-# UPCOMING February 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/41)
-**Expected Production Release Date: February 18, 2025**
-## Change #1
+## Change #4
 ### Impacted Endpoints: **NEW** House Roll Call Votes endpoints
 New beta House Roll Call Votes API endpoints are targeted for release. The House Roll Call Votes endpoints will consist of a list level, an item level, and a member votes level for 2003-present (beginning with the 108th Congress). The list level is filterable by congress and session. Detailed information about each roll call vote will be available at the item level. Detailed information about member votes will be available at the member vote level. The endpoints, once development work is completed, are planned to be:
 1. api.congress.gov/v3/house-vote
@@ -35,19 +33,20 @@ New beta House Roll Call Votes API endpoints are targeted for release. The House
 4. api.congress.gov/v3/house-vote/{congress}/{session}{rollCallVoteNumber}
 5. api.congress.gov/v3/house-vote/{congress}/{session}/{rollCallVoteNumber}/members
    
-This is related to [Issue #64](https://github.com/LibraryOfCongress/api.congress.gov/issues/64).
-## Change #2
+This is related to [Issue #64](https://github.com/LibraryOfCongress/api.congress.gov/issues/64).  **This is ongoing work from a previous sprint.**
+# COMPLETED February 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/41)
+## Change #1
 ### Impacted endpoints: /bill/{congress}/{billType}/{billNumber}, /amendment/{congress}/{amendmentType}/{amendmentNumber}
-On behalf of sponsor data will be incorporated into the Congress.gov API where applicable (for certain bills and amendments).
-## Change #3
+On behalf of sponsor data was incorporated into the Congress.gov API where applicable (for certain bills and amendments).
+## Change #2
 ### Impacted endpoint: /committee-report
-The date format will be adjusted for consistency so that it is YYYY-MM-DDT00:00:00Z. **This ongoing work from a previous sprint.**
-## Change #4
+The date format was adjusted for consistency so that it is YYYY-MM-DDT00:00:00Z. **This was ongoing work from a previous sprint.**
+## Change #3
 ### Impacted endpoint: /committee-meeting
-Filters will be added to the /committee-meeting endpoint. Users will have the ability to filter off of the `updateDate` via `fromDateTime` and `toDateTime` parameters. This is related to [Issue #158](https://github.com/LibraryOfCongress/api.congress.gov/issues/158). **This ongoing work from a previous sprint.**
-## Change #5
+Filters were added to the /committee-meeting endpoint. Users now have the ability to filter off of the `updateDate` via `fromDateTime` and `toDateTime` parameters. This was related to [Issue #158](https://github.com/LibraryOfCongress/api.congress.gov/issues/158). **This is ongoing work from a previous sprint.**
+## Change #4
 ### Impacted endpoint: /committee
-Certain committee names are reverting to their older, previous Congress committee names. This bug will be investigated and fixed. 
+Certain committee names were reverting to their older, previous Congress committee names. This bug was investigated and fixed. 
 # COMPLETED January 2025, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/40)
 ## Change #1
 ### Impacted endpoints: /treaty/{congress}/{treatyNumber}/{treatySuffix} and /treaty/{congress}/{treatyNumber}/{treatySuffix}/actions
