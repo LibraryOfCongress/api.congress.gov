@@ -86,8 +86,8 @@ The `<api-root>` is only present in the XML format.
           - `<URL>`
           -  Referrer URL to the format type of the CRS product on Congress.gov.
      -  `<relatedMaterials>`
-       - Container for all related materials for an individual CRS product.
-       - A `<relatedMaterials>` container may include the following children: 
+        - Container for all related materials for an individual CRS product.
+        - A `<relatedMaterials>` container may include the following children: 
           - `<item>`
           -  A container for individual related material. This element is repeatable and may contain the following children: 
               - `<title>`
@@ -104,10 +104,10 @@ The `<api-root>` is only present in the XML format.
               - `<url>`
               - Referrer URL to the bill, resolution, or law data in the Congress.gov API.
        -  `<topics>`
-       - Container for CRS product topics data.
-       - A `<topics>` container may include the following children:
-          - `<item>`
-          -  Container for an individual CRS product topic. This element is repeatable and may contain the following children:
+         - Container for CRS product topics data.
+         - A `<topics>` container may include the following children:
+           - `<item>`
+           -  Container for an individual CRS product topic. This element is repeatable and may contain the following children:
               - `<topic>`
               -  An individual product topic assigned to the CRS product.
      -  `<summary>`
