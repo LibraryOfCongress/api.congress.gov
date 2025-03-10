@@ -1,4 +1,12 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
+# UPCOMING April 2025 | [Milestone]()
+**Expected Production Release Date: April 21, 2025** 
+## Change #1
+### Impacted endpoint: General API
+A user submitted [pull request](https://github.com/LibraryOfCongress/api.congress.gov/pull/300) will be reviewed. This relates to [Issue #299](https://github.com/LibraryOfCongress/api.congress.gov/issues/299) and [Issue #280](https://github.com/LibraryOfCongress/api.congress.gov/issues/280).
+## Change #2
+### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/text
+A CORS error message will be invesigated. This is related to [Issue #292](https://github.com/LibraryOfCongress/api.congress.gov/issues/292). 
 # UPCOMING March 2025, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/43)
 **Expected Production Release Date: March 31, 2025**
 ## Change #1 
@@ -8,24 +16,7 @@ There is currently a discrepancy between the web and the API for committee repor
 ### Impacted endpoint: All committee endpoints 
 When calling the /committee endpoint,  a 500 error response when using a `fromDateTime` parameter with certain dates is passed. This will be addressed and fixed. This is related to [Issue #290](https://github.com/LibraryOfCongress/api.congress.gov/issues/290).
 ## Change #3
-### Impacted endpoint: General API
-A user submitted [pull request](https://github.com/LibraryOfCongress/api.congress.gov/pull/300) will be reviewed. This relates to [Issue #299](https://github.com/LibraryOfCongress/api.congress.gov/issues/299) and [Issue #280](https://github.com/LibraryOfCongress/api.congress.gov/issues/280).
-## Change #4 
-### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/text
-A CORS error message will be invesigated. This is related to [Issue #292](https://github.com/LibraryOfCongress/api.congress.gov/issues/292). 
-# UPCOMING March 2025, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/42)
-**Expected Production Release Date: March 10, 2025**
-## Change #1 
-### Impacted endpoints: NEW Congressional Research Service (CRS) Reports Endpoints
-A new list-level endpoint will be created that returns CRS Report data. A new detail-level endpoint will be created that returns detailed information for a particular CRS Report. Updated documentation with relevant information on data elements will be uploaded to the documentation section of this Git repository when the new endpoints go live. These new endpoints are related to [Issue #19](https://github.com/LibraryOfCongress/api.congress.gov/issues/19).
-## Change #2
-### Impacted endpoint: N/A 
-When searching for the Congress.gov API, Google search results currently direct users to gpo.congress.gov. A new canonical URL will solve this issue. This is related to [Issue #302](https://github.com/LibraryOfCongress/api.congress.gov/issues/302).
-## Change #3
-### Impacted endpoint: /committee-meeting 
-An error message for certain committee meetings will be investigated and fixed. This seems to be impacting committee meetings that have a "LC" at the start of their meeting ID.
-## Change #4
-### Impacted Endpoints: **NEW** House Roll Call Votes endpoints
+### Impacted endpoints: **NEW** House Roll Call Votes endpoints
 New beta House Roll Call Votes API endpoints are targeted for release. The House Roll Call Votes endpoints will consist of a list level, an item level, and a member votes level for 2003-present (beginning with the 108th Congress). The list level is filterable by congress and session. Detailed information about each roll call vote will be available at the item level. Detailed information about member votes will be available at the member vote level. The endpoints, once development work is completed, are planned to be:
 1. api.congress.gov/v3/house-vote
 2. api.congress.gov/v3/house-vote/{congress}
@@ -34,6 +25,19 @@ New beta House Roll Call Votes API endpoints are targeted for release. The House
 5. api.congress.gov/v3/house-vote/{congress}/{session}/{rollCallVoteNumber}/members
    
 This is related to [Issue #64](https://github.com/LibraryOfCongress/api.congress.gov/issues/64).  **This is ongoing work from a previous sprint.**
+## Change #4 
+### Impacted endpoint: All CRS Report endpoints
+Escaped characters in certain JSON outputs in the CRS Report endpoints will be invesitgated and fixed. 
+## Change #5 
+### Impacted endpoint: N/A
+Escaped charactes in the swagger.yaml output on api.congress.gov will be fixed. 
+# COMPLETED March 2025, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/42)
+## Change #1 
+### Impacted endpoints: NEW Congressional Research Service (CRS) Reports Endpoints
+A new list-level endpoint was created that returns CRS Report data. A new detail-level endpoint was created that returns detailed information for a particular CRS Report. Updated documentation with relevant information on data elements was uploaded to the documentation section of this Git repository. These new endpoints are related to [Issue #19](https://github.com/LibraryOfCongress/api.congress.gov/issues/19).
+## Change #2
+### Impacted endpoint: N/A 
+When searching for the Congress.gov API, Google search results currently direct users to gpo.congress.gov. A new canonical URL solves this issue. This is related to [Issue #302](https://github.com/LibraryOfCongress/api.congress.gov/issues/302).
 # COMPLETED February 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/41)
 ## Change #1
 ### Impacted endpoints: /bill/{congress}/{billType}/{billNumber}, /amendment/{congress}/{amendmentType}/{amendmentNumber}
