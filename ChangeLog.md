@@ -7,6 +7,9 @@ A user submitted [pull request](https://github.com/LibraryOfCongress/api.congres
 ## Change #2
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/text
 A CORS error message will be invesigated. This is related to [Issue #292](https://github.com/LibraryOfCongress/api.congress.gov/issues/292). 
+## Change #3
+### Impacted endpoint: All CRS Report endpoints
+Escaped characters in certain JSON outputs in the CRS Report endpoints will be invesitgated and fixed. 
 # UPCOMING March 2025, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/43)
 **Expected Production Release Date: March 31, 2025**
 ## Change #1 
@@ -26,8 +29,8 @@ New beta House Roll Call Votes API endpoints are targeted for release. The House
    
 This is related to [Issue #64](https://github.com/LibraryOfCongress/api.congress.gov/issues/64).  **This is ongoing work from a previous sprint.**
 ## Change #4 
-### Impacted endpoint: All CRS Report endpoints
-Escaped characters in certain JSON outputs in the CRS Report endpoints will be invesitgated and fixed. 
+### Impacted endpoint: All CRS report endpoints
+The `<publishDate>` element will be adjusted so that it accurately displays the publish date of current version of the report. 
 ## Change #5 
 ### Impacted endpoint: N/A
 Escaped charactes in the swagger.yaml output on api.congress.gov will be fixed. 
