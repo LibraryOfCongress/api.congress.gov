@@ -30,7 +30,7 @@ New beta House Roll Call Votes API endpoints are targeted for release. The House
 This is related to [Issue #64](https://github.com/LibraryOfCongress/api.congress.gov/issues/64).  **This is ongoing work from a previous sprint.**
 ## Change #4 
 ### Impacted endpoint: All CRS report endpoints
-The `<publishDate>` element will be adjusted so that it accurately displays the publish date of current version of the report. 
+The `<publishDate>` element will be adjusted so that it accurately displays the publish date of current version of the report. This is related to [Issue #322](https://github.com/LibraryOfCongress/api.congress.gov/issues/322).
 ## Change #5 
 ### Impacted endpoint: N/A
 Escaped charactes in the swagger.yaml output on api.congress.gov will be fixed. 
