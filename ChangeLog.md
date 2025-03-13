@@ -13,7 +13,9 @@ Escaped characters in certain JSON outputs in the CRS Report endpoints will be i
 ## Change #4
 ### Impacted endpoint: All CRS Report endpoints
 An error message `"error": "get() returned more than one CrsProductsProd -- it returned 2!` will be investigated and fixed. This is related to [Issue #324](https://github.com/LibraryOfCongress/api.congress.gov/issues/324).
-
+## Change #5
+### Impacted endpoint: /amendment
+Issues with missing and duplicated amendments in the list-level endpoint will be investigated and fixed. This is related to [Issue #321](https://github.com/LibraryOfCongress/api.congress.gov/issues/321).
 # UPCOMING March 2025, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/43)
 **Expected Production Release Date: March 31, 2025**
 ## Change #1 
