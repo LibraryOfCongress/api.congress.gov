@@ -11,11 +11,11 @@ A CORS error message will be invesigated. This is related to [Issue #292](https:
 ### Impacted endpoint: All CRS Report endpoints
 Escaped characters in certain JSON outputs in the CRS Report endpoints will be invesitgated and fixed. 
 ## Change #4
-### Impacted endpoint: All CRS Report endpoints
-An error message `"error": "get() returned more than one CrsProductsProd -- it returned 2!` will be investigated and fixed. This is related to [Issue #324](https://github.com/LibraryOfCongress/api.congress.gov/issues/324).
-## Change #5
 ### Impacted endpoint: /amendment
 Issues with missing and duplicated amendments in the list-level endpoint will be investigated and fixed. This is related to [Issue #321](https://github.com/LibraryOfCongress/api.congress.gov/issues/321).
+## Change #5 
+### Impacted endpoint: N/A
+Escaped charactes in the swagger.yaml output on api.congress.gov will be fixed. 
 # UPCOMING March 2025, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/43)
 **Expected Production Release Date: March 31, 2025**
 ## Change #1 
@@ -37,9 +37,9 @@ This is related to [Issue #64](https://github.com/LibraryOfCongress/api.congress
 ## Change #4 
 ### Impacted endpoint: All CRS report endpoints
 The `<publishDate>` element will be adjusted so that it accurately displays the publish date of current version of the report. This is related to [Issue #322](https://github.com/LibraryOfCongress/api.congress.gov/issues/322).
-## Change #5 
-### Impacted endpoint: N/A
-Escaped charactes in the swagger.yaml output on api.congress.gov will be fixed. 
+## Change #5
+### Impacted endpoint: All CRS Report endpoints
+An error message `"error": "get() returned more than one CrsProductsProd -- it returned 2!` will be investigated and fixed. This is related to [Issue #324](https://github.com/LibraryOfCongress/api.congress.gov/issues/324).
 # COMPLETED March 2025, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/42)
 ## Change #1 
 ### Impacted endpoints: NEW Congressional Research Service (CRS) Reports Endpoints
