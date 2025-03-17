@@ -16,6 +16,9 @@ Issues with missing and duplicated amendments in the list-level endpoint will be
 ## Change #5 
 ### Impacted endpoint: N/A
 Escaped charactes in the swagger.yaml output on api.congress.gov will be fixed. 
+## Change #6 
+### Impacted endpoint: /committee-meeting/{congress}/{chamber}/{eventId}
+A bug impacting the `<title>` element displaying the committee name and not the meeting title will be investigated and fixed. This is related to [Issue #327](https://github.com/LibraryOfCongress/api.congress.gov/issues/327). 
 # UPCOMING March 2025, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/43)
 **Expected Production Release Date: March 31, 2025**
 ## Change #1 
