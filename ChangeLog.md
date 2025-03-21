@@ -1,6 +1,6 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
-# UPCOMING April 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/44)
-**Expected Production Release Date: April 21, 2025** 
+# UPCOMING May 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/45)
+**Expected Production Release Date: May 12, 2025**
 ## Change #1
 ### Impacted endpoint: General API
 A user submitted [pull request](https://github.com/LibraryOfCongress/api.congress.gov/pull/300) will be reviewed. This relates to [Issue #299](https://github.com/LibraryOfCongress/api.congress.gov/issues/299) and [Issue #280](https://github.com/LibraryOfCongress/api.congress.gov/issues/280).
@@ -8,15 +8,20 @@ A user submitted [pull request](https://github.com/LibraryOfCongress/api.congres
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/text
 A CORS error message will be invesigated. This is related to [Issue #292](https://github.com/LibraryOfCongress/api.congress.gov/issues/292). 
 ## Change #3
-### Impacted endpoint: All CRS Report endpoints
-Escaped characters in certain JSON outputs in the CRS Report endpoints will be invesitgated and fixed. 
-## Change #4
-### Impacted endpoint: /amendment
-Issues with missing and duplicated amendments in the list-level endpoint will be investigated and fixed. This is related to [Issue #321](https://github.com/LibraryOfCongress/api.congress.gov/issues/321).
-## Change #5 
 ### Impacted endpoint: N/A
 Escaped charactes in the swagger.yaml output on api.congress.gov will be fixed. 
-## Change #6 
+## Change #4
+### Impacted endpoint: /hearing/{congress}/{chamber}/{jacketNumber}
+An error message in the hearing endpoint will be investigated and fixed. This is related to [Issue #262](https://github.com/LibraryOfCongress/api.congress.gov/issues/262).
+# UPCOMING April 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/44)
+**Expected Production Release Date: April 21, 2025** 
+## Change #1
+### Impacted endpoint: All CRS Report endpoints
+Escaped characters in certain JSON outputs in the CRS Report endpoints will be invesitgated and fixed. 
+## Change #2
+### Impacted endpoint: /amendment
+Issues with missing and duplicated amendments in the list-level endpoint will be investigated and fixed. This is related to [Issue #321](https://github.com/LibraryOfCongress/api.congress.gov/issues/321).
+## Change #3
 ### Impacted endpoint: /committee-meeting/{congress}/{chamber}/{eventId}
 A bug impacting the `<title>` element displaying the committee name and not the meeting title will be investigated and fixed. This is related to [Issue #327](https://github.com/LibraryOfCongress/api.congress.gov/issues/327). 
 # UPCOMING March 2025, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/43)
