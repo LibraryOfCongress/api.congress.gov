@@ -10,6 +10,9 @@ A `<textVersions>` container will be added to amendments that have text versions
 ## Change #3
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/cosponsors
 An option to filter the /bill/{congress}/{billType}/{billNumber}/cosponsors endpoint by sponsorshipDate will be added to the endpoint. This is related to [Issue #57](https://github.com/LibraryOfCongress/api.congress.gov/issues/57).
+## Change #4
+### Impacted endpoints: /crsreport, /crsreport/{reportNumber}
+A bug impacting the `<version>` element will be investigated and fixed. 
 # UPCOMING May 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/45)
 **Expected Production Release Date: May 12, 2025**
 ## Change #1
