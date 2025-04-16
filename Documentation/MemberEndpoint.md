@@ -32,7 +32,7 @@ Parent container for all member entries. A `<members>` element may include the f
 
 - `<member>`
   - Container for an individual member’s entry.  A `<member>` element may include the following children:
-    - `<bioguideID>` (e.g., L000174)
+    - `<bioguideId>` (e.g., L000174)
       - The unique ID value that originates in the [Biographical Directory of the United States Congress, 1774-Present](https://bioguide.congress.gov/).
       - View a [field values list of Bioguide identifiers](https://www.congress.gov/help/field-values/member-bioguide-ids) for current and former members in Congress.gov.
     - `<state>` (e.g., Vermont)
@@ -118,7 +118,7 @@ Parent container for an individual member’s entry. A `<member>` element may in
           - The year in which the member’s service in that Congress ended.
         - `<district>`  
           - The Congressional district represented by the member (exclusive to the House). The value of zero indicates the state, district or territory has only one member in the House.
-- `<bioguideID>` (e.g., L000174)
+- `<bioguideId>` (e.g., L000174)
   - The unique ID value that originates in the [Biographical Directory of the United States Congress, 1774-Present](https://bioguide.congress.gov/).
   - View a [field values list of Bioguide identifiers](https://www.congress.gov/help/field-values/member-bioguide-ids) for current and former members in Congress.gov.
 - `<party>` (e.g., Democatic)
