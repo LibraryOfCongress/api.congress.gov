@@ -13,32 +13,27 @@ An option to filter the /bill/{congress}/{billType}/{billNumber}/cosponsors endp
 ## Change #4
 ### Impacted endpoints: /crsreport, /crsreport/{reportNumber}
 A bug impacting the `<version>` element will be investigated and fixed. 
+## Change #5
+### Impacted endpoint: /crsreport/{reportNumber}
+The `<version>` element will be renamed `<currentVersion>`. Additionally, a `<previousVersions>` container will be added to the item-level that provides data on previous versions of the CRS product. 
+## Change #6
+### Impacted endpoint: N/A
+Escaped charactes in the swagger.yaml output on api.congress.gov will be fixed. 
 # UPCOMING May 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/45)
 **Expected Production Release Date: May 12, 2025**
 ## Change #1
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/text
 A CORS error message will be invesigated. This is related to [Issue #292](https://github.com/LibraryOfCongress/api.congress.gov/issues/292). 
 ## Change #2
-### Impacted endpoint: N/A
-Escaped charactes in the swagger.yaml output on api.congress.gov will be fixed. 
-## Change #3
 ### Impacted endpoint: /hearing/{congress}/{chamber}/{jacketNumber}
 An error message in the hearing endpoint will be investigated and fixed. This is related to [Issue #262](https://github.com/LibraryOfCongress/api.congress.gov/issues/262).
-## Change #4
+## Change #3
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}
 When requesting details for a bill that does not exist the API returns a 500. We expect this to return 404. This will be investigated and fixed so that bills that do not exist return a 404 error, not a 500.
-# UPCOMING April 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/44)
-**Expected Production Release Date: April 21, 2025** 
-## Change #1
-### Impacted endpoint: All CRS Report endpoints
-Escaped characters in certain JSON outputs in the CRS Report endpoints will be invesitgated and fixed. 
-## Change #2
-### Impacted endpoint: /amendment
-Issues with missing and duplicated amendments in the list-level endpoint will be investigated and fixed. This is related to [Issue #321](https://github.com/LibraryOfCongress/api.congress.gov/issues/321).
-## Change #3
-### Impacted endpoint: /committee-meeting/{congress}/{chamber}/{eventId}
-A bug impacting the `<title>` element displaying the committee name and not the meeting title will be investigated and fixed. This is related to [Issue #327](https://github.com/LibraryOfCongress/api.congress.gov/issues/327). 
 ## Change #4
+### Impacted endpoint: All CRS Report endpoints
+Escaped characters in certain JSON outputs in the CRS Report endpoints will be invesitgated and fixed. **This is ongoing work from a previous sprint.**
+## Change #5
 ### Impacted endpoints: **NEW** House Roll Call Votes endpoints
 New beta House Roll Call Votes API endpoints are targeted for release. The House Roll Call Votes endpoints will consist of a list level, an item level, and a member votes level for 2003-present (beginning with the 108th Congress). The list level is filterable by congress and session. Detailed information about each roll call vote will be available at the item level. Detailed information about member votes will be available at the member vote level. The endpoints, once development work is completed, are planned to be:
 1. api.congress.gov/v3/house-vote
@@ -48,6 +43,13 @@ New beta House Roll Call Votes API endpoints are targeted for release. The House
 5. api.congress.gov/v3/house-vote/{congress}/{session}/{rollCallVoteNumber}/members
    
 This is related to [Issue #64](https://github.com/LibraryOfCongress/api.congress.gov/issues/64).  **This is ongoing work from a previous sprint.**
+# COMPLETED April 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/44)
+## Change #1
+### Impacted endpoint: /amendment
+Issues with missing and duplicated amendments in the list-level endpoint were investigated and fixed. This is related to [Issue #321](https://github.com/LibraryOfCongress/api.congress.gov/issues/321).
+## Change #2
+### Impacted endpoint: /committee-meeting/{congress}/{chamber}/{eventId}
+A bug impacting the `<title>` element displaying the committee name and not the meeting title was investigated and fixed. This is related to [Issue #327](https://github.com/LibraryOfCongress/api.congress.gov/issues/327). 
 # COMPLETED March 2025, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/43)
 ## Change #1 
 ### Impacted endpoint: All committee report endpoints
