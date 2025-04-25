@@ -2,21 +2,15 @@ This change log will contain information on updates to the Congress.gov API, the
 # UPCOMING June 2025, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/46)
 **Expected Production Release Date: June 2, 2025**
 ## Change #1
-### Impacted endpoint: General API
-A user submitted [pull request](https://github.com/LibraryOfCongress/api.congress.gov/pull/300) will be reviewed. This relates to [Issue #299](https://github.com/LibraryOfCongress/api.congress.gov/issues/299) and [Issue #280](https://github.com/LibraryOfCongress/api.congress.gov/issues/280).
-## Change #2
 ### Impacted endpoint: /amendment/{congress}/{amendmentType}/{amendmentNumber}
 A `<textVersions>` container will be added to amendments that have text versions. This container will provide a `<count>` element and a referrer URL to the text-level amendment API endpoint. This is related to [Issue #317](https://github.com/LibraryOfCongress/api.congress.gov/issues/317). 
-## Change #3
+## Change #2
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/cosponsors
 An option to filter the /bill/{congress}/{billType}/{billNumber}/cosponsors endpoint by sponsorshipDate will be added to the endpoint. This is related to [Issue #57](https://github.com/LibraryOfCongress/api.congress.gov/issues/57).
-## Change #4
+## Change #3
 ### Impacted endpoints: /crsreport, /crsreport/{reportNumber}
 A bug impacting the `<version>` element will be investigated and fixed. 
-## Change #5
-### Impacted endpoint: /crsreport/{reportNumber}
-The `<version>` element will be renamed `<currentVersion>`. Additionally, a `<previousVersions>` container will be added to the item-level that provides data on previous versions of the CRS product. 
-## Change #6
+## Change #4
 ### Impacted endpoint: N/A
 Escaped charactes in the swagger.yaml output on api.congress.gov will be fixed. 
 # UPCOMING May 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/45)
