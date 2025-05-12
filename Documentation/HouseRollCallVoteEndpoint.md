@@ -12,7 +12,7 @@ View OpenAPI Specification on the amendment API, supported endpoints, and availa
 
 ### List Level
 
-Note that House roll call vote items at the list level can be filtered down by congress and then by session number (e.g. <https://api.congress.gov/v3/house-vote/118/2?api_key=INSERT_KEY>).
+Note that House roll call vote items at the list level can be filtered down by congress and by session number (e.g. <https://api.congress.gov/v3/house-vote/118/2?api_key=INSERT_KEY>).
 
 `<api-root>`
 
