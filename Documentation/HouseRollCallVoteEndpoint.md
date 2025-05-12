@@ -44,7 +44,7 @@ Parent container for all House roll call votes entries. A <houserRollCallVotes> 
     - `<result>` (e.g., Failed)
        - The result of the House roll call vote.
        - Options include: "Passed", "Failed", and "Agreed to".
-    - `<legislationType>` (e.g., "HR") or `<amendmentType>` (e.g., "HAMDT"
+    - `<legislationType>` (e.g., HR) or `<amendmentType>` (e.g., HAMDT)
       - The legislation type associated with the roll call vote.
       - `<legislationType>` is applicable for the following values: "HR", "HJRES", "HCONRES", or "HRES".
       - `<amendmentType>` is applicable for the following value: "HAMDT".
@@ -88,7 +88,7 @@ The `<api-root>` is only present in the XML format.
     - `<result>` (e.g., Failed)
        - The result of the House roll call vote.
        - Options include: "Passed", "Failed", and "Agreed to".
-    - `<legislationType>` (e.g., "HR") or `<amendmentType>` (e.g., "HAMDT"
+    - `<legislationType>` (e.g., HR) or `<amendmentType>` (e.g., HAMDT)
        - The legislation type associated with the roll call vote.
        - `<legislationType>` is applicable for the following values: "HR", "HJRES", "HCONRES", or "HRES".
        - `<amendmentType>` is applicable for the following value: "HAMDT".
@@ -105,7 +105,7 @@ The `<api-root>` is only present in the XML format.
         - Container element for a party within the House of Representatives. This element is repeatable and may contain the following children:
         - `<party>`
           - Container element for party data associated with the House roll call vote. This element is repeatable and may contain the following children:
-          - `<type>` (e.g., "R")
+          - `<type>` (e.g., R)
              - The party's abbreviated code.
              - Options include: "R" for "Republican", "D" for "Democratic", and "I" for "Independent".
           - `<name>`
@@ -146,7 +146,7 @@ The `<api-root>` is only present in the XML format.
     - `<result>` (e.g., Failed)
        - The result of the House roll call vote.
        - Options include: "Passed", "Failed", and "Agreed to".
-    - `<legislationType>` (e.g., "HR") or `<amendmentType>` (e.g., "HAMDT"
+    - `<legislationType>` (e.g., HR) or `<amendmentType>` (e.g., HAMDT)
        - The legislation type associated with the roll call vote.
        - `<legislationType>` is applicable for the following values: "HR", "HJRES", "HCONRES", or "HRES".
        - `<amendmentType>` is applicable for the following value: "HAMDT".
