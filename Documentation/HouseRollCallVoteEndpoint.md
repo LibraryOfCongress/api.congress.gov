@@ -88,14 +88,21 @@ The `<api-root>` is only present in the XML format.
     - `<result>` (e.g., Failed)
        - The result of the House roll call vote.
        - Options include: "Passed", "Failed", and "Agreed to".
-    - `<legislationType>` (e.g., HR) or `<amendmentType>` (e.g., HAMDT)
+    - `<legislationType>` (e.g., HR)
        - The legislation type associated with the roll call vote.
-       - `<legislationType>` is applicable for the following values: "HR", "HJRES", "HCONRES", or "HRES".
-       - `<amendmentType>` is applicable for the following value: "HAMDT".
-    - `<legislationNumber>` or `<amendmentNumber>`
-      - The assigned number of thelegislation associated with the roll call vote.
-      - `<legislationNumber>` is applicable for the following values: "HR", "HJRES", "HCONRES", or "HRES".
-      - `<amendmentNumber>` is applicable for the following value: "HAMDT".
+       - Options include: "HR", "HJRES", "HCONRES", or "HRES".
+    - `<legislationNumber>`
+      - The assigned number of the legislation associated with the roll call vote.
+    - `<voteQuestion>` (e.g., On Agreeing to the Amendment)
+       - The question that the vote is asking members to vote on.
+       - Options include: "On Agreeing to the Amendment", "On Agreeing to the Resolution", "On Agreeing to the Resolution, as Amended", "On Motion to Recommit", "On Motion to Reconsider", "On Motion to Suspend the Rules and Agree", "On Motion to Suspend the Rules and Agree, as Amended", "On Motion to Suspend the Rules and Concur in the Senate Amendment", "On Motion to Suspend the Rules and Pass", "On Motion to Suspend the Rules and Pass, as Amended", "On Motion to Table", and "On Ordering the Previous Question".
+    - `<amendmentType>` (e.g., "HAMDT")
+       - The amendment type associated with the roll call vote.
+       - The only value applicable to House roll call votes is "HAMDT".
+       - This element only appears when the vote is on a House amendment.
+    - `<amendmentNumber>`
+      - The assigned number of the amendment associated with the roll call vote.
+      - This element only appears when the vote is on a House amendment.
     - `<amendmentAuthor>` (e.g., "Tlaib of Michigan Amendment No. 6")
       - The author of the House amendment.
       - This element will only populate for House roll call votes associated with an amendment. 
@@ -146,17 +153,25 @@ The `<api-root>` is only present in the XML format.
     - `<result>` (e.g., Failed)
        - The result of the House roll call vote.
        - Options include: "Passed", "Failed", and "Agreed to".
-    - `<legislationType>` (e.g., HR) or `<amendmentType>` (e.g., HAMDT)
+     - `<legislationType>` (e.g., HR)
        - The legislation type associated with the roll call vote.
-       - `<legislationType>` is applicable for the following values: "HR", "HJRES", "HCONRES", or "HRES".
-       - `<amendmentType>` is applicable for the following value: "HAMDT".
-    - `<legislationNumber>` or `<amendmentNumber>`
-      - The assigned number of thelegislation associated with the roll call vote.
-      - `<legislationNumber>` is applicable for the following values: "HR", "HJRES", "HCONRES", or "HRES".
-      - `<amendmentNumber>` is applicable for the following value: "HAMDT".
+       - Options include: "HR", "HJRES", "HCONRES", or "HRES".
+    - `<legislationNumber>`
+      - The assigned number of the legislation associated with the roll call vote.
+    - `<voteQuestion>` (e.g., On Agreeing to the Amendment)
+       - The question that the vote is asking members to vote on.
+       - Options include: "On Agreeing to the Amendment", "On Agreeing to the Resolution", "On Agreeing to the Resolution, as Amended", "On Motion to Recommit", "On Motion to Reconsider", "On Motion to Suspend the Rules and Agree", "On Motion to Suspend the Rules and Agree, as Amended", "On Motion to Suspend the Rules and Concur in the Senate Amendment", "On Motion to Suspend the Rules and Pass", "On Motion to Suspend the Rules and Pass, as Amended", "On Motion to Table", and "On Ordering the Previous Question".
+    - `<amendmentType>` (e.g., "HAMDT")
+       - The amendment type associated with the roll call vote.
+       - The only value applicable to House roll call votes is "HAMDT".
+       - This element only appears when the vote is on a House amendment.
+    - `<amendmentNumber>`
+      - The assigned number of the amendment associated with the roll call vote.
+      - This element only appears when the vote is on a House amendment.
     - `<amendmentAuthor>` (e.g., "Tlaib of Michigan Amendment No. 6")
       - The author of the House amendment.
-      - This element will only populate for House roll call votes associated with an amendment.
+      - This element will only populate for House roll call votes associated with an amendment. 
+  
     - `<results>`
       - Container for vote results. A <results> element may contain the following children:
       - `<item>`
