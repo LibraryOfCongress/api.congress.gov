@@ -6,7 +6,7 @@ Beta House Roll Call Vote data in the API currently includes all House roll call
 
 ## OpenAPI Specification
 
-View OpenAPI Specification on the amendment API, supported endpoints, and available parameters at [https://api.congress.gov](https://api1.stg.congress.gov/#/[BETA]_house-vote).
+View OpenAPI Specification on the amendment API, supported endpoints, and available parameters at [https://api.congress.gov](https://api.congress.gov/#/[BETA]_house-vote).
 
 ## Elements and Descriptions
 
