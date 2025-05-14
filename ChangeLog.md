@@ -1,4 +1,20 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
+# UPCOMING June 2025, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/47)
+## Change #1
+### Impacted endpoints: /crsreport, /crsreport/{reportNumber}
+A bug impacting the `<version>` element will be investigated and fixed. 
+## Change #2
+### Impacted endpoint: N/A
+Escaped charactes in the swagger.yaml output on api.congress.gov will be fixed. 
+## Change #3
+### Impacted endpoint: /committee-meeting
+An error message in the commmittee meeting endpoint will be investigated and fixed. This is related to [Issue #253](https://github.com/LibraryOfCongress/api.congress.gov/issues/253).
+## Change #4
+### Impacted endpoint: /nomination/{congress}/{nominationNumber}
+A `<nominationType>` conatiner will be added to the nominations detail-level endpoint. This container element will contain a `<isMilitary>` element that will return "true" values when applicable. This is related to [Issue #266](https://github.com/LibraryOfCongress/api.congress.gov/issues/266).
+## Change #5
+Impacted endpoint: /committee-meeting/{congress}/{chamber}/{eventId}
+A container for `<continuation>` data will be added to this endpoint. This will be applicable to committee meetings that last more than one day. 
 # UPCOMING June 2025, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/46)
 **Expected Production Release Date: June 2, 2025**
 ## Change #1
@@ -8,35 +24,31 @@ A `<textVersions>` container will be added to amendments that have text versions
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/cosponsors
 An option to filter the /bill/{congress}/{billType}/{billNumber}/cosponsors endpoint by sponsorshipDate will be added to the endpoint. This is related to [Issue #57](https://github.com/LibraryOfCongress/api.congress.gov/issues/57).
 ## Change #3
-### Impacted endpoints: /crsreport, /crsreport/{reportNumber}
-A bug impacting the `<version>` element will be investigated and fixed. 
+### Impacted endpoints: All CRS Report endpoints
+Escaped characters in certain JSON outputs in the CRS Report endpoints will be invesitgated and fixed. **This is ongoing work from a previous sprint.**
 ## Change #4
-### Impacted endpoint: N/A
-Escaped charactes in the swagger.yaml output on api.congress.gov will be fixed. 
-# UPCOMING May 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/45)
-**Expected Production Release Date: May 12, 2025**
+### Impacted endpoints: /house-vote/{congress}/{session}/{voteNumber}, /house-vote/{congress}/{session}/{voteNumber}/members
+Non-legislation related votes (e.g., "Election of the Speaker") will be added to the beta House roll call vote endpoints for 2023-present.
+# COMPLETED May 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/45)
 ## Change #1
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/text
-A CORS error message will be invesigated. This is related to [Issue #292](https://github.com/LibraryOfCongress/api.congress.gov/issues/292). 
+A CORS error message was invesigated. This was related to [Issue #292](https://github.com/LibraryOfCongress/api.congress.gov/issues/292). 
 ## Change #2
 ### Impacted endpoint: /hearing/{congress}/{chamber}/{jacketNumber}
-An error message in the hearing endpoint will be investigated and fixed. This is related to [Issue #262](https://github.com/LibraryOfCongress/api.congress.gov/issues/262).
+An error message in the hearing endpoint was investigated and fixed. This was related to [Issue #262](https://github.com/LibraryOfCongress/api.congress.gov/issues/262).
 ## Change #3
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}
-When requesting details for a bill that does not exist the API returns a 500. We expect this to return 404. This will be investigated and fixed so that bills that do not exist return a 404 error, not a 500.
+When requesting details for a bill that does not exist the API returned a 500. We expected this to return 404. This was investigated and fixed so that bills that do not exist return a 404 error, not a 500.
 ## Change #4
-### Impacted endpoint: All CRS Report endpoints
-Escaped characters in certain JSON outputs in the CRS Report endpoints will be invesitgated and fixed. **This is ongoing work from a previous sprint.**
-## Change #5
 ### Impacted endpoints: **NEW** House Roll Call Votes endpoints
-New beta House Roll Call Votes API endpoints are targeted for release. The House Roll Call Votes endpoints will consist of a list level, an item level, and a member votes level for 2003-present (beginning with the 108th Congress). The list level is filterable by congress and session. Detailed information about each roll call vote will be available at the item level. Detailed information about member votes will be available at the member vote level. The endpoints, once development work is completed, are planned to be:
+New beta House Roll Call Votes API endpoints were released. The House Roll Call Votes endpoints consist of a list level, an item level, and a member votes level for 2023-present (beginning with the 108th Congress). The list level is filterable by congress and session. Detailed information about each roll call vote will be available at the item level. Detailed information about member votes will be available at the member vote level. The endpoints, once development work is completed, are planned to be:
 1. api.congress.gov/v3/house-vote
 2. api.congress.gov/v3/house-vote/{congress}
 3. api.congress.gov/v3/house-vote/{congress}/{session}
 4. api.congress.gov/v3/house-vote/{congress}/{session}{rollCallVoteNumber}
 5. api.congress.gov/v3/house-vote/{congress}/{session}/{rollCallVoteNumber}/members
    
-This is related to [Issue #64](https://github.com/LibraryOfCongress/api.congress.gov/issues/64).  **This is ongoing work from a previous sprint.**
+This is related to [Issue #64](https://github.com/LibraryOfCongress/api.congress.gov/issues/64).  
 # COMPLETED April 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/44)
 ## Change #1
 ### Impacted endpoint: /amendment
