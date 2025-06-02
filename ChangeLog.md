@@ -1,5 +1,6 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
 # UPCOMING July 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/48)
+**Expected Production Release Date: July 14, 2025**
 ## Change #1
 ### Impacted endpoint: /committee-meeting
 An error message in the commmittee meeting endpoint will be investigated and fixed. This is related to [Issue #253](https://github.com/LibraryOfCongress/api.congress.gov/issues/253).
