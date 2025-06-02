@@ -1,4 +1,20 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
+# UPCOMING July 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/48)
+## Change #1
+### Impacted endpoint: /committee-meeting
+An error message in the commmittee meeting endpoint will be investigated and fixed. This is related to [Issue #253](https://github.com/LibraryOfCongress/api.congress.gov/issues/253).
+## Change #2
+### Impacted endpoint: N/A
+A user submitted [pull request](https://github.com/LibraryOfCongress/api.congress.gov/pull/300) will be reviewed. This is related to [Issue #280](https://github.com/LibraryOfCongress/api.congress.gov/issues/280) and [Issue #299](https://github.com/LibraryOfCongress/api.congress.gov/issues/299).
+## Change #3
+### Impacted endpoint: /member/{bioguideId}
+A `<previousNames>` contained will be added to the /member/{bioguideId} endpoint, which will show previous name data for applicable members. 
+## Change #4
+### Impacted endpoint: /committee-report, /committee-report/{congress}, /committee-report/{congress}/{reportType}
+The committee report endpoint will be modified so that data is returned for both errata and non-errata versions of committee reports. This is related to [Issue #216](https://github.com/LibraryOfCongress/api.congress.gov/issues/216).
+## Change #5
+### Impacted endpoint: /nomination/{congress}/{nominationNumber}/{ordinal}
+An error message in the /nomination/{congress}/{nominationNumber}/{ordinal} will be investigated and fixed. This is related to [Issue #251](https://github.com/LibraryOfCongress/api.congress.gov/issues/251).
 # UPCOMING June 2025, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/47)
 **Expected Production Release Date: June 23, 2025**
 ## Change #1
@@ -8,28 +24,24 @@ A bug impacting the `<version>` element will be investigated and fixed.
 ### Impacted endpoint: N/A
 Escaped charactes in the swagger.yaml output on api.congress.gov will be fixed. 
 ## Change #3
-### Impacted endpoint: /committee-meeting
-An error message in the commmittee meeting endpoint will be investigated and fixed. This is related to [Issue #253](https://github.com/LibraryOfCongress/api.congress.gov/issues/253).
-## Change #4
 ### Impacted endpoint: /nomination/{congress}/{nominationNumber}
 A `<nominationType>` conatiner will be added to the nominations detail-level endpoint. This container element will contain a `<isMilitary>` element that will return "true" values when applicable. This is related to [Issue #266](https://github.com/LibraryOfCongress/api.congress.gov/issues/266).
-## Change #5
+## Change #4
 Impacted endpoint: /committee-meeting/{congress}/{chamber}/{eventId}
 A container for `<continuation>` data will be added to this endpoint. This will be applicable to committee meetings that last more than one day. 
-# UPCOMING June 2025, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/46)
-**Expected Production Release Date: June 2, 2025**
-## Change #1
-### Impacted endpoint: /amendment/{congress}/{amendmentType}/{amendmentNumber}
-A `<textVersions>` container will be added to amendments that have text versions. This container will provide a `<count>` element and a referrer URL to the text-level amendment API endpoint. This is related to [Issue #317](https://github.com/LibraryOfCongress/api.congress.gov/issues/317). 
-## Change #2
-### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/cosponsors
-An option to filter the /bill/{congress}/{billType}/{billNumber}/cosponsors endpoint by sponsorshipDate will be added to the endpoint. This is related to [Issue #57](https://github.com/LibraryOfCongress/api.congress.gov/issues/57).
-## Change #3
+## Change #5
 ### Impacted endpoints: All CRS Report endpoints
 Escaped characters in certain JSON outputs in the CRS Report endpoints will be invesitgated and fixed. **This is ongoing work from a previous sprint.**
-## Change #4
+# COMPLETED June 2025, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/46)
+## Change #1
+### Impacted endpoint: /amendment/{congress}/{amendmentType}/{amendmentNumber}
+A `<textVersions>` container was added to amendments that have text versions. This container will provide a `<count>` element and a referrer URL to the text-level amendment API endpoint. This was related to [Issue #317](https://github.com/LibraryOfCongress/api.congress.gov/issues/317). 
+## Change #2
+### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/cosponsors
+An option to filter the /bill/{congress}/{billType}/{billNumber}/cosponsors endpoint by sponsorshipDate was added to the endpoint. This was related to [Issue #57](https://github.com/LibraryOfCongress/api.congress.gov/issues/57).
+## Change #3
 ### Impacted endpoints: /house-vote/{congress}/{session}/{voteNumber}, /house-vote/{congress}/{session}/{voteNumber}/members
-Non-legislation related votes (e.g., "Election of the Speaker") will be added to the beta House roll call vote endpoints for 2023-present.
+Non-legislation related votes (e.g., "Election of the Speaker") were added to the beta House roll call vote endpoints for 2023-present.
 # COMPLETED May 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/45)
 ## Change #1
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/text
