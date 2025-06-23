@@ -16,23 +16,22 @@ The committee report endpoint will be modified so that data is returned for both
 ## Change #5
 ### Impacted endpoint: /nomination/{congress}/{nominationNumber}/{ordinal}
 An error message in the /nomination/{congress}/{nominationNumber}/{ordinal} will be investigated and fixed. This is related to [Issue #251](https://github.com/LibraryOfCongress/api.congress.gov/issues/251).
+## Change #6
+### Impacted endpoint: N/A
+Escaped charactes in the swagger.yaml output on api.congress.gov will be fixed. **This is ongoing work from a previous sprint.**
 # UPCOMING June 2025, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/47)
-**Expected Production Release Date: June 23, 2025**
 ## Change #1
 ### Impacted endpoints: /crsreport, /crsreport/{reportNumber}
-A bug impacting the `<version>` element will be investigated and fixed. 
+A bug impacting the `<version>` element was investigated and fixed. 
 ## Change #2
-### Impacted endpoint: N/A
-Escaped charactes in the swagger.yaml output on api.congress.gov will be fixed. 
-## Change #3
 ### Impacted endpoint: /nomination/{congress}/{nominationNumber}
-A `<nominationType>` conatiner will be added to the nominations detail-level endpoint. This container element will contain a `<isMilitary>` element that will return "true" values when applicable. This is related to [Issue #266](https://github.com/LibraryOfCongress/api.congress.gov/issues/266).
-## Change #4
+A `<nominationType>` conatiner was added to the nominations detail-level endpoint. This container element contains a `<isMilitary>` element that  returns "true" values when applicable. This was related to [Issue #266](https://github.com/LibraryOfCongress/api.congress.gov/issues/266).
+## Change #3
 Impacted endpoint: /committee-meeting/{congress}/{chamber}/{eventId}
-A container for `<continuation>` data will be added to this endpoint. This will be applicable to committee meetings that last more than one day. 
-## Change #5
+A container for `<continuation>` data was added to this endpoint. This will be applicable to committee meetings that last more than one day. 
+## Change #4
 ### Impacted endpoints: All CRS Report endpoints
-Escaped characters in certain JSON outputs in the CRS Report endpoints will be invesitgated and fixed. **This is ongoing work from a previous sprint.**
+Escaped characters in certain JSON outputs in the CRS Report endpoints were invesitgated and fixed. **This was ongoing work from a previous sprint.**
 # COMPLETED June 2025, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/46)
 ## Change #1
 ### Impacted endpoint: /amendment/{congress}/{amendmentType}/{amendmentNumber}
