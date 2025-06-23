@@ -19,7 +19,7 @@ An error message in the /nomination/{congress}/{nominationNumber}/{ordinal} will
 ## Change #6
 ### Impacted endpoint: N/A
 Escaped charactes in the swagger.yaml output on api.congress.gov will be fixed. **This is ongoing work from a previous sprint.**
-# UPCOMING June 2025, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/47)
+# COMPLETED June 2025, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/47)
 ## Change #1
 ### Impacted endpoints: /crsreport, /crsreport/{reportNumber}
 A bug impacting the `<version>` element was investigated and fixed. 
