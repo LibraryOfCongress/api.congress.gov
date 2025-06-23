@@ -1,6 +1,6 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
-# UPCOMING July 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/48)
-**Expected Production Release Date: July 14, 2025**
+# UPCOMING August 2025, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/49)
+**Expected Production Release Date: August 4, 2025**
 ## Change #1
 ### Impacted endpoint: /committee-meeting
 An error message in the commmittee meeting endpoint will be investigated and fixed. This is related to [Issue #253](https://github.com/LibraryOfCongress/api.congress.gov/issues/253).
@@ -8,15 +8,29 @@ An error message in the commmittee meeting endpoint will be investigated and fix
 ### Impacted endpoint: N/A
 A user submitted [pull request](https://github.com/LibraryOfCongress/api.congress.gov/pull/300) will be reviewed. This is related to [Issue #280](https://github.com/LibraryOfCongress/api.congress.gov/issues/280) and [Issue #299](https://github.com/LibraryOfCongress/api.congress.gov/issues/299).
 ## Change #3
+### Impacted endpoint: /crsreport/{reportNumber}
+A bug related to CRS report versions updating will be investigated and fixed. This is related to [Issue #346](https://github.com/LibraryOfCongress/api.congress.gov/issues/346).
+## Change #4
+### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}
+On behalf of sponsor data will be incorporated into the Congress.gov API bill endpoint where applicable.
+## Change #5
+### Impacted endpoint: /crsreport
+An `<updateDate> optional filter will be added to the CRS report list-level endpoint. This is related to [Issue #328](https://github.com/LibraryOfCongress/api.congress.gov/issues/328).
+## Change #6
+### Impacted endpoint: /law/{congress}/{lawType}/{lawNumber}
+An error message in the law detail endpoint will be investigated and fixed. This is related to [Issue #235](https://github.com/LibraryOfCongress/api.congress.gov/issues/235).
+# UPCOMING July 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/48)
+**Expected Production Release Date: July 14, 2025**
+## Change #1
 ### Impacted endpoint: /member/{bioguideId}
 A `<previousNames>` contained will be added to the /member/{bioguideId} endpoint, which will show previous name data for applicable members. 
-## Change #4
+## Change #2
 ### Impacted endpoint: /committee-report, /committee-report/{congress}, /committee-report/{congress}/{reportType}
 The committee report endpoint will be modified so that data is returned for both errata and non-errata versions of committee reports. This is related to [Issue #216](https://github.com/LibraryOfCongress/api.congress.gov/issues/216).
-## Change #5
+## Change #3
 ### Impacted endpoint: /nomination/{congress}/{nominationNumber}/{ordinal}
 An error message in the /nomination/{congress}/{nominationNumber}/{ordinal} will be investigated and fixed. This is related to [Issue #251](https://github.com/LibraryOfCongress/api.congress.gov/issues/251).
-## Change #6
+## Change #4
 ### Impacted endpoint: N/A
 Escaped charactes in the swagger.yaml output on api.congress.gov will be fixed. **This is ongoing work from a previous sprint.**
 # COMPLETED June 2025, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/47)
