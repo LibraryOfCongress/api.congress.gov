@@ -131,6 +131,14 @@ Parent container for the nomination. A `<nomination>` element may contain the fo
       - The date of the latest action taken on the nomination.
     - `<text>` (e.g. Confirmed by the Senate by Voice Vote)
       - The text of the latest action taken on the nomination.
+- `<nominationType>`
+  - Container for type data for the nomination. A <nominationType> element may include the following children:
+    - `<isCivilian>` (e.g. True)
+       - Flag indicating whether the nomination is for a civilian position.
+       - Possible values are "True" or "False".
+    - `<isMilitary>` (e.g. False)
+       - Flag indicating whether the nomination is for a military nomination.
+       - Possible values are "True" or "False".
 - `<actions>`
   - Container for actions on the nomination. An `<actions>` element may include the following children:
     - `<count>` (e.g. 6)
