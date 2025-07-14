@@ -181,8 +181,29 @@ Parent container for an individual member’s entry. A `<member>` element may in
       - The total number of bills and resolutions cosponsored by the member.
     - `<url>` (e.g., <https://api.congress.gov/v3/member/L000174/cosponsored-legislation>)
       - A referrer URL to the cosponsored-legislation level of the API. Click [here](#cosponsored-legislation-level) for more information about the cosponsored-legislation level.  
+- `<previousNames>`
+  - Container for the leadership positions available on Congress.gov that the member has held during their membership/tenure of service. A `<previousNames>` container may include the following child, which is repeatable:
+    - `<honorificName>` (e.g., Mr.)  
+      - The honorific title of the member.
+    - `<firstName>` (e.g., Patrick)  
+      - The member’s first name.
+    - `<middleName>` (e.g., Joseph)
+      - The member’s middle name.
+    - `<lastName>` (e.g., Leahy)
+      - The member’s last name.
+    - `<suffixName>`  
+      - The member’s suffix.
+    - `<directOrderName>` (e.g., Patrick J. Leahy)
+      - The member’s name in first-name-first order.
+    - `<invertedOrderName>` (e.g., Leahy, Patrick J.)
+      - The member’s name in last-name-first order.
+    - `<startDate>` (e.g., 2025-01-17T05:00:00Z)
+      - The date that the member's use of the name started.
+    - `<endDate>` (e.g.,  2025-04-28T13:04:16Z)
+       - The date that the member's use of the name ended.
 - `<updateDate>` (e.g., 2022-07-22T18:44:02Z)
   - The date of last update in Congress.gov.
+
 
 ### Sponsored-Legislation Level
 
