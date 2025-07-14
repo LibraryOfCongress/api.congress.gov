@@ -1,10 +1,15 @@
 {
-    "swagger": "2.0",
+    "openapi": "3.0.3",
     "info": {
         "description": "Congress.gov shares its application programming interface (API) with the public to ingest the Congressional data. <a href=\"sign-up/\" target=\"_blank\">Sign up for an API key</a> from api.data.gov that you can use to access web services provided by Congress.gov. To learn more, view our <a href=\"https://github.com/LibraryOfCongress/api.congress.gov/\" target=\"_blank\">GitHub repository</a>.\n",
         "title": "Congress.gov API"
     },
-    "basePath": "/v3",
+    "servers": [
+        {
+            "url": "https://api.congress.gov/v3",
+            "description": "Congress.gov API Server"
+        }
+    ],
     "tags": [
         {
             "name": "bill",
@@ -6965,11 +6970,13 @@
             }
         }
     },
-    "securityDefinitions": {
-        "api_key": {
-            "type": "apiKey",
-            "name": "api_key",
-            "in": "query"
+    "components": {
+        "securitySchemes": {
+            "api_key": {
+                "type": "apiKey",
+                "name": "api_key",
+                "in": "query"
+            }
         }
     }
 }
