@@ -44,20 +44,20 @@ An `<updateDate> optional filter will be added to the CRS report list-level endp
 ## Change #5
 ### Impacted endpoint: /law/{congress}/{lawType}/{lawNumber}
 An error message in the law detail endpoint will be investigated and fixed. This is related to [Issue #235](https://github.com/LibraryOfCongress/api.congress.gov/issues/235).
+## Change #6
+### Impacted endpoint: /committee-report, /committee-report/{congress}, /committee-report/{congress}/{reportType}
+The committee report endpoint will be modified so that data is returned for both errata and non-errata versions of committee reports. This is related to [Issue #216](https://github.com/LibraryOfCongress/api.congress.gov/issues/216). **This is ongoing work from a previous sprint**
 # UPCOMING July 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/48)
 **Expected Production Release Date: July 14, 2025**
 ## Change #1
 ### Impacted endpoint: /member/{bioguideId}
-A `<previousNames>` contained will be added to the /member/{bioguideId} endpoint, which will show previous name data for applicable members. 
+A `<previousNames>` container was added to the /member/{bioguideId} endpoint, which shows previous name data for applicable members. 
 ## Change #2
-### Impacted endpoint: /committee-report, /committee-report/{congress}, /committee-report/{congress}/{reportType}
-The committee report endpoint will be modified so that data is returned for both errata and non-errata versions of committee reports. This is related to [Issue #216](https://github.com/LibraryOfCongress/api.congress.gov/issues/216).
-## Change #3
 ### Impacted endpoint: /nomination/{congress}/{nominationNumber}/{ordinal}
-An error message in the /nomination/{congress}/{nominationNumber}/{ordinal} will be investigated and fixed. This is related to [Issue #251](https://github.com/LibraryOfCongress/api.congress.gov/issues/251).
-## Change #4
+An error message in the /nomination/{congress}/{nominationNumber}/{ordinal} was investigated and fixed. This was related to [Issue #251](https://github.com/LibraryOfCongress/api.congress.gov/issues/251).
+## Change #3
 ### Impacted endpoint: N/A
-Escaped charactes in the swagger.yaml output on api.congress.gov will be fixed. **This is ongoing work from a previous sprint.**
+Escaped charactes in the swagger.yaml output on api.congress.gov were fixed. **This is ongoing work from a previous sprint.**
 # COMPLETED June 2025, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/47)
 ## Change #1
 ### Impacted endpoints: /crsreport, /crsreport/{reportNumber}
