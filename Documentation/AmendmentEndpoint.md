@@ -115,15 +115,15 @@ Parent container for an amendment. An `<amendment>` element may include the foll
           - The unique identifier for the  senator who submitted and/or proposed the amendment on behalf of the amendment's sponsor, as assigned in the [Biographical Directory of the United States Congress, 1774-Present](https://bioguide.congress.gov/).
           - View a [field values list of Bioguide identifiers](https://www.congress.gov/help/field-values/member-bioguide-ids) for current and former members in Congress.gov.
         - `<fullName>` (e.g. Sen. Sinema, Kyrsten [D-AZ])
-          - The display name of the senator who submitted and/or proposed the amendment on behalf of the sponsor of the amendment amendment's sponsor.
+          - The display name of the senator who submitted and/or proposed the amendment on behalf of the sponsor of the amendment.
         - `<firstName>` (e.g. Kyrsten)
-          - The first name of the  senator who submitted and/or proposed the amendment on behalf of the sponsor of the amendment amendment's sponsor.
+          - The first name of the  senator who submitted and/or proposed the amendment on behalf of the sponsor of the amendment.
         - `<middleName>`
-          - The middle name or initial of the  senator who submitted and/or proposed the amendment on behalf of the sponsor of the amendment amendment's sponsor.
+          - The middle name or initial of the senator who submitted and/or proposed the amendment on behalf of the sponsor of the amendment.
         - `<lastName>`(e.g. Sinema)
-          - The last name of the  senator who submitted and/or proposed the amendment on behalf of the sponsor of the amendment amendment's sponsor.
+          - The last name of the senator who submitted and/or proposed the amendment on behalf of the sponsor of the amendment.
         - `<party>` (e.g. D)
-          - The party code of the  senator who submitted and/or proposed the amendment on behalf of the sponsor of the amendment amendment's sponsor.
+          - The party code of the senator who submitted and/or proposed the amendment on behalf of the sponsor of the amendment.
         - `<state>` (e.g. AZ)
           - A two-letter abbreviation for the state, territory, or district represented by the senator who submitted and/or proposed the amendment on behalf of the sponsor of the amendment amendment's sponsor.
         - `<type>`
