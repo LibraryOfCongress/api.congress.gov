@@ -161,6 +161,29 @@ Parent container for a bill or resolution. A `<bill>` element may include the fo
         - `<isByRequest>` (e.g. N)
           - Flag indicating if the bill or resolution was introduced at the request of the President or another entity.
           - Possible values are "Y" or "N".
+- `<onBehalfOfSponsor>`
+  - Optional container for the person who introduced the bill on behalf of the sponsor. A `<onBehalfOf>` element may include the following children:
+    - `<item>`
+      - Container for a single senator who submitted and/or proposed the amendment on behalf of the sponsor of the amendment. An `<item>` element may include the following children:
+        - `<bioguideId>` (e.g. S001191)
+          - The unique identifier for the  senator who submitted and/or proposed the amendment on behalf of the amendment's sponsor, as assigned in the [Biographical Directory of the United States Congress, 1774-Present](https://bioguide.congress.gov/).
+          - View a [field values list of Bioguide identifiers](https://www.congress.gov/help/field-values/member-bioguide-ids) for current and former members in Congress.gov.
+        - `<fullName>` (e.g. Sen. Sinema, Kyrsten [D-AZ])
+          - The display name of the senator who submitted and/or proposed the amendment on behalf of the sponsor of the amendment amendment's sponsor.
+        - `<firstName>` (e.g. Kyrsten)
+          - The first name of the senator who introduced the bill on behalf of the sponsor.
+        - `<middleName>`
+          - The middle name or initial of the senator who introduced the bill on behalf of the sponsor. 
+        - `<lastName>`(e.g. Sinema)
+          - The last name of the senator who introduced the bill on behalf of the sponsor.
+        - `<party>` (e.g. D)
+          - The party code of the senator who introduced the bill on behalf of the sponsor.
+        - `<state>` (e.g. AZ)
+          - A two-letter abbreviation for the state, territory, or district represented by the senator who intrdocued the bill on behalf of the sponsor.
+        - `<type>`
+          - The type of on behalf of sponsor action. This will always be "Introduced on behalf of". 
+        - `<url>` (e.g. <https://api.congress.gov/v3/member/S001191>)
+          - A referrer URL to the member item in the API. Documentation for the member endpoint is available [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/MemberEndpoint.md).
 - `<cosponsors>`
   - Container for any cosponsors of the bill or resolution. A `<cosponsors>` element may include the following children (the below counts are taken from <https://api.congress.gov/v3/bill/117/s/3580/cosponsors>):
     - `<countIncludingWithdrawnCosponsors>` (e.g. 31)
