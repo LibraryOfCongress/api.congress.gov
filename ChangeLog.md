@@ -1,5 +1,5 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
-# UPCOMING October 2025, Part 1 | [Milestone]()
+# UPCOMING October 2025, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/52)
 ## Change #1
 ### Impacted endpoint: /congress
 The Congress list-level endpoint will have a default sort by congress ID with an option to sort by `<updateDate>`. This is related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117).
