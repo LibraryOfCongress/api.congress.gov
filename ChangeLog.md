@@ -1,13 +1,21 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
+# UPCOMING October 2025, Part 1 | [Milestone]()
+## Change #1
+### Impacted endpoint: /congress
+The Congress list-level endpoint will have a default sort by congress ID with an option to sort by `<updateDate>`. This is related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117).
+## Change #2 
+### Impacted endpoint: /committee-meeting/{congress}/{chamber}/{eventId}
+An `<isManuallyCurated>` element will be added to this endpoint. This optional element will display with a "Y" for meetings that are manually curated. 
+## Change #3
+### Impacted endpoint: committee/{chamber}/{committeeCode},/committee/{chamber}/{committeeCode}/bills, /committee/{chamber}/{committeeCode}/reports
+/committee/{chamber}/{committeeCode}/nominations
+An optional congress filter will be added to the /committee endpoint so that users can filter by these endpoints by Congress. 
 # UPCOMING September 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/51)
 **Expected Production Release Date: September 15, 2025**
 ## Change #1
 ### Impacted endpoint: /crsreport/{reportNumber}
 The `<version>` element will be renamed `<currentVersion>`. Additionally, a `<previousVersions>` container will be added to the item-level, which will provide data on previous version format, author, version number, and URL.
 ## Change #2
-### Impacted endpoint: /congress
-The Congress list-level endpoint will have a default sort by congress ID with an option to sort by `<updateDate>`. This is related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117).
-## Change #3
 ### Impacted endpoint: /committee
 The committee list-level endpoint will have a default sort by committeed ID with an optional sort by `<updateDate>`. This is related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117).
 # UPCOMING August 2025, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/50)
