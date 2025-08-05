@@ -6,10 +6,10 @@ This change log will contain information on updates to the Congress.gov API, the
 The `<version>` element will be renamed `<currentVersion>`. Additionally, a `<previousVersions>` container will be added to the item-level, which will provide data on previous version format, author, version number, and URL.
 ## Change #2
 ### Impacted endpoint: /congress
-The Congress list-level endpoint will have a default sort by updateDate. This is related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117).
+The Congress list-level endpoint will have a default sort by congress ID with an option to sort by `<updateDate>`. This is related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117).
 ## Change #3
 ### Impacted endpoint: /committee
-The committee list-level endpoint will have a default sort by updateDate. This is related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117).
+The committee list-level endpoint will have a default sort by committeed ID with an optional sort by `<updateDate>`. This is related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117).
 # UPCOMING August 2025, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/50)
 **Expected Production Release Date: August 25, 2025**
 ## Change #1
@@ -19,31 +19,27 @@ A 500 error message in the committee meeting list-level endpoint will be investi
 ### Impacted request: /committee-meeting/119/house/118388
 When requesting JSON from the API for House event 118388, an error is returned. This will be investigated and fixed. This is related to [Issue #351](https://github.com/LibraryOfCongress/api.congress.gov/issues/351).
 ## Change #3
-### Impacted endpoint: /bill, /amendment
-User reported issues with pagination in the bill list-level endpoint and the amendment list-level endpoint will be investigated. Findings will determine next steps to fix these issues. This is related to [Issue #74](https://github.com/LibraryOfCongress/api.congress.gov/issues/74) and [Issue #334](https://github.com/LibraryOfCongress/api.congress.gov/issues/334).
-## Change #4
 ### Impacted endpoint: /amendment
-The amendment list-level endpoint will be modified so the default sort is by updateDate. This is related to [Issue #228](https://github.com/LibraryOfCongress/api.congress.gov/issues/228). 
-## Change #5 
+The amendment list-level endpoint will be modified so the default sort is by amendment ID with an optional sort by `<updateDate>`. This is related to [Issue #228](https://github.com/LibraryOfCongress/api.congress.gov/issues/228). 
+## Change #4
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber} 
 A `<legislationUrl>` element will be added to the bill item-level endpoint. This will link to the bill's information on Congress.gov. This is related to [Issue #268](https://github.com/LibraryOfCongress/api.congress.gov/issues/268).
-# UPCOMING August 2025, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/49)
-**Expected Production Release Date: August 4, 2025**
+# COMPLETED August 2025, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/49)
 ## Change #1
 ### Impacted endpoint: /committee-meeting
-An error message in the commmittee meeting endpoint will be investigated and fixed. This is related to [Issue #253](https://github.com/LibraryOfCongress/api.congress.gov/issues/253).
+An error message in the commmittee meeting endpoint was investigated and fixed. This was related to [Issue #253](https://github.com/LibraryOfCongress/api.congress.gov/issues/253).
 ## Change #2
 ### Impacted endpoint: /crsreport/{reportNumber}
-A bug related to CRS report versions updating will be investigated and fixed. This is related to [Issue #346](https://github.com/LibraryOfCongress/api.congress.gov/issues/346).
+A bug related to CRS report versions updating was investigated and fixed. This was related to [Issue #346](https://github.com/LibraryOfCongress/api.congress.gov/issues/346).
 ## Change #3
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}
-On behalf of sponsor data will be incorporated into the Congress.gov API bill endpoint where applicable.
+On behalf of sponsor data was incorporated into the Congress.gov API bill endpoint where applicable.
 ## Change #4
 ### Impacted endpoint: /crsreport
-An `<updateDate> optional filter will be added to the CRS report list-level endpoint. This is related to [Issue #328](https://github.com/LibraryOfCongress/api.congress.gov/issues/328).
+An `<updateDate> optional filter was added to the CRS report list-level endpoint. This was related to [Issue #328](https://github.com/LibraryOfCongress/api.congress.gov/issues/328).
 ## Change #5
 ### Impacted endpoint: /law/{congress}/{lawType}/{lawNumber}
-An error message in the law detail endpoint will be investigated and fixed. This is related to [Issue #235](https://github.com/LibraryOfCongress/api.congress.gov/issues/235).
+An error message in the law detail endpoint was investigated and fixed. This was related to [Issue #235](https://github.com/LibraryOfCongress/api.congress.gov/issues/235).
 ## Change #6
 ### Impacted endpoint: /committee-report, /committee-report/{congress}, /committee-report/{congress}/{reportType}
 The committee report endpoint will be modified so that data is returned for both errata and non-errata versions of committee reports. This is related to [Issue #216](https://github.com/LibraryOfCongress/api.congress.gov/issues/216). **This is ongoing work from a previous sprint**
