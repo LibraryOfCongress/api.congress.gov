@@ -164,12 +164,12 @@ Parent container for a bill or resolution. A `<bill>` element may include the fo
 - `<onBehalfOfSponsor>`
   - Optional container for the person who introduced the bill on behalf of the sponsor. A `<onBehalfOf>` element may include the following children:
     - `<item>`
-      - Container for a single senator who submitted and/or proposed the amendment on behalf of the sponsor of the amendment. An `<item>` element may include the following children:
+      - Container for a single senator who introduced a bill on behalf of the sponsor of the bill. An `<item>` element may include the following children:
         - `<bioguideId>` (e.g. S001191)
-          - The unique identifier for the  senator who submitted and/or proposed the amendment on behalf of the amendment's sponsor, as assigned in the [Biographical Directory of the United States Congress, 1774-Present](https://bioguide.congress.gov/).
+          - The unique identifier for the  senator who introduced the bill on behalf of the bill's sponsor, as assigned in the [Biographical Directory of the United States Congress, 1774-Present](https://bioguide.congress.gov/).
           - View a [field values list of Bioguide identifiers](https://www.congress.gov/help/field-values/member-bioguide-ids) for current and former members in Congress.gov.
         - `<fullName>` (e.g. Sen. Sinema, Kyrsten [D-AZ])
-          - The display name of the senator who submitted and/or proposed the amendment on behalf of the sponsor of the amendment amendment's sponsor.
+          - The display name of the senator who introduced the bill on behalf of the sponsor of the bill.
         - `<firstName>` (e.g. Kyrsten)
           - The first name of the senator who introduced the bill on behalf of the sponsor.
         - `<middleName>`
