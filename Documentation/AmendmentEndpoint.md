@@ -125,7 +125,7 @@ Parent container for an amendment. An `<amendment>` element may include the foll
         - `<party>` (e.g. D)
           - The party code of the senator who submitted and/or proposed the amendment on behalf of the sponsor of the amendment.
         - `<state>` (e.g. AZ)
-          - A two-letter abbreviation for the state, territory, or district represented by the senator who submitted and/or proposed the amendment on behalf of the sponsor of the amendment amendment's sponsor.
+          - A two-letter abbreviation for the state, territory, or district represented by the senator who submitted and/or proposed the amendment on behalf of the sponsor of the amendment's sponsor.
         - `<type>`
           - The type of on behalf of sponsor action. This can  be "Submitted on behalf of" the sponsor and/or "Proposed on behalf of" the sponsor.
         - `<url>` (e.g. <https://api.congress.gov/v3/member/S001191>)
