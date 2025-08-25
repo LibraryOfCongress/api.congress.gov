@@ -37,7 +37,7 @@ class CDGClient:
 
     def __init__(
         self,
-        api_key,
+        x_api_key,
         api_version=API_VERSION,
         response_format=RESPONSE_FORMAT,
         raise_on_error=True,
@@ -47,7 +47,7 @@ class CDGClient:
 
         # do not use url parameters, even if offered, use headers
         self._session.params = {"format": response_format}
-        self._session.headers.update({"x-api-key": api_key})
+        self._session.headers.update({"x-api-key": x_api_key})
 
         if raise_on_error:
             self._session.hooks = {
