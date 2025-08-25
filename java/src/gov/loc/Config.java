@@ -9,7 +9,7 @@ public class Config {
 
     private static final String CONFIG_FILENAME  = "loc.cfg";                // The name of the config file
     
-    private static final String API_KEY          = "CONFIG.API_KEY";         // API Authentication key
+    private static final String X_API_KEY          = "CONFIG.X_API_KEY";         // API Authentication key
     private static final String RESPONSE_FORMAT  = "CONFIG.RESPONSE_FORMAT"; // xml | json
 
     private static final String STORE_RESPONSE   = "CONFIG.STORE_RESPONSE";  // true | false
@@ -68,7 +68,7 @@ public class Config {
      * @return String
      */
     public static String getApiKey() {
-        return getProperty(API_KEY);
+        return getProperty(X_API_KEY);
     }
 
     /**
