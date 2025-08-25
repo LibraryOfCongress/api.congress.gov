@@ -187,10 +187,10 @@ if __name__ == "__main__":
 
     config = ConfigParser()
     config.read("../secrets.ini")
-    api_key = config.get("cdg_api", "api_auth_key")
+    x_api_key = config.get("cdg_api", "api_auth_key")
 
     # if you want to view data in json format, you can change the output type here:
-    client = CDGClient(api_key, response_format="xml")
+    client = CDGClient(x_api_key, response_format="xml")
 
     print(f"Contacting Congres.gov, at {client.base_url} ...")
     pause = lambda: input('\nPress Enter to continue…')
