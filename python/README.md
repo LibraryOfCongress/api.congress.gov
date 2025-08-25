@@ -49,7 +49,7 @@ Sign up for and retrieve your API key from https://api.congress.gov/sign-up
 ```python
 from cdg_client import CDGClient  # make it available
 
-client = CDGClient(api_key)  # pass the key, response_format="xml" if needed
+client = CDGClient(x_api_key)  # pass the key, response_format="xml" if needed
 
 # use requests args and kwargs below modify the request:
 data, status_code = client.get(endpoint, *args, **kwargs)
@@ -122,7 +122,7 @@ now you want to look at bill/hr/21/committeess, write:
 
 | Key                      | Description                                                        | Values                                       |
 |--------------------------|--------------------------------------------------------------------|----------------------------------------------|
-| *API_KEY*                | The API key used to authenticate calls                             | Retrieved from https://api.congress.gov      |
+| *X_API_KEY*                | The API key used to authenticate calls                             | Retrieved from https://api.congress.gov      |
 | *RESPONSE_FORMAT*        | Sets the response format returned by the API                       | xml, json                                    |
 | *BILL.CONGRESS*          | The numerical value of the congress to query                       | 1 - 117 (or current congress)                |
 | *BILL.CHAMBER*           | The congressional chamber                                          | hr, s, sjres, hjres                          |
