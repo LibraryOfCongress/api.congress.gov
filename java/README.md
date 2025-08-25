@@ -31,7 +31,7 @@ git clone https://github.com/LibraryOfCongress/..... <Final URL to be filled in>
 cd java && ./setup.sh
  ````
 
-Edit the loc.cfg file in the client folder and set the CONFIG.API_KEY value to your API Key you obtained earlier
+Edit the loc.cfg file in the client folder and set the CONFIG.X_API_KEY value to your API Key you obtained earlier
 ````shell
 cd client && nano loc.cfg
 ````
@@ -41,7 +41,7 @@ Some configurable options in the config file are
 
 | Key                      | Description                                                        | Values                                       |
 |--------------------------|--------------------------------------------------------------------|----------------------------------------------|
-| *CONFIG_API_KEY*         | The API key used to authenticate calls                             | Retrieved from https://api.congress.gov      |
+| *CONFIG_X_API_KEY*         | The API key used to authenticate calls                             | Retrieved from https://api.congress.gov      |
 | *CONFIG.RESPONSE_FORMAT* | Sets the response format returned by the API                       | xml, json                                    |
 | *CONFIG.STORE_RESPONSE*  | Store the response to a text file or not                           | true, false                                  |
 | *CONFIG.OUTPUT_FOLDER*   | The folder to store the xml or json output if storing the response | a valid folder name                          |
