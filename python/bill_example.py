@@ -230,6 +230,8 @@ if __name__ == "__main__":
         get_bill_text(client)
         pause()
         get_bill_titles(client)
+        pause()
+        get_bill_pagination(client)
 
     except OSError as err:
         print('Error:', err)
