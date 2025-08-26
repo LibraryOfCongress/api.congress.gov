@@ -173,6 +173,14 @@ def get_bill_titles(client):
     endpoint = f"{BILL_PATH}/{CONGRESS}/{BILL_HR}/{BILL_NUM}/titles"
     client.get(endpoint)
 
+def get_bill_pagination(client):
+    """
+    'https://api.congress.gov/v3/bill/117?offset=50&limit=20'
+    This API requests 20 items, and starts from the 51st item (skipping the first 50)
+    for the bill of 117th Congress
+    """
+    endpoint = f"{BILL_PATH}/{CONGRESS}?offset=50&limit=20"
+    client.get(endpoint)
 
 if __name__ == "__main__":
     """
