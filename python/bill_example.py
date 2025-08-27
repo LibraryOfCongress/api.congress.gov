@@ -180,7 +180,16 @@ def get_bill_pagination(client):
     for the bill of 117th Congress
     """
     endpoint = f"{BILL_PATH}/{CONGRESS}?offset=50&limit=20"
-    client.get(endpoint)
+    data, _ = client.get(endpoint)
+
+
+def get_page_info(pages):
+    """Print the first 5 page data."""
+
+    for page in pages[0:5]:
+        for record in page:
+            print(record.bill_number)
+        print(f"{page.page_num} of {page.page_total}")
 
 if __name__ == "__main__":
     """
