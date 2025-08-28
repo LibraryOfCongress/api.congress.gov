@@ -54,6 +54,9 @@ client = CDGClient(x_api_key)  # pass the key, response_format="xml" if needed
 # use requests args and kwargs below modify the request:
 data, status_code = client.get(endpoint, *args, **kwargs)
 
+# use xmltodict package to convert xml formatted data into a python dictionary
+# To install, use 'pipenv install xmltodict'
+
 # JSON data is pre-parsed, XML will need
 # import xml.etree.ElementTree as ET
 # root = ET.fromstring(data)
@@ -176,7 +179,8 @@ Other options allowed as arguments to python bill_example.py are:
 | *bill_subjects*      | Gets a bills subjects                    |
 | *bill_summaries*     | Gets a bills summaries                   |
 | *bill_texts*         | Gets a bills texts                       |
-|  *bill_titles*       | Gets a bills titles                      |
+| *bill_titles*        | Gets a bills titles                      |
+| *bill_pagination*    | Gets bills pagination info           	  |
 
 ## Additional Information
 - For more information and the full API reference, please visit https://api.congress.gov/
