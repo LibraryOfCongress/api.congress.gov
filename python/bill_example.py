@@ -10,7 +10,6 @@
 import xml.etree.ElementTree as ET
 # from lxml import etree as ET  # lxml is faster, but an extra download.
 import xmltodict
-import json
 
 from cdg_client import CDGClient
 
@@ -177,9 +176,9 @@ def get_bill_titles(client):
 
 def get_bill_pagination(client):
     """
-    'https://api.congress.gov/v3/bill/117?offset=50&limit=20'
-    This API requests 20 items, and starts from the 51st item (skipping the first 50)
-    for the bill of 117th Congress
+    'https://api.congress.gov/v3/bill/117?limit=120'
+    This API requests 120 items for the bill of 117th Congress
+    The default number per page is 20
     """
     endpoint = f"{BILL_PATH}/{CONGRESS}?limit=120"
     data, _ = client.get(endpoint)
@@ -192,10 +191,10 @@ def get_bill_pagination(client):
 
     while (cnt < 120):
         print(f"\nPage{page_num}:")
-        for i in range(cnt, 20+cnt): # default 20 items per page
+        print("\tCONGRESS\tBILL_NUMBER")
+        for i in range(cnt, 20+cnt):
             page.append(bill_list[i]) 
-            print(f"congress:{page[i]['congress']}")
-            print(f"bill_number:{page[i]['type']}{page[i]['number']}")
+            print(f"\t{page[i]['congress']}\t\t{page[i]['type']}{page[i]['number']}")
 
         cnt += 20
         page_num += 1
