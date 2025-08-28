@@ -21,7 +21,7 @@ package.
 They may be installed with one of the the following commands:
 
 ```shell
-⏵ python3 -m pip install requests keyring        # X-platform
+⏵ python3 -m pip install requests keyring xmltodict  # X-platform
 ⏵ apt install python3-requests python3-keyring   # Debian
 
 ```
@@ -55,7 +55,8 @@ client = CDGClient(x_api_key)  # pass the key, response_format="xml" if needed
 data, status_code = client.get(endpoint, *args, **kwargs)
 
 # use xmltodict package to convert xml formatted data into a python dictionary
-# To install, use 'pipenv install xmltodict'
+# To install, use:
+⏵ python3 -m pip install requests keyring xmltodict  # X-platform
 
 # JSON data is pre-parsed, XML will need
 # import xml.etree.ElementTree as ET
