@@ -9,6 +9,7 @@
 """
 import xml.etree.ElementTree as ET
 # from lxml import etree as ET  # lxml is faster, but an extra download.
+import xmltodict
 
 from cdg_client import CDGClient
 
@@ -173,6 +174,38 @@ def get_bill_titles(client):
     endpoint = f"{BILL_PATH}/{CONGRESS}/{BILL_HR}/{BILL_NUM}/titles"
     client.get(endpoint)
 
+def get_bill_pagination(client):
+    """
+    'https://api.congress.gov/v3/bill/117?fromDateTime=2022-01-04T04:02:00Z&toDateTime=2022-09-30T04:03:00Z&sort=updateDate+desc'
+    This API returns items within the selected time period for the bills of the 117th Congress
+    The default number per page is 20
+    """
+    endpoint = f"{BILL_PATH}/{CONGRESS}?fromDateTime=2022-01-04T04:02:00Z&toDateTime=2022-09-30T04:03:00Z&sort=updateDate+desc"
+    data, _ = client.get(endpoint)
+    
+    page_num = 1
+    page = []
+
+    while (True):
+        python_dict = xmltodict.parse(data)
+        pagination_info = python_dict['api-root']['pagination']
+        bill_list = python_dict["api-root"]["bills"]["bill"]
+        print(f"\nPage{page_num}:")
+        print("\tCONGRESS\tBILL_NUMBER")
+
+        for i in range(0, len(bill_list)):
+            page.append(bill_list[i]) 
+            print(f"\t{page[i]['congress']}\t\t{page[i]['type']}{page[i]['number']}")
+
+        if "next" in pagination_info:
+            next_page = pagination_info['next']
+            data, _ = client.get(next_page)
+        else:
+            break
+    
+        page_num += 1
+
+    print(f"\nTotal items: {pagination_info['count']}")
 
 if __name__ == "__main__":
     """
@@ -196,7 +229,6 @@ if __name__ == "__main__":
     pause = lambda: input('\nPress Enter to continue…')
 
     try:
-
         get_bill(client)
         pause()
         get_bill_congress(client)
@@ -222,6 +254,8 @@ if __name__ == "__main__":
         get_bill_text(client)
         pause()
         get_bill_titles(client)
+        pause()
+        get_bill_pagination(client)
 
     except OSError as err:
         print('Error:', err)
