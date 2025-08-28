@@ -1,0 +1,113 @@
+Output:
+
+Bill: HR21
+
+    Congress:117
+
+    Actions(10):
+
+        01/06/2021 1: "Received in the Senate and Read twice and referred to the Committee on Homeland Security and Governmental Affairs." -Senate
+
+        01/05/2021 2: "Motion to reconsider laid on the table Agreed to without objection" -House floor actions
+
+        01/05/2021 3: "On motion to suspend the rules and pass the bill Agreed to by voice vote. (text: CR H58-60)" -house
+
+        01/05/2021 4: "Passed/agreed to in House: On motion to suspend the rules and pass the bill Agreed to by voice vote.(text: CR H58-60)" -House
+
+        01/05/2021 5: "DEBATE - The House proceeded with forty minutes of debate on H.R. 21" -House
+
+        01/05/2021 6: "Considered under suspension of the rules. (consideration: CR H58-62)" -House
+
+        01/05/2021 7: "Mrs. Maloney, Carolyn B. moved to suspend the rules and pass the bill" -House
+
+        01/04/2021 8: "Referred to the House Committee on Oversight and Reform" -House
+
+        01/04/2021 9&10: "Introduced in House" -House
+
+    Amendments(0):
+
+    Committees(2):
+
+        01/07/2021 1: "Homeland Security and Governmental Affairs Committee" -Senate
+
+        01/04/2021 2: "Oversight and Reform Committee" -House
+
+    Cosponsors (2):
+
+        Rep. Comer, James [R-KY-1]
+
+        Rep. Hice, Jody B. [R-GA-10]
+
+    RelatedBills(1):
+
+        S3099(Federal Secure Cloud Improvement and Jobs Act of 2021) - Congress 117
+
+    Subjects(14):
+
+        1: "Administrative law and regulatory procedures"
+
+        2: "Advisory bodies"
+
+        3: "Computer security and identity theft"
+
+        4: "Computers and information technology"
+
+        5: "Congressional oversight"
+
+        6: "General Services Administration"
+
+        7: "Government employee pay, benefits, personnel management"
+
+        8: "Government information and archives"
+
+        9: "Government studies and investigations"
+
+        10: "Intergovernmental relations"
+
+        11: "Internet and video services"
+
+        12: "Internet, web applications, social media"
+
+        13: "Public participation and lobbying"
+
+        14: "Government Operations and Politics"
+
+    Summaries(2):
+
+       01/04/2021 :"<p><b>Federal Risk and Authorization Management Program Authorization Act of 2021 or the FedRAMP Authorization Act</b></p> <p>This bill provides statutory authority for the Federal Risk and Authorization Management Program (FedRAMP) within the General Services Administration (GSA).</p> <p>The GSA must establish a government-wide program that provides the authoritative standardized approach to security assessment and authorization for cloud computing products and services that process unclassified information used by agencies. Agencies must ensure that their cloud computing services meet GSA requirements.</p> <p>The bill establishes the Joint Authorization Board to conduct security assessments of cloud computing services and issue provisional authorizations to operate to cloud service providers that meet FedRAMP security guidelines.</p> <p>The GSA shall (1) publish a report that includes an assessment of the cost incurred by agencies and cloud service providers related to the issuance of FedRAMP authorizations and provisional authorizations, (2) determine the requirements for certification of independent assessment organizations, and (3) establish the Federal Secure Cloud Advisory Committee.</p>" - Inroduced in House
+
+       01/05/2021 :" <p><b>Federal Risk and Authorization Management Program Authorization Act of 2021 or the FedRAMP Authorization Act</b></p> <p>This bill provides statutory authority for the Federal Risk and Authorization Management Program (FedRAMP) within the General Services Administration (GSA).</p> <p>The GSA must establish a government-wide program that provides the authoritative standardized approach to security assessment and authorization for cloud computing products and services that process unclassified information used by agencies. Agencies must ensure that their cloud computing services meet GSA requirements.</p> <p>The bill establishes the Joint Authorization Board to conduct security assessments of cloud computing services and issue provisional authorizations to operate to cloud service providers that meet FedRAMP security guidelines.</p> <p>The GSA shall (1) publish a report that includes an assessment of the cost incurred by agencies and cloud service providers related to the issuance of FedRAMP authorizations and provisional authorizations, (2) determine the requirements for certification of independent assessment organizations, and (3) establish the Federal Secure Cloud Advisory Committee.</p>" - Passed House
+
+    TextVersions(3):
+
+        01/06/2021: Received in senate - HTML, Text, PDF, and XML
+
+        01/05/2021: Engrossed in House - HTML, Text, PDF, and XML
+
+        01/04/2021: Introduced in House - HTML, Text, PDF, and XML
+
+    Titles (8):
+
+        Short Title 1: Display Title
+        Official Title 1: FedRAMP Authorization Act
+
+        Short Title 2: Official Title as Introduced
+        Official Title 2: To enhance the innovation, security, and availability of cloud computing products and services used in the Federal Government by establishing the Federal Risk and Authorization Management Program within the General Services Administration and by establishing a risk management, authorization, and continuous monitoring process to enable the Federal Government to leverage cloud computing products and services using a risk-based approach consistent with the Federal Information Security Modernization Act of 2014 and cloud-based operations, and for other purposes.
+
+        Short Title 3: Short Title(s) as Passed House
+        Official Title 3: FedRAMP Authorization Act
+
+        Short Title 4: Short Title(s) as Passed House
+        Official Title 4: Federal Risk and Authorization Management Program Authorization Act of 2021
+
+        Short Title 5: Short Title(s) as Introduced
+        Official Title 5: FedRAMP Authorization Act
+
+        Short Title 6: Short Title(s) as Introduced
+        Official Title 6: Federal Risk and Authorization Management Program Authorization Act of 2021
+
+        Short Title 7: Short Titles as Passed House
+        Official Title 7: Federal Risk and Authorization Management Program Authorization Act of 2021
+
+        Short Title 8: Short Titles as Passed House
+        Official Title 8: FedRAMP Authorization Act

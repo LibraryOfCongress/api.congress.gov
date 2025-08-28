@@ -1,0 +1,33 @@
+{
+    "pagination": {
+        "count": 1,
+        "total": 1
+    },
+    "relatedBills": [
+        {
+            "congress": 117,
+            "latestAction": {
+                "actionDate": "2021-12-15",
+                "text": "Committee on Homeland Security and Governmental Affairs. Ordered to be reported with an amendment in the nature of a substitute favorably."
+            },
+            "number": 3099,
+            "relationshipDetails": [
+                {
+                    "identifiedBy": "CRS",
+                    "type": "Related bill"
+                }
+            ],
+            "title": "Federal Secure Cloud Improvement and Jobs Act of 2021",
+            "type": "S",
+            "url": "https://api.congress.gov/v3/bill/117/s/3099?format=json"
+        }
+    ],
+    "request": {
+        "billNumber": "21",
+        "billType": "hr",
+        "billUrl": "https://api.congress.gov/v3/bill/117/hr/21?format=json",
+        "congress": "117",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}
