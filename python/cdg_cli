@@ -1,0 +1,128 @@
+#!/usr/bin/env python3
+"""
+    CDG CLI - An example of secure API Key handling for the Congress.gov API.
+
+    Rather than keeping the API key in source code or given at the command-line
+    to be easily copied, we prompt for it and then store it in the Operating
+    System's "keyring" storage.  This is a secure place for secrets.
+
+    Example:
+        ⏵ cdg_cli --prompt-key  # ENTER
+        Password: ••••••••••••••••••••••••••••••••
+          INFO     API Key was saved.
+
+        ⏵ cdg_cli bill/117/hr/21/committees
+          INFO     __main__/main:101 HTTP Status: 200
+          INFO     __main__/main:102 API Returned:
+        {'committees': [{'activities': [{'date': '2021-01-07T01:26:34Z',
+                                         'name': 'Referred to'}],
+         ...
+
+    @copyright: 2022, Library of Congress
+    @license: CC0 1.0
+"""
+import sys, os
+import logging
+
+
+__version__ = '0.90'
+log = logging.getLogger(__name__)
+CDG_SYSTEM_NAME = 'CDG_API'
+CDG_USER = 'X_API_KEY'  # informational only
+
+
+def setup():
+    """ Parse command line, validate, initialize logging, etc ."""
+    from argparse import ArgumentParser, RawTextHelpFormatter
+
+    parser = ArgumentParser(
+        description=__doc__, formatter_class=RawTextHelpFormatter
+    )
+    parser.add_argument(
+        'endpoint', nargs="?", help="path to query, i.e. 'bill/117/hr/21/committees'"
+    )
+    parser.add_argument(
+        '--prompt-key',
+        action='store_true',
+        help='Prompt to store x_api_key in keyring.\nDo not add key to command-line.',
+    )
+    parser.add_argument(
+        '-v',
+        '--verbose',
+        action='store_const',
+        dest='loglvl',
+        default=logging.INFO,
+        const=logging.DEBUG,
+    )
+    parser.add_argument(
+        '--version', action='version', version='%(prog)s ' + __version__
+    )
+
+    # parse and validate
+    args = parser.parse_args()
+
+    # start logging
+    logging.basicConfig(
+        level=args.loglvl,
+        stream=sys.stdout,
+        format='  %(levelname)-8.8s %(name)s/%(funcName)s:%(lineno)03i %(message)s',
+    )
+    logging.captureWarnings(True)
+    log.debug('arguments: %s', args)
+    import keyring
+
+    if args.prompt_key:
+        from getpass import getpass
+
+        x_api_key = getpass('API Key: ')
+        if x_api_key:
+            keyring.set_password(CDG_SYSTEM_NAME, CDG_USER, x_api_key)
+            log.info('API Auth Key was saved.')
+            sys.exit(os.EX_OK)
+        else:
+            log.warning('API Auth Key may not be empty, aborting.')
+            sys.exit(os.EX_NOINPUT)
+    else:
+        if not keyring.get_password(CDG_SYSTEM_NAME, CDG_USER):
+            parser.error('x_api_key has not been set, see -h to explain --prompt-key')
+        if not args.endpoint:
+            parser.error('endpoint parameter is required.')
+
+    return args
+
+
+def main(args):
+    """ Let's get started. """
+    from pprint import pformat  # defer imports in favoer of startup speed
+    from keyring import get_password
+    from cdg_client import CDGClient
+
+    status = os.EX_OK
+    try:
+        client = CDGClient(
+            get_password(CDG_SYSTEM_NAME, CDG_USER), raise_on_error=False
+        )
+
+        #
+        # Code goes code here:
+        # below is a simple example:
+        #
+        result,  status_code = client.get(args.endpoint)
+        log.info('HTTP Status: %s', status_code)
+        log.info('API Returned:\n%s', pformat(result))
+
+
+    except IOError as err:
+        status = os.EX_IOERR
+        log.error('%s', err)
+
+    except Exception:
+        status = os.EX_SOFTWARE
+        log.exception("unexpected error:")
+
+    return status
+
+
+if __name__ == '__main__':
+
+    sys.exit(main(setup()))

@@ -1,0 +1,60 @@
+{
+    "pagination": {
+        "count": 14,
+        "total": 14
+    },
+    "request": {
+        "billNumber": "21",
+        "billType": "hr",
+        "billUrl": "https://api.congress.gov/v3/bill/117/hr/21?format=json",
+        "congress": "117",
+        "contentType": "application/json",
+        "format": "json"
+    },
+    "subjects": {
+        "legislativeSubjects": [
+            {
+                "name": "Administrative law and regulatory procedures"
+            },
+            {
+                "name": "Advisory bodies"
+            },
+            {
+                "name": "Computer security and identity theft"
+            },
+            {
+                "name": "Computers and information technology"
+            },
+            {
+                "name": "Congressional oversight"
+            },
+            {
+                "name": "General Services Administration"
+            },
+            {
+                "name": "Government employee pay, benefits, personnel management"
+            },
+            {
+                "name": "Government information and archives"
+            },
+            {
+                "name": "Government studies and investigations"
+            },
+            {
+                "name": "Intergovernmental relations"
+            },
+            {
+                "name": "Internet and video services"
+            },
+            {
+                "name": "Internet, web applications, social media"
+            },
+            {
+                "name": "Public participation and lobbying"
+            }
+        ],
+        "policyArea": {
+            "name": "Government Operations and Politics"
+        }
+    }
+}

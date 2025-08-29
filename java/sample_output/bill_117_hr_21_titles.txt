@@ -1,0 +1,64 @@
+{
+    "pagination": {
+        "count": 8,
+        "total": 8
+    },
+    "request": {
+        "billNumber": "21",
+        "billType": "hr",
+        "billUrl": "https://api.congress.gov/v3/bill/117/hr/21?format=json",
+        "congress": "117",
+        "contentType": "application/json",
+        "format": "json"
+    },
+    "titles": [
+        {
+            "chamberCode": null,
+            "chamberName": null,
+            "title": "FedRAMP Authorization Act",
+            "titleType": "Display Title"
+        },
+        {
+            "chamberCode": null,
+            "chamberName": null,
+            "title": "To enhance the innovation, security, and availability of cloud computing products and services used in the Federal Government by establishing the Federal Risk and Authorization Management Program within the General Services Administration and by establishing a risk management, authorization, and continuous monitoring process to enable the Federal Government to leverage cloud computing products and services using a risk-based approach consistent with the Federal Information Security Modernization Act of 2014 and cloud-based operations, and for other purposes.",
+            "titleType": "Official Title as Introduced"
+        },
+        {
+            "chamberCode": "H",
+            "chamberName": "House",
+            "title": "FedRAMP Authorization Act",
+            "titleType": "Short Title(s) as Passed House"
+        },
+        {
+            "chamberCode": "H",
+            "chamberName": "House",
+            "title": "Federal Risk and Authorization Management Program Authorization Act of 2021",
+            "titleType": "Short Title(s) as Passed House"
+        },
+        {
+            "chamberCode": null,
+            "chamberName": null,
+            "title": "FedRAMP Authorization Act",
+            "titleType": "Short Title(s) as Introduced"
+        },
+        {
+            "chamberCode": null,
+            "chamberName": null,
+            "title": "Federal Risk and Authorization Management Program Authorization Act of 2021",
+            "titleType": "Short Title(s) as Introduced"
+        },
+        {
+            "chamberCode": "H",
+            "chamberName": "House",
+            "title": "Federal Risk and Authorization Management Program Authorization Act of 2021",
+            "titleType": "Short Titles as Passed House"
+        },
+        {
+            "chamberCode": "H",
+            "chamberName": "House",
+            "title": "FedRAMP Authorization Act",
+            "titleType": "Short Titles as Passed House"
+        }
+    ]
+}

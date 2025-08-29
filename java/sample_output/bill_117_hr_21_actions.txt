@@ -1,0 +1,179 @@
+{
+    "actionByCounts": {
+        "houseOfRepresentatives": 9,
+        "senate": 1
+    },
+    "actionTypeCounts": {
+        "billReferrals": 1,
+        "considerationByHouse": 1,
+        "finalPassageUnderSuspensionOfTheRulesResults": 1,
+        "generalDebate": 1,
+        "introducedInHouse": 1,
+        "introducedInTheHouse": 1,
+        "motionMadeToSuspendTheRules": 1,
+        "motionToReconsiderResults": 1,
+        "passedAgreedToInHouse": 1,
+        "referredToCommittee": 1
+    },
+    "actions": [
+        {
+            "actionDate": "2021-01-06",
+            "committees": [
+                {
+                    "name": "Homeland Security and Governmental Affairs Committee",
+                    "systemCode": "ssga00",
+                    "url": "https://api.congress.gov/v3/committee/senate/ssga00?format=json"
+                }
+            ],
+            "links": [],
+            "recordedVotes": [],
+            "sourceSystem": {
+                "code": 0,
+                "name": "Senate"
+            },
+            "text": "Received in the Senate and Read twice and referred to the Committee on Homeland Security and Governmental Affairs.",
+            "type": "IntroReferral"
+        },
+        {
+            "actionCode": "H38310",
+            "actionDate": "2021-01-05",
+            "actionTime": "12:17:16",
+            "committees": null,
+            "links": [],
+            "recordedVotes": [],
+            "sourceSystem": {
+                "code": 2,
+                "name": "House floor actions"
+            },
+            "text": "Motion to reconsider laid on the table Agreed to without objection.",
+            "type": "Floor"
+        },
+        {
+            "actionCode": "H37300",
+            "actionDate": "2021-01-05",
+            "actionTime": "12:17:14",
+            "committees": null,
+            "links": [],
+            "recordedVotes": [],
+            "sourceSystem": {
+                "code": 2,
+                "name": "House floor actions"
+            },
+            "text": "On motion to suspend the rules and pass the bill Agreed to by voice vote. (text: CR H58-60)",
+            "type": "Floor"
+        },
+        {
+            "actionCode": "8000",
+            "actionDate": "2021-01-05",
+            "actionTime": "12:17:14",
+            "committees": null,
+            "links": [],
+            "recordedVotes": [],
+            "sourceSystem": {
+                "code": 9,
+                "name": "Library of Congress"
+            },
+            "text": "Passed/agreed to in House: On motion to suspend the rules and pass the bill Agreed to by voice vote.(text: CR H58-60)",
+            "type": "Floor"
+        },
+        {
+            "actionCode": "H8D000",
+            "actionDate": "2021-01-05",
+            "actionTime": "12:05:39",
+            "committees": null,
+            "links": [],
+            "recordedVotes": [],
+            "sourceSystem": {
+                "code": 2,
+                "name": "House floor actions"
+            },
+            "text": "DEBATE - The House proceeded with forty minutes of debate on H.R. 21.",
+            "type": "Floor"
+        },
+        {
+            "actionCode": "H30000",
+            "actionDate": "2021-01-05",
+            "actionTime": "12:05:38",
+            "committees": null,
+            "links": [],
+            "recordedVotes": [],
+            "sourceSystem": {
+                "code": 2,
+                "name": "House floor actions"
+            },
+            "text": "Considered under suspension of the rules. (consideration: CR H58-62)",
+            "type": "Floor"
+        },
+        {
+            "actionCode": "H30300",
+            "actionDate": "2021-01-05",
+            "actionTime": "12:05:23",
+            "committees": null,
+            "links": [],
+            "recordedVotes": [],
+            "sourceSystem": {
+                "code": 2,
+                "name": "House floor actions"
+            },
+            "text": "Mrs. Maloney, Carolyn B. moved to suspend the rules and pass the bill.",
+            "type": "Floor"
+        },
+        {
+            "actionCode": "H11100",
+            "actionDate": "2021-01-04",
+            "committees": [
+                {
+                    "name": "Oversight and Reform Committee",
+                    "systemCode": "hsgo00",
+                    "url": "https://api.congress.gov/v3/committee/house/hsgo00?format=json"
+                }
+            ],
+            "links": [],
+            "recordedVotes": [],
+            "sourceSystem": {
+                "code": 2,
+                "name": "House floor actions"
+            },
+            "text": "Referred to the House Committee on Oversight and Reform.",
+            "type": "IntroReferral"
+        },
+        {
+            "actionCode": "Intro-H",
+            "actionDate": "2021-01-04",
+            "committees": null,
+            "links": [],
+            "recordedVotes": [],
+            "sourceSystem": {
+                "code": 9,
+                "name": "Library of Congress"
+            },
+            "text": "Introduced in House",
+            "type": "IntroReferral"
+        },
+        {
+            "actionCode": "1000",
+            "actionDate": "2021-01-04",
+            "committees": null,
+            "links": [],
+            "recordedVotes": [],
+            "sourceSystem": {
+                "code": 9,
+                "name": "Library of Congress"
+            },
+            "text": "Introduced in House",
+            "type": "IntroReferral"
+        }
+    ],
+    "pagination": {
+        "count": 10,
+        "total": 10
+    },
+    "request": {
+        "billNumber": "21",
+        "billType": "hr",
+        "billUrl": "https://api.congress.gov/v3/bill/117/hr/21?format=json",
+        "congress": "117",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}

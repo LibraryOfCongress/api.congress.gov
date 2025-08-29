@@ -1,0 +1,40 @@
+{
+    "committees": [
+        {
+            "activities": [
+                {
+                    "date": "2021-01-07T01:26:34Z",
+                    "name": "Referred to"
+                }
+            ],
+            "chamber": "Senate",
+            "name": "Homeland Security and Governmental Affairs Committee",
+            "subcommittees": [],
+            "systemCode": "ssga00",
+            "type": "Standing",
+            "url": "https://api.congress.gov/v3/committee/senate/ssga00?format=json"
+        },
+        {
+            "activities": [
+                {
+                    "date": "2021-01-04T15:11:25Z",
+                    "name": "Referred to"
+                }
+            ],
+            "chamber": "House",
+            "name": "Oversight and Reform Committee",
+            "subcommittees": [],
+            "systemCode": "hsgo00",
+            "type": "Standing",
+            "url": "https://api.congress.gov/v3/committee/house/hsgo00?format=json"
+        }
+    ],
+    "request": {
+        "billNumber": "21",
+        "billType": "hr",
+        "billUrl": "https://api.congress.gov/v3/bill/117/hr/21?format=json",
+        "congress": "117",
+        "contentType": "application/json",
+        "format": "json"
+    }
+}
