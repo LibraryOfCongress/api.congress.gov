@@ -22,7 +22,7 @@ The `<version>` element will be renamed `<currentVersion>`. Additionally, a `<pr
 ## Change #2
 ### Impacted endpoint: /committee-meeting
 A 500 error message in the committee meeting list-level endpoint will be investigated and fixed. This occurs when a user calls the committee-meeting list for the House's 117th Congress with an offset of 1750 and a limit 250. It returns a 500 failure.  
-# UPCOMING August 2025, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/50)
+# COMPLETED August 2025, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/50)
 ## Change #1
 ### Impacted request: /committee-meeting/119/house/118388
 When requesting JSON from the API for House event 118388, an error was returned. This was investigated and fixed. This was related to [Issue #351](https://github.com/LibraryOfCongress/api.congress.gov/issues/351).
