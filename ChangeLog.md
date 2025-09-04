@@ -17,9 +17,6 @@ The committee list-level endpoint will have a default sort by committeed ID with
 # UPCOMING September 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/51)
 **Expected Production Release Date: September 15, 2025**
 ## Change #1
-### Impacted endpoint: /crsreport/{reportNumber}
-The `<version>` element will be renamed `<currentVersion>`. Additionally, a `<previousVersions>` container will be added to the item-level, which will provide data on previous version format, author, version number, and URL.
-## Change #2
 ### Impacted endpoint: /committee-meeting
 A 500 error message in the committee meeting list-level endpoint will be investigated and fixed. This occurs when a user calls the committee-meeting list for the House's 117th Congress with an offset of 1750 and a limit 250. It returns a 500 failure.  
 # COMPLETED August 2025, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/50)
