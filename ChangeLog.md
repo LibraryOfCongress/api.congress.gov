@@ -15,7 +15,7 @@ An optional congress filter will be added to the /committee endpoint so that use
 ### Impacted endpoint: /committee
 The committee list-level endpoint will have a default sort by committeed ID with an optional sort by `<updateDate>`. This is related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117).
 # UPCOMING September 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/51)
-**Expected Production Release Date: September 15, 2025**
+**Expected Production Release Date: September 22, 2025**
 ## Change #1
 ### Impacted endpoint: /committee-meeting
 A 500 error message in the committee meeting list-level endpoint will be investigated and fixed. This occurs when a user calls the committee-meeting list for the House's 117th Congress with an offset of 1750 and a limit 250. It returns a 500 failure.  
