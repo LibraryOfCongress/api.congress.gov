@@ -1,8 +1,8 @@
-cmake_minimum_required(VERSION 4.0)
+cmake_minimum_required(VERSION 3.28)
 project (congress)
 
 #//////////////////////////
-#asio
+# asio
 #//////////////////////////
 
 set(CMAKE_CXX_STANDARD 17)
@@ -26,21 +26,15 @@ endif()
 include_directories(ext/asio-1.30.2/asio/include)
 
 #//////////////////////////
-#link with libraries
-#lib_dep contains a cascade definition of all the libraries needed to link
+# link with libraries
+# lib_dep contains a cascade definition of all the libraries needed to link
 #//////////////////////////
 
 set(lib_dep ${lib_dep})
 
 #//////////////////////////
-#OpenSSL
+# OpenSSL
 #//////////////////////////
-
-if (APPLE)
-  set(OPENSSL_ROOT_DIR ${OPENSSL_ROOT_DIR} /usr/local/Cellar/openssl@1.1/1.1.1h/)
-  set(OPENSSL_CRYPTO_LIBRARY ${OPENSSL_ROOT_DIR}/lib/libcrypto.dylib CACHE FILEPATH "" FORCE)
-  set(OPENSSL_SSL_LIBRARY ${OPENSSL_ROOT_DIR}/lib/libssl.dylib CACHE FILEPATH "" FORCE)
-endif()
 
 if (MSVC)
   if (OPEN_SSL_SOURCE)
@@ -54,11 +48,11 @@ if (MSVC)
   endif()
 endif()
 
+find_package(OpenSSL REQUIRED)
+
 message(STATUS "OpenSSL root: ${OPENSSL_ROOT_DIR}")
 message(STATUS "OpenSSL include: ${OPENSSL_INCLUDE_DIR}")
 message(STATUS "OpenSSL libs: ${OPENSSL_SSL_LIBRARY} ${OPENSSL_CRYPTO_LIBRARY}")
-
-find_package(OpenSSL REQUIRED)
 
 if(UNIX)
   SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
@@ -82,7 +76,7 @@ add_executable(congress src/http_client.cc ${src})
 target_link_libraries (congress ${lib_dep})
 
 #//////////////////////////
-#copy key file to build folder
+# copy key file to build folder
 #//////////////////////////
 
 message(STATUS "Copying API key to: ${CMAKE_BINARY_DIR}")

@@ -37,8 +37,9 @@ set OPENSSL_ROOT_DIR=C:\OpenSSL-Win64
 
 ## Building the Project
 
-On a bash shell, run 
+On a bash shell (on Windows, Git bash shell), run 
 ```bash
+chmod a+x build.cmake.sh 
 build.cmake.sh
 ```
 
