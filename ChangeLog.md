@@ -1,4 +1,18 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
+# UPCOMING October 2025, Part 2 |[Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/53)
+**Expected Production Release Date: October 27, 2025**
+## Change #1
+### Impacted endpoint: /bill, /amendment
+User reported issues with pagination and counts in the bill list-level endpoint and amendment list-level endpoint will be investigated. This is related to [Issue #74](https://github.com/LibraryOfCongress/api.congress.gov/issues/74) and [Issue #334](https://github.com/LibraryOfCongress/api.congress.gov/issues/334).
+## Change #2
+### Impacted endpoint: N/A 
+User submitted pull requests will be reviewed. The pull requests are [#300](https://github.com/LibraryOfCongress/api.congress.gov/pull/300) and [#352](https://github.com/LibraryOfCongress/api.congress.gov/pull/352). These pull requests are related to [Issue #280](https://github.com/LibraryOfCongress/api.congress.gov/issues/280) and [Issue #299](https://github.com/LibraryOfCongress/api.congress.gov/issues/299 ).
+## Change #3
+### Impacted endpoint: /committee/{chamber}/{committeeCode}
+A referrer URL to the committee's official website will be added to this endpoint. 
+## Change #4
+### Impacted endpoint: /committee-meeting/{congress}/{chamber}/{eventId}
+The continuation date and time will be modified to the following format: YYYY-MM-DDT00:00:00Z. The `<meeting_dt>` element will be renamed `<continuationDate>`. 
 # UPCOMING October 2025, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/52)
 **Expected Production Release Date: October 6, 2025**
 ## Change #1
@@ -14,11 +28,10 @@ An optional congress filter will be added to the /committee endpoint so that use
 ## Change #4
 ### Impacted endpoint: /committee
 The committee list-level endpoint will have a default sort by committeed ID with an optional sort by `<updateDate>`. This is related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117).
-# UPCOMING September 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/51)
-**Expected Production Release Date: September 22, 2025**
+# COMPLETED September 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/51)
 ## Change #1
 ### Impacted endpoint: /committee-meeting
-A 500 error message in the committee meeting list-level endpoint will be investigated and fixed. This occurs when a user calls the committee-meeting list for the House's 117th Congress with an offset of 1750 and a limit 250. It returns a 500 failure.  
+A 500 error message in the committee meeting list-level endpoint was investigated and fixed. This occured when a user called the committee-meeting list for the House's 117th Congress with an offset of 1750 and a limit 250. It returned a 500 failure, which is now resolved. 
 # COMPLETED August 2025, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/50)
 ## Change #1
 ### Impacted request: /committee-meeting/119/house/118388
