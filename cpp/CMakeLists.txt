@@ -72,15 +72,22 @@ endif()
 set(src ${src})
 set(src ${src} src/ssl_read.hh)
 set(src ${src} src/ssl_read.cc)
-add_executable(congress src/http_client.cc ${src})
-target_link_libraries (congress ${lib_dep})
+set(src ${src} src/get.hh)
+set(src ${src} src/get.cc)
 
 #//////////////////////////
-# copy key file to build folder
+# create static library from common source files
 #//////////////////////////
 
-message(STATUS "Copying API key to: ${CMAKE_BINARY_DIR}")
-file(COPY "${CMAKE_SOURCE_DIR}/resources/key.txt" DESTINATION ${CMAKE_BINARY_DIR})
+add_library(get STATIC ${src})
+target_link_libraries(get ${lib_dep})
+
+#//////////////////////////
+# congress executable
+#//////////////////////////
+
+add_executable(congress src/http_client.cc)
+target_link_libraries(congress get ${lib_dep})
 
 
 
