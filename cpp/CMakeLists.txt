@@ -89,5 +89,10 @@ target_link_libraries(get ${lib_dep})
 add_executable(congress src/http_client.cc)
 target_link_libraries(congress get ${lib_dep})
 
+#//////////////////////////
+# copy config file to build folder
+#//////////////////////////
 
+message(STATUS "Copying resources to: ${CMAKE_BINARY_DIR}")
+file(COPY "${CMAKE_SOURCE_DIR}/config.json" DESTINATION ${CMAKE_BINARY_DIR})
 

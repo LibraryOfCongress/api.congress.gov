@@ -49,8 +49,14 @@ build.cmake.sh
 
 https://gpo.congress.gov/sign-up/
 
-```bash
-echo "YOUR_API_KEY_HERE" > key.txt
+Edit file config.json with the API key
+
+```json
+{
+  "API_KEY": "MY_API_KEY",
+  "RESPONSE_FORMAT": "json",
+  "LIMIT": "2"
+}
 ```
 
 2. Run the application:

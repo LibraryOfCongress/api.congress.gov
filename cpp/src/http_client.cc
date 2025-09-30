@@ -8,7 +8,7 @@
 #include "ssl_read.hh"
 #include "get.hh"
 
-std::string load_key_from_file(const std::string& filename);
+std::string extract_value(const std::string& content, const std::string& key);
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 //main
@@ -16,14 +16,29 @@ std::string load_key_from_file(const std::string& filename);
 
 int main()
 {
-  std::string key = load_key_from_file("key.txt");
-  if (key.empty())
+  /////////////////////////////////////////////////////////////////////////////////////////////////////
+  // load API key and other configuration values from file
+  /////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  std::ifstream file("config.json");
+  if (!file.is_open())
   {
-    std::cerr << "Failed to load API key from key.txt" << std::endl;
     return -1;
   }
 
-  if (get_member(key, 250) < 0)
+  std::stringstream buf;
+  buf << file.rdbuf();
+  std::string content = buf.str();
+  file.close();
+
+  std::string key = extract_value(content, "API_KEY");
+  std::string format = extract_value(content, "RESPONSE_FORMAT");
+  int limit = std::stoi(extract_value(content, "LIMIT"));
+
+  std::cout << "API_KEY: " << key << std::endl;
+  std::cout << "RESPONSE_FORMAT: " << format << std::endl;
+
+  if (get_member(key, format, limit) < 0)
   {
     return -1;
   }
@@ -31,20 +46,14 @@ int main()
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
-// load_key_from_file
+// extract_value
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
-std::string load_key_from_file(const std::string& filename)
+std::string extract_value(const std::string& content, const std::string& key) 
 {
-  std::ifstream file(filename);
-  if (!file.is_open())
-  {
-    return "";
-  }
-
-  std::string key;
-  std::getline(file, key);
-  file.close();
-  key.erase(key.find_last_not_of(" \t\r\n") + 1);
-  return key;
+  size_t pos_key = content.find("\"" + key + "\"");
+  size_t pos_colon = content.find(":", pos_key);
+  size_t first = content.find("\"", pos_colon);
+  size_t second = content.find("\"", first + 1);
+  return content.substr(first + 1, second - first - 1);
 }

@@ -5,7 +5,7 @@
 //https://api.congress.gov/v3/member?api_key=[INSERT_KEY]&limit=250
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
-int get_member(const std::string key, int limit)
+int get_member(const std::string& key, const std::string& format, int limit)
 {
   const std::string host = "api.congress.gov";
   const std::string port_num = "443";
@@ -18,7 +18,18 @@ int get_member(const std::string key, int limit)
   http << " HTTP/1.1\r\n";
   http << "Host: " << host;
   http << "\r\n";
-  http << "Accept: */*\r\n";
+  if (format == "json")
+  {
+    http << "Accept: application/json\r\n";
+  }
+  else if (format == "xml")
+  {
+    http << "Accept: application/xml\r\n";
+  }
+  else
+  {
+    http << "Accept: */*\r\n";
+  }
   http << "Connection: close\r\n\r\n";
   std::cout << http.str() << std::endl;
 

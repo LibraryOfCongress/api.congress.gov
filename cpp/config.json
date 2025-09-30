@@ -1,0 +1,5 @@
+{
+  "API_KEY": "MY_API_KEY",
+  "RESPONSE_FORMAT": "json",
+  "LIMIT": "2"
+}
