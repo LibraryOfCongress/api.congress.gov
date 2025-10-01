@@ -2,7 +2,7 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 // get_member
-//https://api.congress.gov/v3/member?api_key=[INSERT_KEY]&limit=250
+// https://api.congress.gov/v3/member?api_key=[INSERT_KEY]&limit=250
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
 int get_member(const std::string& key, const std::string& format, int limit)
@@ -43,6 +43,57 @@ int get_member(const std::string& key, const std::string& format, int limit)
 
   std::cout << json.c_str() << std::endl;
   std::ofstream ofs("member.json");
+  ofs << json;
+  ofs.close();
+
+  return 0;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+// get_bill
+// https://api.congress.gov/v3/bill/{congress}/{billType}?api_key=[INSERT_KEY]
+// billType: hr, s, hjres, sjres, hconres, sconres, hres, sres
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+int get_bill(const Bill& params)
+{
+  const std::string host = "api.congress.gov";
+  const std::string port_num = "443";
+  std::stringstream http;
+  http << "GET /v3/bill/" << params.congress << "/" << params.billType
+    << "?api_key=" << params.key;
+  if (params.limit > 0)
+  {
+    http << "&limit=" << params.limit;
+  }
+  http << " HTTP/1.1\r\n";
+  http << "Host: " << host;
+  http << "\r\n";
+  if (params.format == "json")
+  {
+    http << "Accept: application/json\r\n";
+  }
+  else if (params.format == "xml")
+  {
+    http << "Accept: application/xml\r\n";
+  }
+  else
+  {
+    http << "Accept: */*\r\n";
+  }
+  http << "Connection: close\r\n\r\n";
+  std::cout << http.str() << std::endl;
+
+  std::string json;
+  ssl_read(host, port_num, http.str(), json);
+
+  if (!json.size())
+  {
+    return -1;
+  }
+
+  std::cout << json.c_str() << std::endl;
+  std::ofstream ofs("bill.json");
   ofs << json;
   ofs.close();
 

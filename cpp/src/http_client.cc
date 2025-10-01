@@ -38,10 +38,21 @@ int main()
   std::cout << "API_KEY: " << key << std::endl;
   std::cout << "RESPONSE_FORMAT: " << format << std::endl;
 
+  int congress = 118;
+  std::string billType = "hr";
+  Bill params(key, format, congress, billType, limit);
+  if (get_bill(params) < 0)
+  {
+    return -1;
+  }
+
+  return 0;
+
   if (get_member(key, format, limit) < 0)
   {
     return -1;
   }
+
   return 0;
 }
 
@@ -49,7 +60,7 @@ int main()
 // extract_value
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
-std::string extract_value(const std::string& content, const std::string& key) 
+std::string extract_value(const std::string& content, const std::string& key)
 {
   size_t pos_key = content.find("\"" + key + "\"");
   size_t pos_colon = content.find(":", pos_key);
