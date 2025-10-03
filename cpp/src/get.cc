@@ -55,25 +55,25 @@ int get_member(const std::string& key, const std::string& format, int limit)
 // billType: hr, s, hjres, sjres, hconres, sconres, hres, sres
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
-int get_bill(const Bill& params)
+int get_bill(const BillRequest& request)
 {
   const std::string host = "api.congress.gov";
   const std::string port_num = "443";
   std::stringstream http;
-  http << "GET /v3/bill/" << params.congress << "/" << params.billType
-    << "?api_key=" << params.key;
-  if (params.limit > 0)
+  http << "GET /v3/bill/" << request.congress << "/" << request.billType
+    << "?api_key=" << request.key;
+  if (request.limit > 0)
   {
-    http << "&limit=" << params.limit;
+    http << "&limit=" << request.limit;
   }
   http << " HTTP/1.1\r\n";
   http << "Host: " << host;
   http << "\r\n";
-  if (params.format == "json")
+  if (request.format == "json")
   {
     http << "Accept: application/json\r\n";
   }
-  else if (params.format == "xml")
+  else if (request.format == "xml")
   {
     http << "Accept: application/xml\r\n";
   }

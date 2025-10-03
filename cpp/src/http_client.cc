@@ -26,22 +26,22 @@ int main()
     return -1;
   }
 
-  std::stringstream buf;
-  buf << file.rdbuf();
-  std::string content = buf.str();
+  std::stringstream ss;
+  ss << file.rdbuf();
+  std::string buf = ss.str();
   file.close();
 
-  std::string key = extract_value(content, "API_KEY");
-  std::string format = extract_value(content, "RESPONSE_FORMAT");
-  int limit = std::stoi(extract_value(content, "LIMIT"));
+  std::string key = extract_value(buf, "API_KEY");
+  std::string format = extract_value(buf, "RESPONSE_FORMAT");
+  int limit = std::stoi(extract_value(buf, "LIMIT"));
 
   std::cout << "API_KEY: " << key << std::endl;
   std::cout << "RESPONSE_FORMAT: " << format << std::endl;
 
   int congress = 118;
   std::string billType = "hr";
-  Bill params(key, format, congress, billType, limit);
-  if (get_bill(params) < 0)
+  BillRequest request(key, format, congress, billType, limit);
+  if (get_bill(request) < 0)
   {
     return -1;
   }
