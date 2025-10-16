@@ -14,21 +14,51 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: '3.10'
-    - name: Add conda to system path
+    - name: Set up Miniconda
+      uses: conda-incubator/setup-miniconda@v2
+      with:
+        python-version: 3.10
+    - name: Create and prepare conda environment (ci-env)
       run: |
-        # $CONDA is an environment variable pointing to the root of the miniconda directory
-        echo $CONDA/bin >> $GITHUB_PATH
-    - name: Install dependencies
-      run: |
-        conda env update --file environment.yml --name base
+        set -e
+        if [ -f environment.yml ]; then
+          # create the named environment or update it if it exists
+          conda env create --file environment.yml --name ci-env || conda env update --file environment.yml --name ci-env
+        else
+          echo "environment.yml not found; continuing to fallback installs"
+        fi
     - name: Lint with flake8
       run: |
-        conda install flake8
-        # stop the build if there are Python syntax errors or undefined names
-        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+        set -e
+        # Ensure conda activation helper is available in this shell (non-interactive)
+        source "$CONDA_PREFIX/etc/profile.d/conda.sh" || true
+        if conda env list | grep -q "ci-env"; then
+          # ensure pip and tooling are available in the created env
+          conda run -n ci-env pip install --upgrade pip
+          conda run -n ci-env pip install flake8 pytest
+          conda run -n ci-env flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+          conda run -n ci-env flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+        elif [ -f requirements.txt ]; then
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.txt
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+          flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+        else
+          python -m pip install --upgrade pip
+          python -m pip install flake8
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+          flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+        fi
     - name: Test with pytest
       run: |
-        conda install pytest
-        pytest
+        set -e
+        source "$CONDA_PREFIX/etc/profile.d/conda.sh" || true
+        if conda env list | grep -q "ci-env"; then
+          conda run -n ci-env pytest
+        elif [ -f requirements.txt ]; then
+          pytest
+        else
+          python -m pip install --upgrade pip
+          python -m pip install pytest
+          pytest
+        fi
