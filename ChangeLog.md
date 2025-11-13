@@ -1,6 +1,6 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
-# UPCOMING October 2025, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/53)
-**Expected Production Release Date: TBA**
+# UPCOMING December 2025, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/53)
+**Expected Production Release Date: December 8, 2025**
 ## Change #1
 ### Impacted endpoint: /bill, /amendment
 User reported issues with pagination and counts in the bill list-level endpoint and amendment list-level endpoint will be investigated. This is related to [Issue #74](https://github.com/LibraryOfCongress/api.congress.gov/issues/74) and [Issue #334](https://github.com/LibraryOfCongress/api.congress.gov/issues/334).
