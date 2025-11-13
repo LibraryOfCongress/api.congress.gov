@@ -1,6 +1,6 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
 # UPCOMING October 2025, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/53)
-**Expected Production Release Date: October 27, 2025**
+**Expected Production Release Date: TBA**
 ## Change #1
 ### Impacted endpoint: /bill, /amendment
 User reported issues with pagination and counts in the bill list-level endpoint and amendment list-level endpoint will be investigated. This is related to [Issue #74](https://github.com/LibraryOfCongress/api.congress.gov/issues/74) and [Issue #334](https://github.com/LibraryOfCongress/api.congress.gov/issues/334).
@@ -14,7 +14,7 @@ A referrer URL to the committee's official website will be added to this endpoin
 ### Impacted endpoint: /committee-meeting/{congress}/{chamber}/{eventId}
 The continuation date and time will be modified to the following format: YYYY-MM-DDT00:00:00Z. The `<meeting_dt>` element will be renamed `<continuationDate>`. 
 # UPCOMING October 2025, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/52)
-**Expected Production Release Date: October 6, 2025**
+**Expected Production Release Date: TBA**
 ## Change #1
 ### Impacted endpoint: /congress
 The Congress list-level endpoint will have a default sort by congress ID with an option to sort by `<updateDate>`. This is related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117).
