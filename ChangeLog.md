@@ -12,9 +12,15 @@ User submitted pull requests will be reviewed. The pull requests are [#300](http
 A referrer URL to the committee's official website will be added to this endpoint. 
 ## Change #4
 ### Impacted endpoint: /committee-meeting/{congress}/{chamber}/{eventId}
-The continuation date and time will be modified to the following format: YYYY-MM-DDT00:00:00Z. The `<meeting_dt>` element will be renamed `<continuationDate>`. 
-# UPCOMING October 2025, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/52)
-**Expected Production Release Date: TBA**
+The continuation date and time will be modified to the following format: YYYY-MM-DDT00:00:00Z. The `<meeting_dt>` element will be renamed `<continuationDate>`.
+## Change #5
+### Impacted endpoint: committee/{chamber}/{committeeCode},/committee/{chamber}/{committeeCode}/bills, /committee/{chamber}/{committeeCode}/reports
+/committee/{chamber}/{committeeCode}/nominations
+An optional congress filter will be added to the /committee endpoint so that users can filter by these endpoints by Congress. **This work is ongoing from a previous sprint.**
+
+
+# UPCOMING October 2025, Part 1 [POSTPONED TO NOVEMBER 2025]| [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/52)
+**Expected Production Release Date: November 24, 2025**
 ## Change #1
 ### Impacted endpoint: /congress
 The Congress list-level endpoint will have a default sort by congress ID with an option to sort by `<updateDate>`. This is related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117).
@@ -22,12 +28,11 @@ The Congress list-level endpoint will have a default sort by congress ID with an
 ### Impacted endpoint: /committee-meeting/{congress}/{chamber}/{eventId}
 An `<isManuallyCurated>` element will be added to this endpoint. This optional element will display with a "Y" for meetings that are manually curated. 
 ## Change #3
-### Impacted endpoint: committee/{chamber}/{committeeCode},/committee/{chamber}/{committeeCode}/bills, /committee/{chamber}/{committeeCode}/reports
-/committee/{chamber}/{committeeCode}/nominations
-An optional congress filter will be added to the /committee endpoint so that users can filter by these endpoints by Congress. 
-## Change #4
 ### Impacted endpoint: /committee
 The committee list-level endpoint will have a default sort by committeed ID with an optional sort by `<updateDate>`. This is related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117).
+## Change #4
+### Impacted endpoint: /congress, /congress/{congress}
+Objects in the sessions list that have the number element value "null" in the CDG API will be suppressed. 
 # COMPLETED September 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/51)
 ## Change #1
 ### Impacted endpoint: /committee-meeting
