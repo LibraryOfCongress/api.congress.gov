@@ -17,8 +17,10 @@ The continuation date and time will be modified to the following format: YYYY-MM
 ### Impacted endpoint: committee/{chamber}/{committeeCode},/committee/{chamber}/{committeeCode}/bills, /committee/{chamber}/{committeeCode}/reports
 /committee/{chamber}/{committeeCode}/nominations
 An optional congress filter will be added to the /committee endpoint so that users can filter by these endpoints by Congress. **This work is ongoing from a previous sprint.**
-
-
+## Change #6
+### Impacted endpoint: N/A
+The current swagger documentation is using non-standard yaml file to display the documentation which causes some issues with text formatting.  It should follow the formatting found here: https://editor.swagger.io/.
+Items to address: (1) separate the swagger view to its own file rather than bills.py, (2) update the swagger yaml to use standard formatting
 # UPCOMING October 2025, Part 1 [POSTPONED TO NOVEMBER 2025]| [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/52)
 **Expected Production Release Date: November 24, 2025**
 ## Change #1
