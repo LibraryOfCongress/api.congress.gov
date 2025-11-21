@@ -68,6 +68,8 @@ Parent container for a single committee meeting. A `<committeeMeeting>` element 
 - `<chamber>` (e.g., House)
     - The chamber where the committee meeting was held.
     - Possible values are "House", "Senate" and "NoChamber".
+-`<isManuallyCurated>` (e.g., Y)
+  - This element displays if manual curation was required. The value is always "Y". 
 - `<committees>` 
     - Container for the committees or subcommittees the held the meeting. A `<committees>` element may include the following children:
         - `<item>`
@@ -183,3 +185,4 @@ Parent container for a single committee meeting. A `<committeeMeeting>` element 
                             - The congress during which the nomination was received.
                         - `<url>`
                             - A referrer URL to the nomination item in the API. Documentation for the nomination API is available [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/NominationEndpoint.md).
+
