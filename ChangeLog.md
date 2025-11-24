@@ -18,20 +18,19 @@ An optional congress filter will be added to the /committee endpoint so that use
 ### Impacted endpoint: N/A
 The current swagger documentation is using non-standard yaml file to display the documentation which causes some issues with text formatting.  It should follow the formatting found here: https://editor.swagger.io/.
 Items to address: (1) separate the swagger view to its own file rather than bills.py, (2) update the swagger yaml to use standard formatting
-# UPCOMING October 2025, Part 1 [POSTPONED TO NOVEMBER 2025]| [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/52)
-**Expected Production Release Date: November 24, 2025**
+# COMPLETED October/November 2025| [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/52)
 ## Change #1
 ### Impacted endpoint: /congress
-The Congress list-level endpoint will have a default sort by congress ID with an option to sort by `<updateDate>`. This is related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117).
+The Congress list-level endpoint now has a default sort by congress ID with an option to sort by `<updateDate>`. This is related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117).
 ## Change #2 
 ### Impacted endpoint: /committee-meeting/{congress}/{chamber}/{eventId}
-An `<isManuallyCurated>` element will be added to this endpoint. This optional element will display with a "Y" for meetings that are manually curated. 
+An `<isManuallyCurated>` element was added to this endpoint. This optional element now displays with a "Y" for meetings that are manually curated. 
 ## Change #3
 ### Impacted endpoint: /committee
-The committee list-level endpoint will have a default sort by committeed ID with an optional sort by `<updateDate>`. This is related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117).
+The committee list-level endpoint now has a default sort by committeed ID with an optional sort by `<updateDate>`. This is related to [Issue #117](https://github.com/LibraryOfCongress/api.congress.gov/issues/117).
 ## Change #4
 ### Impacted endpoint: /congress, /congress/{congress}
-Objects in the sessions list that have the number element value "null" in the CDG API will be suppressed. 
+Objects in the sessions list that have the number element value "null" in the CDG API are now suppressed. 
 # COMPLETED September 2025 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/51)
 ## Change #1
 ### Impacted endpoint: /committee-meeting
