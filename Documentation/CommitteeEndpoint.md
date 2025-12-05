@@ -68,6 +68,8 @@ Parent container for an individual committee or subcommittee entry. A `<committe
 
 - `<systemCode>` (e.g., hspw00)
   - The unique ID value for the committee. Parent committee `<systemCode>` values end in a double zero while those for a subcommittee end with numerals other than a double zero.
+- `<committeeWebsiteUrl>`
+   - A referrer URL to the committee's official Congressional website. 
 - `<parent>`  
   - Container for parent committee information providing an indication of whether the subcommittee has a parent. A `<parent>` element may contain the following children:
     - `<url>`
