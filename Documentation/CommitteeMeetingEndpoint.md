@@ -82,9 +82,9 @@ Parent container for a single committee meeting. A `<committeeMeeting>` element 
                     - The name of the committee or subcommittee.
 - `<continuations>`
    - Container for an continuation data for an individual meeting. An `<continuations>` container element is repeatable and may include the following children:
-      - `<meeting_dt>`
+      - `<continuationDate>`
         - Date and time of the meeting continuation (e.g., 2023-03-24 13T00:00:00Z).
-- `<location>` 
+   -  `<location>` 
     - Container for the location of the meeting. A `<location>` element may include the following children:
         - `<room>` (e.g., 1324)
             - The room number where the meeting will be or was held. If the meeting was held virtually using 'Webex', the value for `<room>` will be 'WEBEX'. 
@@ -185,6 +185,7 @@ Parent container for a single committee meeting. A `<committeeMeeting>` element 
                             - The congress during which the nomination was received.
                         - `<url>`
                             - A referrer URL to the nomination item in the API. Documentation for the nomination API is available [here](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/NominationEndpoint.md).
+
 
 
 
