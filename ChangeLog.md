@@ -1,5 +1,6 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
 # UPCOMING January 2026 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/55)
+**Expected Production Release Date: January 12, 2026**
 ## Change #1
 ### Impacted endpoint: N/A 
 User submitted pull requests will be reviewed. The pull requests are [#300](https://github.com/LibraryOfCongress/api.congress.gov/pull/300) and [#352](https://github.com/LibraryOfCongress/api.congress.gov/pull/352). These pull requests are related to [Issue #280](https://github.com/LibraryOfCongress/api.congress.gov/issues/280) and [Issue #299](https://github.com/LibraryOfCongress/api.congress.gov/issues/299 ).
@@ -10,6 +11,7 @@ The treaty detail level endpoint will be modified so that data is returned for b
 ### Impacted endpoints: /crsreport, crsreport/{reportNumber}
 The `<author>` element will be modified to only show a CRS product's current author or authors. 
 # UPCOMING December 2025, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/54)
+**Expected Production Release Date: December 22, 2025**
 ## Change #1
 ### Impacted endpoint: committee/{chamber}/{committeeCode},/committee/{chamber}/{committeeCode}/bills, /committee/{chamber}/{committeeCode}/reports
 /committee/{chamber}/{committeeCode}/nominations
