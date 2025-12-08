@@ -1,23 +1,35 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
-# UPCOMING December 2025, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/53)
-**Expected Production Release Date: December 8, 2025**
+# UPCOMING January 2026 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/55)
 ## Change #1
-### Impacted endpoint: /bill, /amendment
-User reported issues with pagination and counts in the bill list-level endpoint and amendment list-level endpoint will be investigated. This is related to [Issue #74](https://github.com/LibraryOfCongress/api.congress.gov/issues/74) and [Issue #334](https://github.com/LibraryOfCongress/api.congress.gov/issues/334).
+### Impacted endpoint: N/A 
+User submitted pull requests will be reviewed. The pull requests are [#300](https://github.com/LibraryOfCongress/api.congress.gov/pull/300) and [#352](https://github.com/LibraryOfCongress/api.congress.gov/pull/352). These pull requests are related to [Issue #280](https://github.com/LibraryOfCongress/api.congress.gov/issues/280) and [Issue #299](https://github.com/LibraryOfCongress/api.congress.gov/issues/299 ).
 ## Change #2
-### Impacted endpoint: /committee/{chamber}/{committeeCode}
-A referrer URL to the committee's official website will be added to this endpoint. 
+### Impacted endpoint: /treaty/{congress}/{treatyNumber}
+The treaty detail level endpoint will be modified so that data is returned for both errata and non-errata versions of the treaty.
 ## Change #3
-### Impacted endpoint: /committee-meeting/{congress}/{chamber}/{eventId}
-The continuation date and time will be modified to the following format: YYYY-MM-DDT00:00:00Z. The `<meeting_dt>` element will be renamed `<continuationDate>`.
-## Change #4
+### Impacted endpoints: /crsreport, crsreport/{reportNumber}
+The `<author>` element will be modified to only show a CRS product's current author or authors. 
+# UPCOMING December 2025, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/54)
+## Change #1
 ### Impacted endpoint: committee/{chamber}/{committeeCode},/committee/{chamber}/{committeeCode}/bills, /committee/{chamber}/{committeeCode}/reports
 /committee/{chamber}/{committeeCode}/nominations
 An optional congress filter will be added to the /committee endpoint so that users can filter by these endpoints by Congress. **This work is ongoing from a previous sprint.**
-## Change #5
+## Change #2
+### Impacted endpoint: /bill, /amendment
+User reported issues with pagination and counts in the bill list-level endpoint and amendment list-level endpoint will be investigated. This is related to [Issue #74](https://github.com/LibraryOfCongress/api.congress.gov/issues/74) and [Issue #334](https://github.com/LibraryOfCongress/api.congress.gov/issues/334). **This work is ongoing from a previous sprint.**
+## Change #3
 ### Impacted endpoint: N/A
 The current swagger documentation is using non-standard yaml file to display the documentation which causes some issues with text formatting.  It should follow the formatting found here: https://editor.swagger.io/.
 Items to address: (1) separate the swagger view to its own file rather than bills.py, (2) update the swagger yaml to use standard formatting
+**This work is ongoing from a previous sprint.**
+
+# COMPLETED December 2025, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/53)
+## Change #1
+### Impacted endpoint: /committee/{chamber}/{committeeCode}
+A referrer URL to the committee's official website was added to this endpoint. 
+## Change #2
+### Impacted endpoint: /committee-meeting/{congress}/{chamber}/{eventId}
+The continuation date and time wwas modified to the following format: YYYY-MM-DDT00:00:00Z. The `<meeting_dt>` element was renamed `<continuationDate>`.
 # COMPLETED October/November 2025| [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/52)
 ## Change #1
 ### Impacted endpoint: /congress
