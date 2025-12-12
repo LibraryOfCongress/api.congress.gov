@@ -24,7 +24,9 @@ User reported issues with pagination and counts in the bill list-level endpoint 
 The current swagger documentation is using non-standard yaml file to display the documentation which causes some issues with text formatting.  It should follow the formatting found here: https://editor.swagger.io/.
 Items to address: (1) separate the swagger view to its own file rather than bills.py, (2) update the swagger yaml to use standard formatting
 **This work is ongoing from a previous sprint.**
-
+## Change #4
+### Impacted endpoints: all House roll call vote endpoints
+The "beta" label will be removed from the House roll call vote endpoints.
 # COMPLETED December 2025, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/53)
 ## Change #1
 ### Impacted endpoint: /committee/{chamber}/{committeeCode}
