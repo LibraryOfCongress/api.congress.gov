@@ -7,9 +7,6 @@ User submitted pull requests will be reviewed. The pull requests are [#300](http
 ## Change #2
 ### Impacted endpoint: /treaty/{congress}/{treatyNumber}
 The treaty detail level endpoint will be modified so that data is returned for both errata and non-errata versions of the treaty.
-## Change #3
-### Impacted endpoints: /crsreport, crsreport/{reportNumber}
-The `<author>` element will be modified to only show a CRS product's current author or authors. 
 # UPCOMING December 2025, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/54)
 **Expected Production Release Date: December 22, 2025**
 ## Change #1
