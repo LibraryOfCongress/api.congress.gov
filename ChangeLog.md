@@ -19,11 +19,11 @@ The default sort for the committee report endpoints will be ascending. Optional 
 An  congress filter was added to the /committee endpoint so that users can filter by these committee data by Congress. **This work is ongoing from a previous sprint.**
 ## Change #2
 ### Impacted endpoint: /bill, /amendment
-User reported issues with pagination and counts in the bill list-level endpoint and amendment list-level endpoint was investigated. This is related to [Issue #74](https://github.com/LibraryOfCongress/api.congress.gov/issues/74) and [Issue #334](https://github.com/LibraryOfCongress/api.congress.gov/issues/334). **This work is ongoing from a previous sprint.**
+User reported issues with pagination and counts in the bill list-level endpoint and amendment list-level endpoint was investigated. This was addressed and fixed. This is related to [Issue #74](https://github.com/LibraryOfCongress/api.congress.gov/issues/74) and [Issue #334](https://github.com/LibraryOfCongress/api.congress.gov/issues/334). **This work is ongoing from a previous sprint.**
 ## Change #3
 ### Impacted endpoint: N/A
-The current swagger documentation is using non-standard yaml file to display the documentation which causes some issues with text formatting.  It should follow the formatting found here: https://editor.swagger.io/.
-Items to address: (1) separate the swagger view to its own file rather than bills.py, (2) update the swagger yaml to use standard formatting
+The current swagger documentation was using non-standard yaml file to display the documentation which causes some issues with text formatting.  It now follows the formatting found here: https://editor.swagger.io/.
+Items addressed: (1) separate the swagger view to its own file rather than bills.py, (2) update the swagger yaml to use standard formatting
 **This work is ongoing from a previous sprint.**
 ## Change #4
 ### Impacted endpoints: all House roll call vote endpoints
