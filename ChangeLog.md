@@ -1,21 +1,25 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
-# UPCOMING January 2026 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/55)
-**Expected Production Release Date: January 12, 2026**
+# UPCOMING February 2026 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/55)
+**Expected Production Release Date: February 2, 2026**
 ## Change #1
 ### Impacted endpoint: N/A 
 User submitted pull requests will be reviewed. The pull requests are [#300](https://github.com/LibraryOfCongress/api.congress.gov/pull/300) and [#352](https://github.com/LibraryOfCongress/api.congress.gov/pull/352). These pull requests are related to [Issue #280](https://github.com/LibraryOfCongress/api.congress.gov/issues/280) and [Issue #299](https://github.com/LibraryOfCongress/api.congress.gov/issues/299 ).
 ## Change #2
 ### Impacted endpoint: /treaty/{congress}/{treatyNumber}
 The treaty detail level endpoint will be modified so that data is returned for both errata and non-errata versions of the treaty.
-# UPCOMING December 2025, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/54)
-**Expected Production Release Date: December 22, 2025**
+## Change #3
+### Impacted endpoint: N/A
+When searching for the Congress.gov API, Google search results currently direct users to gpo.congress.gov. A new canonical URL solves this issue and will correct this to "api.congress.gov". 
+# Change #4 
+### Impacted endpoint: /committee-report, /committee-report/{congress}
+The default sort for the committee report endpoints will be ascending. Optional `fromDateTime` and `toDateTime` parameters will continue to work.
+# COMPLETED December 2025, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/54)
 ## Change #1
-### Impacted endpoint: committee/{chamber}/{committeeCode},/committee/{chamber}/{committeeCode}/bills, /committee/{chamber}/{committeeCode}/reports
-/committee/{chamber}/{committeeCode}/nominations
-An optional congress filter will be added to the /committee endpoint so that users can filter by these endpoints by Congress. **This work is ongoing from a previous sprint.**
+### Impacted endpoint: /committee/{congress}/{chamber}/{committeeCode}
+An  congress filter was added to the /committee endpoint so that users can filter by these committee data by Congress. **This work is ongoing from a previous sprint.**
 ## Change #2
 ### Impacted endpoint: /bill, /amendment
-User reported issues with pagination and counts in the bill list-level endpoint and amendment list-level endpoint will be investigated. This is related to [Issue #74](https://github.com/LibraryOfCongress/api.congress.gov/issues/74) and [Issue #334](https://github.com/LibraryOfCongress/api.congress.gov/issues/334). **This work is ongoing from a previous sprint.**
+User reported issues with pagination and counts in the bill list-level endpoint and amendment list-level endpoint was investigated. This is related to [Issue #74](https://github.com/LibraryOfCongress/api.congress.gov/issues/74) and [Issue #334](https://github.com/LibraryOfCongress/api.congress.gov/issues/334). **This work is ongoing from a previous sprint.**
 ## Change #3
 ### Impacted endpoint: N/A
 The current swagger documentation is using non-standard yaml file to display the documentation which causes some issues with text formatting.  It should follow the formatting found here: https://editor.swagger.io/.
