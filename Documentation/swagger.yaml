@@ -5161,7 +5161,7 @@ components:
             legalAuthority:
               type: string
               example: "5 U.S.C. 801(a)(1)(A); Public Law 104–121, section 251; (110 Stat. 868)"
-            matchingCommunications":
+            matchingCommunications:
               $ref: '#/components/schemas/matchCommunication'
             nature:
               type: string
