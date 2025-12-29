@@ -6195,7 +6195,7 @@ components:
     ApiKeyAuth:
       type: apiKey
       in: query # or 'query' or 'cookie'
-      name: authkey
+      name: api_key
 
 servers:
   - url: /v3
