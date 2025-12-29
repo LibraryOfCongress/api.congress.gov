@@ -13,6 +13,16 @@ When searching for the Congress.gov API, Google search results currently direct 
 # Change #4 
 ### Impacted endpoint: /committee-report, /committee-report/{congress}
 The default sort for the committee report endpoints will be ascending. Optional `fromDateTime` and `toDateTime` parameters will continue to work.
+# UPCOMING January 2026 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/56)
+## Change #1
+### Impacted endpoint: /bill
+The bill endpoint is currently returning incorrect counts when specifying a limit, along with duplicate bill entries. This will be fixed. This is related to [Issue #399](https://github.com/LibraryOfCongress/api.congress.gov/issues/399).
+## Change #2
+### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}
+An `UnboundLocalError` in the bill detail-level endpoint will be fixed. This is related to [Issue #398](https://github.com/LibraryOfCongress/api.congress.gov/issues/398). 
+## Change #3 
+### Impacted endpoint: N/A; swagger documentation impacted
+The swagger documentation will be updated to "api_key" instead of "authkey". This is related to [Issue #400](https://github.com/LibraryOfCongress/api.congress.gov/issues/400). 
 # COMPLETED December 2025, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/54)
 ## Change #1
 ### Impacted endpoint: /committee/{congress}/{chamber}/{committeeCode}
