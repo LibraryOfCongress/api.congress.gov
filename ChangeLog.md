@@ -10,7 +10,7 @@ The treaty detail level endpoint will be modified so that data is returned for b
 ## Change #3
 ### Impacted endpoint: N/A
 When searching for the Congress.gov API, Google search results currently direct users to gpo.congress.gov. A new canonical URL solves this issue and will correct this to "api.congress.gov". 
-# Change #4 
+## Change #4 
 ### Impacted endpoint: /committee-report, /committee-report/{congress}
 The default sort for the committee report endpoints will be ascending. Optional `fromDateTime` and `toDateTime` parameters will continue to work.
 # UPCOMING January 2026 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/56)
