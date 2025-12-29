@@ -9990,7 +9990,7 @@
             "ApiKeyAuth": {
                 "type": "apiKey",
                 "in": "query",
-                "name": "authkey"
+                "name": "api_key"
             }
         }
     }
