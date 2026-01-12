@@ -1,28 +1,32 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
-# UPCOMING February 2026 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/55)
-**Expected Production Release Date: February 2, 2026**
+# UPCOMING March 2026 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/57)
+**Expected Production Release Date: March 16, 2026**
 ## Change #1
 ### Impacted endpoint: N/A 
 User submitted pull requests will be reviewed. The pull requests are [#300](https://github.com/LibraryOfCongress/api.congress.gov/pull/300) and [#352](https://github.com/LibraryOfCongress/api.congress.gov/pull/352). These pull requests are related to [Issue #280](https://github.com/LibraryOfCongress/api.congress.gov/issues/280) and [Issue #299](https://github.com/LibraryOfCongress/api.congress.gov/issues/299 ).
-## Change #2
-### Impacted endpoint: /treaty/{congress}/{treatyNumber}
-The treaty detail level endpoint will be modified so that data is returned for both errata and non-errata versions of the treaty.
-## Change #3
+# UPCOMING February 2026, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/56)
+**Expected Production Release Date: February 23, 2026**
+## Change #1
 ### Impacted endpoint: N/A
 When searching for the Congress.gov API, Google search results currently direct users to gpo.congress.gov. A new canonical URL solves this issue and will correct this to "api.congress.gov". 
-## Change #4 
+# UPCOMING February 2026, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/55)
+**Expected Production Release Date: February 2, 2026**
+## Change #1
+### Impacted endpoint: /treaty/{congress}/{treatyNumber}
+The treaty detail level endpoint will be modified so that data is returned for both errata and non-errata versions of the treaty.
+## Change #2
 ### Impacted endpoint: /committee-report, /committee-report/{congress}
 The default sort for the committee report endpoints will be ascending. Optional `fromDateTime` and `toDateTime` parameters will continue to work.
-# UPCOMING January 2026 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/56)
+# Completed January 2026 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/56)
 ## Change #1
 ### Impacted endpoint: /bill
-The bill endpoint is currently returning incorrect counts when specifying a limit, along with duplicate bill entries. This will be fixed. This is related to [Issue #399](https://github.com/LibraryOfCongress/api.congress.gov/issues/399).
+The bill endpoint was returning incorrect counts when specifying a limit, along with duplicate bill entries. This is related to [Issue #399](https://github.com/LibraryOfCongress/api.congress.gov/issues/399).
 ## Change #2
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}
-An `UnboundLocalError` in the bill detail-level endpoint will be fixed. This is related to [Issue #398](https://github.com/LibraryOfCongress/api.congress.gov/issues/398). 
+An `UnboundLocalError` in the bill detail-level endpoint was fixed. This is related to [Issue #398](https://github.com/LibraryOfCongress/api.congress.gov/issues/398). 
 ## Change #3 
 ### Impacted endpoint: N/A; swagger documentation impacted
-The swagger documentation will be updated to "api_key" instead of "authkey". This is related to [Issue #400](https://github.com/LibraryOfCongress/api.congress.gov/issues/400). 
+The swagger documentation was updated to "api_key" instead of "authkey". This is related to [Issue #400](https://github.com/LibraryOfCongress/api.congress.gov/issues/400). 
 # COMPLETED December 2025, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/54)
 ## Change #1
 ### Impacted endpoint: /committee/{congress}/{chamber}/{committeeCode}
