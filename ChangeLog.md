@@ -1,22 +1,26 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
+# UPCOMING April 2026 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/59)
+## Change #1
+### Impacted endpoints: /crsreport, /crsreport/{reportNumber}
+The <author> element will be modified to only show a CRS product's current author or authors. 
+## Change #2 
+### Impacted endpoints: /committee-report, /committee-report/{reportNumber}
+Optional sort by update date parameters will be fixed. This is related to [Issue #409](https://github.com/LibraryOfCongress/api.congress.gov/issues/409).
 # UPCOMING March 2026 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/58)
 **Expected Production Release Date: March 16, 2026**
 ## Change #1
-### Impacted endpoint: N/A 
-User submitted pull requests will be reviewed. The pull requests are [#300](https://github.com/LibraryOfCongress/api.congress.gov/pull/300) and [#352](https://github.com/LibraryOfCongress/api.congress.gov/pull/352). These pull requests are related to [Issue #280](https://github.com/LibraryOfCongress/api.congress.gov/issues/280) and [Issue #299](https://github.com/LibraryOfCongress/api.congress.gov/issues/299 ).
-# UPCOMING February 2026, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/57)
-**Expected Production Release Date: February 23, 2026**
-## Change #1
 ### Impacted endpoint: N/A
 When searching for the Congress.gov API, Google search results currently direct users to gpo.congress.gov. A new canonical URL solves this issue and will correct this to "api.congress.gov". 
-# UPCOMING February 2026, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/55)
-**Expected Production Release Date: February 2, 2026**
+## Change #2
+### Impacted endpoint: /house-vote/{congress}{sessionNumber}/{voteNumber}
+A `<notes>` container with note data will be added to the /house-vote/{congress}{sessionNumber}/{voteNumber} data. 
+# Completed February 2026 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/55)
 ## Change #1
 ### Impacted endpoint: /treaty/{congress}/{treatyNumber}
-The treaty detail level endpoint will be modified so that data is returned for both errata and non-errata versions of the treaty.
+The treaty detail level endpoint was modified so that data is returned for both errata and non-errata versions of the treaty.
 ## Change #2
 ### Impacted endpoint: /committee-report, /committee-report/{congress}
-The default sort for the committee report endpoints will be ascending. Optional `fromDateTime` and `toDateTime` parameters will continue to work.
+The default sort for the committee report endpoints was changed to committee report number ascending. Optional `fromDateTime` and `toDateTime` parameters will be fixed in a later sprint. 
 # Completed January 2026 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/56)
 ## Change #1
 ### Impacted endpoint: /bill
