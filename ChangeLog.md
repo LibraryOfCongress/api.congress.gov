@@ -1,11 +1,18 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
-# UPCOMING April 2026 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/59)
+# UPCOMING April 2026, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/59)
+**Expected Production Release Date: April 6, 2026**
 ## Change #1
 ### Impacted endpoints: /crsreport, /crsreport/{reportNumber}
 The <author> element will be modified to only show a CRS product's current author or authors. 
 ## Change #2 
 ### Impacted endpoints: /committee-report, /committee-report/{reportNumber}
 Optional sort by update date parameters will be fixed. This is related to [Issue #409](https://github.com/LibraryOfCongress/api.congress.gov/issues/409).
+## Change #3
+### Impacted endpoints: /bill, /bill/{congress}, /bill/{congress}/{billType}
+The bill list-level endpoints will be fixed so that the default sort is by latest action date. This is related to [Issue #406](https://github.com/LibraryOfCongress/api.congress.gov/issues/406).
+## Change #4
+### Impacted endpoints: /amendment, /amendment/{congress}/{amendmentType}
+The amendment list-level endpoints will be fixed so that the default sort is by latest action date. This is related to [Issue #406](https://github.com/LibraryOfCongress/api.congress.gov/issues/406).
 # UPCOMING March 2026 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/58)
 **Expected Production Release Date: March 16, 2026**
 ## Change #1
