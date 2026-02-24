@@ -13,6 +13,9 @@ The bill list-level endpoints will be fixed so that the default sort is by lates
 ## Change #4
 ### Impacted endpoints: /amendment, /amendment/{congress}/{amendmentType}
 The amendment list-level endpoints will be fixed so that the default sort is by latest action date. This is related to [Issue #406](https://github.com/LibraryOfCongress/api.congress.gov/issues/406).
+## Change #5
+### Imapcted endpoint: /law/{congress}/{lawType}/{lawNumber}
+The law detail-level endpoint will be fixed so an error message is no longer returned. This is related to [Issue #414](https://github.com/LibraryOfCongress/api.congress.gov/issues/414). 
 # UPCOMING March 2026 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/58)
 **Expected Production Release Date: March 16, 2026**
 ## Change #1
