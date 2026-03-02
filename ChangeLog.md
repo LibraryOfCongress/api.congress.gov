@@ -24,6 +24,9 @@ When searching for the Congress.gov API, Google search results currently direct 
 ## Change #2
 ### Impacted endpoint: /house-vote/{congress}{sessionNumber}/{voteNumber}
 A `<notes>` container with note data will be added to the /house-vote/{congress}{sessionNumber}/{voteNumber} data. 
+## Change #3
+### Impacted endpoint: committee-meeting/{congress}/{chamber}/{eventId}
+A bug with the referrer URL to committee meeting videos on YouTube will be investigated and fixed. This is related to [Issue #418](https://github.com/LibraryOfCongress/api.congress.gov/issues/418). 
 # Completed February 2026 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/55)
 ## Change #1
 ### Impacted endpoint: /treaty/{congress}/{treatyNumber}
