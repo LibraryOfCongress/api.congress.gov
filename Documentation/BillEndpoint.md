@@ -623,7 +623,10 @@ Parent container for titles associated with the bill or resolution. A title may 
 | 7 | Official Titles as Amended by House |
 | 8 | Official Titles as Amended by Senate |
 | 9 | Official Title as Agreed to by House and Senate |
+| 10 | Official Title as Enacted |
 | 14 | Short Titles as Introduced |
+| 15 | Short Titles as Reported to House |
+| 16 | Short Titles as Reported to Senate |
 | 17 | Short Titles as Passed House |
 | 18 | Short Titles as Passed Senate |
 | 19 | Short Titles as Enacted |
@@ -645,10 +648,21 @@ Parent container for titles associated with the bill or resolution. A title may 
 | 108 | Short Title(s) as Reported to Senate for portions of this bill |
 | 109 | Short Title(s) as Passed House for portions of this bill |
 | 110 | Short Title(s) as Passed Senate for portions of this bill |
+| 146 | Short Titles for portions of this bill from ENR (Enrolled) bill text |
 | 147 | Short Title(s) from ENR (Enrolled) bill text |
+| 151 | Short Titles for portions of this bill from PCS (Placed on Senate Calendar) bill text |
+| 152 | Short Title(s) from PCS (Placed on Senate Calendar) bill text |
+| 159 | Official Title(s) from Statutes at Large |
+| 217 | Short Title(s) from Statutes at Large |
 | 250 | Short Title(s) from Engrossed Amendment Senate |
+| 252 | Short Title(s) from Engrossed Amendment House bill text |
 | 253 | Short Title(s) from Engrossed Amendment House for portions of this bill |
 | 254 | Short Title(s) from Engrossed Amendment Senate for portions of this bill |
+| 255 | Short Titles from RFS (Referred to Senate) bill text |
+| 256 | Short Title(s) for portions of this bill from RFS (Referred to Senate) bill text |
+| 257 | Short Titles from RFH (Referred to House) bill text |
+| 258 | Short Titles from RFH (Referred to House) for portions of this bill text |
+| 259 | Official Titles from EH (Engrossed in House) bill text |
 
 
 #### Text Level
