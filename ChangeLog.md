@@ -1,4 +1,8 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
+# UPCOMING April 2026, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/60)
+## Change #1 
+### Impacted endpoint: /member/{bioguideId}/cosponsored-legislation
+The cosponsored legislation counts will exclude withdrawn cosponsorships. 
 # UPCOMING April 2026, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/59)
 **Expected Production Release Date: April 6, 2026**
 ## Change #1
@@ -14,19 +18,21 @@ The bill list-level endpoints will be fixed so that the default sort is by lates
 ### Impacted endpoints: /amendment, /amendment/{congress}/{amendmentType}
 The amendment list-level endpoints will be fixed so that the default sort is by latest action date. This is related to [Issue #406](https://github.com/LibraryOfCongress/api.congress.gov/issues/406).
 ## Change #5
-### Imapcted endpoint: /law/{congress}/{lawType}/{lawNumber}
+### Impacted endpoint: /law/{congress}/{lawType}/{lawNumber}
 The law detail-level endpoint will be fixed so an error message is no longer returned. This is related to [Issue #414](https://github.com/LibraryOfCongress/api.congress.gov/issues/414). 
-# UPCOMING March 2026 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/58)
-**Expected Production Release Date: March 16, 2026**
+## Change #6
+### Impacted endpoint: all /house-vote endpoints
+117th Congress House roll call votes will be added to the API. 
+# Completed March 2026 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/58)
 ## Change #1
 ### Impacted endpoint: N/A
-When searching for the Congress.gov API, Google search results currently direct users to gpo.congress.gov. A new canonical URL solves this issue and will correct this to "api.congress.gov". 
+When searching for the Congress.gov API, Google search results directed users to gpo.congress.gov. A new canonical URL solved this issue and corrected this to "api.congress.gov". 
 ## Change #2
 ### Impacted endpoint: /house-vote/{congress}{sessionNumber}/{voteNumber}
-A `<notes>` container with note data will be added to the /house-vote/{congress}{sessionNumber}/{voteNumber} data. 
+A `<notes>` container with note data was added to the /house-vote/{congress}{sessionNumber}/{voteNumber} data. 
 ## Change #3
 ### Impacted endpoint: committee-meeting/{congress}/{chamber}/{eventId}
-A bug with the referrer URL to committee meeting videos on YouTube will be investigated and fixed. This is related to [Issue #418](https://github.com/LibraryOfCongress/api.congress.gov/issues/418). 
+A bug with the referrer URL to committee meeting videos on YouTube was investigated and fixed. This was related to [Issue #418](https://github.com/LibraryOfCongress/api.congress.gov/issues/418). 
 # Completed February 2026 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/55)
 ## Change #1
 ### Impacted endpoint: /treaty/{congress}/{treatyNumber}
