@@ -4,6 +4,9 @@ This change log will contain information on updates to the Congress.gov API, the
 ## Change #1 
 ### Impacted endpoint: /member/{bioguideId}/cosponsored-legislation
 The cosponsored legislation counts will exclude withdrawn cosponsorships. 
+## Change #2 
+### Impacted endpoints: /bill/{congress}/{billType}/{billNumber}/text, /bill/{congress}/{billType}/{billNumber}/summaries, /amendment/{congress}/{amendmentType}/{amendmentNumber}/text
+Error messages in the Bill text-level endpoint, the Bill summary-level endpoint, and the Amendment text-level endpoint will be investigated and fixed. This is related to Issue #431 and Issue #434. 
 # UPCOMING April 2026, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/59)
 **Expected Production Release Date: April 6, 2026**
 ## Change #1
