@@ -34,6 +34,9 @@ The law detail-level endpoint will be fixed so an error message is no longer ret
 ## Change #5
 ### Impacted endpoint: all /house-vote endpoints
 117th Congress House roll call votes will be added to the API. 
+## Change #6 
+### Impacted endpoints: ALL API ENDPOINTS
+We corrected an inconsistency between XML and JSON in the default response format of various API endpoints when a format is not specified in the request. The default response format is now XML for all endpoints. We strongly suggest that API clients specify the response format they want in all API calls.
 # Completed March 2026 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/58)
 ## Change #1
 ### Impacted endpoint: N/A
