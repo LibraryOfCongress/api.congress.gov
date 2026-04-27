@@ -4,6 +4,9 @@ This change log will contain information on updates to the Congress.gov API, the
 ## Change #1
 ### Impacted endpoint: /congress
 For each item returned in the congresses field, the number field will be present. This is related to [Issue #286](https://github.com/LibraryOfCongress/api.congress.gov/issues/286). 
+## Change #2
+### Impacted endpoints: /member/{bioguideId}/sponsored-legislation, /member/{bioguideId}/cosponsored-legislation
+An optional sort by introduced date or sponsored date ascending and descending will be enabled in these endpoints. 
 # UPCOMING May 2026 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/61)
 **Expected Production Release Date: May 18, 2026**
 ## Change #1
