@@ -1,4 +1,9 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
+# UPCOMING June 2026 | [Milestone()
+**Expected Production Release Date: June 8, 2026**
+## Change #1
+### Impacted endpoint: /congress
+For each item returned in the congresses field, the number field will be present. This is related to [Issue #286](https://github.com/LibraryOfCongress/api.congress.gov/issues/286). 
 # UPCOMING May 2026 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/61)
 **Expected Production Release Date: May 18, 2026**
 ## Change #1
@@ -7,17 +12,16 @@ A 500 error message in the treaty actions-level endpoint will be investigated an
 ## Change #2
 ### Impacted endpoints: /v3/treaty/{congress}/{treatyNumber}/actions, /v3/treaty/{congress}/{treatyNumber}/committees
 The actions-level and committees-level treaty endpoints will be modified so that data is returned for both errata and non-errata versions of the treaty.This is related to [Issue #428](https://github.com/LibraryOfCongress/api.congress.gov/issues/428).
-# UPCOMING April 2026, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/60)
-**Expected Production Release Date: April 27, 2026**
+# Completed April 2026, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/60)
 ## Change #1 
 ### Impacted endpoint: /member/{bioguideId}/cosponsored-legislation
-The cosponsored legislation counts will exclude withdrawn cosponsorships. 
+The cosponsored legislation counts now exclude withdrawn cosponsorships. 
 ## Change #2 
 ### Impacted endpoints: /bill/{congress}/{billType}/{billNumber}/text, /bill/{congress}/{billType}/{billNumber}/summaries, /amendment/{congress}/{amendmentType}/{amendmentNumber}/text
-Error messages in the Bill text-level endpoint, the Bill summary-level endpoint, and the Amendment text-level endpoint will be investigated and fixed. This is related to [Issue #431](https://github.com/LibraryOfCongress/api.congress.gov/issues/431)and [Issue #434](https://github.com/LibraryOfCongress/api.congress.gov/issues/434). 
+Error messages in the Bill text-level endpoint, the Bill summary-level endpoint, and the Amendment text-level endpoint were investigated and fixed. This is related to [Issue #431](https://github.com/LibraryOfCongress/api.congress.gov/issues/431)and [Issue #434](https://github.com/LibraryOfCongress/api.congress.gov/issues/434). 
 ## Change #3
 ### Impacted endpoints: /amendment, /amendment/{congress}/{amendmentType}
-The amendment list-level endpoints will be fixed so that the default sort is by latest action date. This is related to [Issue #406](https://github.com/LibraryOfCongress/api.congress.gov/issues/406). **This work is ongoing from a previous sprint.**
+The amendment list-level endpoints were fixed so that the default sort is by latest action date. This is related to [Issue #406](https://github.com/LibraryOfCongress/api.congress.gov/issues/406). **This work is ongoing from a previous sprint.**
 # Completed April 2026, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/59)
 ## Change #1
 ### Impacted endpoints: /crsreport, /crsreport/{reportNumber}
