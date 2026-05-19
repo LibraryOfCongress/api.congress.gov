@@ -12,6 +12,8 @@ View OpenAPI Specification on the nomination API, supported endpoints, and avail
 
 A presidential nomination (PN) with multiple nominees may be partitioned by the Senate if the nominees follow a different confirmation path. Partitions are identified with a suffix; for example, PN230-1 (114th Congress) and PN230-2 (114th Congress). Searching on a PN number in Congress.gov API, such as PN230, without a partition designation will retrieve all partitions of a partitioned nomination.
 
+Nomination numbers can be described by the regular expression `[0-9]+(-[0-9]+)?`, where the optional suffix (hyphen followed by digits) refers to a partitioned nomination's partition number. If you are trying to retrieve information on a specific part of a nomination, use a nomination number of this form.
+
 ## Elements and Descriptions
 
 The section below details available element names, their descriptions, and possible values.
