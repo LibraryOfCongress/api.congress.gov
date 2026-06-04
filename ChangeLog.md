@@ -10,7 +10,7 @@ A 500 error message in the treaty actions-level endpoint will be investigated an
 ## Change #3
 ### Impacted endpoints: /v3/treaty/{congress}/{treatyNumber}/actions, /v3/treaty/{congress}/{treatyNumber}/committees
 The actions-level and committees-level treaty endpoints will be modified so that data is returned for both errata and non-errata versions of the treaty.This is related to [Issue #428](https://github.com/LibraryOfCongress/api.congress.gov/issues/428).
-# COMPLETED May 2026 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/61)
+# Completed May 2026 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/61)
 **Expected Production Release Date: May 18, 2026**
 ## Change #1
 ### Impacted endpoints: /member/{bioguideId}/sponsored-legislation, /member/{bioguideId}/cosponsored-legislation
