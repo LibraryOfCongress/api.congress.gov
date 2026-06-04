@@ -14,7 +14,7 @@ The actions-level and committees-level treaty endpoints will be modified so that
 **Expected Production Release Date: May 18, 2026**
 ## Change #1
 ### Impacted endpoints: /member/{bioguideId}/sponsored-legislation, /member/{bioguideId}/cosponsored-legislation
-An optional sort by introduced date or sponsored date ascending and descending will be enabled in these endpoints. 
+An optional sort by introduced date or sponsored date ascending and descending has been enabled in these endpoints. 
 # Completed April 2026, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/60)
 ## Change #1 
 ### Impacted endpoint: /member/{bioguideId}/cosponsored-legislation
