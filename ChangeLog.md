@@ -1,12 +1,17 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
-# Completed June 2026 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/62)
+# UPCOMING June 2026, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/63)
+**Expected Production Release Date: June 29, 2026**
+## Change #1
+### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/actions
+Error caused by bills in the same Congress sharing bill numbers will be fixed [#387](https://github.com/LibraryOfCongress/api.congress.gov/issues/286)
+# Completed June 2026, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/62)
 **Expected Production Release Date: June 8, 2026**
 ## Change #1
 ### Impacted endpoint: /congress
 For each item returned in the congresses field, the number field is now present. This is related to [Issue #286](https://github.com/LibraryOfCongress/api.congress.gov/issues/286). 
 ## Change #2
 ### Impacted endpoint: /treaty/{congress}/{treatyNumber}/actions
-A 500 error message in the treaty actions-level endpoint has been fixed fixed. This is related to [Issue #428](https://github.com/LibraryOfCongress/api.congress.gov/issues/428).
+A 500 error message in the treaty actions-level endpoint has been fixed. This is related to [Issue #428](https://github.com/LibraryOfCongress/api.congress.gov/issues/428).
 ## Change #3
 ### Impacted endpoints: /v3/treaty/{congress}/{treatyNumber}/actions, /v3/treaty/{congress}/{treatyNumber}/committees
 The actions-level and committees-level treaty endpoints have been modified so that data is returned for both errata and non-errata versions of the treaty. This is related to [Issue #428](https://github.com/LibraryOfCongress/api.congress.gov/issues/428).
