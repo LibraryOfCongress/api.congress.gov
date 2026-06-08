@@ -3,7 +3,7 @@ This change log will contain information on updates to the Congress.gov API, the
 **Expected Production Release Date: June 29, 2026**
 ## Change #1
 ### Impacted endpoint: /bill/{congress}/{billType}/{billNumber}/actions
-Error caused by bills in the same Congress sharing bill numbers will be fixed [#387](https://github.com/LibraryOfCongress/api.congress.gov/issues/286)
+Error caused by bills in the same Congress sharing bill numbers will be fixed ([#387](https://github.com/LibraryOfCongress/api.congress.gov/issues/387))
 # Completed June 2026, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/62)
 **Expected Production Release Date: June 8, 2026**
 ## Change #1
