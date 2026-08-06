@@ -36,7 +36,11 @@ Coverage information for Congress.gov collections data in the API can be found a
 
 ## Support
 
-Congress.gov staff will monitor and respond to any [issues](https://github.com/LibraryOfCongress/api.congress.gov/issues) created in this repository, and will initiate actions, as necessary. Before creating an issue in the repository, please review existing issues and add a comment to any issues relevant to yours. 
+Congress.gov staff will monitor and respond to any [issues](https://github.com/LibraryOfCongress/api.congress.gov/issues) created in this repository, and will initiate actions, as necessary. Before creating an issue in the repository, please review existing issues and add a comment to any issues relevant to yours.
+
+### Reporting suspected missing, inaccurate, or incomplete data
+
+Congress.gov maintains data exchanges with both chambers of Congress. The data available on the website and via the API are what have been delivered by chambers to Congress.gov. Reports of suspected missing, inaccurate, or incomplete data will be triaged by Congress.gov staff and referred to data partners in the House and Senate as appropriate.
 
 ## Change Management
 
