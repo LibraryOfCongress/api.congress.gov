@@ -1,13 +1,14 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
-# UPCOMING August 2026 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/64)
-**Expected Production Release Date: August 10, 2026**
+# UPCOMING August 2026, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/66)
+**Expected Production Release Date: August 31, 2026**
+## Change #1
+### Impacted endpoints: `/bill`, `/bill/{congress}`, `/bill/{congress}/{billType}`
+This change will allow sorting the above endpoints with `introducedDate asc` and `introducedDate desc`. See [#467](https://github.com/LibraryOfCongress/api.congress.gov/issues/467).
+# Completed August 2026, Part 1 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/65)
 ## Change #1
 ### Impacted endpoints: `/bill`, `/bill/{congress}`, `/bill/{congress}/{billType}`
 This change will include an `introducedDate` field to objects listed by the above endpoints. See [#142](https://github.com/LibraryOfCongress/api.congress.gov/issues/142).
 ## Change #2
-### Impacted endpoints: `/bill`, `/bill/{congress}`, `/bill/{congress}/{billType}`
-This change will allow sorting the above endpoints with `introducedDate asc` and `introducedDate desc`. See [#467](https://github.com/LibraryOfCongress/api.congress.gov/issues/467).
-## Change #3
 ### Impacted endpoints: N/A
 [#458](https://github.com/LibraryOfCongress/api.congress.gov/pull/458) merged several fixes to the [OpenAPI spec](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/openapi.yaml), which has been renamed from `swagger.yaml` to `openapi.yaml` (`swagger.json` is also now [`openapi.json`](https://github.com/LibraryOfCongress/api.congress.gov/blob/main/Documentation/openapi.json). The updated file shows no errors or warnings when run against https://editor.swagger.io/. Changes will be reflected at https://api.congress.gov/ on August 10.
 
