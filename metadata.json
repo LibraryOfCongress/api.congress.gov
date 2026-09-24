@@ -1,0 +1,7 @@
+{
+  "name": "Congress API Explorer",
+  "description": "A comprehensive documentation viewer and explorer for the Congress.gov API, featuring endpoint documentation and interactive API testing.",
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

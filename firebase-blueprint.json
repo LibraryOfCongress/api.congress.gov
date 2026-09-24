@@ -1,0 +1,37 @@
+{
+  "entities": {
+    "Summary": {
+      "title": "Summary",
+      "description": "AI summary of the work",
+      "type": "object",
+      "properties": {
+        "text": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "userId": { "type": "string" }
+      },
+      "required": ["text", "createdAt", "userId"]
+    },
+    "StoredData": {
+      "title": "StoredData",
+      "description": "Stored Congress API response",
+      "type": "object",
+      "properties": {
+        "path": { "type": "string" },
+        "data": { "type": "object" },
+        "createdAt": { "type": "string", "format": "date-time" },
+        "userId": { "type": "string" }
+      },
+      "required": ["path", "data", "createdAt", "userId"]
+    }
+  },
+  "firestore": {
+    "/summaries/{summaryId}": {
+      "schema": { "$ref": "#/entities/Summary" },
+      "description": "Collection of AI summaries"
+    },
+    "/stored_data/{dataId}": {
+      "schema": { "$ref": "#/entities/StoredData" },
+      "description": "Collection of stored API responses"
+    }
+  }
+}
