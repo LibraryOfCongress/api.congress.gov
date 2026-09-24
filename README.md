@@ -1,3 +1,15 @@
+# Congress API Explorer
+
+This repository has been migrated to a web-based explorer for the [Congress.gov Application Programming Interface (API)](https://api.congress.gov/). Use the built-in interface to browse endpoints, view detailed documentation, and explore the schema of the Congressional data.
+
+## Getting Started
+
+1. Browse categories in the sidebar.
+2. View endpoint details, parameters, and descriptions.
+3. Use the OpenAPI specification provided in `Documentation/openapi.json`.
+
+---
+
 # Overview
 
 ## Introduction
