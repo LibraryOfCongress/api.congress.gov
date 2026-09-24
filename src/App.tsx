@@ -6,13 +6,17 @@ import {
   ExternalLink, 
   Menu, 
   X,
-  FileCode,
   Layout,
   Database,
-  Users,
+  User,
+  LogOut,
+  Mic,
   MessageSquare
 } from 'lucide-react';
 import axios from 'axios';
+import { signInWithPopup, GoogleAuthProvider, onAuthStateChanged, User as FirebaseUser, signOut } from 'firebase/auth';
+import { auth, db } from './firebase';
+import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 
 interface Spec {
   info: {
@@ -30,6 +34,62 @@ const App: React.FC = () => {
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
+  const [results, setResults] = useState<Record<string, any>>({});
+  const [loadingResults, setLoadingResults] = useState<Record<string, boolean>>({});
+  const [user, setUser] = useState<FirebaseUser | null>(null);
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+  }, []);
+
+  const login = async () => {
+    const provider = new GoogleAuthProvider();
+    await signInWithPopup(auth, provider);
+  };
+  
+  const logout = () => signOut(auth);
+
+  const persistData = async (path: string, data: any) => {
+    if (!user) return;
+    try {
+      await addDoc(collection(db, 'stored_data'), {
+        path,
+        data,
+        createdAt: serverTimestamp(),
+        userId: user.uid
+      });
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
+  };
+
+  const summarizeWork = async () => {
+    if (!user) return;
+    try {
+      const response = await axios.post('/api/summarize', { userId: user.uid });
+      alert(`Summary: ${response.data.summary}`);
+    } catch (error) {
+      console.error('Summary failed:', error);
+      alert('Failed to summarize work');
+    }
+  };
+
+  const runTest = async (path: string) => {
+    const key = path;
+    setLoadingResults(prev => ({ ...prev, [key]: true }));
+    try {
+      const response = await axios.get(`/api/proxy${path}`);
+      setResults(prev => ({ ...prev, [key]: response.data }));
+      await persistData(path, response.data);
+    } catch (error) {
+      console.error('Test failed:', error);
+      setResults(prev => ({ ...prev, [key]: { error: 'Failed to fetch data' } }));
+    } finally {
+      setLoadingResults(prev => ({ ...prev, [key]: false }));
+    }
+  };
 
   useEffect(() => {
     const fetchSpec = async () => {
@@ -147,6 +207,29 @@ const App: React.FC = () => {
           </button>
           <div className="flex items-center gap-4">
             <span className="text-sm text-slate-500 font-medium">API Version: {spec?.info.version}</span>
+            {user ? (
+              <div className="flex items-center gap-3">
+                <button 
+                  onClick={summarizeWork}
+                  className="flex items-center gap-2 px-3 py-1 bg-emerald-600 text-white rounded-md text-sm font-semibold hover:bg-emerald-700"
+                >
+                  <MessageSquare size={16} /> Summary
+                </button>
+                <button 
+                  onClick={logout}
+                  className="p-2 text-slate-600 hover:bg-slate-100 rounded-md"
+                >
+                  <LogOut size={20} />
+                </button>
+              </div>
+            ) : (
+              <button 
+                onClick={login}
+                className="flex items-center gap-2 px-3 py-1 bg-primary text-white rounded-md text-sm font-semibold hover:bg-primary/90"
+              >
+                <User size={16} /> Login
+              </button>
+            )}
           </div>
         </header>
 
@@ -189,7 +272,22 @@ const App: React.FC = () => {
                                 {path}
                               </code>
                             </div>
+                            <button
+                              onClick={() => runTest(path)}
+                              disabled={loadingResults[path]}
+                              className="px-3 py-1 bg-primary text-white rounded-md text-xs font-bold hover:bg-primary/90 disabled:bg-slate-300"
+                            >
+                              {loadingResults[path] ? 'Testing...' : 'Test'}
+                            </button>
                           </div>
+                          
+                          {results[path] && (
+                            <div className="mt-4 p-4 bg-slate-900 rounded-lg overflow-x-auto">
+                              <pre className="text-xs text-emerald-400 font-mono">
+                                {JSON.stringify(results[path], null, 2)}
+                              </pre>
+                            </div>
+                          )}
                           
                           <h4 className="text-lg font-bold text-slate-900 mb-2">{details.summary}</h4>
                           <p className="text-slate-600 text-sm mb-6">{details.description}</p>
