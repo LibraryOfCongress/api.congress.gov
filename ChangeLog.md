@@ -1,4 +1,11 @@
 This change log will contain information on updates to the Congress.gov API, the impacted endpoints, and the expected production release date. Changes not yet in production will be prefaced by UPCOMING. Once in production, that preface will be changed to COMPLETED. Milestones are also used to tag issues in this repository with expected production release date information.
+# UPCOMING November 2026 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/67)
+## Change #1
+### Impacted endpoints: `/bill`, `/bill/{congress}`, `/bill/{congress}/{billType}`
+This change will allow filtering bill list endpoints on introduced dates. Available query parameters are `introducedDate` to match a specific introduced date, `fromIntroducedDate` for the start of a date range, and `toIntroducedDate` for the end of a date range. Dates should be in YYYY-MM-DD format. Related issue [#475](https://github.com/LibraryOfCongress/api.congress.gov/issues/475).
+## Change #2
+### Impacted endpoints: `/bill`, `/bill/{congress}`, `/bill/{congress}/{billType}`
+This change will allow filtering bill list endpoints on policy areas using the `policyArea` query parameter. Valid arguments are listed [here](https://www.congress.gov/help/field-values/policy-area) and are case insensitive. Only one policy area may be passed. Invalid policy areas will throw a 400 error and display the URL for policy area controlled vocabulary. Related issue [#359](https://github.com/LibraryOfCongress/api.congress.gov/issues/359).
 # Completed August 2026, Part 2 | [Milestone](https://github.com/LibraryOfCongress/api.congress.gov/milestone/66)
 ## Change #1
 ### Impacted endpoints: `/bill`, `/bill/{congress}`, `/bill/{congress}/{billType}`
