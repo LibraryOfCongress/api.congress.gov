@@ -18,6 +18,10 @@ An API key is required for access. Sign up for a key [here](https://api.congress
 
 Learn more on how you can use your API key to access the Congress.gov API on [api.data.gov](https://api.data.gov/docs/api-key/).
 
+### Key Revocation/Deactivation
+
+Please visit https://api.congress.gov/sign-up/#/deactivate-api-key if you need to revoke/deactivate your API key.
+
 ## Versioning
 
 The current version of the API is version 3 (v3). Prior versions were used by the Government Publishing Office (GPO) for its [Bulk Data Repository](https://www.govinfo.gov/bulkdata), and other clients.
